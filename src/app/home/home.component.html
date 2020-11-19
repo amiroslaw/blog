@@ -1,0 +1,10 @@
+<p>home works!</p>
+
+<ul>
+  <li *ngFor="let page of pages$ | async">
+    {{ page.route }} {{ page.data }}
+    <span *ngFor="let arrayItem of page.tags">
+      {{ arrayItem }}
+    </span>
+  </li>
+</ul>

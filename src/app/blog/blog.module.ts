@@ -8,4 +8,5 @@ import {BlogComponent} from './blog.component';
   declarations: [BlogComponent],
   imports: [CommonModule, BlogRoutingModule, ScullyLibModule],
 })
-export class BlogModule {}
+export class BlogModule {
+}

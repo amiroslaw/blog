@@ -1,11 +1,12 @@
 <header class="masthead" style="background-image: url('assets/img/sites/home-bg.jpg')">
   <div class="overlay"></div>
-  <div class="container">
+  <div class="container" *ngIf="content$ | async as post">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
 
           <h1 class="post-title">
+            {{post.title}}
           </h1>
         </div>
       </div>
@@ -13,8 +14,12 @@
   </div>
 </header>
 
-<h3>ScullyIo content</h3>
-<hr>
-
-<!-- This is where Scully will inject the static HTML -->
-<scully-content></scully-content>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 mx-auto">
+      <article>
+        <scully-content></scully-content>
+      </article>
+    </div>
+  </div>
+</div>

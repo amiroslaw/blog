@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +6,13 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isCollapsed: boolean;
 
-  constructor(private route: ActivatedRoute) {
+  constructor() {
+    this.isCollapsed = true;
   }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      console.log(params['name']);
-    });
   }
 
 }

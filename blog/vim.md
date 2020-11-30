@@ -1,5 +1,5 @@
 ---
-title: vim
+title: Filozofia Vima - tryby i pliki
 description: Filozoficzne podejście do nauki nietypowego edytora jakim jest vim. 
 published: true
 date: 2020-05-12
@@ -12,21 +12,20 @@ photo:
   card: assets/img/thumbnail/vim-logo-300.png
 ---
 
-<img markdown="1" src="https://unicorn-utterances.com/static/d36f9347f2b108aa8245d47437003823/1b595/crutchcorn.png" />
+<div id="toc">
+  Spis treści
+</div>
 
-<img src="https://unicorn-utterances.com/static/d36f9347f2b108aa8245d47437003823/1b595/crutchcorn.png" />
-
-# Filozofia Vima - tryby i pliki
 Długo przymierzałem się do napisania tego artykułu, który miałby za zadanie nauczyć i zachęcić do poznania Vima. Moja prokrastynacja wynikała z niezliczonych możliwości jakie daje te narzędzie. Po kilku latach używania tego edytora nadal uczę się nowych rzeczy.<!--more--> Na początku przygody z Vimem, [dokumentacja](https://www.vim.org/docs.php) lub darmowa [książka](ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf) może być przytłaczająca. Warto natomiast poznać koncepcje na jakich został oparty edytor, i w czasie potrzeby zgłębiać wiedzę, spoglądając w instrukcję (`:help`). Dla osób które szybko się nudzą powstały gry do nauki jak [vim adventures](https://vim-adventures.com/) i [vim genius](http://www.vimgenius.com/). Bardzo dobrym źródłem wiedzy jest dostępna wraz z programem dokumentacja - vimtutor i strona z poradnikami wideo [vim casts](http://vimcasts.org/).  
 
-![img-left vim-curve](assets/img/vim/vim-learning-curve.png)
+![img-left vim-curve](assets/img/posts/vim/vim-learning-curve.png)
 Dlaczego zatem uczyć się edytora, którego korzenie sięgają 1976 roku? Odpowiedzi jest kilka w zależności od zapotrzebowania. Najważniejszą cechą wg. mnie jest efektywność. Vi (protoplasta Vim), był napisany w czasach, gdy interfejsy graficzne nie były popularne. Całą manipulacją dokumentu, trzeba było wykonywać przy pomocy klawiatury. Obsługa programu przez samą klawiaturę ma sens dzisiaj, ponieważ używanie myszki komputerowej jest nieoptymalne oraz bardziej naraża nasze nadgarstki na urazy. Program ten jest bardzo lekki (zajmuje ok. 10 MB), dzięki czemu możemy go znaleźć prawie na każdej instalacji Linuksa. Pożera też mało RAMu, szybko się otwiera nawet przy gigantycznych plikach tekstowych. Łatwość, duża możliwość konfiguracji oraz zbiór pluginów pozwala nam na dostosowanie edytora do naszych potrzeb. Vim posiada dużo zaawansowanych opcji, które ułatwią nam pisanie tekstu i oszczędzają czas. Niestety, aby skorzystać z tych benefitów musimy poznać podstawy działania, które są inne niż w typowych edytorach. 
 
 W tym artykule jak i następnym przybliżę filozofię działania Vima. Uważam, że to lepsza nauka niż próba uczenia się skrótów w losowej kolejności. 
 Będę się posługiwać konwencjami z Vima, tłumacząc jego zawiłości. Znak `c-` oznaczać będzie klawisz Control, dwukropek `:` komendę w trybie Command-line. W nawiasach okrągłych `()` będą nazwy angielskie używane przez Vima, natomiast nawiasy `{}` będą zawierać przykładowe parametry.
 
 ## Tryby pracy
-![img-right Esc-key](assets/img/vim/vim-esc.jpg)  
+![img-right Esc-key](assets/img/posts/vim/vim-esc.jpg)  
 Vim posiada [jedenaście](http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes-intro) trybów pracy poza zwykłym jakim jest wpisywanie tekstu (Insert mode). Niech ta liczba Was nie przeraża, ponieważ niektóre z nich są podobne do siebie i mało używane. Jak uruchomimy Vima to wejdziemy w tryb normalny (Normal mode). Pozwala on nam na edytowanie tekstu oraz jest punktem startowym to wszystkich innych funkcji. Prawdopodobnie stąd powstał kawał związany z trudnością wyjścia z edytora.
 
 - Normal mode - pozwala nam w łatwy sposób edytować tekst ponieważ, każdy klawisz w tym trybie może być skrótem klawiszowym. Z tego miejsca możemy dostać się do wszystkich innych trybów. Jak chcemy napisać tekst musimy wejść w tryb Insert przez:
@@ -41,7 +40,7 @@ Vim posiada [jedenaście](http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-m
 - Command-line mode - pozwala nam wywoływać komendy wpisując jej nazwę po dwukropku np. `:start` (przejście do trybu Insert). Natomiast znaki `/` i `?` służą do wyszukiwania tekstu. Ciekawostką jest możliwość wywoływania komend powłoki systemowej. Poprzedzając poleceniem bashowym wykrzyknikiem np. `!ls`, wyświetlimy listę plików w bieżącym katalogu. Używając uzupełnienia `c-d`, możemy zobaczyć pasujące polecenia.
 - Replace mode - w trybie Insert przejdziemy do niego wciskając przycisk `insert`, zachowanie tego trybu jest takie same jakbyśmy zrobili to samo w LibreOffice. Do trybu podmieniania znaków możemy też przejść z Normal mode klawiszem `R`.
 
-![img-right exit from vim](assets/img/vim/kiedy-prbujesz-wyj-z-vim.jpg)  
+![img-right exit from vim](assets/img/posts/vim/kiedy-prbujesz-wyj-z-vim.jpg)  
 
 To nie są wszystkie tryby pracy, lecz najważniejsze. Szczególnie w trybach Normal i Insert będziemy spędzać najwięcej czasu. Visual mode powinniśmy unikać. Lepiej nauczyć się używać efektywniej metod skakania po tekście w normalnym trybie.   
 Więc jak wyjść z Vima? ;) "To zależy" - jakby to odpowiedział dobry adwokat. W różnych trybach można zrobić te same operacje i to od nas zależy jaki sposób będzie wygodniejszy w danej sytuacji. Po drugie, istnieje dużo aliasów robiących to samo. Przykładowo w normalnym trybie wyjść z Vima można na kilka sposobów:
@@ -74,7 +73,7 @@ Vim dostarcza nam kilka narzędzi do zarządzania plikami. Pierwsze jakie chcia�
 - `c-w >`, `c-w <` - zwiększa, zmniejsza rozmiar okna w układzie wertykalnym
 - `c-w _` - maksymalizuje okno
 - `c-w =` - ustawia okna na takie same rozmiary
-![split windows](assets/img/vim/split-vim.png "vim split")  
+![split windows](assets/img/posts/vim/split-vim.png "vim split")  
 
 ### Karty 
 Dodatkowo Vim wspiera karty, dzięki czemu możemy mieć otwarte kilka dokumentów. 
@@ -101,5 +100,5 @@ Instalacja Vima zawiera plugin netrw, który jest przeglądarką plików. Dzięk
 - `o`, `v` - otwiera plik w poziomo `o` lub pionowo `v` podzielonym oknie  
 
 Jest to pierwsza część dotycząca podstaw w używaniu najlepszego na świecie edytora tekstowego. :> Nie będę na razie opisywać takich funkcji jak zwijanie i porównywanie napisów, bufory, makra i podświetlanie kodu. Warto jednak wiedzieć, że takie funkcje są dostępne. Zapraszam jednak do przeczytania [drugiej](http://www.miroslaw.ovh/filozofia-vima-edycja) części. Opisuję w niej najważniejszą (i trudniejszą) funkcję jaką mają edytory tekstowe. Tak zgadliście mówię o manipulowaniem tekstu. :D
-![madness](assets/img/vim/this-is-vim.jpg)  
+![madness](assets/img/posts/vim/this-is-vim.jpg)  
   

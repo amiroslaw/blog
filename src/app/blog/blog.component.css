@@ -66,9 +66,15 @@ footer .copyright {
   padding: 25px 35px; }
 
 
+article.post iframe {
+  display: block;
+  margin: 0 auto;
+}
+
 article.post img {
   display: block;
   margin: 2% auto;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
   article.post .img-left {
@@ -92,7 +98,10 @@ article.post img {
   }
 }
 
-article.post iframe {
-  display: block;
-  margin: 0 auto;
+.medium-zoom-overlay {
+  background-color: var(--background) !important;
+  z-index: 2;
+}
+.medium-zoom-image--opened {
+  z-index: 3;
 }

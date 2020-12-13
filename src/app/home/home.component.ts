@@ -2,6 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {ScullyRoute, ScullyRoutesService} from '@scullyio/ng-lib';
 import {map} from 'rxjs/operators';
 import {ActivatedRoute} from '@angular/router';
+import { faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
+import { faTags} from '@fortawesome/free-solid-svg-icons';
+
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +15,8 @@ import {ActivatedRoute} from '@angular/router';
 export class HomeComponent implements OnInit {
   posts$;
 
-  constructor(private activatedRoute: ActivatedRoute, private scully: ScullyRoutesService) {
+  constructor(private activatedRoute: ActivatedRoute, private scully: ScullyRoutesService, library: FaIconLibrary) {
+    library.addIcons(faTags, faCalendarAlt);
   }
 
   ngOnInit(): void {

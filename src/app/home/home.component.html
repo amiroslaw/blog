@@ -30,12 +30,12 @@
               <!--  post-meta -->
               <div class="post-meta  mt-2">
                 <div>
-                  <i class="far fa-calendar-alt"></i>
+                  <fa-icon [icon]="['far', 'calendar-alt']" class="mr-1"></fa-icon>
                   <time datetime="post.date">{{post.date | date}}</time>
                 </div>
                 <div *ngIf="post.tags">
-                  <i class="fas fa-folder-open" aria-hidden="true"></i>
-                  <a href="" *ngFor="let tag of post.tags"> {{tag}}  </a>
+                  <fa-icon [icon]="['fas', 'tags']" aria-hidden="true"></fa-icon>
+                  <a href="" *ngFor="let tag of post.tags"> {{tag}} </a>
                 </div>
               </div>
             </div>

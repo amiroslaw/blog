@@ -105,3 +105,11 @@ article.post img {
 .medium-zoom-image--opened {
   z-index: 3;
 }
+
+#toc {
+  margin: auto;
+  max-width: 40%;
+}
+#toc > div {
+  text-transform: uppercase;
+}

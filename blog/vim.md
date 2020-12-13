@@ -12,8 +12,8 @@ photo:
   card: assets/img/thumbnail/vim-logo-300.png
 ---
 
-<div id="toc">
-  Spis treści
+<div id="toc" >
+  <div>Spis treści:</div>
 </div>
 
 Długo przymierzałem się do napisania tego artykułu, który miałby za zadanie nauczyć i zachęcić do poznania Vima. Moja prokrastynacja wynikała z niezliczonych możliwości jakie daje te narzędzie. Po kilku latach używania tego edytora nadal uczę się nowych rzeczy.<!--more--> Na początku przygody z Vimem, [dokumentacja](https://www.vim.org/docs.php) lub darmowa [książka](ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf) może być przytłaczająca. Warto natomiast poznać koncepcje na jakich został oparty edytor, i w czasie potrzeby zgłębiać wiedzę, spoglądając w instrukcję (`:help`). Dla osób które szybko się nudzą powstały gry do nauki jak [vim adventures](https://vim-adventures.com/) i [vim genius](http://www.vimgenius.com/). Bardzo dobrym źródłem wiedzy jest dostępna wraz z programem dokumentacja - vimtutor i strona z poradnikami wideo [vim casts](http://vimcasts.org/).  

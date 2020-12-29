@@ -1,12 +1,14 @@
 import {ScullyConfig, setPluginConfig} from '@scullyio/scully';
 import {getTocPlugin, TocConfig} from 'scully-plugin-toc';
 
-// require('@notiz/scully-plugin-medium-zoom');
-//   'mediumZoom'
+import './scully/plugins/emoji.js';
+require('@notiz/scully-plugin-medium-zoom');
 // 'seoHrefOptimise',
 // 'lazyImages',
 const defaultPostRenderers = [
   'toc',
+  'emoji',
+  'mediumZoom',
 ];
 
 const tocOptions: TocConfig = {

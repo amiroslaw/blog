@@ -1,1 +1,35 @@
-<p>footer works!</p>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-10 col-md-4 mx-auto">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="mailto:ar.miroslaw@gmail.com">
+              <fa-layers size="3x">
+                <fa-icon [icon]="['fas', 'circle']"></fa-icon>
+                <fa-icon [inverse]="true" [icon]="['fas', 'envelope']" transform="shrink-6"></fa-icon>
+              </fa-layers>
+            </a>
+
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/arkadiusz-miroslaw/" target="_blank" rel="noopener noreferrer">
+              <fa-layers size="3x">
+                <fa-icon [icon]="['fas', 'circle']"></fa-icon>
+                <fa-icon [inverse]="true" [icon]="['fab', 'linkedin-in']" transform="shrink-6"></fa-icon>
+              </fa-layers>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/amiroslaw" target="_blank" rel="noopener noreferrer">
+              <fa-layers size="3x">
+                <fa-icon [icon]="['fas', 'circle']"></fa-icon>
+                <fa-icon [inverse]="true" [icon]="['fab', 'github']" transform="shrink-6"></fa-icon>
+              </fa-layers>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; {{currentYear}}</p>
+      </div>
+    </div>
+  </div>
+</footer>

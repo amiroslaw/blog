@@ -4,13 +4,10 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-
           <h1>
             Blog programistyczny
           </h1>
-
           <!--                        <span class="subheading">A Blog Theme by Start Bootstrap</span>-->
-
         </div>
       </div>
     </div>
@@ -27,7 +24,6 @@
               <a [routerLink]="post.route" *ngIf=" post.photo && (post.photo.header || post.photo.card)">
                 <img class="img-thumbnail" [src]="post.photo.card || post.photo.header" alt="thumbnail"/>
               </a>
-              <!--  post-meta -->
               <div class="post-meta  mt-2">
                 <div>
                   <fa-icon [icon]="['far', 'calendar-alt']" class="mr-1"></fa-icon>
@@ -39,7 +35,6 @@
                 </div>
               </div>
             </div>
-            <!--                        post  -->
             <div class="col-md-7 col-12 ">
               <h2 class="post-title text-center">
                 <a [routerLink]="post.route">

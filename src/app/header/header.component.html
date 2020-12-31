@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" *ngFor="let route of getRoutesNavigation() | keyvalue">
+        <li class="nav-item" *ngFor="let route of routesNavigation | keyvalue: originalOrder">
           <a routerLink="{{route.key}}" routerLinkActive="active">{{route.value}}</a>
         </li>
       </ul>

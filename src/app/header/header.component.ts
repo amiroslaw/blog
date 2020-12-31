@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {ScullyRoute, ScullyRoutesService} from '@scullyio/ng-lib';
 import {RouteService} from '../services/route.service';
+import {KeyValue} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,7 @@ export class HeaderComponent implements OnInit {
   headerTitle: string;
   routeInfo$: Observable<ScullyRoute> = this.scully.getCurrent();
   photo: string;
+  routesNavigation: Map<string, string>;
 
   constructor(private scully: ScullyRoutesService) {
     this.isCollapsed = true;
@@ -24,10 +26,14 @@ export class HeaderComponent implements OnInit {
       this.photo = this.getPhoto(routeInfo);
     });
 
-    this.scully.allRoutes$.subscribe((e) => console.log(e));
+    this.routesNavigation = this.getRoutesNavigation();
   }
 
-  getRoutesNavigation(): Map<string, string> {
+  originalOrder = (a: KeyValue<string, string>, b: KeyValue<string, string>): number => {
+    return 0;
+  }
+
+  private getRoutesNavigation(): Map<string, string> {
     const routesNavigation = new Map(RouteService.routesName);
     routesNavigation.delete('/home');
     console.log(routesNavigation);

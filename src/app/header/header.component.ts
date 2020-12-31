@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {ScullyRoute, ScullyRoutesService} from '@scullyio/ng-lib';
+import {RouteService} from '../services/route.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +10,63 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   isCollapsed: boolean;
+  headerTitle: string;
+  routeInfo$: Observable<ScullyRoute> = this.scully.getCurrent();
+  photo: string;
 
-  constructor() {
+  constructor(private scully: ScullyRoutesService) {
     this.isCollapsed = true;
   }
 
   ngOnInit(): void {
+    this.routeInfo$.subscribe((routeInfo) => {
+      this.headerTitle = this.getHeaderTitle(routeInfo);
+      this.photo = this.getPhoto(routeInfo);
+    });
+
+    this.scully.allRoutes$.subscribe((e) => console.log(e));
   }
 
+  getRoutesNavigation(): Map<string, string> {
+    const routesNavigation = new Map(RouteService.routesName);
+    routesNavigation.delete('/home');
+    console.log(routesNavigation);
+    return routesNavigation;
+  }
+
+  private getHeaderTitle(routeInfo): string {
+    if (!routeInfo) {
+      return RouteService.BLOG_ROUTE_NAME;
+    }
+
+    const route = routeInfo.route;
+    if (route.includes('/blog/')) {
+      return routeInfo.title;
+    } else {
+      return this.getRouteName(route);
+    }
+  }
+
+  private getPhoto(routeInfo): string {
+    const defaultPhoto = 'assets/img/sites/home-bg.jpg';
+    if (!routeInfo) {
+      return defaultPhoto;
+    }
+
+    const route = routeInfo.route;
+    if (route.includes('/blog/') && routeInfo.photo.header) {
+      return routeInfo.photo.header;
+    } else {
+      return defaultPhoto;
+    }
+  }
+
+  private getRouteName(route: string): string {
+    if (RouteService.routesName.has(route)) {
+      return RouteService.routesName.get(route);
+    } else {
+      return RouteService.routesName.get(RouteService.HOME_ROUTE);
+    }
+  }
 }
+

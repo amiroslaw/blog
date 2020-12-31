@@ -8,20 +8,26 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a routerLink="/blog" routerLinkActive="active">Blog</a>
+        <li class="nav-item" *ngFor="let route of getRoutesNavigation() | keyvalue">
+          <a routerLink="{{route.key}}" routerLinkActive="active">{{route.value}}</a>
         </li>
-        <li class="nav-item">
-          <a routerLink="/about" routerLinkActive="active">O mnie</a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
-        </li>
-
-        <!--        <li class="nav-item" >-->
-        <!--                  <a routerLink="/about" routerLinkActive="active">Kontakt</a>-->
-        <!--      </li>-->
       </ul>
     </div>
   </div>
 </nav>
+
+<header class="masthead" [ngStyle]="{backgroundImage:'url('+photo+')'}">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>
+            {{headerTitle}}
+          </h1>
+          <!--                        <span class="subheading">A Blog Theme by Start Bootstrap</span>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

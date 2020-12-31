@@ -1,9 +1,12 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 
 import {BlogComponent} from './blog.component';
+import {HomeComponent} from '../home/home.component';
 
 const routes: Routes = [
+//TODO redirect to something else
+  {path: '', component: HomeComponent},
   {
     path: ':slug',
     component: BlogComponent,
@@ -18,5 +21,6 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class BlogRoutingModule {}
+export class BlogRoutingModule {
+}
 

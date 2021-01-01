@@ -36,7 +36,6 @@ export class HeaderComponent implements OnInit {
   private getRoutesNavigation(): Map<string, string> {
     const routesNavigation = new Map(RouteService.routesName);
     routesNavigation.delete('/home');
-    console.log(routesNavigation);
     return routesNavigation;
   }
 

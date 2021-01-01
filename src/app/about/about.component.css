@@ -92,4 +92,6 @@ skills bar  ====================================================================
 #devicons img:hover {
   background: #17A2B8;
 }
-
+#technologies .card-body div.collapse li {
+  font-size: 18px;
+}

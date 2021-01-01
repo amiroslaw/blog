@@ -43,42 +43,14 @@
         <div class="card" id="skills">
           <div class="card-header">Umiejętności</div>
           <div class="card-body">
-            <div class="skillbar clearfix " ngbTooltip="Android, Spring Boot, JavaFX" data-percent="75%" placement="top"
-            >
-              <div class="skillbar-title" style="background: #27ae60;">Java</div>
-              <div @expand class="skillbar-bar" style="background: #2ecc71;"></div>
-              <div class="skill-bar-percent">75%</div>
-            </div>
-            <!-- End Skill Bar -->
-            <div class="skillbar clearfix " ngbTooltip="Hibernate, SQLite, ORMLite, MySql" data-percent="60%"
-            >
-              <div class="skillbar-title" style="background: #2980b9;">SQL</div>
-              <div class="skillbar-bar" style="background: #3498db;"></div>
-              <div class="skill-bar-percent">60%</div>
-            </div>
-            <!-- End Skill Bar -->
-            <div class="skillbar clearfix " ngbTooltip="jUnit, Mockito" data-percent="40%">
-              <div class="skillbar-title" style="background: #46465e;">Testing</div>
-              <div class="skillbar-bar" style="background: #5a68a5;"></div>
-              <div class="skill-bar-percent">40%</div>
-            </div>
-            <!-- End Skill Bar -->
-            <div class="skillbar clearfix " ngbTooltip="Bootstrap 4" data-percent="55%">
-              <div class="skillbar-title" style="background: #d35400;">HTML5 CSS3</div>
-              <div class="skillbar-bar" style="background: #e67e22;"></div>
-              <div class="skill-bar-percent">55%</div>
-            </div>
-            <!-- End Skill Bar -->
-            <div class="skillbar clearfix " ngbTooltip="jQuery" data-percent="30%">
-              <div class="skillbar-title" style="background: #FFA000;">Java Script</div>
-              <div class="skillbar-bar" style="background: #FFC107;"></div>
-              <div class="skill-bar-percent">30%</div>
-            </div>
-            <!-- End Skill Bar -->
-            <div class="skillbar clearfix " ngbTooltip="Construct" data-percent="60%">
-              <div class="skillbar-title" style="background: #7B1FA2;">Construct</div>
-              <div class="skillbar-bar" style="background: #9C27B0;"></div>
-              <div class="skill-bar-percent">60%</div>
+            <div class="skill" *ngFor="let skill of skills">
+              <div class="skillbar clearfix " ngbTooltip="{{skill.tooltip}}" data-percent="{{skill.skillLevel}}%"
+                   placement="top">
+                <div class="skillbar-title" [ngStyle]="{'background': skill.titleColor}">{{skill.name}}</div>
+                <div class="skillbar-bar" [ngStyle]="{'background': skill.barColor, width: skill.skillLevel + '%'}"
+                     [@expand]="{value: skill.name, params: {barWidth: skill.skillLevel}}"></div>
+                <div class="skill-bar-percent">{{skill.skillLevel}}%</div>
+              </div>
             </div>
           </div>
         </div>

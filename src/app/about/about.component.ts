@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import {animate, style, transition, trigger} from '@angular/animations';
+import {Skill} from './skill.model';
 
 @Component({
   selector: 'app-about',
@@ -8,16 +9,15 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   animations: [
     trigger('expand', [
       transition(':enter', [
-        animate(6000, style({width: '88%'})),
-      ])
+        style({width: '8%'}),
+        animate(6000, style({width: '{{barWidth}}%'}))
+      ], {params: {barWidth: 33}})
     ])
   ]
 })
 export class AboutComponent implements OnInit {
   public isTechnologyDescriptionCollapsed = true;
-
-  constructor() {
-  }
+  skills: Array<Skill> = Skill.skills;
 
   ngOnInit(): void {
   }

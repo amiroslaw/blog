@@ -16,12 +16,12 @@ photo:
   <div>Spis treści:</div>
 </div>
 
-# Filozofia Vima - edycja
 Jest to druga część dotycząca podstaw w używaniu edytora tekstowego Vim. Pierwszą opisującą tryby i zarządzanie plikami można przeczytać [tutaj](blog/filozofia-vima-tryby-i-pliki). 
 
 Najistotniejsze co trzeba zrozumieć w używaniu Vima jest to, że zachowuje się on jak język programowania. :)
 
 Edytowanie i poruszanie oparte jest na komendach (commands), które operują na obiektach (text objects) lub określonym ruchu (motions). Dodatkowo taki zestaw możemy poprzedzić ilością powtórzeń. Ważne do zaznaczenie jest to, że wszystkie wymienione wcześniej funkcje są odseparowane od siebie. 
+
 ## Poruszanie 
 Dużą zaletą Vima jest mnogość operacji pozwalających na efektywne przemieszczenie kursora. Możemy zapomnieć o używaniu myszki i syndromie RSI. Poniższe skróty działają w normalnym trybie. 
 
@@ -74,7 +74,7 @@ Gratuluję wytrwałości, jak dotrwałeś do tego miejsca. Mam dobrą wiadomoś�
 - `~` (`gUl` i `gul`) - (tylda) zamiana wielkości znaku spod kursora
 - `r{x}` - działa jak `cl`, jednak pozostaje w Normal mode. Zamienia znak na pozycji kursora na wybrany znak
 
-![img-right img-25](assets/img/posts/vim/smart-guy-300x300.jpg)
+![img-right img-25](assets/img/posts/memy/smart-guy-300x300.jpg)
 Jestem Wam winien wyjaśnienie, dlaczego operacje `d` (delete) przetłumaczyłem na wycinanie. Vim domyślnie niczego nie kasuje, komendy takie jak `d`, `c`, `S` przenoszą tekst do rejestru.  
 Vim przechowuje historie wyciętego tekstu w rejestrach pod cyframi 1-9. Jeśli usunęliśmy dwa różne stringi i chcemy wkleić ten pierwszy, to musimy wywołać rejestr o cyfrze 2 przez `"2`, aby wkleić dodajemy jeszcze literkę p (paste) - `"2p`. Dodatkowo po kolejnych wyciętych obiektach, tekst przesuwa się do rejestrów o wyższych numeracjach. Następną sprawą jest fakt, iż skopiowany tekst (`y`) posiada specjalny rejestr 0.  
 

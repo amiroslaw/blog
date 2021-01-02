@@ -5,67 +5,71 @@
         <a class="portfolio-link" target="_blank" href="http://philippadalton.uk/">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-link fa-3x"></i>
+              <fa-icon [icon]="['fas', 'link']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/philippa_site_small.png" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/philippa_site_small.png" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Philipa Dalton</h4>
           <p class="text-muted">Strona dla nauczyciela</p>
         </div>
       </div>
+
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+        <a class="portfolio-link" (click)="openModal(landingPage)">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-plus fa-3x"></i>
+              <fa-icon [icon]="['fas', 'plus']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/elearning_small.png" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/elearning_small.png" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Landing page</h4>
           <p class="text-muted">Platformy edukacyjnej</p>
         </div>
       </div>
+
       <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" target="_blank" href="http://zespol-nostress.pl/">
           <!--          to switch to modal version change target to data-toggle   <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">-->
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-link fa-3x"></i>
+              <fa-icon [icon]="['fas', 'link']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/nostress_small.jpg" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/nostress_small.jpg" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>NoStress</h4>
           <p class="text-muted">Strona dla zespołu muzycznego</p>
         </div>
       </div>
+
       <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-plus fa-3x"></i>
+              <fa-icon [icon]="['fas', 'plus']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/games/wisielec_food_small.png" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/games/wisielec_food_small.png" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Zgadywanka</h4>
           <p class="text-muted">Gra edukacyjna - wisielec</p>
         </div>
       </div>
+
       <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-plus fa-3x"></i>
+              <fa-icon [icon]="['fas', 'plus']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/games/wpisz_animal_small.png" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/games/wpisz_animal_small.png" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Type Fast</h4>
@@ -76,10 +80,10 @@
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-plus fa-3x"></i>
+              <fa-icon [icon]="['fas', 'plus']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/games/platforma_small.png" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/games/platforma_small.png" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Alien</h4>
@@ -90,7 +94,6 @@
     </div>
     <!--   end row   -->
 
-
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Programy i aplikacje</h2>
@@ -98,17 +101,16 @@
       </div>
     </div>
 
-
     <div class="row">
 
       <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-plus fa-3x"></i>
+              <fa-icon [icon]="['fas', 'plus']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/languide_small.png" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/languide_small.png" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Languide</h4>
@@ -117,28 +119,28 @@
       </div>
 
       <div class="col-md-4 col-sm-6 portfolio-item">
-<!--        <a class="portfolio-link" target="_blank" href="https://github.com/amiroslaw/Gamification-android">-->
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+        <!--        <a class="portfolio-link" target="_blank" href="https://github.com/amiroslaw/Gamification-android">-->
+        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <fa-icon [icon]="['fas', 'plus']" size="3x"></fa-icon>
             </div>
-            <img class="img-fluid" src="img/portfolio/android_small.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Gamification for Android</h4>
-            <p class="text-muted">Aplikacja motywacyjna, która używa metody "grywalizacji".</p>
           </div>
+          <img class="img-fluid" src="assets/img/portfolio/android_small.jpg" alt="">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Gamification for Android</h4>
+          <p class="text-muted">Aplikacja motywacyjna, która używa metody "grywalizacji".</p>
+        </div>
       </div>
       <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" target="_blank" href="https://github.com/amiroslaw/review">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-link fa-3x"></i>
+              <fa-icon [icon]="['fas', 'link']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/restful_small.png" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/restful_small.png" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Review</h4>
@@ -149,10 +151,10 @@
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-plus fa-3x"></i>
+              <fa-icon [icon]="['fas', 'plus']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/chart_eportfel_small.png" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/chart_eportfel_small.png" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>ePortfel</h4>
@@ -164,10 +166,10 @@
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <i class="fas fa-plus fa-3x"></i>
+              <fa-icon [icon]="['fas', 'plus']" size="3x"></fa-icon>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/draw_grywalizacja_small.png" alt="">
+          <img class="img-fluid" src="assets/img/portfolio/draw_grywalizacja_small.png" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Grywalizacja</h4>
@@ -180,38 +182,38 @@
   </div>
 
   <!-- Portfolio Modals -->
-  <!-- Modal 1 zdobywcy wiedzy-->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" data-backdrop="true" role="dialog" aria-hidden="true">
-    <!-- <div class="modal-dialog modal-lg mx-auto" role="document"> -->
-    <div class="modal-dialog mx-auto" role="document">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
+
+  <ng-template #landingPage let-modal class="portfolio-modal">
+    <div class="portfolio-modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Zdobywcy wiedzy</h2>
+        <div class="close-modal" aria-label="Close" (click)="modal.dismiss()">
           <div class="lr">
             <div class="rl"></div>
           </div>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Zdobywcy wiedzy</h2>
-                <p class="item-intro text-muted">Landing page dla platformy edukacyjnej.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/zdobywcy_all.png" alt="">
-                <p>Nieaktualna już strona platformy edukacyjnej
-                  <a href="https://zdobywcywiedzy.pl/">Zdobywcy wiedzy</a>. Niestety nie mogę pokazać funkcjonalności strony.</p>
-                <button class="btn btn-theme btn-info" data-dismiss="modal" type="button">
-                  <i class="fa fa-times"></i> Zamknij</button>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <p class="item-intro text-muted">Landing page dla platformy edukacyjnej.</p>
+
+      <div class="modal-body mx-auto">
+        <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/zdobywcy_all.png" alt="">
+        <p>Nieaktualna już strona platformy edukacyjnej
+          <a href="https://zdobywcywiedzy.pl/">Zdobywcy wiedzy</a>. Niestety nie mogę pokazać
+          funkcjonalności strony.</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-theme btn-info" type="button" (click)="modal.dismiss()">
+          <fa-icon [icon]="['fas', 'times']"></fa-icon>
+          Zamknij
+        </button>
       </div>
     </div>
-  </div>
+  </ng-template>
 
   <!-- Modal 2 wisielec -->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" data-backdrop="true" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" data-backdrop="true" role="dialog"
+       aria-hidden="true">
     <!-- <div class="modal-dialog modal-lg mx-auto" role="document"> -->
     <div class="modal-dialog mx-auto" role="document">
       <div class="modal-content">
@@ -227,13 +229,15 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Zgadywanka</h2>
                 <p class="item-intro text-muted">Gra edukacyja - wisielec.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/games/wisielec_menu.png" alt="">
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/games/wisielec_food_full.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/games/wisielec_menu.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/games/wisielec_food_full.png" alt="">
                 <p>Gra dla platformy edukacyjnej
                   <a href="https://zdobywcywiedzy.pl/">Zdobywcy wiedzy</a>
                 </p>
                 <button class="btn btn-theme btn-info" data-dismiss="modal" type="button">
-                  <i class="fa fa-times"></i> Zamknij</button>
+                  <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                  Zamknij
+                </button>
               </div>
             </div>
           </div>
@@ -243,7 +247,8 @@
   </div>
 
   <!-- Modal 3 wpisz -->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" data-backdrop="true" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" data-backdrop="true" role="dialog"
+       aria-hidden="true">
     <!-- <div class="modal-dialog modal-lg mx-auto" role="document"> -->
     <div class="modal-dialog mx-auto" role="document">
       <div class="modal-content">
@@ -259,13 +264,15 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Type Fast</h2>
                 <p class="item-intro text-muted">Gra edukacyja ćwicząca pisanie słówek.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/games/wpisz_game.png" alt="">
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/games/wpisz_animal_full.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/games/wpisz_game.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/games/wpisz_animal_full.png" alt="">
                 <p>Gra dla platformy edukacyjnej
                   <a href="https://zdobywcywiedzy.pl/">Zdobywcy wiedzy</a>
                 </p>
                 <button class="btn btn-theme btn-info" data-dismiss="modal" type="button">
-                  <i class="fa fa-times"></i> Zamknij</button>
+                  <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                  Zamknij
+                </button>
               </div>
             </div>
           </div>
@@ -275,7 +282,8 @@
   </div>
 
   <!-- Modal 4 platforma -->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" data-backdrop="true" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" data-backdrop="true" role="dialog"
+       aria-hidden="true">
     <!-- <div class="modal-dialog modal-lg mx-auto" role="document"> -->
     <div class="modal-dialog mx-auto" role="document">
       <div class="modal-content">
@@ -291,13 +299,15 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Alien</h2>
                 <p class="item-intro text-muted">Platformowa gra edukacyja.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/games/platforma_menu.png" alt="">
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/games/platforma_game.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/games/platforma_menu.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/games/platforma_game.png" alt="">
                 <p>Gra dla platformy edukacyjnej
                   <a href="https://zdobywcywiedzy.pl/">Zdobywcy wiedzy</a>
                 </p>
                 <button class="btn btn-theme btn-info" data-dismiss="modal" type="button">
-                  <i class="fa fa-times"></i> Zamknij</button>
+                  <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                  Zamknij
+                </button>
               </div>
             </div>
           </div>
@@ -307,7 +317,8 @@
   </div>
 
   <!-- Modal 5 lanuide -->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" data-backdrop="true" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" data-backdrop="true" role="dialog"
+       aria-hidden="true">
     <!-- <div class="modal-dialog modal-lg mx-auto" role="document"> -->
     <div class="modal-dialog mx-auto" role="document">
       <div class="modal-content">
@@ -323,9 +334,11 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Languide</h2>
                 <p class="item-intro text-muted">Web application for learning foreign languages.</p>
-                <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/.png" alt=""> -->
-                <p>The web application for learning foreign languages. The application easily compares the texts from two
-                  languages sentence by sentence. This note could have tags and can be saved in a notebook. You can create
+                <!-- <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/.png" alt=""> -->
+                <p>The web application for learning foreign languages. The application easily compares the texts from
+                  two
+                  languages sentence by sentence. This note could have tags and can be saved in a notebook. You can
+                  create
                   a dictionary from select words.
                   <br>
                   <strong>Notice</strong>: This app is in developer stage.</p>
@@ -340,7 +353,8 @@
                 </ul>
                 <p>This app won't have translation option.</p>
                 <h3>Used technology</h3>
-                <p>Spring Boot, Spring MVC, Spring Security, Java 8, Hibernate, H2 database, JUnit, Mockito, Project Lombok,
+                <p>Spring Boot, Spring MVC, Spring Security, Java 8, Hibernate, H2 database, JUnit, Mockito, Project
+                  Lombok,
                   thymeleaf, Bootstrap 4, wordnik API</p>
 
                 <ul class="list-inline text-center">
@@ -362,7 +376,9 @@
                   </li>
                 </ul>
                 <button class="btn btn-theme btn-info" data-dismiss="modal" type="button">
-                  <i class="fa fa-times"></i> Zamknij</button>
+                  <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                  Zamknij
+                </button>
               </div>
             </div>
           </div>
@@ -371,9 +387,9 @@
     </div>
   </div>
 
-
   <!-- Modal 6  -->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" data-backdrop="true" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" data-backdrop="true" role="dialog"
+       aria-hidden="true">
     <!-- <div class="modal-dialog modal-lg mx-auto" role="document"> -->
     <div class="modal-dialog mx-auto" role="document">
       <div class="modal-content">
@@ -389,9 +405,10 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Gamification for Android</h2>
                 <p class="item-intro text-muted"></p>
-                <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/.png" alt=""> -->
+                <!-- <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/.png" alt=""> -->
                 <p>The motivational application uses the "
-                  <a href="https://en.wikipedia.org/wiki/Gamification" rel="nofollow">gamification</a>" method. The program was written in Android.</p>
+                  <a href="https://en.wikipedia.org/wiki/Gamification" rel="nofollow">gamification</a>" method. The
+                  program was written in Android.</p>
                 <h3>Features:</h3>
                 <ul class="contains-task-list">
                   <li> creating a deck of cards</li>
@@ -401,10 +418,12 @@
                   <li> help</li>
                 </ul>
                 <h3>Used technology and libraries</h3>
-                <p>SQLite, ORMLite, butterknife, junit, espresso test, picasso The application was written in the MVP pattern.</p>
+                <p>SQLite, ORMLite, butterknife, junit, espresso test, picasso The application was written in the MVP
+                  pattern.</p>
                 <a href="https://github.com/amiroslaw/Gamification-android" target="_blank">
                   <button class="btn btn-theme btn-info">
-                    <i class="fab fa-github"></i> GitHub</button>
+                    <i class="fab fa-github"></i> GitHub
+                  </button>
                 </a>
               </div>
             </div>
@@ -415,7 +434,8 @@
   </div>
 
   <!-- Modal 7  -->
-  <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" data-backdrop="true" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" data-backdrop="true" role="dialog"
+       aria-hidden="true">
     <!-- <div class="modal-dialog modal-lg mx-auto" role="document"> -->
     <div class="modal-dialog mx-auto" role="document">
       <div class="modal-content">
@@ -431,10 +451,12 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">e-Wallet</h2>
                 <p class="item-intro text-muted">Electronic wallet created in JavaFX technology</p>
-                <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/.png" alt=""> -->
-                <p>The electronic wallet was created using javaFX technology. Use it to manage your personal accounts. The
+                <!-- <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/.png" alt=""> -->
+                <p>The electronic wallet was created using javaFX technology. Use it to manage your personal accounts.
+                  The
                   application implements a
-                  <a href="https://en.wikipedia.org/wiki/Double-entry_bookkeeping_system" rel="nofollow">Double-entry bookkeeping system</a>. The program is cross-platform software, built in Java 8</p>
+                  <a href="https://en.wikipedia.org/wiki/Double-entry_bookkeeping_system" rel="nofollow">Double-entry
+                    bookkeeping system</a>. The program is cross-platform software, built in Java 8</p>
                 <h3>Features:</h3>
                 <ul class="contains-task-list">
                   <li>creating a wallet</li>
@@ -449,7 +471,8 @@
                   <br> The application was written in MVC pattern.</p>
                 <a href="https://github.com/amiroslaw/ePortfel" target="_blank">
                   <button class="btn btn-theme btn-info">
-                    <i class="fab fa-github"></i> GitHub</button>
+                    <i class="fab fa-github"></i> GitHub
+                  </button>
                 </a>
               </div>
             </div>
@@ -460,7 +483,8 @@
   </div>
 
   <!-- Modal 8  -->
-  <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" data-backdrop="true" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" data-backdrop="true" role="dialog"
+       aria-hidden="true">
     <!-- <div class="modal-dialog modal-lg mx-auto" role="document"> -->
     <div class="modal-dialog mx-auto" role="document">
       <div class="modal-content">
@@ -475,8 +499,9 @@
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Gamification</h2>
-                <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/.png" alt=""> -->
-                <p>The motivational application uses the "<a href="https://en.wikipedia.org/wiki/Gamification" rel="nofollow">gamification</a>" method.
+                <!-- <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/.png" alt=""> -->
+                <p>The motivational application uses the "<a href="https://en.wikipedia.org/wiki/Gamification"
+                                                             rel="nofollow">gamification</a>" method.
                   The program was written in Java 8 and JavaFX technology.</p>
                 <h3>Features:</h3>
                 <ul class="contains-task-list">
@@ -490,7 +515,8 @@
                   The application was written in the MVC pattern.</p>
                 <a href="https://github.com/amiroslaw/grywalizacja" target="_blank">
                   <button class="btn btn-theme btn-info">
-                    <i class="fab fa-github"></i> GitHub</button>
+                    <i class="fab fa-github"></i> GitHub
+                  </button>
                 </a>
               </div>
             </div>
@@ -499,8 +525,6 @@
       </div>
     </div>
   </div>
-
-
 
 </section>
 

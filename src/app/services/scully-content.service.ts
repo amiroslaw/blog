@@ -32,7 +32,7 @@ export class ScullyContentService {
   }
 
   getCurrent(): Observable<ScullyRoute> {
- return        this.scully.getCurrent();
+    return this.scully.getCurrent();
   }
 
   latestBlogPost(): Observable<ScullyRoute> {

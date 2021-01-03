@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
-import {ScullyRoute, ScullyRoutesService} from '@scullyio/ng-lib';
+import {ScullyRoute} from '@scullyio/ng-lib';
 import {RouteService} from '../services/route.service';
 import {KeyValue} from '@angular/common';
+import {ScullyContentService} from '../services/scully-content.service';
 
 @Component({
   selector: 'app-header',
@@ -12,11 +13,11 @@ import {KeyValue} from '@angular/common';
 export class HeaderComponent implements OnInit {
   isCollapsed: boolean;
   headerTitle: string;
-  routeInfo$: Observable<ScullyRoute> = this.scully.getCurrent();
+  routeInfo$: Observable<ScullyRoute> = this.contentService.getCurrent();
   photo: string;
   routesNavigation: Map<string, string>;
 
-  constructor(private scully: ScullyRoutesService) {
+  constructor(private contentService: ScullyContentService) {
     this.isCollapsed = true;
   }
 
@@ -31,7 +32,7 @@ export class HeaderComponent implements OnInit {
 
   originalOrder = (a: KeyValue<string, string>, b: KeyValue<string, string>): number => {
     return 0;
-  }
+  };
 
   private getRoutesNavigation(): Map<string, string> {
     const routesNavigation = new Map(RouteService.routesName);

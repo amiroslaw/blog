@@ -1,11 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {ScullyRoute, ScullyRoutesService} from '@scullyio/ng-lib';
-import {map} from 'rxjs/operators';
-import {ActivatedRoute} from '@angular/router';
-import { faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
-import { faTags} from '@fortawesome/free-solid-svg-icons';
+import {faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
+import {faTags} from '@fortawesome/free-solid-svg-icons';
 
-import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
+import {ScullyContentService} from '../services/scully-content.service';
 
 @Component({
   selector: 'app-home',
@@ -15,16 +13,11 @@ import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 export class HomeComponent implements OnInit {
   posts$;
 
-  constructor(private activatedRoute: ActivatedRoute, private scully: ScullyRoutesService, library: FaIconLibrary) {
+  constructor(private scullyContentService: ScullyContentService, library: FaIconLibrary) {
     library.addIcons(faTags, faCalendarAlt);
   }
 
   ngOnInit(): void {
-
-    this.posts$ = this.scully.available$.pipe(map(routeList => {
-        return routeList
-        .filter((route: ScullyRoute) => route.route.startsWith(`/blog/`));
-    }));
+    this.posts$ = this.scullyContentService.blogPosts();
   }
 }
-

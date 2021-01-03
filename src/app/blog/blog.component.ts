@@ -1,6 +1,4 @@
 import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {Observable} from 'rxjs';
-import {ScullyRoute, ScullyRoutesService} from '@scullyio/ng-lib';
 
 import mediumZoom from 'medium-zoom';
 
@@ -13,9 +11,8 @@ import mediumZoom from 'medium-zoom';
 
 })
 export class BlogComponent implements OnInit, AfterViewInit {
-  content$: Observable<ScullyRoute> = this.scully.getCurrent();
 
-  constructor(private scully: ScullyRoutesService) {
+  constructor() {
   }
 
   ngOnInit(): void {

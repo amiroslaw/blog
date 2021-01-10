@@ -9,13 +9,8 @@ const routes: Routes = [
   {path: 'blog/', redirectTo: '/blog', pathMatch: 'full'},
   {path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)},
   {path: 'portfolio', loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)},
-  // {path: '404', loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)},
-  // {path: '**', redirectTo: '/404', pathMatch: 'full'}
-  // {path: 'autor/portfolio', redirectTo: '/404', pathMatch: 'full'},
   {path: 'autor/portfolio', loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)},
-  // {path: '**', loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)},
   {path: '404', component: NotFoundComponent},
-  // {path: '**', component: NotFoundComponent}
   {path: '**', redirectTo: '/404'}
 
 ];

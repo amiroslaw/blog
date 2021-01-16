@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: 'portfolio', loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)},
   {path: 'autor/portfolio', loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)},
   {path: '404', component: NotFoundComponent},
-  {path: '**', redirectTo: '/404'}
-
+  {path: '**', component: NotFoundComponent},
+  // {path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({

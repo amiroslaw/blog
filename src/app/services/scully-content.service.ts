@@ -39,8 +39,41 @@ export class ScullyContentService {
     return this.blogPosts().pipe(map((posts) => posts[0]));
   }
 
-  tags(): Observable<ScullyRoute[]> {
-    return filterRoute(this.scully.available$, '/tags/');
+  getAllTags(): Observable<string[]> {
+    const tagMaps$ = filterRoute(this.scully.available$, '/blog/')
+    .pipe(
+      map(posts => posts
+        .map(post => post.tags)
+        .reduce((cur, acc) => cur.concat(acc))
+      )
+    );
+
+    return tagMaps$.pipe(
+      map(tags => tags.filter((tag, index) => tags.indexOf(tag) === index)
+      )
+    );
+  }
+
+  getTagPosts(tag: string): Observable<ScullyRoute[]> {
+    const blogPosts$ = this.blogPosts();
+    return blogPosts$.pipe(
+      map((blogs) =>
+        blogs.filter((blog) => blog.tags.some((t) => t === tag))
+      )
+    );
+  }
+
+  getSlug(): Observable<string> {
+    return this.getCurrent().pipe(
+      map(routeInfo => {
+          if (routeInfo) {
+            const pathsRoute = routeInfo.route.split('/');
+            return pathsRoute[pathsRoute.length - 1];
+          }
+          return '';
+        }
+      )
+    );
   }
 
   // tagPosts(tag: Observable<ScullyRoute>): Observable<ScullyRoute[]> {
@@ -94,10 +127,7 @@ export class ScullyContentService {
 
 }
 
-export const filterRoute = (
-  routes: Observable<ScullyRoute[]>,
-  path: string
-): Observable<ScullyRoute[]> => {
+export const filterRoute = (routes: Observable<ScullyRoute[]>, path: string): Observable<ScullyRoute[]> => {
   return routes.pipe(
     map((r) => r.filter((route) => route.route.startsWith(path)))
   );

@@ -16,7 +16,7 @@
                 </div>
                 <div *ngIf="post.tags">
                   <fa-icon [icon]="['fas', 'tags']" aria-hidden="true"></fa-icon>
-                  <a href="" *ngFor="let tag of post.tags"> {{tag}} </a>
+                  <a *ngFor="let tag of post.tags" [href]="'/tags/' + tag"> {{tag}} </a>
                 </div>
               </div>
             </div>

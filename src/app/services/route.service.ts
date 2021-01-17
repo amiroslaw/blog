@@ -6,7 +6,6 @@ import {Injectable} from '@angular/core';
 export class RouteService {
   static BLOG_ROUTE_NAME = 'Blog';
   static HOME_ROUTE = '/home';
-  static routesName = new Map([['/blog', 'Blog'], ['/about', 'O mnie'], ['/portfolio', 'Portfolio'], ['/home', 'Blog programistyczny']]);
-
+  static routesName = new Map([['/blog', 'Blog'], ['/about', 'O mnie'], ['/portfolio', 'Portfolio'], ['/tags', 'Tagi'], ['/home', 'Blog programistyczny']]);
 }
 

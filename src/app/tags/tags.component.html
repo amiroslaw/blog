@@ -1,0 +1,11 @@
+<div *ngIf="showAllTags() | async; else posts">
+  <div *ngFor="let tag of allTags | keyvalue">
+    <a href="/tags/{{tag.value}}">{{tag.key}}</a>
+  </div>
+</div>
+<ng-template #posts>
+  <div>
+    <h1>{{getSlugTitle() | async}}</h1>
+    posts
+  </div>
+</ng-template>

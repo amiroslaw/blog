@@ -13,7 +13,7 @@ import * as global from '../services/globals';
 })
 export class TagsComponent implements OnInit {
 
-  blogPosts$: Observable<ScullyRoute[]>;
+  posts$: Observable<ScullyRoute[]>;
   allTags: Map<string, string> = global.tagsName;
   slug$: Observable<string>;
 
@@ -22,16 +22,13 @@ export class TagsComponent implements OnInit {
 
   ngOnInit(): void {
     this.slug$ = this.scullyContent.getSlug();
-    this.blogPosts$ = this.slug$.pipe(
-      flatMap(slug => this.scullyContent.getTagPosts(slug))
+    this.posts$ = this.getSlugTitle().pipe(
+      flatMap(slug => this.scullyContent.getTagPosts(slug[0]))
     );
-    // this.blogPosts$ = this.scullyContent.getTagPosts(slug$);
-    // this.routeInfo$.subscribe(routeInfo => this.getSelectedTag(routeInfo));
-    // this.allTags$ = this.scullyContent.getAllTags();
-    // this.allTags$.subscribe(value => console.log(value));
+    // this.scullyContent.weightedTags(this.posts$, global.tagsName);
   }
 
-  getSlugTitle() {
+  getSlugTitle(): Observable<string[]> {
     return this.slug$.pipe(
       map(slug => [...this.allTags.entries()]
         .filter(({1: v}) => v === slug)
@@ -43,7 +40,6 @@ export class TagsComponent implements OnInit {
   showAllTags(): Observable<boolean> {
     return this.slug$.pipe(
       map(slug => {
-        console.log(slug);
         return slug === 'tags';
       })
     );

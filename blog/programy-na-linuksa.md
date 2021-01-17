@@ -4,10 +4,10 @@ description: Jak szukać zamienników programów napisanych na Linuksa wraz z mo
 published: true
 date: 2020-02-30
 tags:
-    - programy
-    - tutorial
-    - linux
-    - porady
+    - Programy
+    - Tutorial
+    - Linux
+    - Porady
 photo: 
   header: assets/img/thumbnail/looking-at-board.jpeg
   card: assets/img/thumbnail/looking-at-board-small.jpeg

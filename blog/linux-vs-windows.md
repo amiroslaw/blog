@@ -4,8 +4,8 @@ description: Najważniejsze różnice pomiędzy systemem operacyjnym z rodziny W
 published: true
 date: 2020-01-19
 tags:
-    - linux
-    - windows
+    - Linux
+    - Windows
 photo: 
   header: assets/img/thumbnail/Linux-Vs-Windows.jpg
   card: assets/img/thumbnail/Linux-Vs-Windows-small.jpg

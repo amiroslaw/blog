@@ -1,0 +1,37 @@
+<div class="post-preview jumbotron" >
+  <div class="row">
+    <div class="col-md-5 col-12 text-center">
+      <a [routerLink]="article.route" *ngIf=" article.photo && (article.photo.header || article.photo.card)">
+        <img class="img-thumbnail" [src]="article.photo.card || article.photo.header" alt="thumbnail"/>
+      </a>
+      <div class="post-meta  mt-2">
+        <div>
+          <fa-icon [icon]="['far', 'calendar-alt']" class="mr-1"></fa-icon>
+          <time datetime="article.date">{{article.date | date}}</time>
+        </div>
+        <div *ngIf="article.tags">
+          <fa-icon [icon]="['fas', 'tags']" aria-hidden="true"></fa-icon>
+          <a *ngFor="let tag of getTags() | keyvalue" href="/tags/{{tag.value}}">
+            {{tag.key}}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-12 ">
+      <h2 class="post-title text-center">
+        <a [routerLink]="article.route">
+          {{article.title}}
+        </a>
+      </h2>
+      <div class="post-subtitle">
+        {{article.description}}
+      </div>
+      <div class="text-center">
+        <a [routerLink]="article.route">
+          <button type="button" class="btn btn-info mt-1 ">Czytaj więcej</button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

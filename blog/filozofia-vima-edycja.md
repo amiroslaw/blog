@@ -4,9 +4,9 @@ description: Druga część dotycząca podstaw w używaniu edytora tekstowego Vi
 published: true
 date: 2020-05-30
 tags:
-    - vim
-    - tutorial
-    - linux
+    - Vim
+    - Tutorial
+    - Linux
 photo: 
   header: assets/img/thumbnail/vim-logo.png
   card: assets/img/thumbnail/vim-logo-300.png

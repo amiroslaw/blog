@@ -1,18 +1,17 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
-import { RouterModule } from '@angular/router';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {HomeRoutingModule} from './home-routing.module';
+import {HomeComponent} from './home.component';
+import {ArticleModule} from '../article/article.module';
 
 @NgModule({
   declarations: [HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    RouterModule,
-    FontAwesomeModule
+    ArticleModule
   ]
 })
-export class HomeModule { }
+export class HomeModule {
+}

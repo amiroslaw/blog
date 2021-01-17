@@ -12,7 +12,7 @@ import {
 } from 'rxjs/operators';
 import {Observable, zip, concat} from 'rxjs';
 
-// import {TagWeight} from '../types/types';
+import {TagWeight} from '../types/types';
 
 @Injectable({
   providedIn: 'root',
@@ -54,15 +54,6 @@ export class ScullyContentService {
     );
   }
 
-  getTagPosts(tag: string): Observable<ScullyRoute[]> {
-    const blogPosts$ = this.blogPosts();
-    return blogPosts$.pipe(
-      map((blogs) =>
-        blogs.filter((blog) => blog.tags.some((t) => t === tag))
-      )
-    );
-  }
-
   getSlug(): Observable<string> {
     return this.getCurrent().pipe(
       map(routeInfo => {
@@ -76,32 +67,23 @@ export class ScullyContentService {
     );
   }
 
-  // tagPosts(tag: Observable<ScullyRoute>): Observable<ScullyRoute[]> {
-  //   const blogPosts = this.posts();
-  //   return tag.pipe(
-  //     switchMap((page) =>
-  //       blogPosts.pipe(
-  //         map((blogs) =>
-  //           blogs.filter((blog) => blog.tags.some((t) => t === page.title))
-  //         )
-  //       )
-  //     )
-  //   );
-  // }
+  getTagPosts(tag: string): Observable<ScullyRoute[]> {
+    return this.blogPosts().pipe(
+      map((blogs) =>
+        blogs.filter((blog) => blog.tags.some((t) => t === tag))
+      )
+    );
+  }
 
-  // weightedTags(
-  //   blogPosts$: Observable<ScullyRoute[]>,
-  //   tags$: Observable<ScullyRoute[]>
-  // ): Observable<TagWeight[]> {
+  // weightedTags(blogPosts$: Observable<ScullyRoute[]>, tags: Map<string, string>): Observable<TagWeight[]> {
   //   const used$: Observable<number> = blogPosts$.pipe(
   //     map((blogs) =>
   //       blogs.map((blog) => (blog.tags || []).length).reduce((a, b) => a + b, 0)
   //     )
   //   );
-  //
   //   return blogPosts$.pipe(
   //     switchMap((blogs) =>
-  //       tags$.pipe(
+  //       tags.pipe(
   //         map((tags) =>
   //           tags.map((tag) => ({
   //             tag,

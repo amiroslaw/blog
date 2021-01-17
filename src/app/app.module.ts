@@ -10,6 +10,7 @@ import {FooterComponent} from './footer/footer.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NotFoundComponent} from './not-found/not-found.component';
+import { ArticleModule } from './article/article.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {NotFoundComponent} from './not-found/not-found.component';
     ScullyLibModule,
     NgbModule,
     FontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ArticleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

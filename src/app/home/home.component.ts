@@ -1,8 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
-import {faTags} from '@fortawesome/free-solid-svg-icons';
-
-import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import {ScullyContentService} from '../services/scully-content.service';
 
 @Component({
@@ -13,8 +9,7 @@ import {ScullyContentService} from '../services/scully-content.service';
 export class HomeComponent implements OnInit {
   posts$;
 
-  constructor(private scullyContentService: ScullyContentService, library: FaIconLibrary) {
-    library.addIcons(faTags, faCalendarAlt);
+  constructor(private scullyContentService: ScullyContentService) {
   }
 
   ngOnInit(): void {

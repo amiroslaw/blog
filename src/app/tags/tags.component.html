@@ -1,11 +1,23 @@
-<div *ngIf="showAllTags() | async; else posts">
-  <div *ngFor="let tag of allTags | keyvalue">
-    <a href="/tags/{{tag.value}}">{{tag.key}}</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-auto">
+      <section>
+        <div *ngIf="showAllTags() | async; else posts">
+          <div *ngFor="let tag of allTags | keyvalue">
+            <a href="/tags/{{tag.value}}">{{tag.key}}</a>
+          </div>
+        </div>
+        <ng-template #posts>
+          <div>
+            <h1 class="post-title text-center">
+              {{getSlugTitle() | async}}
+            </h1>
+
+            <app-article *ngFor="let post of posts$ | async" [article]="post"></app-article>
+            <div class="clearfix"></div>
+          </div>
+        </ng-template>
+      </section>
+    </div>
   </div>
 </div>
-<ng-template #posts>
-  <div>
-    <h1>{{getSlugTitle() | async}}</h1>
-    posts
-  </div>
-</ng-template>

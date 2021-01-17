@@ -4,7 +4,7 @@ description: Trochę o mnie i o blogu. Jest to mój pierwszy post, do którego z
 published: true
 date: 2020-01-01
 tags:
-    - luźne
+    - Luźne
 photo: 
   header: assets/img/thumbnail/typewriter.jpeg
   card: assets/img/thumbnail/typewriter-small.jpeg

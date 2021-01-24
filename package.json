@@ -12,6 +12,12 @@
     "scully:serve": "scully serve",
     "scully-build": "ng build --prod && npm run scully"
   },
+  "description": "miroslaw.ovh website",
+  "author": "Arkadiusz Mirosław",
+  "homepage": "https://github.com/amiroslaw/blog",
+  "bugs": {
+    "url": "https://github.com/amiroslaw/blog/issues"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.0.9",

@@ -28,7 +28,7 @@ setPluginConfig(TocPlugin, tocOptions);
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'miroslaw',
-  outDir: './dist/static',
+  outDir: './dist/miroslaw',
   defaultPostRenderers,
   routes: {
     '/blog/:slug': {

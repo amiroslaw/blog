@@ -1,4 +1,5 @@
-import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewChecked, AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {HighlightService} from '../services/highlight.service';
 
 import mediumZoom from 'medium-zoom';
 
@@ -10,12 +11,16 @@ import mediumZoom from 'medium-zoom';
   encapsulation: ViewEncapsulation.Emulated
 
 })
-export class BlogComponent implements OnInit, AfterViewInit {
+export class BlogComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
-  constructor() {
+  constructor(private highlightService: HighlightService) {
   }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewChecked(): void {
+    this.highlightService.highlightAll();
   }
 
   ngAfterViewInit(): void {

@@ -1,18 +1,10 @@
-import {Router, NavigationEnd, RouteConfigLoadEnd} from '@angular/router';
+import {Router} from '@angular/router';
 import {Injectable} from '@angular/core';
-import {ScullyRoutesService, ScullyRoute} from '@scullyio/ng-lib';
-import {
-  map,
-  switchMap,
-  tap,
-  reduce,
-  filter,
-  startWith,
-  share,
-} from 'rxjs/operators';
-import {Observable, zip, concat} from 'rxjs';
-
-import {TagWeight} from '../types/types';
+import {ScullyRoute, ScullyRoutesService} from '@scullyio/ng-lib';
+import {map} from 'rxjs/operators';
+import {Observable} from 'rxjs';
+import * as global from '../services/globals';
+import {Tag, TagWeight} from '../types/types';
 
 @Injectable({
   providedIn: 'root',
@@ -39,21 +31,6 @@ export class ScullyContentService {
     return this.blogPosts().pipe(map((posts) => posts[0]));
   }
 
-  getAllTags(): Observable<string[]> {
-    const tagMaps$ = filterRoute(this.scully.available$, '/blog/')
-    .pipe(
-      map(posts => posts
-        .map(post => post.tags)
-        .reduce((cur, acc) => cur.concat(acc))
-      )
-    );
-
-    return tagMaps$.pipe(
-      map(tags => tags.filter((tag, index) => tags.indexOf(tag) === index)
-      )
-    );
-  }
-
   getSlug(): Observable<string> {
     return this.getCurrent().pipe(
       map(routeInfo => {
@@ -67,6 +44,15 @@ export class ScullyContentService {
     );
   }
 
+  getSlugTitle(slug$: Observable<string>): Observable<string[]> {
+    return slug$.pipe(
+      map(slug => [...global.tagsName.entries()]
+        .filter(({1: v}) => v === slug)
+        .map(([k]) => k)
+      )
+    );
+  }
+
   getTagPosts(tag: string): Observable<ScullyRoute[]> {
     return this.blogPosts().pipe(
       map((blogs) =>
@@ -75,37 +61,30 @@ export class ScullyContentService {
     );
   }
 
-  // weightedTags(blogPosts$: Observable<ScullyRoute[]>, tags: Map<string, string>): Observable<TagWeight[]> {
-  //   const used$: Observable<number> = blogPosts$.pipe(
-  //     map((blogs) =>
-  //       blogs.map((blog) => (blog.tags || []).length).reduce((a, b) => a + b, 0)
-  //     )
-  //   );
-  //   return blogPosts$.pipe(
-  //     switchMap((blogs) =>
-  //       tags.pipe(
-  //         map((tags) =>
-  //           tags.map((tag) => ({
-  //             tag,
-  //             count: blogs.filter((blog) =>
-  //               (blog.tags || []).some((t) => t === tag.title)
-  //             ).length,
-  //           }))
-  //         ),
-  //         switchMap((counts) =>
-  //           used$.pipe(
-  //             map((used) =>
-  //               counts.map((count) => ({
-  //                 tag: count.tag,
-  //                 weight: (count.count / used) * 100,
-  //               }))
-  //             )
-  //           )
-  //         )
-  //       )
-  //     )
-  //   );
-  // }
+  getPostTags(): Observable<Tag[]> {
+    return this.scully.getCurrent().pipe(
+      map(routeInfo => routeInfo.tags
+      .map(e => new Tag(e, global.tagsName.get(e))
+      ))
+    );
+  }
+
+  getAllTags(): TagWeight[] {
+    const tagMaps$ = filterRoute(this.scully.available$, '/blog/').pipe(
+      map(posts => posts
+        .map(post => post.tags)
+        .reduce((cur, acc) => cur.concat(acc))
+        .reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map())
+      )
+    );
+
+    const tags = [];
+    tagMaps$.subscribe(
+      tagMap => new Map([...tagMap.entries()].sort((a: number, b: number) => b[1] - a[1]))
+        .forEach((k: number, v: string) => tags.push(new TagWeight(v, global.tagsName.get(v), k)))
+    );
+    return tags;
+  }
 
 }
 

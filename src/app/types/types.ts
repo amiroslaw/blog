@@ -1,11 +1,21 @@
-import { ScullyRoute } from '@scullyio/ng-lib';
-
-export interface TagWeight {
-  tag: ScullyRoute;
-  weight: number;
+export class Tag {
+  constructor(name: string, slug: string) {
+  this.name = name;
+  this.slug = slug;
+}
+name: string;
+  slug: string;
 }
 
-export interface SearchItem {
+export class TagWeight extends Tag {
+  constructor(name: string, slug: string, counter: number) {
+    super(name, slug);
+    this.counter = counter;
+  }
+  counter: number;
+}
+
+export class SearchItem {
   title: string;
   description?: string;
   url: string;

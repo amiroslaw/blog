@@ -3,16 +3,17 @@
     <div class="col-md-10 col-lg-8 mx-auto">
       <section>
         <div *ngIf="showAllTags() | async; else posts">
-          <div *ngFor="let tag of allTags | keyvalue">
-            <a href="/tags/{{tag.value}}">{{tag.key}}</a>
-          </div>
+          <ul class="tags">
+            <li *ngFor="let tag of allTags">
+              <a href="/tags/{{tag.slug}}">{{tag.name}}<span>{{tag.counter}}</span></a>
+            </li>
+          </ul>
         </div>
         <ng-template #posts>
           <div>
             <h1 class="post-title text-center">
               {{getSlugTitle() | async}}
             </h1>
-
             <app-article *ngFor="let post of posts$ | async" [article]="post"></app-article>
             <div class="clearfix"></div>
           </div>

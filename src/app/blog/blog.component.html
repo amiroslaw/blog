@@ -3,6 +3,11 @@
     <div class="col-md-10 mx-auto">
       <article class="post">
         <scully-content></scully-content>
+        <ul class="tags">
+          <li *ngFor="let tag of postTags$ | async" class="tag">
+            <a [href]="tag.slug">{{tag.name}}</a>
+          </li>
+        </ul>
       </article>
     </div>
   </div>

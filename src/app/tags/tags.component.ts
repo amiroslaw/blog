@@ -4,7 +4,7 @@ import {Observable} from 'rxjs';
 import {ScullyRoute} from '@scullyio/ng-lib';
 import {map} from 'rxjs/operators';
 import {flatMap} from 'rxjs/internal/operators';
-import * as global from '../services/globals';
+import {TagWeight} from '../types/types';
 
 @Component({
   selector: 'app-tags',
@@ -14,7 +14,7 @@ import * as global from '../services/globals';
 export class TagsComponent implements OnInit {
 
   posts$: Observable<ScullyRoute[]>;
-  allTags: Map<string, string> = global.tagsName;
+  allTags: TagWeight[];
   slug$: Observable<string>;
 
   constructor(private scullyContent: ScullyContentService) {
@@ -22,19 +22,10 @@ export class TagsComponent implements OnInit {
 
   ngOnInit(): void {
     this.slug$ = this.scullyContent.getSlug();
-    this.posts$ = this.getSlugTitle().pipe(
+    this.posts$ = this.scullyContent.getSlugTitle(this.slug$).pipe(
       flatMap(slug => this.scullyContent.getTagPosts(slug[0]))
     );
-    // this.scullyContent.weightedTags(this.posts$, global.tagsName);
-  }
-
-  getSlugTitle(): Observable<string[]> {
-    return this.slug$.pipe(
-      map(slug => [...this.allTags.entries()]
-        .filter(({1: v}) => v === slug)
-        .map(([k]) => k)
-      )
-    );
+    this.allTags = this.scullyContent.getAllTags();
   }
 
   showAllTags(): Observable<boolean> {

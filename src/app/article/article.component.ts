@@ -21,7 +21,6 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.article);
   }
 
   getTags(): Map<string, string> {

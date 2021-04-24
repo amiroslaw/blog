@@ -2,7 +2,10 @@
   <div class="row">
     <div class="col-md-10 mx-auto">
       <article class="post">
-        <time datetime="article.date">{{postDate$ | async | date}}</time>
+        <div>
+          <fa-icon [icon]="['far', 'calendar-alt']" class="mr-1"></fa-icon>
+          <time datetime="article.date">{{postDate$ | async | date}}</time>
+        </div>
         <scully-content></scully-content>
         <ul class="tags">
           <li *ngFor="let tag of postTags$ | async" class="tag">

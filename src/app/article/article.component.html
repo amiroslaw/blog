@@ -11,7 +11,7 @@
         </div>
         <div *ngIf="article.tags">
           <fa-icon [icon]="['fas', 'tags']" aria-hidden="true"></fa-icon>
-          <a *ngFor="let tag of contentService.getArticleTags(article.tags) | keyvalue" href="/tags/{{tag.value}}">
+          <a *ngFor="let tag of tagService.getArticleTags(article.tags) | keyvalue" href="/tags/{{tag.value}}">
             {{tag.key}}
           </a>
         </div>
@@ -31,7 +31,6 @@
           <button type="button" class="btn btn-info mt-4">Czytaj więcej</button>
         </a>
       </div>
-
     </div>
   </div>
 </div>

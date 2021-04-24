@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ScullyContentService} from '../services/scully-content.service';
+import {TagService} from '../services/tag.service';
 import {Observable} from 'rxjs';
 import {ScullyRoute} from '@scullyio/ng-lib';
 import {map} from 'rxjs/operators';
@@ -18,16 +19,16 @@ export class TagsComponent implements OnInit {
   slug$: Observable<string>;
   slugTitle$: Observable<string[]>;
 
-  constructor(private scullyContent: ScullyContentService) {
+  constructor(private tagService: TagService, private contentService: ScullyContentService) {
   }
 
   ngOnInit(): void {
-    this.slug$ = this.scullyContent.getSlug();
-    this.slugTitle$ = this.scullyContent.getSlugTitle(this.slug$);
-    this.posts$ = this.scullyContent.getSlugTitle(this.slug$).pipe(
-      flatMap(slug => this.scullyContent.getTagPosts(slug[0]))
+    this.slug$ = this.contentService.getSlug();
+    this.slugTitle$ = this.contentService.getSlugTitle(this.slug$);
+    this.posts$ = this.contentService.getSlugTitle(this.slug$).pipe(
+      flatMap(slug => this.tagService.getTagPosts(slug[0]))
     );
-    this.allTags = this.scullyContent.getAllTags();
+    this.allTags = this.tagService.getAllTags();
   }
 
   showAllTags(): Observable<boolean> {

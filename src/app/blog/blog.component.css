@@ -178,10 +178,10 @@ article.post img {
 }
 
 .tag:hover {
-  background-color: crimson;
+  background-color: #aaa;
   color: white;
 }
 
 .tag:hover::after {
-  border-left-color: crimson;
+  border-left-color: #aaa;
 }

@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
 
   originalOrder = (a: KeyValue<string, string>, b: KeyValue<string, string>): number => {
     return 0;
-  };
+  }
 
   private getRoutesNavigation(): Map<string, string> {
     const routesNavigation = new Map(RouteService.routesName);

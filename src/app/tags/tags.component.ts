@@ -16,12 +16,14 @@ export class TagsComponent implements OnInit {
   posts$: Observable<ScullyRoute[]>;
   allTags: TagWeight[];
   slug$: Observable<string>;
+  slugTitle$: Observable<string[]>;
 
   constructor(private scullyContent: ScullyContentService) {
   }
 
   ngOnInit(): void {
     this.slug$ = this.scullyContent.getSlug();
+    this.slugTitle$ = this.scullyContent.getSlugTitle(this.slug$);
     this.posts$ = this.scullyContent.getSlugTitle(this.slug$).pipe(
       flatMap(slug => this.scullyContent.getTagPosts(slug[0]))
     );
@@ -30,9 +32,7 @@ export class TagsComponent implements OnInit {
 
   showAllTags(): Observable<boolean> {
     return this.slug$.pipe(
-      map(slug => {
-        return slug === 'tags';
-      })
+      map(slug => slug === 'tags')
     );
   }
 }

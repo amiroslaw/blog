@@ -13,7 +13,7 @@ export class ScullyContentService {
   constructor(private scully: ScullyRoutesService, private router: Router) {
   }
 
-  blogPosts(): Observable<ScullyRoute[]> {
+  getBlogPosts(): Observable<ScullyRoute[]> {
     return filterRoute(this.scully.available$, '/blog/').pipe(
       map((posts) =>
         posts.sort((p1, p2) =>
@@ -28,7 +28,7 @@ export class ScullyContentService {
   }
 
   latestBlogPost(): Observable<ScullyRoute> {
-    return this.blogPosts().pipe(map((posts) => posts[0]));
+    return this.getBlogPosts().pipe(map((posts) => posts[0]));
   }
 
   getSlug(): Observable<string> {
@@ -54,11 +54,19 @@ export class ScullyContentService {
   }
 
   getTagPosts(tag: string): Observable<ScullyRoute[]> {
-    return this.blogPosts().pipe(
+    return this.getBlogPosts().pipe(
       map((blogs) =>
         blogs.filter((blog) => blog.tags.some((t) => t === tag))
       )
     );
+  }
+
+  getArticleTags(tags: string[]): Map<string, string> {
+    const tagsMap = new Map();
+    for (const tag of tags) {
+      tagsMap.set(tag, global.tagsName.get(tag));
+    }
+    return tagsMap;
   }
 
   getPostTags(): Observable<Tag[]> {
@@ -81,7 +89,7 @@ export class ScullyContentService {
     const tags = [];
     tagMaps$.subscribe(
       tagMap => new Map([...tagMap.entries()].sort((a: number, b: number) => b[1] - a[1]))
-        .forEach((k: number, v: string) => tags.push(new TagWeight(v, global.tagsName.get(v), k)))
+      .forEach((k: number, v: string) => tags.push(new TagWeight(v, global.tagsName.get(v), k)))
     );
     return tags;
   }

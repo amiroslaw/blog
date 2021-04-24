@@ -13,6 +13,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.posts$ = this.scullyContentService.blogPosts();
+    this.posts$ = this.scullyContentService.getBlogPosts();
   }
 }

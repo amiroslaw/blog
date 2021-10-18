@@ -10,7 +10,7 @@ require('@notiz/scully-plugin-medium-zoom');
 const Http404Plugin = getHttp404Plugin();
 const defaultPostRenderers = [
   'emoji',
-  // 'mediumZoom',
+  'mediumZoom',
   Http404Plugin
 ];
 

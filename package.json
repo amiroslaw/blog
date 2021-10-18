@@ -8,9 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scully": "scully",
-    "scully:serve": "scully serve",
-    "scully-build": "ng build --prod && npm run scully"
+    "scully-build": "ng build --prod && npm run scully",
+    "scan": "scully -- --scanRoutes",
+    "watch": "scully -- --watch",
+    "scully": "npx scully --",
+    "scully:serve": "npx scully serve --"
   },
   "description": "miroslaw.ovh website",
   "author": "Arkadiusz Mirosław",

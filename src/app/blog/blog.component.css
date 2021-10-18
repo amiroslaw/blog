@@ -80,33 +80,32 @@ article.post iframe {
 }
 
 article.post img {
-  display: block;
   margin: 2% auto;
   max-width: 100%;
 }
 
 @media (min-width: 768px) {
-  article.post .img-left {
+  article.post span.left {
     float: left;
     margin: 2% 2% 2% 0;
     max-width: 40%;
   }
 
-  article.post .img-right {
+  article.post span.right {
     float: right;
     margin: 2% 0 2% 2%;
     max-width: 40%;
   }
 
-  article.post .img-25 {
+  article.post img-25 {
     max-width: 25%;
   }
 
-  article.post .img-55 {
+  article.post img-55 {
     max-width: 55%;
   }
 
-  article.post .img-75 {
+  article.post img-75 {
     max-width: 75%;
   }
 }
@@ -120,13 +119,16 @@ article.post img {
   z-index: 3;
 }
 
+#toc > div {
+  text-transform: uppercase;
+}
+
 #toc {
-  margin: auto;
   max-width: 40%;
 }
 
-#toc > div {
-  text-transform: uppercase;
+#date {
+  text-align: right;
 }
 
 .tags {

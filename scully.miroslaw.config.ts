@@ -12,7 +12,7 @@ const Http404Plugin = getHttp404Plugin();
 const defaultPostRenderers = [
   'toc',
   'emoji',
-  'mediumZoom',
+  // 'mediumZoom',
   Http404Plugin
 ];
 

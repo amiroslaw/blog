@@ -15,6 +15,27 @@ photo:
 :toc-title: Spis:
 :figure-caption: Img
 
+
+test
+
+[source,java]
+----
+ private Map<String, String> splitURL(String query){
+     Map<String, String> urlMap= new HashMap<>();
+     for(String param : query.split("&")){
+ 		//param = URLDecoder.decode(param, StandardCharsets.UTF_8.toString());
+         urlMap.put(StringUtils.substringBefore(param, "="),StringUtils.substringAfter(param, "="));
+     }
+     return urlMap;
+ }
+
+//połączenie tych znaków
+String newQuery = parameters.entrySet()
+		.stream()
+		.map(Object::toString)
+		.collect(joining("&"));
+----
+
 Postaram się w tym artykule, wytłumaczyć najważniejsze dla mnie różnice pomiędzy systemem operacyjnym z rodziny Windows a GNU/Linux w wersjach nie serwerowych. Nie będę brać pod uwagę Windowsa XP (oraz wersji starszych), ponieważ sam Microsoft jak i inne firmy porzuciły wsparcie dla niego. 
 
 pass:[<iframe width="560" height="315" src="https://www.youtube.com/embed/VrOhi5ZHkIw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>]

@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewChecked, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {HighlightService} from '../services/highlight.service';
 import {ScullyContentService} from '../services/scully-content.service';
 import {TagService} from '../services/tag.service';
@@ -18,7 +18,7 @@ import {faTags} from '@fortawesome/free-solid-svg-icons';
   encapsulation: ViewEncapsulation.Emulated
 
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent implements OnInit, AfterViewChecked {
   postTags$: Observable<Tag[]>;
   postDate$: Observable<any>;
 
@@ -32,6 +32,10 @@ export class BlogComponent implements OnInit {
     this.postDate$ = this.scullyContent.getCurrent().pipe(
       map(route => route.date)
     );
+  }
+
+  ngAfterViewChecked(): void {
+    this.highlightService.highlightAll();
   }
 
 }

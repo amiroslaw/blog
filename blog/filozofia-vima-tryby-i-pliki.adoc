@@ -21,7 +21,6 @@ test
 kbd:[Ctrl+C]
 kbd:[Esc]
 
-image::assets/img/big.JPG[test, role=left]
 
 [source,java]
 ----
@@ -40,6 +39,8 @@ String newQuery = parameters.entrySet()
 		.map(Object::toString)
 		.collect(joining("&"));
 ----
+
+image::assets/img/big.JPG[test, role=left]
 
 Długo przymierzałem się do napisania tego artykułu, który miałby za zadanie nauczyć i zachęcić do poznania Vima. Moja prokrastynacja wynikała z niezliczonych możliwości jakie daje te narzędzie. Po kilku latach używania tego edytora nadal uczę się nowych rzeczy. Na początku przygody z Vimem, https://www.vim.org/docs.php[dokumentacja] lub darmowa ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf[książka] może być przytłaczająca. Warto natomiast poznać koncepcje na jakich został oparty edytor, i w czasie potrzeby zgłębiać wiedzę, spoglądając w instrukcję (`:help`). Dla osób które szybko się nudzą powstały gry do nauki jak https://vim-adventures.com/[vim adventures] i http://www.vimgenius.com/[vim genius]. Bardzo dobrym źródłem wiedzy jest dostępna wraz z programem dokumentacja - vimtutor i strona z poradnikami wideo http://vimcasts.org/[vim casts].
 

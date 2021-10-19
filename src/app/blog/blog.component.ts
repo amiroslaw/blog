@@ -1,4 +1,4 @@
-import {AfterViewChecked, AfterViewInit, Component, OnInit, ViewChildren, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {HighlightService} from '../services/highlight.service';
 import {ScullyContentService} from '../services/scully-content.service';
 import {TagService} from '../services/tag.service';

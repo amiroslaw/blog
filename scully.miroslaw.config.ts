@@ -5,6 +5,8 @@ import './scully/plugins/emoji.js';
 import './scully/plugins/tags.js';
 
 require('@notiz/scully-plugin-medium-zoom');
+require('@notiz/scully-plugin-lazy-images');
+
 const Http404Plugin = getHttp404Plugin();
 const defaultPostRenderers = [
   'seoHrefOptimise',

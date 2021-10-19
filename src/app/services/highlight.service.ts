@@ -6,6 +6,7 @@ import 'prismjs';
 import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 import 'prismjs/plugins/show-language/prism-show-language';
+import 'prismjs/plugins/line-numbers/prism-line-numbers';
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-css';
 import 'prismjs/components/prism-javascript';
@@ -20,8 +21,6 @@ import 'prismjs/components/prism-markup';
 import 'prismjs/components/prism-sass';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-yaml';
-// import 'prismjs/plugins/line-numbers/prism-line-numbers';
-// ... probably more, check out node_modules/prismjs/components
 
 declare var Prism: any;
 

@@ -13,20 +13,6 @@ photo:
   card: assets/img/thumbnail/looking-at-board-small.jpeg
 ---
 
-test
-
-[source,java]
-----
- private Map<String, String> splitURL(String query){
-     Map<String, String> urlMap= new HashMap<>();
-     for(String param : query.split("&")){
- 		//param = URLDecoder.decode(param, StandardCharsets.UTF_8.toString());
-         urlMap.put(StringUtils.substringBefore(param, "="),StringUtils.substringAfter(param, "="));
-     }
-     return urlMap;
- }
-----
-
 ## Wstęp
 Dla	osoby zaczynającej przygodę z systemami GNU/Linux, początek może być bardzo frustrujący z uwagi na brak wsparcia programów z którymi się zapoznaliśmy używając Windowsa. Często osoba w takiej sytuacji narzeka na niedobór oprogramowania lub w najgorszym przypadku próbuje instalować swoje ulubione programy przez Wine. Rozwiązaniem sytuacji powinno być przede wszystkim szukanie programów napisanych natywne pod Linuksa. Może to zająć trochę czasu, dlatego powstał ten post. Mam nadzieję, że osoby używające pingwina codziennie, znajdą też coś ciekawego lub podzielą się w komentarzu własnymi propozycjami.
 

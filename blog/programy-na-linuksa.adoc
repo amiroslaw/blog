@@ -2,7 +2,7 @@
 title: Programy na linuksa
 description: Jak szukać zamienników programów napisanych na Linuksa wraz z moimi rekomendacjami.
 published: true
-date: 2020-02-30
+date: 2020-02-28
 tags:
     - Programy
     - Tutorial

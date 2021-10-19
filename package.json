@@ -12,7 +12,7 @@
     "scully-build": "ng build --prod && npm run scully",
     "scan": "scully -- --scanRoutes",
     "watch": "scully -- --watch",
-    "scully": "npx scully --",
+    "scully": "scully",
     "scully:serve": "npx scully serve --",
     "deploy": "npm run build --prod && npm run scully"
   },

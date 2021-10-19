@@ -1,4 +1,5 @@
 import {AfterViewChecked, AfterViewInit, Component, OnInit, ViewChildren, ViewEncapsulation} from '@angular/core';
+import {HighlightService} from '../services/highlight.service';
 import {ScullyContentService} from '../services/scully-content.service';
 import {TagService} from '../services/tag.service';
 import {faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
@@ -21,7 +22,7 @@ export class BlogComponent implements OnInit {
   postTags$: Observable<Tag[]>;
   postDate$: Observable<any>;
 
-  constructor(private tagService: TagService, private scullyContent: ScullyContentService, library: FaIconLibrary) {
+  constructor(private highlightService: HighlightService, private tagService: TagService, private scullyContent: ScullyContentService, library: FaIconLibrary) {
     library.addIcons(faTags, faCalendarAlt);
   }
 
@@ -32,10 +33,5 @@ export class BlogComponent implements OnInit {
       map(route => route.date)
     );
   }
-
-  // ngAfterViewChecked(): void {
-  //   //TODO remove?
-  //   this.highlightService.highlightAll();
-  // }
 
 }

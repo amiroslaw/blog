@@ -12,9 +12,11 @@ photo:
   card: assets/img/thumbnail/vim-logo-300.png
 ---
 
+:toc:
+:toc-title: Spis:
+:figure-caption: Img
+:experimental:
 
-[[toc]]
-Spis treści:
 
 Jest to druga część dotycząca podstaw w używaniu edytora tekstowego Vim. Pierwszą opisującą tryby i zarządzanie plikami można przeczytać link:blog/filozofia-vima-tryby-i-pliki[tutaj].
 
@@ -43,7 +45,7 @@ Prawie wszystkie powyższe skróty można poprzedzić liczbą i tak np. `4l` prz
 
 Upraszczając do celów edukacyjnych, zebrałem trzy metody przeskakiwania kursora do wyszukiwanego tekstu lub znaku.
 
-* `#`, `*` - przechodzenie do następnego `*` lub poprzedniego `#` wyrazu który znajduję się pod kursorem
+* `\#`, `\*` - przechodzenie do następnego `*` lub poprzedniego `#` wyrazu który znajduję się pod kursorem
 * `%` - szuka brakującego nawiasu: (,),[,],\{, lub }. Przenosi do miejsca, w którym występuje zamykający/otwierający nawias
 * `f{znak}`, `F{znak}` - skok do pierwszego następnego `f` lub poprzedniego `F` wyszukiwanego znaku. Możemy powtarzać ten sam skok poprzez `;` lub powracając `,` do poprzedniego znaku.
 * `/{fraza}` lub `?{fraza}` - wyszukuje następnej `/` lub poprzedniej `?` frazy w pliku
@@ -51,7 +53,7 @@ Upraszczając do celów edukacyjnych, zebrałem trzy metody przeskakiwania kurso
 Dobrze wiedzieć, że w ostatni sposobie możemy użyć wyrażeń regularnych na przykład `/nazw.\|login`, może uwzględnić nam wyrazy jak: nazwa, nazwy lub login. Bardziej przydatne wyrażenia to:
 
 * `.` - dowolny znak
-* `^`, `$` - początek i koniec linii +
+* `^`, `$` - początek i koniec linii 
 * `\<`, `\>` - początek i koniec słowa np. `\<surykatka\>` wyszuka tylko wyraz surykatka
 
 W czasie wyszukiwania możemy skakać pomiędzy znalezionymi frazami, i tak `n` znajduje nam następne wystąpienie, a `N` poprzednie. Jak chcemy przeskoczyć kilka trafień musimy poprzedzić komendę liczbą np. `10n`.
@@ -77,7 +79,8 @@ Gratuluję wytrwałości, jak dotrwałeś do tego miejsca. Mam dobrą wiadomoś�
 * `~` (`gUl` i `gul`) - (tylda) zamiana wielkości znaku spod kursora
 * `r{x}` - działa jak `cl`, jednak pozostaje w Normal mode. Zamienia znak na pozycji kursora na wybrany znak
 
-[.image]#img-right img-25# Jestem Wam winien wyjaśnienie, dlaczego operacje `d` (delete) przetłumaczyłem na wycinanie. Vim domyślnie niczego nie kasuje, komendy takie jak `d`, `c`, `S` przenoszą tekst do rejestru. +
+image:assets/img/posts/memy/smart-guy-300x300.jpg[smart guy,role=right,role=img-25]
+Jestem Wam winien wyjaśnienie, dlaczego operacje `d` (delete) przetłumaczyłem na wycinanie. Vim domyślnie niczego nie kasuje, komendy takie jak `d`, `c`, `S` przenoszą tekst do rejestru.
 Vim przechowuje historie wyciętego tekstu w rejestrach pod cyframi 1-9. Jeśli usunęliśmy dwa różne stringi i chcemy wkleić ten pierwszy, to musimy wywołać rejestr o cyfrze 2 przez `"2`, aby wkleić dodajemy jeszcze literkę p (paste) - `"2p`. Dodatkowo po kolejnych wyciętych obiektach, tekst przesuwa się do rejestrów o wyższych numeracjach. Następną sprawą jest fakt, iż skopiowany tekst (`y`) posiada specjalny rejestr 0.
 
 Podsumowując, jeśli skopiujemy napis (`y`) i potem przejdziemy w inne miejsce pliku oraz usuniemy inny fragment, to pod klawiszem `p` będzie ten usunięty tekst. Jeśli chcemy wkleić to co kopiowaliśmy, to musimy użyć komendę `"0p`.
@@ -86,8 +89,8 @@ Podsumowując, jeśli skopiujemy napis (`y`) i potem przejdziemy w inne miejsce 
 
 Każde polecenie można powtórzyć - robi się to przez `.` kropkę. Oczywiście mamy też możliwość cofnięcia edycji lub wykonania jej ponownie. Nic nie szkodzi nam, aby takie cofnięcia powtarzać kilkukrotnie np. `5u`.
 
-* `u` - cofa skutki ostatniego polecenia +
-* `U` - cofa dla całej linii +
+* `u` - cofa skutki ostatniego polecenia 
+* `U` - cofa dla całej linii 
 * `c-r` - operacja ``wykonaj ponownie'' - cofa cofnięcia
 
 == Obiekty tekstowe
@@ -152,7 +155,7 @@ Składowe tego polecenia są opcjonalne. Nie musimy powtarzać lub manipulować 
 * `dG` - usunięcie wszystkiego od kursora do końca dokumentu
 * `4>j` - wcięcie 4 następnych linii
 * `2.` - dwukrotne powtórzenie ostatniego polecenia
-* `d'a` - dzięki takiej konstrukcji, Vim usuwa wszystko od miejsca zakładki `a` do miejsca, w którym znajduje się kursor +
+* `d'a` - dzięki takiej konstrukcji, Vim usuwa wszystko od miejsca zakładki `a` do miejsca, w którym znajduje się kursor 
 * `5c-w+` - zwiększenie okna o 5 wierszy
 
 == Porady
@@ -161,6 +164,9 @@ Na sam koniec tego wstępu do Vima, mam dla Was kilka porad, które mogą być p
 
 Zachętą do nauki Vima jest fakt, iż w innych programach zaimplementowane są poznane nam skróty. Praktycznie większość popularnych IDE ma wtyczkę, która umożliwi nam operowaniem tekstem w ten sam sposób jak w Vime. W powłokach systemowych bash i zsh jest możliwość włączenia `Vi mode`. https://github.com/brookhong/Surfingkeys[Surfingkeys] to jedno z rozszerzeń do Firefox i przeglądarek bazujących na Chromium, które pozwalają nawigować po stronach internetowych. Niektóre aplikacje, zorientowane na produktywność pozwalają na łatwą zamianę lub wspierają, skróty podobne do tych z Vima.
 
-[.image]#img-right vimiv# - https://vifm.info/[vifm] i https://ranger.github.io/[ranger] → Przeglądarki plików - https://github.com/thestinger/termite/[termite] → Terminal linuksowy, który posiada tryby jak w Vim. - http://karlch.github.io/vimiv/[vimiv], feh i sxiv → Lekkie przeglądarki zdjęć - https://cmus.github.io/[cmus] i https://kimtore.no/pms/[PMS] → Odtwarzacze muzyczne - https://pwmt.org/projects/zathura/[zathura] i http://naihe2010.github.io/apvlv/[apvlv] → Przeglądarki pdf - https://i3wm.org/[i3wm] → Window manager - https://tamlok.github.io/vnote/[VNote] → Aplikacja do robienia notatek w Markdown - http://www.mutt.org/[mutt] → Klient e-mail - https://code.meskio.net/tudu/[TuDu] → Lista zadań w terminalu - https://qutebrowser.org/[qutebrowser] → Lekka przeglądarka internetowa - https://github.com/seanyeh/vibreoffice[vibreoffice] → Plugin do LibreOffice i OpenOffice - https://skyfromme.wordpress.com/2015/04/06/easterhegg-vimpressing-libreoffice/[Vimpressing] → Tworzenie prezentacji w Vim - less - → Przeglądarka tekstu
+image::assets/img/posts/vim/vimiv.png[vimiv,role=right]
+https://vifm.info/[vifm] i https://ranger.github.io/[ranger] → Przeglądarki plików - https://github.com/thestinger/termite/[termite] → Terminal linuksowy, który posiada tryby jak w Vim. - http://karlch.github.io/vimiv/[vimiv], feh i sxiv → Lekkie przeglądarki zdjęć - https://cmus.github.io/[cmus] i https://kimtore.no/pms/[PMS] → Odtwarzacze muzyczne - https://pwmt.org/projects/zathura/[zathura] i http://naihe2010.github.io/apvlv/[apvlv] → Przeglądarki pdf - https://i3wm.org/[i3wm] → Window manager - https://tamlok.github.io/vnote/[VNote] → Aplikacja do robienia notatek w Markdown - http://www.mutt.org/[mutt] → Klient e-mail - https://code.meskio.net/tudu/[TuDu] → Lista zadań w terminalu - https://qutebrowser.org/[qutebrowser] → Lekka przeglądarka internetowa - https://github.com/seanyeh/vibreoffice[vibreoffice] → Plugin do LibreOffice i OpenOffice - https://skyfromme.wordpress.com/2015/04/06/easterhegg-vimpressing-libreoffice/[Vimpressing] → Tworzenie prezentacji w Vim - less - → Przeglądarka tekstu
 
-Na stronie http://www.viemu.com/[viemu] - emulatora Vima, znajdziemy przydatną grafikę z skrótami klawiaturowymi. [.image]#cheat sheet#
+Na stronie http://www.viemu.com/[viemu] - emulatora Vima, znajdziemy przydatną grafikę z skrótami klawiaturowymi.
+
+image::assets/img/posts/vim/vi-vim-cheat-sheet.gif[cheat sheet]

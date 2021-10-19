@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-md-10 col-lg-8 mx-auto">
       <section>
+        <img class="ops" src="assets/img/404.svg" alt="not found image"/>
         <app-article *ngFor="let post of posts$ | async" [article]="post"></app-article>
         <div class="clearfix"></div>
       </section>

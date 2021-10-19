@@ -1,20 +1,38 @@
-name: Build and Deploy
+name: GitHub Pages
+
 on:
   push:
     branches:
-      - master
+      - main
+  pull_request:
+
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
-      - name: Angular Deploy gh-pages Actions
-        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          github_access_token: ${{ secrets.ACCESS_TOKEN }} # see the Configuration section for how you can create secrets
-          build_configuration: npm run deploy # The build environment for the app. please look configurations in your angular.json
-          deploy_branch: gh-pages # The branch the action should deploy to.
-          angular_dist_build_folder: dist/static # The folder where your project is supposed to be after running ng build by the action.
-          # angular_dist_build_folder: dist/miroslaw # The folder where your project is supposed to be after running ng build by the action.
+          node-version: '14'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: npm run build -- && npm run scully
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/static

@@ -14,5 +14,5 @@ jobs:
           node-version: '14'
       - uses: cmgriffing/scully-gh-pages-action@v9
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          access-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-branch: gh-pages

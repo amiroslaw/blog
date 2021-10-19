@@ -1,10 +1,8 @@
 import {AfterViewChecked, AfterViewInit, Component, OnInit, ViewChildren, ViewEncapsulation} from '@angular/core';
-import {HighlightService} from '../services/highlight.service';
 import {ScullyContentService} from '../services/scully-content.service';
 import {TagService} from '../services/tag.service';
 import {faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
 
-import mediumZoom from 'medium-zoom';
 import {Observable} from 'rxjs';
 import {Tag} from '../types/types';
 import {map} from 'rxjs/operators';
@@ -19,11 +17,11 @@ import {faTags} from '@fortawesome/free-solid-svg-icons';
   encapsulation: ViewEncapsulation.Emulated
 
 })
-export class BlogComponent implements OnInit, AfterViewChecked{
+export class BlogComponent implements OnInit {
   postTags$: Observable<Tag[]>;
   postDate$: Observable<any>;
 
-  constructor(private highlightService: HighlightService, private tagService: TagService, private scullyContent: ScullyContentService, library: FaIconLibrary) {
+  constructor(private tagService: TagService, private scullyContent: ScullyContentService, library: FaIconLibrary) {
     library.addIcons(faTags, faCalendarAlt);
   }
 
@@ -35,19 +33,9 @@ export class BlogComponent implements OnInit, AfterViewChecked{
     );
   }
 
-  ngAfterViewChecked(): void {
-    //TODO remove?
-    this.highlightService.highlightAll();
-  }
-
-  ngAfterViewInit(): void {
-    const zoom = mediumZoom('[data-zoomable]');
-    const images = document.getElementsByTagName('img');
-    for (let i = 0; i < images.length; i++) {
-      images[i].classList.add('medium-zoom-image')
-    }
-    console.log(images)
-    // console.log(zoom)
-  }
+  // ngAfterViewChecked(): void {
+  //   //TODO remove?
+  //   this.highlightService.highlightAll();
+  // }
 
 }

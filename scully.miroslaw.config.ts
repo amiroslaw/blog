@@ -3,7 +3,6 @@ import {getHttp404Plugin} from '@gammastream/scully-plugin-http404';
 
 import './scully/plugins/emoji.js';
 import './scully/plugins/tags.js';
-import './scully/plugins/zoom.js';
 
 require('@notiz/scully-plugin-medium-zoom');
 const Http404Plugin = getHttp404Plugin();

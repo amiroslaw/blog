@@ -109,15 +109,6 @@ article.post img {
     max-width: 75%;
   }
 }
-
-/*.medium-zoom-overlay {*/
-/*  background-color: var(--background) !important;*/
-/*  z-index: 2;*/
-/*}*/
-/*.medium-zoom-image--opened {*/
-/*  z-index: 3;*/
-/*}*/
-
 #toc > div {
   text-transform: uppercase;
 }

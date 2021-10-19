@@ -5,7 +5,6 @@ const  emojiPlugin = async (html: string): Promise<string> => {
   html = html.replace(/\:\)/g, '😊');
   html = html.replace(/\:>/g, '😀');
   html = html.replace(/\;\)/g, '😉');
-  html = html.replace(/\0\)/g, '😉');
   return html;
 };
 

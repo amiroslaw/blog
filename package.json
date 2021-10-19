@@ -13,7 +13,8 @@
     "scan": "scully -- --scanRoutes",
     "watch": "scully -- --watch",
     "scully": "npx scully --",
-    "scully:serve": "npx scully serve --"
+    "scully:serve": "npx scully serve --",
+    "deploy": "npm run build --prod && npm run scully"
   },
   "description": "miroslaw.ovh website",
   "author": "Arkadiusz Mirosław",

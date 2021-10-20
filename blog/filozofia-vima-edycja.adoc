@@ -164,9 +164,23 @@ Na sam koniec tego wstępu do Vima, mam dla Was kilka porad, które mogą być p
 
 Zachętą do nauki Vima jest fakt, iż w innych programach zaimplementowane są poznane nam skróty. Praktycznie większość popularnych IDE ma wtyczkę, która umożliwi nam operowaniem tekstem w ten sam sposób jak w Vime. W powłokach systemowych bash i zsh jest możliwość włączenia `Vi mode`. https://github.com/brookhong/Surfingkeys[Surfingkeys] to jedno z rozszerzeń do Firefox i przeglądarek bazujących na Chromium, które pozwalają nawigować po stronach internetowych. Niektóre aplikacje, zorientowane na produktywność pozwalają na łatwą zamianę lub wspierają, skróty podobne do tych z Vima.
 
+.VimVi przeglądarka zdjęć
 image::assets/img/posts/vim/vimiv.png[vimiv,role=right]
-https://vifm.info/[vifm] i https://ranger.github.io/[ranger] → Przeglądarki plików - https://github.com/thestinger/termite/[termite] → Terminal linuksowy, który posiada tryby jak w Vim. - http://karlch.github.io/vimiv/[vimiv], feh i sxiv → Lekkie przeglądarki zdjęć - https://cmus.github.io/[cmus] i https://kimtore.no/pms/[PMS] → Odtwarzacze muzyczne - https://pwmt.org/projects/zathura/[zathura] i http://naihe2010.github.io/apvlv/[apvlv] → Przeglądarki pdf - https://i3wm.org/[i3wm] → Window manager - https://tamlok.github.io/vnote/[VNote] → Aplikacja do robienia notatek w Markdown - http://www.mutt.org/[mutt] → Klient e-mail - https://code.meskio.net/tudu/[TuDu] → Lista zadań w terminalu - https://qutebrowser.org/[qutebrowser] → Lekka przeglądarka internetowa - https://github.com/seanyeh/vibreoffice[vibreoffice] → Plugin do LibreOffice i OpenOffice - https://skyfromme.wordpress.com/2015/04/06/easterhegg-vimpressing-libreoffice/[Vimpressing] → Tworzenie prezentacji w Vim - less - → Przeglądarka tekstu
 
-Na stronie http://www.viemu.com/[viemu] - emulatora Vima, znajdziemy przydatną grafikę z skrótami klawiaturowymi.
+- https://vifm.info/[vifm] i https://ranger.github.io/[ranger] → Przeglądarki plików
+- https://github.com/thestinger/termite/[termite] → Terminal linuksowy, który posiada tryby jak w Vim.
+- http://karlch.github.io/vimiv/[vimiv], feh i sxiv → Lekkie przeglądarki zdjęć
+- https://cmus.github.io/[cmus] i https://kimtore.no/pms/[PMS] → Odtwarzacze muzyczne
+- https://pwmt.org/projects/zathura/[zathura] i http://naihe2010.github.io/apvlv/[apvlv] → Przeglądarki pdf
+- https://i3wm.org/[i3wm] → Window manager
+- https://tamlok.github.io/vnote/[VNote] → Aplikacja do robienia notatek w Markdown
+- http://www.mutt.org/[mutt] → Klient e-mail
+- https://code.meskio.net/tudu/[TuDu] → Lista zadań w terminalu
+- https://qutebrowser.org/[qutebrowser] → Lekka przeglądarka internetowa
+- https://github.com/seanyeh/vibreoffice[vibreoffice] → Plugin do LibreOffice i OpenOffice
+- https://skyfromme.wordpress.com/2015/04/06/easterhegg-vimpressing-libreoffice/[Vimpressing] → Tworzenie prezentacji w Vim
+- http://www.viemu.com/[viemu] - emulatora Vima
+
+Poniżej zamieszczam przydatną grafikę z skrótami klawiaturowymi.
 
 image::assets/img/posts/vim/vi-vim-cheat-sheet.gif[cheat sheet]

@@ -1,13 +1,13 @@
 ---
 title: Filozofia Vima - edycja
-description: Druga część dotycząca podstaw w używaniu edytora tekstowego Vim. W tej części nauczymy się jak się poruszać i edytować plik tekstowy. 
+description: Druga część dotycząca podstaw w używaniu edytora tekstowego Vim. W tej części nauczymy się jak się poruszać i edytować plik tekstowy.
 published: true
 date: 2020-05-30
 tags:
     - Vim
     - Tutorial
     - Linux
-photo: 
+photo:
   header: assets/img/thumbnail/vim-logo.png
   card: assets/img/thumbnail/vim-logo-300.png
 ---
@@ -53,7 +53,7 @@ Upraszczając do celów edukacyjnych, zebrałem trzy metody przeskakiwania kurso
 Dobrze wiedzieć, że w ostatni sposobie możemy użyć wyrażeń regularnych na przykład `/nazw.\|login`, może uwzględnić nam wyrazy jak: nazwa, nazwy lub login. Bardziej przydatne wyrażenia to:
 
 * `.` - dowolny znak
-* `^`, `$` - początek i koniec linii 
+* `^`, `$` - początek i koniec linii
 * `\<`, `\>` - początek i koniec słowa np. `\<surykatka\>` wyszuka tylko wyraz surykatka
 
 W czasie wyszukiwania możemy skakać pomiędzy znalezionymi frazami, i tak `n` znajduje nam następne wystąpienie, a `N` poprzednie. Jak chcemy przeskoczyć kilka trafień musimy poprzedzić komendę liczbą np. `10n`.
@@ -89,8 +89,8 @@ Podsumowując, jeśli skopiujemy napis (`y`) i potem przejdziemy w inne miejsce 
 
 Każde polecenie można powtórzyć - robi się to przez `.` kropkę. Oczywiście mamy też możliwość cofnięcia edycji lub wykonania jej ponownie. Nic nie szkodzi nam, aby takie cofnięcia powtarzać kilkukrotnie np. `5u`.
 
-* `u` - cofa skutki ostatniego polecenia 
-* `U` - cofa dla całej linii 
+* `u` - cofa skutki ostatniego polecenia
+* `U` - cofa dla całej linii
 * `c-r` - operacja ``wykonaj ponownie'' - cofa cofnięcia
 
 == Obiekty tekstowe
@@ -155,12 +155,12 @@ Składowe tego polecenia są opcjonalne. Nie musimy powtarzać lub manipulować 
 * `dG` - usunięcie wszystkiego od kursora do końca dokumentu
 * `4>j` - wcięcie 4 następnych linii
 * `2.` - dwukrotne powtórzenie ostatniego polecenia
-* `d'a` - dzięki takiej konstrukcji, Vim usuwa wszystko od miejsca zakładki `a` do miejsca, w którym znajduje się kursor 
+* `d'a` - dzięki takiej konstrukcji, Vim usuwa wszystko od miejsca zakładki `a` do miejsca, w którym znajduje się kursor
 * `5c-w+` - zwiększenie okna o 5 wierszy
 
 == Porady
 
-Na sam koniec tego wstępu do Vima, mam dla Was kilka porad, które mogą być przydatne. Pierwsza z nich wydaje się być dziwna. Proponuję zamiast Vima zainstalować jego fork https://neovim.io/[NeoVim]. Program ten ma kilka dodatkowych funkcji i wydaje mi się, że jest bardzie dostosowany do pracy od razu po zainstalowaniu. Mówiąc o ustawieniach, na stronie https://vim-bootstrap.com/[vim-bootstrap] znajdziemy przygotowane pliki konfiguracyjne. Podczas pisania możemy korzystać z autouzupełniania. Listę słów, które wystąpiły w dokumencie otworzymy przez `c-n` lub `c-p`, skróty te odpowiadają też za ich wybór.
+Na sam koniec tego wstępu do Vima, mam dla Was kilka porad, które mogą być przydatne. Pierwsza z nich wydaje się być dziwna. Proponuję zamiast Vima zainstalować jego fork https://neovim.io/[NeoVim]. Program ten ma kilka dodatkowych funkcji i wydaje mi się, że jest bardzie dostosowany do pracy od razu po zainstalowaniu. Mówiąc o ustawieniach, na stronie https://vim-bootstrap.com/[vim-bootstrap] znajdziemy przygotowane pliki konfiguracyjne. Podczas pisania możemy korzystać z autouzupełniania. Listę słów, które wystąpiły w dokumencie otworzymy przez kbd:[Ctrl+n] lub kbd:[Ctrl+p], skróty te odpowiadają też za ich wybór.
 
 Zachętą do nauki Vima jest fakt, iż w innych programach zaimplementowane są poznane nam skróty. Praktycznie większość popularnych IDE ma wtyczkę, która umożliwi nam operowaniem tekstem w ten sam sposób jak w Vime. W powłokach systemowych bash i zsh jest możliwość włączenia `Vi mode`. https://github.com/brookhong/Surfingkeys[Surfingkeys] to jedno z rozszerzeń do Firefox i przeglądarek bazujących na Chromium, które pozwalają nawigować po stronach internetowych. Niektóre aplikacje, zorientowane na produktywność pozwalają na łatwą zamianę lub wspierają, skróty podobne do tych z Vima.
 

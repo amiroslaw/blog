@@ -8,5 +8,5 @@ const emojiPlugin = async (html) => {
     return html;
 };
 const validator = async () => [];
-scully_1.registerPlugin('render', 'emoji', emojiPlugin, validator);
+scully_1.registerPlugin('postProcessByHtml', 'emoji', emojiPlugin, validator);
 //# sourceMappingURL=emoji.js.map

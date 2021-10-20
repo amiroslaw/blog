@@ -1,19 +1,14 @@
 import {ScullyConfig, setPluginConfig} from '@scullyio/scully';
 import {getHttp404Plugin} from '@gammastream/scully-plugin-http404';
+// import '@notiz/scully-plugin-rss';
 
 import './scully/plugins/emoji.js';
 import './scully/plugins/tags.js';
 
-require('@notiz/scully-plugin-medium-zoom');
-require('@notiz/scully-plugin-lazy-images');
-
 const Http404Plugin = getHttp404Plugin();
 const defaultPostRenderers = [
   'seoHrefOptimise',
-  'lazyImages',
   'emoji',
-  'zoom',
-  'mediumZoom',
   Http404Plugin
 ];
 

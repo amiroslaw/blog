@@ -17,31 +17,6 @@ photo:
 :figure-caption: Img
 :experimental:
 
-test
-kbd:[Ctrl+C]
-kbd:[Esc]
-
-
-[source,java]
-----
- private Map<String, String> splitURL(String query){
-     Map<String, String> urlMap= new HashMap<>();
-     for(String param : query.split("&")){
- 		//param = URLDecoder.decode(param, StandardCharsets.UTF_8.toString());
-         urlMap.put(StringUtils.substringBefore(param, "="),StringUtils.substringAfter(param, "="));
-     }
-     return urlMap;
- }
-
-//połączenie tych znaków
-String newQuery = parameters.entrySet()
-		.stream()
-		.map(Object::toString)
-		.collect(joining("&"));
-----
-
-image::assets/img/big.JPG[test, role=left]
-
 Długo przymierzałem się do napisania tego artykułu, który miałby za zadanie nauczyć i zachęcić do poznania Vima. Moja prokrastynacja wynikała z niezliczonych możliwości jakie daje te narzędzie. Po kilku latach używania tego edytora nadal uczę się nowych rzeczy. Na początku przygody z Vimem, https://www.vim.org/docs.php[dokumentacja] lub darmowa ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf[książka] może być przytłaczająca. Warto natomiast poznać koncepcje na jakich został oparty edytor, i w czasie potrzeby zgłębiać wiedzę, spoglądając w instrukcję (`:help`). Dla osób które szybko się nudzą powstały gry do nauki jak https://vim-adventures.com/[vim adventures] i http://www.vimgenius.com/[vim genius]. Bardzo dobrym źródłem wiedzy jest dostępna wraz z programem dokumentacja - vimtutor i strona z poradnikami wideo http://vimcasts.org/[vim casts].
 
 image:assets/img/posts/vim/vim-learning-curve.png[vim-curve, role=left]
@@ -130,3 +105,23 @@ Instalacja Vima zawiera plugin netrw, który jest przeglądarką plików. Dzięk
 Jest to pierwsza część dotycząca podstaw w używaniu najlepszego na świecie edytora tekstowego. :> Nie będę na razie opisywać takich funkcji jak zwijanie i porównywanie napisów, bufory, makra i podświetlanie kodu. Warto jednak wiedzieć, że takie funkcje są dostępne. Zapraszam jednak do przeczytania link:blog/filozofia-vima-edycja[drugiej] części. Opisuję w niej najważniejszą (i trudniejszą) funkcję jaką mają edytory tekstowe. Tak zgadliście mówię o manipulowaniem tekstu. :D
 
 image::assets/img/posts/vim/this-is-vim.jpg[madness]
+
+test
+[source,java]
+----
+ private Map<String, String> splitURL(String query){
+     Map<String, String> urlMap= new HashMap<>();
+     for(String param : query.split("&")){
+ 		//param = URLDecoder.decode(param, StandardCharsets.UTF_8.toString());
+         urlMap.put(StringUtils.substringBefore(param, "="),StringUtils.substringAfter(param, "="));
+     }
+     return urlMap;
+ }
+
+//połączenie tych znaków
+String newQuery = parameters.entrySet()
+		.stream()
+		.map(Object::toString)
+		.collect(joining("&"));
+----
+

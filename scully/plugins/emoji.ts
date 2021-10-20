@@ -10,6 +10,6 @@ const  emojiPlugin = async (html: string): Promise<string> => {
 
 const validator = async () => [];
 
-registerPlugin('render', 'emoji', emojiPlugin, validator);
+registerPlugin('postProcessByHtml', 'emoji', emojiPlugin, validator);
 
 

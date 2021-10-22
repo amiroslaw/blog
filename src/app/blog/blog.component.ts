@@ -1,4 +1,4 @@
-import {AfterViewChecked, AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewChecked, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {HighlightService} from '../services/highlight.service';
 import {ScullyContentService} from '../services/scully-content.service';
 import {TagService} from '../services/tag.service';
@@ -19,7 +19,7 @@ import {root} from 'rxjs/internal-compatibility';
   encapsulation: ViewEncapsulation.Emulated
 
 })
-export class BlogComponent implements OnInit, AfterViewChecked, AfterViewInit {
+export class BlogComponent implements OnInit, AfterViewChecked {
   postTags$: Observable<Tag[]>;
   postDate$: Observable<any>;
   private currentRoute: string;
@@ -38,26 +38,6 @@ export class BlogComponent implements OnInit, AfterViewChecked, AfterViewInit {
 
   ngAfterViewChecked(): void {
     this.highlightService.highlightAll();
-    this.addClassToCodeBlock();
-  }
-  ngAfterViewInit() {
-    this.scullyContent.getCurrent().subscribe(
-      current => this.addRouteToTocLinks(current.route)
-    );
   }
 
-  private addClassToCodeBlock() {
-    const codeBlocks = document.querySelectorAll('div.code-toolbar pre.highlight');
-    for (let i = 0; i < codeBlocks.length; i++) {
-      codeBlocks[i].classList.add('rainbow-braces', 'match-braces');
-    }
-  }
-
-  private addRouteToTocLinks(currentRoute: string) {
-    const tocLinks = document.querySelectorAll('#toc a');
-    for (let i = 0; i < tocLinks.length; i++) {
-      let href = tocLinks[i].getAttribute('href');
-      tocLinks[i].setAttribute('href', currentRoute + href);
-    }
-  }
 }

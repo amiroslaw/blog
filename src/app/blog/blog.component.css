@@ -52,6 +52,10 @@
   margin: 5px;
 }
 
+li > p {
+  margin: 5px;
+}
+
 @media only screen and (min-width: 768px) {
   .post-title {
     font-size: 36px;
@@ -73,15 +77,31 @@
   padding: 25px 35px;
 }
 
-
 article.post iframe {
   display: block;
   margin: 0 auto;
 }
 
 article.post img {
-  margin: 2% auto;
   max-width: 100%;
+  margin: 2% 0;
+  text-align: center;
+}
+
+article.post div.imageblock {
+  text-align: center;
+}
+
+article.post img-25 {
+  max-width: 25%;
+}
+
+article.post img-55 {
+  max-width: 55%;
+}
+
+article.post img-75 {
+  max-width: 75%;
 }
 
 @media (min-width: 768px) {
@@ -96,19 +116,8 @@ article.post img {
     margin: 2% 0 2% 2%;
     max-width: 40%;
   }
-
-  article.post img-25 {
-    max-width: 25%;
-  }
-
-  article.post img-55 {
-    max-width: 55%;
-  }
-
-  article.post img-75 {
-    max-width: 75%;
-  }
 }
+
 #toc > div {
   text-transform: uppercase;
 }

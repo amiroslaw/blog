@@ -102,26 +102,7 @@ Instalacja Vima zawiera plugin netrw, który jest przeglądarką plików. Dzięk
 * `e` - otwiera plik w bieżącym oknie
 * `o`, `v` - otwiera plik w poziomo `o` lub pionowo `v` podzielonym oknie
 
-Jest to pierwsza część dotycząca podstaw w używaniu najlepszego na świecie edytora tekstowego. :> Nie będę na razie opisywać takich funkcji jak zwijanie i porównywanie napisów, bufory, makra i podświetlanie kodu. Warto jednak wiedzieć, że takie funkcje są dostępne. Zapraszam jednak do przeczytania link:blog/filozofia-vima-edycja[drugiej] części. Opisuję w niej najważniejszą (i trudniejszą) funkcję jaką mają edytory tekstowe. Tak zgadliście mówię o manipulowaniem tekstu. :D
+Jest to pierwsza część dotycząca podstaw w używaniu najlepszego na świecie edytora tekstowego. Nie będę na razie opisywać takich funkcji jak zwijanie i porównywanie napisów, bufory, makra i podświetlanie kodu. Warto jednak wiedzieć, że takie funkcje są dostępne. Zapraszam jednak do przeczytania link:blog/filozofia-vima-edycja[drugiej] części. Opisuję w niej najważniejszą (i trudniejszą) funkcję jaką mają edytory tekstowe. Tak zgadliście mówię o manipulowaniem tekstu. :D
 
 image::assets/img/posts/vim/this-is-vim.jpg[madness]
-
-test
-[source,java]
-----
- private Map<String, String> splitURL(String query){
-     Map<String, String> urlMap= new HashMap<>();
-     for(String param : query.split("&")){
- 		//param = URLDecoder.decode(param, StandardCharsets.UTF_8.toString());
-         urlMap.put(StringUtils.substringBefore(param, "="),StringUtils.substringAfter(param, "="));
-     }
-     return urlMap;
- }
-
-//połączenie tych znaków
-String newQuery = parameters.entrySet()
-		.stream()
-		.map(Object::toString)
-		.collect(joining("&"));
-----
 

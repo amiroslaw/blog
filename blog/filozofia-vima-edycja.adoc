@@ -79,7 +79,7 @@ Gratuluję wytrwałości, jak dotrwałeś do tego miejsca. Mam dobrą wiadomoś�
 * `~` (`gUl` i `gul`) - (tylda) zamiana wielkości znaku spod kursora
 * `r{x}` - działa jak `cl`, jednak pozostaje w Normal mode. Zamienia znak na pozycji kursora na wybrany znak
 
-image:assets/img/posts/memy/smart-guy-300x300.jpg[smart guy,role=right,role=img-25]
+image:assets/img/posts/memy/smart-guy-300x300.jpg[smart guy,role=left img-25]
 Jestem Wam winien wyjaśnienie, dlaczego operacje `d` (delete) przetłumaczyłem na wycinanie. Vim domyślnie niczego nie kasuje, komendy takie jak `d`, `c`, `S` przenoszą tekst do rejestru.
 Vim przechowuje historie wyciętego tekstu w rejestrach pod cyframi 1-9. Jeśli usunęliśmy dwa różne stringi i chcemy wkleić ten pierwszy, to musimy wywołać rejestr o cyfrze 2 przez `"2`, aby wkleić dodajemy jeszcze literkę p (paste) - `"2p`. Dodatkowo po kolejnych wyciętych obiektach, tekst przesuwa się do rejestrów o wyższych numeracjach. Następną sprawą jest fakt, iż skopiowany tekst (`y`) posiada specjalny rejestr 0.
 

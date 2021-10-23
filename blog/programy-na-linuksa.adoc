@@ -23,7 +23,7 @@ Dla osoby zaczynającej przygodę z systemami GNU/Linux, początek może być ba
 
 == Jak szukać programów?
 
-image:assets/img/posts/2020/ask-blackboard-chalk-board-356079-300x182.jpg[question_makr] 
+image:assets/img/posts/2020/ask-blackboard-chalk-board-356079-300x182.jpg[question_makr, role=left]
 Moja propozycja programów jest tylko małym wycinkiem dostępnego oprogramowania na Linuksy. Różne dystrybucje podchodzą do tego inaczej, więc należy się zapoznać jak instalować paczki z programami. Najprostszym sposobem do zainstalowania programu jest otworzenie odpowiednika Windowsowskiego sklepu - w Linux Mint jest to menedżer oprogramowania. W systemach pochodnych do debiana operację taką wykonamy też w terminalu:
 
 [source,bash]
@@ -92,9 +92,9 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
 ** sxiv
 ** Viewnior
 * https://www.darktable.org/[Darktable] → Obróbka zdjęć (jak Lightroom).
-** RawTherapee 
-** digiKam 
-** LightZone 
+** RawTherapee
+** digiKam
+** LightZone
 ** Photivo
 
 === Programy biurwe
@@ -108,17 +108,17 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
 * http://goldendict.org/[GoldenDict] → Słownik
 ** StarDict → Już nie wspierany.
 * https://www.gnucash.org/[GnuCash] → Zarządzanie budżetem domowym i małych firm. Zgodny z regułą podwójnego zapisu.
-** Eqonomize 
-** Homebank 
+** Eqonomize
+** Homebank
 * https://calibre-ebook.com/[calibre - E-book management] → Manager e-booków, w pakiecie jest zawarta przeglądarka książek elektronicznych.
-** https://github.com/oguzhaninan/Buka[buka ebook reader] 
+** https://github.com/oguzhaninan/Buka[buka ebook reader]
 * https://www.freeplane.org/wiki/index.php/Home[Freeplane] → Tworzenia map myśli.
-** http://www.xmind.net/[xmind] 
+** http://www.xmind.net/[xmind]
 ** freemind
 * https://pwmt.org/projects/zathura/[zathura i mupdf] → Lekka przeglądarka PDF.
 ** https://okular.kde.org/[Okular] → Wersja KDE.
 * http://www.pdfsam.org/[PDFsam] → Program do modyfikowania plików PDF
-** PDFMod 
+** PDFMod
 ** http://xournal.sourceforge.net/[Xournal] → Notatki i adnotacje PDF.
 * https://typora.io/[Typora] → Tworzenie i podgląd notatek zapisanych w formacie Markdown.
 ** Boostnote
@@ -129,8 +129,8 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
 
 * http://tilda.sourceforge.net/[tilda] → Drop-down terminal.
 ** Guake terminal
-** yakuake → Wersja dla KDE. 
-* https://github.com/alacritty/alacritty[alacritty] 
+** yakuake → Wersja dla KDE.
+* https://github.com/alacritty/alacritty[alacritty]
 ** kitty
 ** https://github.com/thestinger/termite/[termite] → Posiada tryby jak w vim, ale już nie jest wspierany.
 ** http://www.ubuntu-pomoc.org/terminology-wiecej-niz-kolejny-emulator-terminala/[terminology] → Rozbudowany terminal z wieloma funkcjami.
@@ -138,24 +138,24 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
 * http://en.congelli.eu/prog_info_lcdnurse.html[LCD Nurse] → Szukanie martwych pikseli w monitorach LCD.
 * https://dave-theunsub.github.io/clamtk/[ClamTK] → Antywirus
 * http://www.pixelbeat.org/fslint/[fslint] → Narzędzie do szukania duplikatów, pustych folderów itp.
-* http://pl.wikibooks.org/wiki/Ubuntu/Program_antywirusowy[ClamTK] ClamAV → nakładka gui na antywirus 
+* http://pl.wikibooks.org/wiki/Ubuntu/Program_antywirusowy[ClamTK] ClamAV → nakładka gui na antywirus
 * kazam → Nagrywanie pulpitu.
 * https://davedavenport.github.io/rofi/[rofi] → Program do przełączania i uruchamiania aplikacji jak dmenu.
-** https://kupferlauncher.github.io/[kupfer] 
+** https://kupferlauncher.github.io/[kupfer]
 * https://github.com/wummel/patool[patool] → Manager do archiwizacji i kompresji danych. Wspiera dużą ilość rozszerzeń.
 ** atool
-** 7zip 
+** 7zip
 * https://github.com/DoTheEvo/ANGRYsearch[ANGRYsearch] → Wyszukiwarka plików.
 ** http://www.lesbonscomptes.com/recoll/[recoll]
-* https://unetbootin.github.io/[UNetbootin] → Tworzenie USB boot. 
+* https://unetbootin.github.io/[UNetbootin] → Tworzenie USB boot.
 * https://github.com/oguzhaninan/Stacer[Stacer] → Optymalizacja systemu.
 * http://shutter-project.org/[Shutter] → Tworzenie zrzutów ekranu.
 * https://sourceforge.net/projects/linssid/[linssid] → Skanowanie sieci bezprzewodowych.
 * https://www.bleachbit.org/[bleachbit] → Czyszczenie systemu z niepotrzebnych plików.
 * Unclutter → Ukrywanie wskaźnika myszy w czasie spoczynku.
 * Hardinfo → Informacje o sprzęcie i systemie.
-** lshw → info o systemie można zainstalować nakładkę GUI. 
-* http://www.nongnu.org/synaptic/[Synaptic] → Manager pakietów. 
+** lshw → info o systemie można zainstalować nakładkę GUI.
+* http://www.nongnu.org/synaptic/[Synaptic] → Manager pakietów.
 * http://meldmerge.org/[meld] → Porównywanie plików tekstowych w poszukiwaniu różnic.
 * https://wiki.gnome.org/Apps/Brasero[brasero] → Nagrywarka płyt.
 ** https://sourceforge.net/projects/acetoneiso/[AcetoneISO] → Tworzenie plików ISO.
@@ -167,7 +167,7 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
 * http://www.workrave.org/[Workrave] → Program mówiący kiedy mamy zrobić sobie przerwę od komputera.
 ** https://projecthamster.wordpress.com/about/[Hamster] → Monitorowanie czasu.
 * http://jonls.dk/redshift[redshift] → Aplikacja starająca się ograniczyć niebieskie światło od monitora.
-** f.lux 
+** f.lux
 * http://hluk.github.io/CopyQ/[CopyQ] → Manager schowka systemowego.
 ** cliplt
 
@@ -182,7 +182,7 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
 * https://zealdocs.org/[zeal] → Dokumentacja offline.
 * https://filezilla-project.org/[filezilla] → Klient FTP.
 * http://dbeaver.jkiss.org/[dbeaver] → Uniwersalny klient do zarządzania bazami danymi.
-** mysql workbench 
+** mysql workbench
 ** DbVisualizer
 * https://git-scm.com/[git] → Manager kontroli wersji.
 ** kraken

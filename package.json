@@ -10,10 +10,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully-build": "ng build --prod && npm run scully",
-    "scan": "scully -- --scanRoutes",
-    "watch": "scully -- --watch",
+    "scully-scan": "scully -- --scanRoutes",
+    "scully-watch": "scully -- --watch",
     "scully": "scully",
-    "scully:serve": "npx scully serve --",
+    "scully-serve": "npx scully serve --",
     "deploy": "npm run build --prod && npm run scully"
   },
   "description": "miroslaw.ovh website",

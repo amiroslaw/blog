@@ -5,6 +5,7 @@
         <div id="date">
           <fa-icon [icon]="['far', 'calendar-alt']" class="mr-1"></fa-icon>
           <time datetime="article.date">{{postDate$ | async | date}}</time>
+          <fa-icon [icon]="['far', 'clock']" class="ml-3"></fa-icon>
         </div>
         <scully-content></scully-content>
         <ul class="tags">

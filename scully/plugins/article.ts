@@ -9,8 +9,21 @@ function getWordcount(body: HTMLBodyElement) {
   return content.split(' ').length;
 }
 
-function toc(dom: JSDOM) {
+function addReadingTime(dom: JSDOM) {
+  let body = dom.window.document.querySelector('body');
+  if (body) {
+    const wordcount = getWordcount(body);
+    // const readingTimeMin = Math.floor(wordcount/160);
+    // const readingTimeSec = (wordcount/160 - readingTimeMin) * 60;
+    const readingTimeMin = Math.round(wordcount / 200);
+    const post = dom.window.document.getElementById('toc')
+    if (post) {
+      post.insertAdjacentHTML('beforebegin', `<div id="reading-time" style="display: inline-block;" > ${readingTimeMin} min.</div>`);
+    }
+  }
+}
 
+function toc(dom: JSDOM) {
   const tocLinks = dom.window.document.querySelectorAll('#toc a');
   if (tocLinks.length > 0) {
     for (let i = 0; i < tocLinks.length; i++) {
@@ -18,18 +31,6 @@ function toc(dom: JSDOM) {
       const onclickAttr = 'document.getElementById(\'' + href.substring(1) + '\').scrollIntoView(); return false;';
       tocLinks[i].setAttribute('onclick', onclickAttr);
     }
-  }
-}
-
-function addReadingTime(dom: JSDOM) {
-  let body = dom.window.document.querySelector('body');
-  if (body) {
-    const wordcount = getWordcount(body);
-    // const readingTimeMin = Math.floor(wordcount/160);
-    // const readingTimeSec = (wordcount/160 - readingTimeMin) * 60;
-    const readingTimeMin = Math.round(wordcount / 160);
-    const post = dom.window.document.querySelector('article.post');
-    post.insertAdjacentHTML('afterbegin', `<div id="reading-time"> ${readingTimeMin} min  </div>`);
   }
 }
 

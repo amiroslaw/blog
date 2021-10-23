@@ -127,11 +127,12 @@ article.post img-75 {
 }
 
 #date {
-  text-align: right;
+  display: inline-block;
+  margin-left: 33%;
 }
 
 #reading-time {
-  text-align: right;
+  display: inline-block;
 }
 
 .tags {

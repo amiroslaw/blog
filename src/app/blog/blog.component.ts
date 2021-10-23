@@ -2,14 +2,13 @@ import {AfterViewChecked, Component, OnInit, ViewEncapsulation} from '@angular/c
 import {HighlightService} from '../services/highlight.service';
 import {ScullyContentService} from '../services/scully-content.service';
 import {TagService} from '../services/tag.service';
-import {faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
+import {faCalendarAlt, faClock} from '@fortawesome/free-regular-svg-icons';
 
 import {Observable} from 'rxjs';
 import {Tag} from '../types/types';
 import {map} from 'rxjs/operators';
 import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import {faTags} from '@fortawesome/free-solid-svg-icons';
-import {root} from 'rxjs/internal-compatibility';
 
 @Component({
   selector: 'app-blog',
@@ -22,10 +21,9 @@ import {root} from 'rxjs/internal-compatibility';
 export class BlogComponent implements OnInit, AfterViewChecked {
   postTags$: Observable<Tag[]>;
   postDate$: Observable<any>;
-  private currentRoute: string;
 
   constructor(private highlightService: HighlightService, private tagService: TagService, private scullyContent: ScullyContentService, library: FaIconLibrary) {
-    library.addIcons(faTags, faCalendarAlt);
+    library.addIcons(faTags, faCalendarAlt, faClock);
   }
 
   ngOnInit(): void {

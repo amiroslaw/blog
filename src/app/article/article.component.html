@@ -1,12 +1,12 @@
-<div class="post-preview jumbotron" >
+<div class="post-preview p-5 bg-light border rounded-3" >
   <div class="row">
     <div class="col-md-5 col-12 text-center">
       <a [routerLink]="article.route" *ngIf=" article.photo && (article.photo.header || article.photo.card)">
         <img class="img-thumbnail" [src]="article.photo.card || article.photo.header" alt="thumbnail"/>
       </a>
-      <div class="post-meta  mt-2">
+      <div class="post-meta mt-2">
         <div>
-          <fa-icon [icon]="['far', 'calendar-alt']" class="mr-1"></fa-icon>
+          <fa-icon [icon]="['far', 'calendar-alt']" class="me-1"></fa-icon>
           <time datetime="article.date">{{article.date | date}}</time>
         </div>
         <div *ngIf="article.tags">
@@ -26,11 +26,11 @@
       <div class="post-subtitle">
         {{article.description}}
       </div>
-      <div class="text-center">
-        <a [routerLink]="article.route">
-          <button type="button" class="btn btn-info mt-4">Czytaj więcej</button>
-        </a>
-      </div>
+<!--      <div class="text-center">-->
+<!--        <a [routerLink]="article.route">-->
+<!--          <button type="button" class="btn btn-info mt-4">Czytaj więcej</button>-->
+<!--        </a>-->
+<!--      </div>-->
     </div>
   </div>
 </div>

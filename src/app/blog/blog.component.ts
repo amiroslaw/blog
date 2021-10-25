@@ -16,7 +16,6 @@ import {faTags} from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./blog.component.css'],
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated
-
 })
 export class BlogComponent implements OnInit, AfterViewChecked {
   postTags$: Observable<Tag[]>;

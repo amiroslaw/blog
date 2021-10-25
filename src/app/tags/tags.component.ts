@@ -4,7 +4,7 @@ import {TagService} from '../services/tag.service';
 import {Observable} from 'rxjs';
 import {ScullyRoute} from '@scullyio/ng-lib';
 import {map} from 'rxjs/operators';
-import {flatMap} from 'rxjs/internal/operators';
+import {mergeMap} from 'rxjs/operators';
 import {TagWeight} from '../types/types';
 
 @Component({
@@ -26,7 +26,7 @@ export class TagsComponent implements OnInit {
     this.slug$ = this.contentService.getSlug();
     this.slugTitle$ = this.contentService.getSlugTitle(this.slug$);
     this.posts$ = this.contentService.getSlugTitle(this.slug$).pipe(
-      flatMap(slug => this.tagService.getTagPosts(slug[0]))
+      mergeMap(slug => this.tagService.getTagPosts(slug[0]))
     );
     this.allTags = this.tagService.getAllTags();
   }

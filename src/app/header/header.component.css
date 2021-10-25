@@ -150,6 +150,7 @@ header.masthead .overlay {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
+  position: relative;
   padding: 100px;
   color: white;
 }

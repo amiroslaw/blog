@@ -20,7 +20,7 @@ article.post iframe {
 
 article.post img {
   max-width: 100%;
-  margin: 2% 0;
+  margin: 1% 0;
   text-align: center;
 }
 
@@ -208,3 +208,9 @@ li > p {
   }
 }
 
+.imageblock > .title {
+  text-align: left;
+  font-size: .8em;
+  color: #6c757d;
+  margin-bottom: 1%;
+}

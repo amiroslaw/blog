@@ -183,4 +183,5 @@ image::assets/img/posts/vim/vimiv.png[vimiv,role=right]
 
 Poniżej zamieszczam przydatną grafikę z skrótami klawiaturowymi.
 
+.Vim cheat sheet
 image::assets/img/posts/vim/vi-vim-cheat-sheet.gif[cheat sheet]

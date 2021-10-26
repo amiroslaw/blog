@@ -24,6 +24,7 @@ Po tym humorystycznym fragmencie z serialu IT crowd (polecam obejrzeć) nie trud
 == To ten system z pingwinem?
 Linux często jest utożsamiany z jej sympatyczną maskotką - pingwinem Tux.
 
+.Pingwin Tux
 image::assets/img/posts/linux/Tux.svg[pingwin Tux]
 
 Do nakreślenia filozofii tego systemu operacyjnego, posłużę się cytatem z Wikipedii:

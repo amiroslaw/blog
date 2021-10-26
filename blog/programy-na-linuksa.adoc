@@ -34,6 +34,7 @@ sudo apt-get install nazwa_paczki
 
 Alternatywami menedżera oprogramowania i apt jest Synaptic i aptitude z łatwiejszymi do zapamiętania poleceniami. Czasami jednak trzeba je zainstalować.
 
+.Synaptic
 image::assets/img/posts/2020/synatpic-768x537.jpg[Synaptic]
 
 Jak nie znajdziemy nic co nas interesuje w repozytorium lub nie wiemy jak nazywa się program, możemy zajrzeć na stronę https://alternativeto.net/platform/linux/[alternativeTO]. Portal ten posiada zbiór rekomendowanych aplikacji. Możemy wpisać nazwę programu który znamy z Windowsa i przefiltrować wyniki po platformie Linux. Na oficjalnej stronie wybranego projektu powinniśmy mieć instrukcję instalacji na nasz system. W Ubuntu i Mint będzie to pobranie paczki z rozszerzeniem .deb lub dodanie jego do repozytorium przez PPA. W najgorszym przypadku będziemy musieli pobrać kod programu i go skompilować.

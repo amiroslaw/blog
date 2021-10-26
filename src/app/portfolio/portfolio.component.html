@@ -25,6 +25,36 @@
       </div>
 
       <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" (click)="openModal(portfolioModalInvesting)">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <fa-icon [icon]="['fas', 'search-plus']" size="3x"></fa-icon>
+            </div>
+          </div>
+          <img class="img-fluid" src="assets/img/portfolio/investing-small.png" alt="">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Investing CLI</h4>
+          <p class="text-muted">Aplikacjia CLI pozwalająca monitorować aktywa finansowe.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" (click)="openModal(portfolioModal7)">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <fa-icon [icon]="['fas', 'search-plus']" size="3x"></fa-icon>
+            </div>
+          </div>
+          <img class="img-fluid" src="assets/img/portfolio/chart_eportfel_small.png" alt="">
+        </a>
+        <div class="portfolio-caption">
+          <h4>ePortfel</h4>
+          <p class="text-muted">Elektroniczy portfel do zarządzania budżetem domowym.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" (click)="openModal(portfolioModal6)">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
@@ -50,20 +80,6 @@
         <div class="portfolio-caption">
           <h4>Review</h4>
           <p class="text-muted">Aplikacja RESTful do rewidowania postępów w osiąganiu swoich celów</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" (click)="openModal(portfolioModal7)">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <fa-icon [icon]="['fas', 'search-plus']" size="3x"></fa-icon>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/img/portfolio/chart_eportfel_small.png" alt="">
-        </a>
-        <div class="portfolio-caption">
-          <h4>ePortfel</h4>
-          <p class="text-muted">Elektroniczy portfel do zarządzania budżetem domowym.</p>
         </div>
       </div>
 
@@ -313,13 +329,10 @@
       </div>
       <div class="modal-body">
         <p class="item-intro text-muted">Web application for learning foreign languages.</p>
-        <p>The web application for learning foreign languages. The application easily compares the texts from
-          two
-          languages sentence by sentence. This note could have tags and can be saved in a notebook. You can
-          create
+        <p>The web application for learning foreign languages. The application easily compares the texts from two
+          languages sentence by sentence. This note could have tags and can be saved in a notebook. You can create
           a dictionary from select words.
-          <br>
-          <strong>Notice</strong>: This app is in developer stage.</p>
+          </p>
         <h3> Features:</h3>
         <ul class="contains-task-list">
           <li> Authentication a user</li>
@@ -336,7 +349,7 @@
           thymeleaf, Bootstrap 4, wordnik API</p>
         <ul class="list-inline text-center">
           <li class="list-inline-item">
-            <a target="_blank" rel="noopener noreferrer" href="https://mighty-castle-53559.herokuapp.com/">
+            <a target="_blank" rel="noopener noreferrer" href="https://languide.herokuapp.com/">
               <fa-layers size="2x">
                 <fa-icon [icon]="['fas', 'circle']"></fa-icon>
                 <fa-icon [inverse]="true" [icon]="['fas', 'link']" transform="shrink-6"></fa-icon>
@@ -353,6 +366,98 @@
           </li>
         </ul>
       </div>
+      <div class="modal-footer">
+        <button class="btn btn-theme btn-info" type="button" (click)="modal.dismiss()">
+          <fa-icon [icon]="['fas', 'times']"></fa-icon>
+          Zamknij
+        </button>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- Modal portfel  -->
+  <ng-template #portfolioModal7 let-modal>
+    <div class="portfolio-modal">
+      <div class="modal-header">
+        <h2 class="modal-title">e-Wallet</h2>
+        <div class="close-modal" aria-label="Close" (click)="modal.dismiss()">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+      </div>
+      <p class="item-intro text-muted">Electronic wallet created in JavaFX technology</p>
+      <div class="modal-body">
+        <p>The electronic wallet was created using javaFX technology. Use it to manage your personal
+          accounts. The application implements a
+          <a href="https://en.wikipedia.org/wiki/Double-entry_bookkeeping_system" rel="nofollow">Double-entry
+            bookkeeping system</a>. The program is cross-platform software, built in Java 8</p>
+        <h3>Features:</h3>
+        <ul class="contains-task-list">
+          <li>creating a wallet</li>
+          <li>creating a user profile</li>
+          <li>logging in to a user profile</li>
+          <li>managing wallets</li>
+          <li>saving in to a database</li>
+          <li>creating reports</li>
+        </ul>
+        <h3>Used technology</h3>
+        <p>Java 8, JavaFX, Scene Builder, SQLite, JDBC
+          <br> The application was written in MVC pattern.</p>
+        <a href="https://github.com/amiroslaw/ePortfel" target="_blank" rel="noopener noreferrer" >
+          <fa-layers size="2x">
+            <fa-icon [icon]="['fas', 'circle']"></fa-icon>
+            <fa-icon [inverse]="true" [icon]="['fab', 'github']" transform="shrink-6"></fa-icon>
+          </fa-layers>
+        </a>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-theme btn-info" type="button" (click)="modal.dismiss()">
+          <fa-icon [icon]="['fas', 'times']"></fa-icon>
+          Zamknij
+        </button>
+      </div>
+    </div>
+  </ng-template>
+
+
+  <!-- Modal investing-cli  -->
+  <ng-template #portfolioModalInvesting let-modal>
+    <div class="portfolio-modal">
+      <div class="modal-header">
+        <h2 class="modal-title">investing-cli</h2>
+        <div class="close-modal" aria-label="Close" (click)="modal.dismiss()">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+      </div>
+      <p class="item-intro text-muted">The terminal application for tracking financial assets.</p>
+      <div class="modal-body">
+        <p>
+          Motivation for making this application was to try the new java features (java 16), graalVM and fluent process and the framework picocli.
+          The program supports cryptocurrencies and stock market assets from the YahooFinanceAPI (some Crypto - Crypto trade data are not accessible).
+        </p>
+
+        <h3>Features:</h3>
+        <ul class="contains-task-list">
+          <li>tracking financial assets</li>
+          <li>creating a portfolio with holdings</li>
+          <li>calculating profit</li>
+          <li>adding alerts</li>
+          <li>support cryptocurrency and GPW</li>
+        </ul>
+        <h3>Used technology</h3>
+        <p>Java 16, graalVM, jsoup, picocli, unirest java, fluent process.</p>
+        <a href="https://github.com/amiroslaw/investing-cli" target="_blank" rel="noopener noreferrer" >
+          <fa-layers size="2x">
+            <fa-icon [icon]="['fas', 'circle']"></fa-icon>
+            <fa-icon [inverse]="true" [icon]="['fab', 'github']" transform="shrink-6"></fa-icon>
+          </fa-layers>
+        </a>
+      </div>
+
       <div class="modal-footer">
         <button class="btn btn-theme btn-info" type="button" (click)="modal.dismiss()">
           <fa-icon [icon]="['fas', 'times']"></fa-icon>
@@ -404,52 +509,6 @@
       </div>
     </div>
   </ng-template>
-  <!-- Modal 7  -->
-  <ng-template #portfolioModal7 let-modal>
-    <div class="portfolio-modal">
-      <div class="modal-header">
-        <h2 class="modal-title">e-Wallet</h2>
-        <div class="close-modal" aria-label="Close" (click)="modal.dismiss()">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-      </div>
-      <p class="item-intro text-muted">Electronic wallet created in JavaFX technology</p>
-      <div class="modal-body">
-        <p>The electronic wallet was created using javaFX technology. Use it to manage your personal
-          accounts. The application implements a
-          <a href="https://en.wikipedia.org/wiki/Double-entry_bookkeeping_system" rel="nofollow">Double-entry
-            bookkeeping system</a>. The program is cross-platform software, built in Java 8</p>
-        <h3>Features:</h3>
-        <ul class="contains-task-list">
-          <li>creating a wallet</li>
-          <li>creating a user profile</li>
-          <li>logging in to a user profile</li>
-          <li>managing wallets</li>
-          <li>saving in to a database</li>
-          <li>creating reports</li>
-        </ul>
-        <h3>Used technology</h3>
-        <p>Java 8, JavaFX, Scene Builder, SQLite, JDBC
-          <br> The application was written in MVC pattern.</p>
-        <a href="https://github.com/amiroslaw/ePortfel" target="_blank" rel="noopener noreferrer" >
-          <fa-layers size="2x">
-            <fa-icon [icon]="['fas', 'circle']"></fa-icon>
-            <fa-icon [inverse]="true" [icon]="['fab', 'github']" transform="shrink-6"></fa-icon>
-          </fa-layers>
-        </a>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-theme btn-info" type="button" (click)="modal.dismiss()">
-          <fa-icon [icon]="['fas', 'times']"></fa-icon>
-          Zamknij
-        </button>
-      </div>
-    </div>
-  </ng-template>
-
   <!-- Modal 8  -->
   <ng-template #portfolioModal8 let-modal>
     <div class="portfolio-modal">

@@ -16,7 +16,7 @@ export class ScullyContentService {
     return this.getFilterRoute(this.scully.available$, '/blog/').pipe(
       map((posts) =>
         posts.sort((p1, p2) =>
-          new Date(p1.date) > new Date(p2.date) ? -1 : 1
+          new Date(p1.publishedAt) > new Date(p2.publishedAt) ? -1 : 1
         )
       )
     );

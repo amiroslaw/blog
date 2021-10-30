@@ -2,7 +2,9 @@
 title: Filozofia Vima - edycja
 description: Druga część dotycząca podstaw w używaniu edytora tekstowego Vim. W tej części nauczymy się jak się poruszać i edytować plik tekstowy.
 published: true
-date: 2020-05-30
+publishedAt: 2020-05-30
+authors:
+   - Arkadiusz Mirosław
 tags:
     - Vim
     - Tutorial

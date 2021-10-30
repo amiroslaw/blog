@@ -2,7 +2,9 @@
 title: Filozofia Vima - tryby i pliki
 description: Filozoficzne podejście do nauki nietypowego edytora jakim jest vim.
 published: true
-date: 2020-05-12
+publishedAt: 2020-05-12
+authors:
+   - Arkadiusz Mirosław
 tags:
     - Vim
     - Tutorial

@@ -7,7 +7,7 @@
       <div class="post-meta mt-2">
         <div>
           <fa-icon [icon]="['far', 'calendar-alt']" class="me-1"></fa-icon>
-          <time datetime="article.date">{{article.date | date}}</time>
+          <time datetime="article.date">{{article.publishedAt | date}}</time>
         </div>
         <div *ngIf="article.tags">
           <fa-icon [icon]="['fas', 'tags']" aria-hidden="true"></fa-icon>

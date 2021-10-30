@@ -1,6 +1,6 @@
 import {ScullyConfig} from '@scullyio/scully';
 import {getHttp404Plugin} from '@gammastream/scully-plugin-http404';
-// import '@notiz/scully-plugin-rss';
+import '@notiz/scully-plugin-rss';
 
 import './scully/plugins/emoji.js';
 import './scully/plugins/tags.js';

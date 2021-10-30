@@ -29,7 +29,7 @@ export class BlogComponent implements OnInit, AfterViewChecked {
     this.postTags$ = this.tagService.getPostTags();
 
     this.postDate$ = this.scullyContent.getCurrent().pipe(
-      map(route => route.date)
+      map(route => route.publishedAt)
     );
   }
 

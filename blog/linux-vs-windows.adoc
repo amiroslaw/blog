@@ -2,7 +2,9 @@
 title: Linux vs Windows
 description: Najważniejsze różnice pomiędzy systemem operacyjnym z rodziny Windows i Linuks z perspektywy desktopowego użytkownika. Czyli próba potwierdzenia mojego wyboru.
 published: true
-date: 2020-01-19
+publishedAt: 2020-01-19
+authors:
+   - Arkadiusz Mirosław
 tags:
     - Linux
     - Windows

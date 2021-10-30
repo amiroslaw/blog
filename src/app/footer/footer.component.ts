@@ -1,11 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 
 import {faGithub, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
-import {faCircle, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {faCircle, faEnvelope, faRss} from '@fortawesome/free-solid-svg-icons';
 import {ActivatedRoute} from '@angular/router';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
-
 
 @Component({
   selector: 'app-footer',
@@ -16,7 +15,7 @@ export class FooterComponent implements OnInit {
   currentYear;
 
   constructor(private activatedRoute: ActivatedRoute, private scully: ScullyRoutesService, library: FaIconLibrary) {
-    library.addIcons(faLinkedinIn, faGithub, faCircle, faEnvelope);
+    library.addIcons(faRss, faLinkedinIn, faGithub, faCircle, faEnvelope);
   }
 
   ngOnInit(): void {

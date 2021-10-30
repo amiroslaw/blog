@@ -2,9 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://miroslaw.ovh</id>
     <title>miroslaw.ovh</title>
-    <updated>2021-10-30T22:36:01.606Z</updated>
+    <updated>2021-10-30T22:46:36.734Z</updated>
     <generator>Artykuły o programowaniu i Linuksie</generator>
     <link rel="alternate" href="https://miroslaw.ovh"/>
+    <link rel="self" href="https://miroslaw.ovh/feed.atom"/>
     <subtitle>Artykuły o programowaniu i Linuksie</subtitle>
     <logo>https://miroslaw.ovh/assets/img/logo.jpg</logo>
     <icon>https://miroslaw.ovh/assets/img/logo.jpg</icon>

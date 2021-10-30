@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-    <channel>
-        <title>miroslaw.ovh</title>
-        <link>https://miroslaw.ovh</link>
-        <description>Artykuły o programowaniu i Linuksie</description>
-        <lastBuildDate>Sat, 30 Oct 2021 22:46:36 GMT</lastBuildDate>
-        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>Artykuły o programowaniu i Linuksie</generator>
-        <language>pl</language>
-        <image>
-            <title>miroslaw.ovh</title>
-            <url>https://miroslaw.ovh/assets/img/logo.jpg</url>
-            <link>https://miroslaw.ovh</link>
-        </image>
-        <copyright>2021 miroslaw.ovh</copyright>
-        <category>Web Development</category>
-        <category>Blog</category>
-        <category>Angular</category>
-        <category>node</category>
-        <item>
-            <title><![CDATA[Filozofia Vima - edycja]]></title>
-            <link>https://miroslaw.ovh/blog/filozofia-vima-edycja</link>
-            <guid>/blog/filozofia-vima-edycja</guid>
-            <pubDate>Sat, 30 May 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Druga część dotycząca podstaw w używaniu edytora tekstowego Vim. W tej części nauczymy się jak się poruszać i edytować plik tekstowy.]]></description>
-            <content:encoded><![CDATA[<p>:toc:
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://miroslaw.ovh</id>
+    <title>miroslaw.ovh</title>
+    <updated>2021-10-30T23:02:13.983Z</updated>
+    <generator>Artykuły o programowaniu i Linuksie</generator>
+    <link rel="alternate" href="https://miroslaw.ovh"/>
+    <link rel="self" href="https://miroslaw.ovh/rss.atom"/>
+    <subtitle>Artykuły o programowaniu i Linuksie</subtitle>
+    <logo>https://miroslaw.ovh/assets/img/logo.jpg</logo>
+    <icon>https://miroslaw.ovh/assets/img/logo.jpg</icon>
+    <rights>2021 miroslaw.ovh</rights>
+    <category term="Web Development"/>
+    <category term="Blog"/>
+    <category term="Angular"/>
+    <category term="node"/>
+    <entry>
+        <title type="html"><![CDATA[Filozofia Vima - edycja]]></title>
+        <id>/blog/filozofia-vima-edycja</id>
+        <link href="https://miroslaw.ovh/blog/filozofia-vima-edycja"/>
+        <updated>2020-05-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Druga część dotycząca podstaw w używaniu edytora tekstowego Vim. W tej części nauczymy się jak się poruszać i edytować plik tekstowy.]]></summary>
+        <content type="html"><![CDATA[<p>:toc:
 :toc-title: Spis:
 :figure-caption: Img
 :experimental:</p>
@@ -168,15 +164,21 @@ image::assets/img/posts/vim/vimiv.png[vimiv,role=right]</p>
 </ul>
 <p>Poniżej zamieszczam przydatną grafikę z skrótami klawiaturowymi.</p>
 <p>.Vim cheat sheet
-image::assets/img/posts/vim/vi-vim-cheat-sheet.gif[cheat sheet]</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Filozofia Vima - tryby i pliki]]></title>
-            <link>https://miroslaw.ovh/blog/filozofia-vima-tryby-i-pliki</link>
-            <guid>/blog/filozofia-vima-tryby-i-pliki</guid>
-            <pubDate>Tue, 12 May 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Filozoficzne podejście do nauki nietypowego edytora jakim jest vim.]]></description>
-            <content:encoded><![CDATA[<p>:toc:
+image::assets/img/posts/vim/vi-vim-cheat-sheet.gif[cheat sheet]</p>]]></content>
+        <author>
+            <name>Arkadiusz Mirosław</name>
+        </author>
+        <contributor>
+            <name>arkadiusz-mirosław</name>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Filozofia Vima - tryby i pliki]]></title>
+        <id>/blog/filozofia-vima-tryby-i-pliki</id>
+        <link href="https://miroslaw.ovh/blog/filozofia-vima-tryby-i-pliki"/>
+        <updated>2020-05-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Filozoficzne podejście do nauki nietypowego edytora jakim jest vim.]]></summary>
+        <content type="html"><![CDATA[<p>:toc:
 :toc-title: Spis:
 :figure-caption: Img
 :experimental:</p>
@@ -256,15 +258,21 @@ Więc jak wyjść z Vima? ;) "To zależy" - jakby to odpowiedział dobry adwokat
 <li><code>o</code>, <code>v</code> - otwiera plik w poziomo <code>o</code> lub pionowo <code>v</code> podzielonym oknie</li>
 </ul>
 <p>Jest to pierwsza część dotycząca podstaw w używaniu najlepszego na świecie edytora tekstowego. Nie będę na razie opisywać takich funkcji jak zwijanie i porównywanie napisów, bufory, makra i podświetlanie kodu. Warto jednak wiedzieć, że takie funkcje są dostępne. Zapraszam jednak do przeczytania link:blog/filozofia-vima-edycja[drugiej] części. Opisuję w niej najważniejszą (i trudniejszą) funkcję jaką mają edytory tekstowe. Tak zgadliście mówię o manipulowaniem tekstu. :D</p>
-<p>image::assets/img/posts/vim/this-is-vim.jpg[madness]</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Programy na linuksa]]></title>
-            <link>https://miroslaw.ovh/blog/programy-na-linuksa</link>
-            <guid>/blog/programy-na-linuksa</guid>
-            <pubDate>Fri, 28 Feb 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Jak szukać zamienników programów napisanych na Linuksa wraz z moimi rekomendacjami.]]></description>
-            <content:encoded><![CDATA[<p>:toc:
+<p>image::assets/img/posts/vim/this-is-vim.jpg[madness]</p>]]></content>
+        <author>
+            <name>Arkadiusz Mirosław</name>
+        </author>
+        <contributor>
+            <name>arkadiusz-mirosław</name>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Programy na linuksa]]></title>
+        <id>/blog/programy-na-linuksa</id>
+        <link href="https://miroslaw.ovh/blog/programy-na-linuksa"/>
+        <updated>2020-02-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Jak szukać zamienników programów napisanych na Linuksa wraz z moimi rekomendacjami.]]></summary>
+        <content type="html"><![CDATA[<p>:toc:
 :toc-title: Spis:
 :figure-caption: Img</p>
 <p>== Wstęp</p>
@@ -426,15 +434,21 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
 <li>https://git-scm.com/[git] → Manager kontroli wersji.
 ** kraken
 ** smartgit</li>
-</ul>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Linux vs Windows]]></title>
-            <link>https://miroslaw.ovh/blog/linux-vs-windows</link>
-            <guid>/blog/linux-vs-windows</guid>
-            <pubDate>Sun, 19 Jan 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Najważniejsze różnice pomiędzy systemem operacyjnym z rodziny Windows i Linuks z perspektywy desktopowego użytkownika. Czyli próba potwierdzenia mojego wyboru.]]></description>
-            <content:encoded><![CDATA[<p>:toc:
+</ul>]]></content>
+        <author>
+            <name>Arkadiusz Mirosław</name>
+        </author>
+        <contributor>
+            <name>arkadiusz-mirosław</name>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux vs Windows]]></title>
+        <id>/blog/linux-vs-windows</id>
+        <link href="https://miroslaw.ovh/blog/linux-vs-windows"/>
+        <updated>2020-01-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Najważniejsze różnice pomiędzy systemem operacyjnym z rodziny Windows i Linuks z perspektywy desktopowego użytkownika. Czyli próba potwierdzenia mojego wyboru.]]></summary>
+        <content type="html"><![CDATA[<p>:toc:
 :toc-title: Spis:
 :figure-caption: Img</p>
 <p>Postaram się w tym artykule, wytłumaczyć najważniejsze dla mnie różnice pomiędzy systemem operacyjnym z rodziny Windows a GNU/Linux w wersjach nie serwerowych. Nie będę brać pod uwagę Windowsa XP (oraz wersji starszych), ponieważ sam Microsoft jak i inne firmy porzuciły wsparcie dla niego.</p>
@@ -470,21 +484,32 @@ Nie oszukuję, raz dosłownie osoba z wsparcia technicznego poleciła mi reboot 
 <p>== Nawyki
 Na zakończenie chciałbym obalić mit, jakoby to Linuksy były tylko dla programistów lub ludzi pracujących w NASA. Oczywiście systemy te utożsamiane są z osobami, które dużo pracują z komputerem. Wynika to z faktu, iż Linux pozwala na większą swobodę i możliwości konfiguracyjne. Obecnie jednak nowoczesne środowiska graficzne są dostosowane dla każdego. W tym momencie możesz zadać pytanie, dlaczego w takim razie nie widać migracji z np. Windowsa to Ubuntu (albo innej dystrybucji). Powodów może być kilka, ale najważniejszy według mnie to nawyki, które bardzo trudno zmienić. Z systemem od Microsoftu wszyscy są zaznajomieni, w szkole jest nauczany, a większość komputerów sprzedaje się z preinstalowanym windowsem. Jestem przekonany, że jakby postawić przed wyborem systemu operacyjnego, kogoś kto pierwszy raz ma z nimi styczność, to wybrałby np. Linux Mint niż Windows 10. Dla przykładu mogę jedynie przedstawić serię filmów "Mum tries out Linux" z kanału OSFirstTimer na YouTube.
 pass:[<iframe width="560" height="315" src="https://www.youtube.com/embed/I-PTQVeCF9k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>]
-Z drugiej strony nie zachęcam osób do zmiany systemu, które nie chcą zmienić swoich nawyków lub po prostu nie mają na to czasu. Linuksa zaliczył by do kategorii "easy to learn difficult to master". Oznacza to często, iż instalując Linuksa trzeba być otwartym na naukę tego systemu i nie bać się konsoli. Na szczęście nie często przytrafi nam się trudniejszy błąd, który wymagać będzie jego użycia.</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Słowem wstępu]]></title>
-            <link>https://miroslaw.ovh/blog/slowem-wstepu</link>
-            <guid>/blog/slowem-wstepu</guid>
-            <pubDate>Wed, 01 Jan 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Trochę o mnie i o blogu. Jest to mój pierwszy post, do którego zbierałem się niemal dwa lata, więc przydało by się z Wami przywitać...]]></description>
-            <content:encoded><![CDATA[<p>:figure-caption: Img</p>
+Z drugiej strony nie zachęcam osób do zmiany systemu, które nie chcą zmienić swoich nawyków lub po prostu nie mają na to czasu. Linuksa zaliczył by do kategorii "easy to learn difficult to master". Oznacza to często, iż instalując Linuksa trzeba być otwartym na naukę tego systemu i nie bać się konsoli. Na szczęście nie często przytrafi nam się trudniejszy błąd, który wymagać będzie jego użycia.</p>]]></content>
+        <author>
+            <name>Arkadiusz Mirosław</name>
+        </author>
+        <contributor>
+            <name>arkadiusz-mirosław</name>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Słowem wstępu]]></title>
+        <id>/blog/slowem-wstepu</id>
+        <link href="https://miroslaw.ovh/blog/slowem-wstepu"/>
+        <updated>2020-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Trochę o mnie i o blogu. Jest to mój pierwszy post, do którego zbierałem się niemal dwa lata, więc przydało by się z Wami przywitać...]]></summary>
+        <content type="html"><![CDATA[<p>:figure-caption: Img</p>
 <p>Jest to mój pierwszy post, do którego zbierałem się niemal dwa lata, więc przydało by się z Wami przywitać. :) Nazywam się Arek, a nazwisko moje to Mirosław (warto nadmienić, aby nie wprowadzać nikogo w zakłopotanie które to imie, a które nazwisko) z czego pochodzi moja kreatywna nazwa tej domeny. Nie lubię mówić o sobie, więc po więcej informacji odsyłam do strony link:about[O mnie].</p>
 <p>.Oneiric Ocelot
 image::assets/img/posts/linux/Oneiric<em>Ocelot</em>c-768x480.jpg[Oneiric Ocelot]</p>
 <p>Od wersji 11.10 Ubuntu (Oniryczny Ocelot) poznaje świat systemu operacyjnego z pod znaku pingwina. Szczególnie upodobałem sobie programy uruchamiane w terminalu. Niestety wydaje mi się, mało jest artykułów w internecie (zwłaszcza po polsku), które łatwo wprowadzałyby do ich użytkowania. Szczególnie małe programy, które poza suchą dokumentacją nie mają nic innego. Właśnie w tamtym okresie zainteresowania systemem operacyjnym GNU/Linux, pojawiła się w mojej głowie myśl o stworzeniu blogu o takiej tematyce. W następnych postach będę częściej używał skrótu myślowego Linux, odwołując się do systemów operacyjnych GNU/Linux. Z biegiem lat ukończyłem studia informatyczne oraz na kierunku zarządzania, przez co moje zainteresowania poszerzyły się. W związku z tym na blogu będą się pojawiać posty na temat programowania (głównie interesuje się technologiami opartymi na Javie) oraz nie wykluczam, że popełnię teksty o inwestowaniu.</p>
 <p>Nie ukrywam, że blog zakładam także z myślą o sobie. Lubię poznawać nowe technologie, a przy tym przywykłem do robienia notatek. Pisanie postów będzie dla mnie sposobem na usystematyzowanie swojej wiedzy (lub jej zdobycie), pretekstem do "posprzątania" moich notatek oraz oddaniem hołdu dla społeczności ludzi, którzy dzielą się swoją wiedzą. Wszystko to wpływać będzie na format moich postów. Czasami będą to, krótkie skrypty, instrukcje zawierające najważniejsze informacje. Starać się jednak będę pokazywać mój punkt widzenia na dany temat. Nie omieszkam, co z góry przepraszam, ubarwiać wpisów dawką humoru. ;)</p>
-<p>Zdaję sobie sprawę, że mogę się mylić, popełnić błąd lub dana informacja może się zdezaktualizować. Umożliwiam pisanie komentarzy bez rejestracji, właśnie z tej racji oraz na zachęcenie Ciebie do dyskusji. Docelowo wszystkie moje pliki konfiguracyjne oraz dłuższe fragmenty kodu z postów, będę zamieszczać na moim https://github.com/amiroslaw[GitHubie].</p>]]></content:encoded>
-        </item>
-    </channel>
-</rss>
+<p>Zdaję sobie sprawę, że mogę się mylić, popełnić błąd lub dana informacja może się zdezaktualizować. Umożliwiam pisanie komentarzy bez rejestracji, właśnie z tej racji oraz na zachęcenie Ciebie do dyskusji. Docelowo wszystkie moje pliki konfiguracyjne oraz dłuższe fragmenty kodu z postów, będę zamieszczać na moim https://github.com/amiroslaw[GitHubie].</p>]]></content>
+        <author>
+            <name>Arkadiusz Mirosław</name>
+        </author>
+        <contributor>
+            <name>arkadiusz-mirosław</name>
+        </contributor>
+    </entry>
+</feed>

@@ -2,7 +2,7 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "miroslaw.ovh",
     "home_page_url": "https://miroslaw.ovh",
-    "feed_url": "https://miroslaw.ovh/feed.json",
+    "feed_url": "https://miroslaw.ovh/rss.json",
     "description": "Artykuły o programowaniu i Linuksie",
     "icon": "https://miroslaw.ovh/assets/img/logo.jpg",
     "items": [

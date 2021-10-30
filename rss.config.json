@@ -1,13 +1,13 @@
 {
   "title": "miroslaw.ovh",
-  "description": "Artykuły o programowaniu i Linuksie",
+  "description": "Blog o programowaniu i Linuksie",
   "id": "https://miroslaw.ovh",
   "link": "https://miroslaw.ovh",
   "language": "pl",
   "image": "https://miroslaw.ovh/assets/img/logo.jpg",
   "favicon": "https://miroslaw.ovh/assets/img/logo.jpg",
   "copyright": "2021 miroslaw.ovh",
-  "generator": "Artykuły o programowaniu i Linuksie",
+  "generator": "Blog o programowaniu i Linuksie",
   "filename": "rss",
   "feedLinks": {
     "json": "https://miroslaw.ovh/rss.json",
@@ -15,7 +15,7 @@
     "xml": "https://miroslaw.ovh/rss.xml"
   },
   "outDir": "./dist/static",
-  "categories": ["Web Development", "Blog", "Angular", "node"],
+  "categories": ["Programowanie", "Linux", "Java", "node"],
   "blogPostRouteSlug": "/blog",
   "newestPostsFirst": true
 }

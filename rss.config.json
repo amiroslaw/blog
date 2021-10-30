@@ -8,9 +8,11 @@
   "favicon": "https://miroslaw.ovh/assets/img/logo.jpg",
   "copyright": "2021 miroslaw.ovh",
   "generator": "Artykuły o programowaniu i Linuksie",
-  "filename": "rss",
+  "filename": "feed",
   "feedLinks": {
-    "xml": "https://miroslaw.ovh/feed"
+    "json": "https://miroslaw.ovh/feed.json",
+    "atom": "https://miroslaw.ovh/feed.atom",
+    "xml": "https://miroslaw.ovh/feed.xml"
   },
   "outDir": "./dist/static",
   "categories": ["Web Development", "Blog", "Angular", "node"],

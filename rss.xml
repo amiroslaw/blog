@@ -3,10 +3,10 @@
     <channel>
         <title>miroslaw.ovh</title>
         <link>https://miroslaw.ovh</link>
-        <description>Artykuły o programowaniu i Linuksie</description>
-        <lastBuildDate>Sat, 30 Oct 2021 23:02:13 GMT</lastBuildDate>
+        <description>Blog o programowaniu i Linuksie</description>
+        <lastBuildDate>Sat, 30 Oct 2021 23:24:27 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>Artykuły o programowaniu i Linuksie</generator>
+        <generator>Blog o programowaniu i Linuksie</generator>
         <language>pl</language>
         <image>
             <title>miroslaw.ovh</title>
@@ -14,9 +14,9 @@
             <link>https://miroslaw.ovh</link>
         </image>
         <copyright>2021 miroslaw.ovh</copyright>
-        <category>Web Development</category>
-        <category>Blog</category>
-        <category>Angular</category>
+        <category>Programowanie</category>
+        <category>Linux</category>
+        <category>Java</category>
         <category>node</category>
         <item>
             <title><![CDATA[Filozofia Vima - edycja]]></title>

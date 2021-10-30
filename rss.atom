@@ -2,17 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://miroslaw.ovh</id>
     <title>miroslaw.ovh</title>
-    <updated>2021-10-30T23:02:13.983Z</updated>
-    <generator>Artykuły o programowaniu i Linuksie</generator>
+    <updated>2021-10-30T23:24:27.114Z</updated>
+    <generator>Blog o programowaniu i Linuksie</generator>
     <link rel="alternate" href="https://miroslaw.ovh"/>
     <link rel="self" href="https://miroslaw.ovh/rss.atom"/>
-    <subtitle>Artykuły o programowaniu i Linuksie</subtitle>
+    <subtitle>Blog o programowaniu i Linuksie</subtitle>
     <logo>https://miroslaw.ovh/assets/img/logo.jpg</logo>
     <icon>https://miroslaw.ovh/assets/img/logo.jpg</icon>
     <rights>2021 miroslaw.ovh</rights>
-    <category term="Web Development"/>
-    <category term="Blog"/>
-    <category term="Angular"/>
+    <category term="Programowanie"/>
+    <category term="Linux"/>
+    <category term="Java"/>
     <category term="node"/>
     <entry>
         <title type="html"><![CDATA[Filozofia Vima - edycja]]></title>

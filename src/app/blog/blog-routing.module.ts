@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {BlogComponent} from './blog.component';
 import {HomeComponent} from '../home/home.component';
+import {NotFoundComponent} from '../not-found/not-found.component';
 
 const routes: Routes = [
 //TODO redirect to something else
@@ -13,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: BlogComponent,
+    component: NotFoundComponent,
   }
 ];
 

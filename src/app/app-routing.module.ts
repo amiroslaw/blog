@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {NotFoundComponent} from './not-found/not-found.component';
-import {TagsComponent} from './tags/tags.component';
 
 const routes: Routes = [
   {path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)},
@@ -14,11 +13,8 @@ const routes: Routes = [
   {path: 'autor/portfolio', loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)},
   {path: '404', component: NotFoundComponent},
   // { path: 'tags/:slug', component: TagsComponent},
-  // { path: 'tags/:tagId', loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule) },
   { path: 'tags', loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule) },
-  // {path: 'tags/', redirectTo: '/tags', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent},
-  // {path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({

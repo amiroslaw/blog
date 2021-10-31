@@ -8,10 +8,8 @@ const routes: Routes = [
     path: ':tagId',
     component: TagsComponent
   },
-  // {
-  //   path: '**',
-  //   component: TagsComponent
-  // }
+  // { path: 'tags/:tagId', loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule) },
+  {path: '**', redirectTo: '/tags', pathMatch: 'full'}
 ];
 
 @NgModule({

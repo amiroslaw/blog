@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'blog/', redirectTo: '/blog', pathMatch: 'full'},
   {path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)},
   {path: 'portfolio', loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)},
+  // old url from different website
   {path: 'autor/portfolio', loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)},
   {path: '404', component: NotFoundComponent},
   // { path: 'tags/:slug', component: TagsComponent},

@@ -13,7 +13,7 @@ import {faTags} from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css'],
+  styleUrls: ['./blog.component.scss'],
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated
 })

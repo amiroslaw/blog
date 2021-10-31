@@ -1,0 +1,162 @@
+/*
+Theme Name: Clean WP
+Version: 1.
+Author: Miroslaw
+Author URI: miroslaw.ovh
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: easyblog
+Tags: bootstrap 4, easyblog
+
+Description: Clean WP is a fully responsive blogging WordPress theme perfect for personal blog, photo blogging, writers, travelers, bloggers, blog. Bootstrap is used for responsiveness and supports all major browsers.
+
+Clean WP is based on Clean-Blog
+*/
+/*
+variables
+#17a2b8 accent
+*/
+
+/* include CSS for prism toolbar */
+@import '~prismjs/plugins/toolbar/prism-toolbar.css';
+/* check node_modules/prismjs/themes/ for the available themes */
+@import '~prismjs/themes/prism-coy.css';
+@import '~prismjs/plugins/line-numbers/prism-line-numbers.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 20px;
+  color: #212529;
+  font-family: 'Lora', 'Times New Roman', serif;
+  -webkit-tap-highlight-color: #0085A1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #17A2B8;
+}
+
+a {
+  color: #17A2B8;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+a:focus, a:hover {
+  color: #0085A1;
+}
+
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+}
+
+blockquote {
+  font-style: italic;
+  color: #63809c;
+  text-align: justify;
+  margin: 0 5%;
+}
+
+.section-heading {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.caption {
+  font-size: 14px;
+  font-style: italic;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #0085A1;
+  text-shadow: none;
+}
+
+::selection {
+  color: #fff;
+  background: #0085A1;
+  text-shadow: none;
+}
+
+img {
+  &::selection {
+    color: #fff;
+    background: transparent;
+  }
+
+  &::-moz-selection {
+    color: #fff;
+    background: transparent;
+  }
+}
+
+/* my comment section changes is in above */
+/* =====================================================================================================================================
+=============================== COUSTOM ===============================================================================================
+===================================================================================================================================== */
+.clear {
+  clear: both;
+}
+
+.card {
+  margin-bottom: 5%;
+}
+
+code {
+  font-size: 13px !important;
+}
+
+#text-technology {
+  h5 {
+    text-align: center;
+    color: #17A2B8;
+  }
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+
+  &:focus, &:hover {
+    background-color: #0085A1;
+    border-color: #17a2b8;
+    color: white;
+  }
+}

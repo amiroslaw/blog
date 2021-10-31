@@ -5,7 +5,7 @@ import {Skill} from './skill.model';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
+  styleUrls: ['./about.component.scss'],
   animations: [
     trigger('expand', [
       transition(':enter', [

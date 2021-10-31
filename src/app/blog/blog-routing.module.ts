@@ -3,19 +3,12 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {BlogComponent} from './blog.component';
 import {HomeComponent} from '../home/home.component';
-import {NotFoundComponent} from '../not-found/not-found.component';
 
 const routes: Routes = [
 //TODO redirect to something else
   {path: '', component: HomeComponent},
-  {
-    path: ':slug',
-    component: BlogComponent,
-  },
-  {
-    path: '**',
-    component: NotFoundComponent,
-  }
+  {path: ':slug', component: BlogComponent,},
+  {path: '**', component: HomeComponent,}
 ];
 
 @NgModule({

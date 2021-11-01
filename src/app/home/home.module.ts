@@ -3,14 +3,14 @@ import {CommonModule} from '@angular/common';
 
 import {HomeRoutingModule} from './home-routing.module';
 import {HomeComponent} from './home.component';
-import {ArticleModule} from '../article/article.module';
+import {PostCardModule} from '../post-card/post-card.module';
 
 @NgModule({
   declarations: [HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    ArticleModule
+    PostCardModule
   ]
 })
 export class HomeModule {

@@ -10,7 +10,7 @@ import {FooterComponent} from './footer/footer.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NotFoundComponent} from './not-found/not-found.component';
-import { ArticleModule } from './article/article.module';
+import { PostCardModule } from './post-card/post-card.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { ArticleModule } from './article/article.module';
     NgbModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    ArticleModule
+    PostCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

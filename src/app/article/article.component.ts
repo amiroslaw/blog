@@ -1,25 +1,40 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ScullyRoute} from '@scullyio/ng-lib';
+import {AfterViewChecked, Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {HighlightService} from '../services/highlight.service';
 import {ScullyContentService} from '../services/scully-content.service';
 import {TagService} from '../services/tag.service';
+import {faCalendarAlt, faClock} from '@fortawesome/free-regular-svg-icons';
+
+import {Observable} from 'rxjs';
+import {Tag} from '../types/types';
+import {map} from 'rxjs/operators';
 import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import {faTags} from '@fortawesome/free-solid-svg-icons';
-import {faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss']
+  styleUrls: ['./article.component.scss'],
+  preserveWhitespaces: true,
+  encapsulation: ViewEncapsulation.Emulated
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent implements OnInit, AfterViewChecked {
+  postTags$: Observable<Tag[]>;
+  postDate$: Observable<any>;
 
-  @Input() article: ScullyRoute;
-
-  constructor(private tagService: TagService, private contentService: ScullyContentService, library: FaIconLibrary) {
-    library.addIcons(faTags, faCalendarAlt);
+  constructor(private highlightService: HighlightService, private tagService: TagService, private scullyContent: ScullyContentService, library: FaIconLibrary) {
+    library.addIcons(faTags, faCalendarAlt, faClock);
   }
 
   ngOnInit(): void {
+    this.postTags$ = this.tagService.getPostTags();
+
+    this.postDate$ = this.scullyContent.getCurrent().pipe(
+      map(route => route.publishedAt)
+    );
+  }
+
+  ngAfterViewChecked(): void {
+    this.highlightService.highlightAll();
   }
 
 }

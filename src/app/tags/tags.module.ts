@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TagsRoutingModule } from './tags-routing.module';
 import { TagsComponent } from './tags.component';
-import {ArticleModule} from '../article/article.module';
+import {PostCardModule} from '../post-card/post-card.module';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import {ArticleModule} from '../article/article.module';
     imports: [
         CommonModule,
         TagsRoutingModule,
-        ArticleModule
+        PostCardModule
     ]
 })
 export class TagsModule { }

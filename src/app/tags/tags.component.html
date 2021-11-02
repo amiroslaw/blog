@@ -14,7 +14,7 @@
             <h2 class="section-heading text-center">
               {{slugTitle$ | async}}
             </h2>
-            <app-article *ngFor="let post of posts$ | async" [article]="post"></app-article>
+            <app-post-card *ngFor="let post of posts$ | async" [article]="post"></app-post-card>
             <div class="clearfix"></div>
           </div>
         </ng-template>

@@ -6,8 +6,11 @@ import {ArticleComponent} from './article.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [ArticleComponent],
-  imports: [CommonModule, ArticleRoutingModule, ScullyLibModule, FontAwesomeModule],
+    declarations: [ArticleComponent],
+    imports: [CommonModule, ArticleRoutingModule, ScullyLibModule, FontAwesomeModule],
+    exports: [
+        ArticleComponent
+    ]
 })
 export class ArticleModule {
 }

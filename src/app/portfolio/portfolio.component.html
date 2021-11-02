@@ -1,23 +1,23 @@
 <section class="bg-light" id="portfolio">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Programy i aplikacje</h2>
-      </div>
-    </div>
+<!--    <div class="row">-->
+<!--      <div class="col-lg-12 text-center">-->
+<!--        <h2 class="section-heading text-uppercase">Programy i aplikacje</h2>-->
+<!--      </div>-->
+<!--    </div>-->
 
     <div class="row">
-      <div *ngFor="let app of apps" class="col-md-4 col-sm-6 portfolio-item">
-        <ng-container *ngIf="isModalType(app.project);  then modal; else projectUrl">
+      <div *ngFor="let portfolio of portfolios" class="col-md-4 col-sm-6 portfolio-item">
+        <ng-container *ngIf="isModalType(portfolio.project);  then modal; else projectUrl">
         </ng-container>
         <ng-template #projectUrl>
-          <a class="portfolio-link" target="_blank" rel="noopener noreferrer" [href]="app.project.href">
+          <a class="portfolio-link" target="_blank" rel="noopener noreferrer" [href]="portfolio.project.href">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <fa-icon [icon]="['fas', 'link']" size="3x"></fa-icon>
               </div>
             </div>
-            <img class="img-fluid" [src]="app.cardImgPath" alt="">
+            <img class="img-fluid" [src]="portfolio.cardImgPath" alt="">
           </a>
         </ng-template>
 
@@ -28,19 +28,19 @@
                 <fa-icon [icon]="['fas', 'search-plus']" size="3x"></fa-icon>
               </div>
             </div>
-            <img class="img-fluid" [src]="app.cardImgPath" alt="">
+            <img class="img-fluid" [src]="portfolio.cardImgPath" alt="">
           </a>
         </ng-template>
 
         <div class="portfolio-caption">
-          <h4>{{app.title}}</h4>
-          <p class="text-muted">{{app.caption}}</p>
+          <h4>{{portfolio.title}}</h4>
+          <p class="text-muted">{{portfolio.caption}}</p>
         </div>
 
         <ng-template #modalPopup let-modal>
           <div class="portfolio-modal">
             <div class="modal-header">
-              <h2 class="modal-title">{{app.title}}</h2>
+              <h2 class="modal-title">{{portfolio.title}}</h2>
               <div class="close-modal" aria-label="Close" (click)="modal.dismiss()">
                 <div class="lr">
                   <div class="rl"></div>
@@ -48,28 +48,31 @@
               </div>
             </div>
             <div class="modal-body">
-              <p [innerHTML]="app.project.description"></p>
-              <ng-container *ngIf="app.project.features">
+              <p [innerHTML]="portfolio.project.description"></p>
+              <ng-container *ngIf="portfolio.project.features">
                 <h3> Features:</h3>
                 <ul class="contains-task-list">
-                  <li *ngFor="let feature of app.project.features">{{feature}}</li>
+                  <li *ngFor="let feature of portfolio.project.features">{{feature}}</li>
                 </ul>
               </ng-container>
-              <ng-container *ngIf="app.project.technology">
+              <ng-container *ngFor="let screenshot of portfolio.project.screenshotsPath">
+                <img class="img-fluid d-block mx-auto" [src]="screenshot" alt="">
+              </ng-container>
+              <ng-container *ngIf="portfolio.project.technology">
                 <h3>Used technology</h3>
-                <p>{{app.project.technology}}</p>
+                <p>{{portfolio.project.technology}}</p>
               </ng-container>
               <ul class="list-inline text-center">
-                <li *ngIf="app.project.projectUrl" class="list-inline-item">
-                  <a target="_blank" rel="noopener noreferrer" [href]="app.project.projectUrl" >
+                <li *ngIf="portfolio.project.projectUrl" class="list-inline-item">
+                  <a target="_blank" rel="noopener noreferrer" [href]="portfolio.project.projectUrl">
                     <fa-layers size="2x">
                       <fa-icon [icon]="['fas', 'circle']"></fa-icon>
                       <fa-icon [inverse]="true" [icon]="['fas', 'link']" transform="shrink-6"></fa-icon>
                     </fa-layers>
                   </a>
                 </li>
-                <li *ngIf="app.project.repositoryUrl" class="list-inline-item">
-                  <a target="_blank" rel="noopener noreferrer" [href]="app.project.repositoryUrl">
+                <li *ngIf="portfolio.project.repositoryUrl" class="list-inline-item">
+                  <a target="_blank" rel="noopener noreferrer" [href]="portfolio.project.repositoryUrl">
                     <fa-layers size="2x">
                       <fa-icon [icon]="['fas', 'circle']"></fa-icon>
                       <fa-icon [inverse]="true" [icon]="['fab', 'github']" transform="shrink-6"></fa-icon>

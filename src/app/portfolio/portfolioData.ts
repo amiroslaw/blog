@@ -2,8 +2,8 @@ import {PortfolioCard, PortfolioModal} from '../types/types';
 
 const repository = 'https://github.com';
 
-export let appsData: Array<PortfolioCard> = [];
-appsData.push(new PortfolioCard(
+export let portfolioData: Array<PortfolioCard> = [];
+portfolioData.push(new PortfolioCard(
   'Languide', 'Aplikacja do nauki języków obcych.',
   'assets/img/portfolio/languide_small.png',
   new PortfolioModal(
@@ -24,7 +24,7 @@ appsData.push(new PortfolioCard(
   )
 ));
 
-appsData.push(new PortfolioCard(
+portfolioData.push(new PortfolioCard(
   'Investing CLI',
   'Aplikacjia CLI pozwalająca monitorować aktywa finansowe.',
   'assets/img/portfolio/investing-small.png',
@@ -44,7 +44,7 @@ appsData.push(new PortfolioCard(
   )
 ));
 
-appsData.push(new PortfolioCard(
+portfolioData.push(new PortfolioCard(
   'ePortfel',
   'Elektroniczy portfel do zarządzania budżetem domowym.',
   'assets/img/portfolio/chart_eportfel_small.png',
@@ -65,7 +65,7 @@ appsData.push(new PortfolioCard(
   )
 ));
 
-appsData.push(new PortfolioCard(
+portfolioData.push(new PortfolioCard(
   'Gamification for Android',
   'Aplikacja motywacyjna, która używa metody "grywalizacji".',
   'assets/img/portfolio/android_small.jpg',
@@ -85,7 +85,7 @@ appsData.push(new PortfolioCard(
   )
 ));
 
-appsData.push(new PortfolioCard(
+portfolioData.push(new PortfolioCard(
   'Grywalizacja', 'Aplikacja motywacyjna. Wersja na komputery stacjonarne.',
   'assets/img/portfolio/draw_grywalizacja_small.png',
   new PortfolioModal(
@@ -103,24 +103,105 @@ appsData.push(new PortfolioCard(
   )
 ));
 
-appsData.push(new PortfolioCard(
+portfolioData.push(new PortfolioCard(
   'Review',
   'Aplikacja RESTful do rewidowania postępów w osiąganiu swoich celów',
   'assets/img/portfolio/restful_small.png',
   new URL('amiroslaw/review', repository
   )));
 
-// appsData.push(new PortfolioCard(
-//   '',
-//   '',
-//   '',
-//   new PortfolioModal(
-//     {
-//       description: '',
-//       features: [
-//       ],
-//       technology: '',
-//       repositoryUrl: new URL('amiroslaw/', repository)
-//     }
-//   )
-// ))
+// WEBSITES
+portfolioData.push(new PortfolioCard(
+    'Uprawnienia budowlane',
+    'Strona oparta na Materialize CSS framework',
+    'assets/img/portfolio/budowlanka-small.png',
+    new URL('http://miroslawdm.cluster021.hosting.ovh.net/uprawnienia-budowlane/')
+  )
+)
+
+portfolioData.push(new PortfolioCard(
+    'Philipa Dalton',
+    'Strona dla nauczyciela',
+    'assets/img/portfolio/philippa_site_small.png',
+    new URL('http://miroslawdm.cluster021.hosting.ovh.net/pdalton/')
+// new URL('http://philippadalton.uk/')
+  )
+);
+
+portfolioData.push(new PortfolioCard(
+  'Myasthenia',
+  'Strona promująca aplikację mobilną',
+  'assets/img/portfolio/myasthenia-small.png',
+  new URL('http://miroslawdm.cluster021.hosting.ovh.net/myasthenia/')
+  )
+)
+
+portfolioData.push(new PortfolioCard(
+    'NoStress',
+    'Strona CMS dla zespołu muzycznego opartego na Wordpress',
+    'assets/img/portfolio/nostress_small.jpg',
+    new URL('http://zespol-nostress.pl/')
+  )
+);
+
+portfolioData.push(new PortfolioCard(
+  'Landing page',
+  'Platformy edukacyjnej',
+  'assets/img/portfolio/elearning_small.png',
+  new PortfolioModal(
+    {
+      description: 'Landing page dla platformy edukacyjnej. Nieaktualna już strona platformy edukacyjnej <a href="https://zdobywcywiedzy.pl/">Zdobywcy wiedzy</a>. Niestety nie mogę pokazać funkcjonalności strony.',
+      screenshotsPath: [
+        'assets/img/portfolio/zdobywcy_all.png'
+      ]
+    }
+  )
+));
+
+// GRY
+const gameDescription = 'Aplikacja dla platformy edukacyjnej <a href="https://zdobywcywiedzy.pl/" target="_blank">Zdobywcy wiedzy</a>';
+
+portfolioData.push(new PortfolioCard(
+  'Type Fast',
+  'Gra edukacyjna na pisanie słówek',
+  'assets/img/portfolio/games/wpisz_animal_small.png',
+  new PortfolioModal(
+    {
+      description: 'Gra edukacyja ćwicząca pisanie słówek. ' + gameDescription,
+      screenshotsPath: [
+        'assets/img/portfolio/games/wpisz_game.png',
+        'assets/img/portfolio/games/wpisz_animal_full.png'
+      ]
+    }
+  )
+));
+
+portfolioData.push(new PortfolioCard(
+  'Zgadywanka',
+  'Gra edukacyjna - wisielec',
+  'assets/img/portfolio/games/wisielec_food_small.png',
+  new PortfolioModal(
+    {
+      description: gameDescription,
+      screenshotsPath: [
+        'assets/img/portfolio/games/wisielec_menu.png',
+        'assets/img/portfolio/games/wisielec_food_full.png'
+      ]
+    }
+  )
+));
+
+portfolioData.push(new PortfolioCard(
+  'Alien',
+  'Platformowa gra edukacyjna',
+  'assets/img/portfolio/games/platforma_small.png',
+  new PortfolioModal(
+    {
+      description: 'Platformowa gra edukacyjna. ' + gameDescription,
+      screenshotsPath: [
+        'assets/img/portfolio/games/platforma_menu.png',
+        'assets/img/portfolio/games/platforma_game.png'
+      ]
+    }
+  )
+));

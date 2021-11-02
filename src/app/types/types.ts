@@ -49,7 +49,7 @@ export class PortfolioCard {
 
 export class PortfolioModal {
   private _description: string;
-  private _screenPath?: string;
+  private _screenshotsPath?: string[];
   private _features?: string[];
   private _technology?: string;
   private _repositoryUrl?: URL;
@@ -63,8 +63,8 @@ export class PortfolioModal {
     return this._description;
   }
 
-  get screenPath(): string {
-    return this._screenPath;
+  get screenshotsPath(): string[] {
+    return this._screenshotsPath;
   }
 
   get features(): string[] {
@@ -79,9 +79,9 @@ export class PortfolioModal {
     return this._repositoryUrl;
   }
 
-  constructor({description, screenPath, features, technology, repositoryUrl, projectUrl}:
-                { description: string, screenPath?: string, features?: string[], technology?: string, repositoryUrl?: URL, projectUrl?: URL }) {
-    this._screenPath = screenPath;
+  constructor({description, screenshotsPath, features, technology, repositoryUrl, projectUrl}:
+                { description: string, screenshotsPath?: string[], features?: string[], technology?: string, repositoryUrl?: URL, projectUrl?: URL }) {
+    this._screenshotsPath = screenshotsPath;
     this._description = description;
     this._features = features;
     this._technology = technology;

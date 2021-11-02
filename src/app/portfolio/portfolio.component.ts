@@ -6,30 +6,26 @@ import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {PortfolioCard, PortfolioModal} from '../types/types';
-import {appsData} from './portfolioData';
-
-interface PortfolioComponentb {
-  ngOnInit(): void;
-}
+import {portfolioData} from './portfolioData';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit, PortfolioComponentb {
-  apps: Array<PortfolioCard> = [];
+export class PortfolioComponent implements OnInit {
+  portfolios: Array<PortfolioCard> = [];
 
   constructor(private modalService: NgbModal, private scully: ScullyRoutesService, library: FaIconLibrary) {
     library.addIcons(faLink, faPlus, faTimes, faCircle, faSearchPlus, faGithub);
   }
 
   openModal(content): void {
-    this.modalService.open(content, {size: 'xl'});
+    this.modalService.open(content, {animation: true, centered:true, size: 'lg'});
   }
 
   ngOnInit(): void {
-    this.apps = appsData;
+    this.portfolios = portfolioData;
   }
 
   isModalType(project): boolean {

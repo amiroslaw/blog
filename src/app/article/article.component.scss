@@ -67,13 +67,10 @@ article.post {
   max-width: 40%;
 }
 
-#date {
-  display: inline-block;
-  margin-left: 33%;
-}
-
-#reading-time {
-  display: inline-block;
+#article-info {
+  text-align: right;
+  font-size: 18px;
+  color: #868e96;
 }
 
 .tags {

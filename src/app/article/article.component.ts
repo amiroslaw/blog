@@ -20,12 +20,20 @@ import {faTags} from '@fortawesome/free-solid-svg-icons';
 export class ArticleComponent implements OnInit, AfterViewChecked {
   postTags$: Observable<Tag[]>;
   postDate$: Observable<any>;
+  readingTime$: Observable<number>;
 
   constructor(private highlightService: HighlightService, private tagService: TagService, private scullyContent: ScullyContentService, library: FaIconLibrary) {
     library.addIcons(faTags, faCalendarAlt, faClock);
   }
 
   ngOnInit(): void {
+
+    this.readingTime$ = this.scullyContent.getCurrent().pipe(
+      map(route => route.readingTime)
+    );
+
+    this.readingTime$.subscribe(r => console.log(r));
+
     this.postTags$ = this.tagService.getPostTags();
 
     this.postDate$ = this.scullyContent.getCurrent().pipe(

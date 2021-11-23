@@ -19,7 +19,7 @@ photo:
 :figure-caption: Img
 :experimental:
 
-Długo przymierzałem się do napisania tego artykułu, który miałby za zadanie nauczyć i zachęcić do poznania Vima. Moja prokrastynacja wynikała z niezliczonych możliwości jakie daje te narzędzie. Po kilku latach używania tego edytora nadal uczę się nowych rzeczy. Na początku przygody z Vimem, https://www.vim.org/docs.php[dokumentacja] lub darmowa ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf[książka] może być przytłaczająca. Warto natomiast poznać koncepcje na jakich został oparty edytor, i w czasie potrzeby zgłębiać wiedzę, spoglądając w instrukcję (`:help`). Dla osób które szybko się nudzą powstały gry do nauki jak https://vim-adventures.com/[vim adventures] i http://www.vimgenius.com/[vim genius]. Bardzo dobrym źródłem wiedzy jest dostępna wraz z programem dokumentacja - vimtutor i strona z poradnikami wideo http://vimcasts.org/[vim casts].
+Długo przymierzałem się do napisania tego artykułu, który miałby za zadanie nauczyć i zachęcić do poznania Vima. Moja prokrastynacja wynikała z niezliczonych możliwości, jakie daje to narzędzie. Po kilku latach używania tego edytora nadal uczę się nowych rzeczy. Na początku przygody z Vimem, https://www.vim.org/docs.php[dokumentacja] lub darmowa ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf[książka] może być przytłaczająca. Warto natomiast poznać koncepcje, na jakich został oparty edytor, i w czasie potrzeby zgłębiać wiedzę, spoglądając w instrukcję (`:help`). Dla osób które szybko się nudzą powstały gry do nauki jak https://vim-adventures.com/[vim adventures] i http://www.vimgenius.com/[vim genius]. Bardzo dobrym źródłem wiedzy jest dostępna wraz z programem dokumentacja - vimtutor i strona z poradnikami wideo http://vimcasts.org/[vim casts].
 
 image:assets/img/posts/vim/vim-learning-curve.png[vim-curve, role=left]
 Dlaczego zatem uczyć się edytora, którego korzenie sięgają 1976 roku? Odpowiedzi jest kilka w zależności od zapotrzebowania. Najważniejszą cechą wg. mnie jest efektywność. Vi (protoplasta Vim), był napisany w czasach, gdy interfejsy graficzne nie były popularne. Całą manipulacją dokumentu, trzeba było wykonywać przy pomocy klawiatury. Obsługa programu przez samą klawiaturę ma sens dzisiaj, ponieważ używanie myszki komputerowej jest nieoptymalne oraz bardziej naraża nasze nadgarstki na urazy. Program ten jest bardzo lekki (zajmuje ok. 10 MB), dzięki czemu możemy go znaleźć prawie na każdej instalacji Linuksa. Pożera też mało RAMu, szybko się otwiera nawet przy gigantycznych plikach tekstowych. Łatwość, duża możliwość konfiguracji oraz zbiór pluginów pozwala nam na dostosowanie edytora do naszych potrzeb. Vim posiada dużo zaawansowanych opcji, które ułatwią nam pisanie tekstu i oszczędzają czas. Niestety, aby skorzystać z tych benefitów musimy poznać podstawy działania, które są inne niż w typowych edytorach.
@@ -31,7 +31,7 @@ W tym artykule jak i następnym przybliżę filozofię działania Vima. Uważam,
 image:assets/img/posts/vim/vim-esc.jpg[Esc-key,role=right]
 Vim posiada http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes-intro[jedenaście] trybów pracy poza zwykłym jakim jest wpisywanie tekstu (Insert mode). Niech ta liczba Was nie przeraża, ponieważ niektóre z nich są podobne do siebie i mało używane. Jak uruchomimy Vima to wejdziemy w tryb normalny (Normal mode). Pozwala on nam na edytowanie tekstu oraz jest punktem startowym to wszystkich innych funkcji. Prawdopodobnie stąd powstał kawał związany z trudnością wyjścia z edytora.
 
-* Normal mode - pozwala nam w łatwy sposób edytować tekst ponieważ, każdy klawisz w tym trybie może być skrótem klawiszowym. Z tego miejsca możemy dostać się do wszystkich innych trybów. Jak chcemy napisać tekst musimy wejść w tryb Insert przez:
+* Normal mode - pozwala nam w łatwy sposób edytować tekst, ponieważ, każdy klawisz w tym trybie może być skrótem klawiszowym. Z tego miejsca możemy dostać się do wszystkich innych trybów. Jak chcemy napisać tekst, musimy wejść w tryb Insert przez:
 ** `i`, `a` - stawia kursor przed podświetlonym znakiem, `a` za znakiem
 ** `I`, `A` - stawia kursor na początek paragrafu, `A` na koniec
 ** `o`, `O` - stawia kursor pod edytowaną linią, `O` nad nią
@@ -41,7 +41,7 @@ Vim posiada http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes-intro[jed
 ** `V` - zaznacza całe linie
 ** `c-v` - zaznaczanie blokowe
 * Command-line mode - pozwala nam wywoływać komendy wpisując jej nazwę po dwukropku np. `:start` (przejście do trybu Insert). Natomiast znaki `/` i `?` służą do wyszukiwania tekstu. Ciekawostką jest możliwość wywoływania komend powłoki systemowej. Poprzedzając poleceniem bashowym wykrzyknikiem np. `!ls`, wyświetlimy listę plików w bieżącym katalogu. Używając uzupełnienia `c-d`, możemy zobaczyć pasujące polecenia.
-* Replace mode - w trybie Insert przejdziemy do niego wciskając przycisk `insert`, zachowanie tego trybu jest takie same jakbyśmy zrobili to samo w LibreOffice. Do trybu podmieniania znaków możemy też przejść z Normal mode klawiszem `R`.
+* Replace mode - w trybie Insert przejdziemy do niego wciskając przycisk `insert`, zachowanie tego trybu jest takie same, jakbyśmy zrobili to samo w LibreOffice. Do trybu podmieniania znaków możemy też przejść z Normal mode klawiszem `R`.
 
 image::assets/img/posts/vim/kiedy-prbujesz-wyj-z-vim.jpg[exit from vim]
 
@@ -69,7 +69,7 @@ Jeśli nie będziecie chcieli zapamiętywać jakie litery nadaliście swoim zak�
 
 == Pliki i karty
 
-Vim dostarcza nam kilka narzędzi do zarządzania plikami. Pierwsze jakie chciałem opisać to podział ekranu. Jak chcemy podzielić okno horyzontalnie na dwie części to w Command-line mode musimy wpisać `:split` lub tylko `:sp`. Analogicznie do podziału wertykalnego użyjemy komend `:vsplit` lub `:vs`. Dzielić ekran możemy kilkukrotnie, ważne, jednak na jakim oknie aktualnie się znajdujemy. Polecenie `:resize 90` ustawi nam szerokość okna na 90 kolumn, natomiast `:vertical resize 80` na 80 wierszy.
+Vim dostarcza nam kilka narzędzi do zarządzania plikami. Pierwsze, jakie chciałem opisać to podział ekranu. Jak chcemy podzielić okno horyzontalnie na dwie części to w Command-line mode musimy wpisać `:split` lub tylko `:sp`. Analogicznie do podziału wertykalnego użyjemy komend `:vsplit` lub `:vs`. Dzielić ekran możemy kilkukrotnie, ważne, jednak na jakim oknie aktualnie się znajdujemy. Polecenie `:resize 90` ustawi nam szerokość okna na 90 kolumn, natomiast `:vertical resize 80` na 80 wierszy.
 
 * `c-w w` lub `c-w c-w` - przełącza okna z jednego okna na drugie
 * `c-w j`, `c-w k`, `c-w h`, `c-l` - odpowiednio przełącza na okno dolne, górne, lewe i prawe. Zamiast `hjkl` można używać strzałek
@@ -104,7 +104,7 @@ Instalacja Vima zawiera plugin netrw, który jest przeglądarką plików. Dzięk
 * `e` - otwiera plik w bieżącym oknie
 * `o`, `v` - otwiera plik w poziomo `o` lub pionowo `v` podzielonym oknie
 
-Jest to pierwsza część dotycząca podstaw w używaniu najlepszego na świecie edytora tekstowego. Nie będę na razie opisywać takich funkcji jak zwijanie i porównywanie napisów, bufory, makra i podświetlanie kodu. Warto jednak wiedzieć, że takie funkcje są dostępne. Zapraszam jednak do przeczytania link:blog/filozofia-vima-edycja[drugiej] części. Opisuję w niej najważniejszą (i trudniejszą) funkcję jaką mają edytory tekstowe. Tak zgadliście mówię o manipulowaniem tekstu. :D
+Jest to pierwsza część dotycząca podstaw w używaniu najlepszego na świecie edytora tekstowego. Nie będę na razie opisywać takich funkcji jak zwijanie i porównywanie napisów, bufory, makra i podświetlanie kodu. Warto jednak wiedzieć, że takie funkcje są dostępne. Zapraszam jednak do przeczytania link:blog/filozofia-vima-edycja[drugiej] części. Opisuję w niej najważniejszą (i trudniejszą) funkcję, jaką mają edytory tekstowe. Tak zgadliście mówię o manipulowaniem tekstu. :D
 
 image::assets/img/posts/vim/this-is-vim.jpg[madness]
 

@@ -41,13 +41,13 @@ Dużą zaletą Vima jest mnogość operacji pozwalających na efektywne przemies
 * `c-b`, `c-f` - przesunięcie ekranu do góry i dołu,
 * `c-u`, `c-d` - przesunięcie tylko połowy ekranu do góry i dołu
 
-Prawie wszystkie powyższe skróty można poprzedzić liczbą i tak np. `4l` przesunie kursor o cztery znaki w prawo, a `2k` o dwie linie do góry. Jak chcemy skoczyć do konkretnej linii to możemy użyć `gg` lub `G`, poprzedzając je numerem linii. Skok do linii numer 3 wykonamy przez `3gg`. Istnieją aliasy to przechodzenia na początek i koniec dokumentu, są to odpowiednio `gg` i `G`, tylko bez liczb.
+Prawie wszystkie powyższe skróty można poprzedzić liczbą i tak np. `4l` przesunie kursor o cztery znaki w prawo, a `2k` o dwie linie do góry. Jak chcemy skoczyć do konkretnej linii, to możemy użyć `gg` lub `G`, poprzedzając je numerem linii. Skok do linii numer 3 wykonamy przez `3gg`. Istnieją aliasy to przechodzenia na początek i koniec dokumentu, są to odpowiednio `gg` i `G`, tylko bez liczb.
 
 === Wyszukiwanie
 
 Upraszczając do celów edukacyjnych, zebrałem trzy metody przeskakiwania kursora do wyszukiwanego tekstu lub znaku.
 
-* `\#`, `\*` - przechodzenie do następnego `*` lub poprzedniego `#` wyrazu który znajduję się pod kursorem
+* `\#`, `\*` - przechodzenie do następnego `*` lub poprzedniego `#` wyrazu, który znajduję się pod kursorem
 * `%` - szuka brakującego nawiasu: (,),[,],\{, lub }. Przenosi do miejsca, w którym występuje zamykający/otwierający nawias
 * `f{znak}`, `F{znak}` - skok do pierwszego następnego `f` lub poprzedniego `F` wyszukiwanego znaku. Możemy powtarzać ten sam skok poprzez `;` lub powracając `,` do poprzedniego znaku.
 * `/{fraza}` lub `?{fraza}` - wyszukuje następnej `/` lub poprzedniej `?` frazy w pliku
@@ -66,7 +66,7 @@ Jak do tej pory nauczyliśmy się skakać po dokumencie, co nie jest zbytnio pro
 
 * `y`, `yy` (yank) - kopiowanie tekstu lub całej linii `yy`
 * `d`, `dd` (delete) - usunięcie (wycinanie) zaznaczonego tekstu `d` lub całej linii `dd`
-* `c`, `cc` (change) - zmienianie tekstu, komenda ta wycina znaki i przechodzi do Insert mode. polecenie `cc` zmienia całą linie.
+* `c`, `cc` (change) - zmienianie tekstu, komenda ta wycina znaki i przechodzi do Insert mode. Polecenie `cc` zmienia całą linię.
 * `p`, `p` (paste) - wklejanie tekstu po kursorze `p` lub przed `p`
 * `gu`, `gu` - opcja dodana trochę na siłę mająca na celu podmianę wyrazów na duże `gu` lub małe `gu` litery
 * `>`, `>>` - zrobienie wcięcia jednej linii `>>` lub kilku `>`, przy dodaniu parametru ruchu
@@ -100,7 +100,7 @@ Każde polecenie można powtórzyć - robi się to przez `.` kropkę. Oczywiści
 Dobrą praktyką jest, aby podczas edycji dokumentu używać obiektów tekstowych, a nie komend ruchu (motions). Obiektami tymi są m.in. wyraz `w`, zdanie `s`, paragraf `p`, napis zawarty w cudzysłowach `"`, nawiasach `b` lub tagach HTML `t`. Często klawisz odpowiadający za dany ruch jest taki sam w obiektach tekstowych. W takim wypadku różnica polegająca na zaznaczeniu obiektu, to dodanie jednej z dwóch liter:
 
 * `i` - operuje tylko na danym obiekcie
-* `a` - operuje na danym obiekcie wraz z spacjami poprzedzającymi następny obiekt. Jeśli mamy cudzysłowy lub nawiasy to zaznaczamy je oraz tekst pomiędzy nimi.
+* `a` - operuje na danym obiekcie wraz ze spacjami poprzedzającymi następny obiekt. Jeśli mamy cudzysłowy lub nawiasy to zaznaczamy je oraz tekst pomiędzy nimi.
 
 Załóżmy, że nasz kursor znajduje się na środku wyrazu i chcielibyśmy go usunąć. Jeśli użyjemy `dw` usuniemy tylko połowę wyrazu (od kursora do następnego słowa). Musimy w takim razie przejść do początku tego wyrazu (przez np.`b`) i dopiero zastosować komendy `dw`. Używając obiektów tekstowych nie musimy być na początku tego obiektu. Następną przewagą w tej metodzie jest zdolność do powtarzania komend, niezależnie od pozycji kursora. Wydaje się to skomplikowane, ale po poniższym przykładzie wszystko stanie się jasne. Pogrubiony znak oznacza pozycję kursora.
 
@@ -127,7 +127,7 @@ Wyodrębniłbym kilka rodzajów obiektów. W pieszym znajdują się:
 * `p` - paragraf
 * `'`, `"`, ` - tekst pomiędzy cudzysłowami
 
-Napis pomiędzy nawiasami. Obiekty te możemy zaznaczać niezależnie czy użyjemy znak otwarcia lub zamknięcia nawiasu. Niektóre z nich mają alias:
+Napis pomiędzy nawiasami. Obiekty te możemy zaznaczać niezależnie czy użyjemy znaku otwarcia lub zamknięcia nawiasu. Niektóre z nich mają alias:
 
 * `(`, `)` lub `b` - nawias okrągły
 * `{`, `}` lub `B` - nawias wąsaty
@@ -162,7 +162,7 @@ Składowe tego polecenia są opcjonalne. Nie musimy powtarzać lub manipulować 
 
 == Porady
 
-Na sam koniec tego wstępu do Vima, mam dla Was kilka porad, które mogą być przydatne. Pierwsza z nich wydaje się być dziwna. Proponuję zamiast Vima zainstalować jego fork https://neovim.io/[NeoVim]. Program ten ma kilka dodatkowych funkcji i wydaje mi się, że jest bardzie dostosowany do pracy od razu po zainstalowaniu. Mówiąc o ustawieniach, na stronie https://vim-bootstrap.com/[vim-bootstrap] znajdziemy przygotowane pliki konfiguracyjne. Podczas pisania możemy korzystać z autouzupełniania. Listę słów, które wystąpiły w dokumencie otworzymy przez kbd:[Ctrl+n] lub kbd:[Ctrl+p], skróty te odpowiadają też za ich wybór.
+Na sam koniec tego wstępu do Vima, mam dla Was kilka porad, które mogą być przydatne. Pierwsza z nich wydaje się być dziwna. Proponuję zamiast Vima zainstalować jego fork https://neovim.io/[NeoVim]. Program ten ma kilka dodatkowych funkcji i wydaje mi się, że jest bardzie, dostosowany do pracy od razu po zainstalowaniu. Mówiąc o ustawieniach, na stronie https://vim-bootstrap.com/[vim-bootstrap] znajdziemy przygotowane pliki konfiguracyjne. Podczas pisania możemy korzystać z auto uzupełniania. Listę słów, które wystąpiły w dokumencie otworzymy przez kbd:[Ctrl+n] lub kbd:[Ctrl+p], skróty te odpowiadają też za ich wybór.
 
 Zachętą do nauki Vima jest fakt, iż w innych programach zaimplementowane są poznane nam skróty. Praktycznie większość popularnych IDE ma wtyczkę, która umożliwi nam operowaniem tekstem w ten sam sposób jak w Vime. W powłokach systemowych bash i zsh jest możliwość włączenia `Vi mode`. https://github.com/brookhong/Surfingkeys[Surfingkeys] to jedno z rozszerzeń do Firefox i przeglądarek bazujących na Chromium, które pozwalają nawigować po stronach internetowych. Niektóre aplikacje, zorientowane na produktywność pozwalają na łatwą zamianę lub wspierają, skróty podobne do tych z Vima.
 

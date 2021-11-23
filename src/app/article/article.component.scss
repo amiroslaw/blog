@@ -147,7 +147,10 @@ kbd {
 }
 
 li > p {
-  margin: 5px;
+  margin: 4px;
+}
+li li p {
+  margin: 3px;
 }
 
 .imageblock > .title {

@@ -21,12 +21,12 @@ photo:
 
 == Wstęp
 
-Dla osoby zaczynającej przygodę z systemami GNU/Linux, początek może być bardzo frustrujący z uwagi na brak wsparcia programów z którymi się zapoznaliśmy używając Windowsa. Często osoba w takiej sytuacji narzeka na niedobór oprogramowania lub w najgorszym przypadku próbuje instalować swoje ulubione programy przez Wine. Rozwiązaniem sytuacji powinno być przede wszystkim szukanie programów napisanych natywne pod Linuksa. Może to zająć trochę czasu, dlatego powstał ten post. Mam nadzieję, że osoby używające pingwina codziennie, znajdą też coś ciekawego lub podzielą się w komentarzu własnymi propozycjami.
+Dla osoby zaczynającej przygodę z systemami GNU/Linux początek może być bardzo frustrujący z uwagi na brak wsparcia programów, z którymi się zapoznaliśmy używając Windowsa. Często osoba w takiej sytuacji narzeka na niedobór oprogramowania lub w najgorszym przypadku próbuje instalować swoje ulubione programy przez Wine. Rozwiązaniem sytuacji powinno być przede wszystkim szukanie programów napisanych natywne pod Linuksa. Może to zająć trochę czasu, dlatego powstał ten post. Mam nadzieję, że osoby używające pingwina codziennie, znajdą też coś ciekawego lub podzielą się w komentarzu własnymi propozycjami.
 
 == Jak szukać programów?
 
 image:assets/img/posts/2020/ask-blackboard-chalk-board-356079-300x182.jpg[question_makr, role=left]
-Moja propozycja programów jest tylko małym wycinkiem dostępnego oprogramowania na Linuksy. Różne dystrybucje podchodzą do tego inaczej, więc należy się zapoznać jak instalować paczki z programami. Najprostszym sposobem do zainstalowania programu jest otworzenie odpowiednika Windowsowskiego sklepu - w Linux Mint jest to menedżer oprogramowania. W systemach pochodnych do debiana operację taką wykonamy też w terminalu:
+Moja propozycja programów jest tylko małym wycinkiem dostępnego oprogramowania na Linuksy. Różne dystrybucje podchodzą do tego inaczej, więc należy się zapoznać jak instalować paczki z programami. Najprostszym sposobem do zainstalowania programu jest otworzenie odpowiednika Windowsowskiego sklepu, w Linux Mint jest to menedżer oprogramowania. W systemach pochodnych do debiana operację taką wykonamy też w terminalu:
 
 [source,bash]
 ----
@@ -39,9 +39,9 @@ Alternatywami menedżera oprogramowania i apt jest Synaptic i aptitude z łatwie
 .Synaptic
 image::assets/img/posts/2020/synatpic-768x537.jpg[Synaptic]
 
-Jak nie znajdziemy nic co nas interesuje w repozytorium lub nie wiemy jak nazywa się program, możemy zajrzeć na stronę https://alternativeto.net/platform/linux/[alternativeTO]. Portal ten posiada zbiór rekomendowanych aplikacji. Możemy wpisać nazwę programu który znamy z Windowsa i przefiltrować wyniki po platformie Linux. Na oficjalnej stronie wybranego projektu powinniśmy mieć instrukcję instalacji na nasz system. W Ubuntu i Mint będzie to pobranie paczki z rozszerzeniem .deb lub dodanie jego do repozytorium przez PPA. W najgorszym przypadku będziemy musieli pobrać kod programu i go skompilować.
+Jak nie znajdziemy nic co nas interesuje w repozytorium lub nie wiemy jak nazywa się program, możemy zajrzeć na stronę https://alternativeto.net/platform/linux/[alternativeTO]. Portal ten posiada zbiór rekomendowanych aplikacji. Możemy wpisać nazwę programu, który znamy z Windowsa i przefiltrować wyniki po platformie Linux. Na oficjalnej stronie wybranego projektu powinniśmy mieć instrukcję instalacji na nasz system. W Ubuntu i Mint będzie to pobranie paczki z rozszerzeniem .deb lub dodanie jego do repozytorium przez PPA. W najgorszym przypadku będziemy musieli pobrać kod programu i go skompilować.
 
-Chciałbym wspomnieć, też o nowych technologiach które mają na celu uprościć instalację oprogramowanie nie patrząc na jakiej dystrybucji pracujemy. https://appimage.org/[AppImage] jest chyba najprostszym sposobem, aby to osiągnąć. https://flatpak.org/[Flatpak] i https://snapcraft.io/store[Snap] posiadają własne centra.
+Chciałbym wspomnieć, też o nowych technologiach, które mają na celu uprościć instalację oprogramowanie nie patrząc na jakiej dystrybucji pracujemy. https://appimage.org/[AppImage] jest chyba najprostszym sposobem, aby to osiągnąć. https://flatpak.org/[Flatpak] i https://snapcraft.io/store[Snap] posiadają własne centra.
 
 == Lista aplikacji
 
@@ -50,7 +50,7 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
 
 * https://mega.nz/[Megasync] Synchronizacja plików z chmury Mega. Usługa ta daje nam 50 GB miejsca na nasze pliki.
 ** Dropbox → Popularna alternatywa, oferująca jednak mniej darmowej przestrzeni.
-* https://apps.ankiweb.net/[anki] → Program do nauki, głównie wykorzystywany do zapamiętania słówek z obcego języka. Pakiety słówek można pobierać z strony projektu. Jest dostępna wersja na androida - AnkiDroid.
+* https://apps.ankiweb.net/[anki] → Program do nauki, głównie wykorzystywany do zapamiętania słówek z obcego języka. Pakiety słówek można pobierać ze strony projektu. Jest dostępna wersja na androida - AnkiDroid.
 * https://www.pidgin.im/[pidgin] → Komunikator internetowy, pozwalający na łączenie się z różnymi protokołami np. IRC, Skype, Facebook. Dostępna jest, też wersja konsolowa.
 * https://www.qbittorrent.org/[qBittorrent] → Klient torrent.
 ** Transmission
@@ -91,7 +91,7 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
 
 * https://www.gimp.org/[Gimp] → Edytor grafiki.
 * http://www.xnview.com/en/xnviewmp/#features[xnview] → Przeglądarka i konwersją zdjęć.
-** http://karlch.github.io/vimiv/[vimiv] → Lekka przeglądarka zdjęć z skrótami jak w vimie.
+** http://karlch.github.io/vimiv/[vimiv] → Lekka przeglądarka zdjęć ze skrótami jak w vimie.
 ** sxiv
 ** Viewnior
 * https://www.darktable.org/[Darktable] → Obróbka zdjęć (jak Lightroom).

@@ -22,13 +22,14 @@ variables
 /* check node_modules/prismjs/themes/ for the available themes */
 @import '~prismjs/themes/prism-coy.css';
 @import '~prismjs/plugins/line-numbers/prism-line-numbers.css';
+@import "variables";
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
-  font-size: 20px;
   color: #212529;
   font-family: 'Lora', 'Times New Roman', serif;
   -webkit-tap-highlight-color: #0085A1;

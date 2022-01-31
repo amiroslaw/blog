@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .btn-theme {
   font-size: 14px;
   font-weight: 800;
@@ -18,6 +20,9 @@ article.post {
   iframe {
     display: block;
     margin: 0 auto;
+    @media (max-width: $small) {
+      max-width: 100%;
+    }
   }
 
   img {
@@ -41,9 +46,13 @@ article.post {
   img-75 {
     max-width: 75%;
   }
+
+  @media (min-width: $large) {
+    font-size: 20px;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $medium) {
   article.post span {
     &.left {
       float: left;
@@ -63,14 +72,16 @@ article.post {
   > div {
     text-transform: uppercase;
   }
-
-  max-width: 40%;
 }
 
 #article-info {
   text-align: right;
-  font-size: 18px;
+  font-size: 16px;
   color: #868e96;
+  margin-top: -4%;
+  @media (min-width: $large) {
+    font-size: 18px;
+  }
 }
 
 .tags {

@@ -3,6 +3,10 @@
 //  color: #17a2b8;
 //}
 
+ul.tags {
+  padding-left: 0;
+}
+
 .tags {
   zoom: 1;
 
@@ -40,7 +44,7 @@
       border-radius: 3px 0 0 3px;
       background: #56a3d5;
       -webkit-box-shadow: inset 1px 0 #276f9e;
-      box-shadow: inset 1px 0 #276f9e;
+      //box-shadow: inset 1px 0 #276f9e;
     }
   }
 

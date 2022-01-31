@@ -1,3 +1,5 @@
+@import "src/variables";
+
 #mainNav {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
@@ -42,7 +44,7 @@
   color: powderblue;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: $large) {
   #mainNav {
     border-bottom: 1px solid transparent;
     background: transparent;
@@ -67,7 +69,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: $large) {
   #mainNav {
     -webkit-transition: background-color 0.2s;
     -moz-transition: background-color 0.2s;
@@ -151,27 +153,21 @@ header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
   position: relative;
-  padding: 100px;
+  padding: 15% 5%;
   color: white;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: $medium) {
   header.masthead .page-heading,
   header.masthead .post-heading,
   header.masthead .site-heading {
-    padding: 150px 0 100px;
+    padding: 25% 2% 15% 2%;
   }
 }
 
 header.masthead .page-heading,
 header.masthead .site-heading {
   text-align: center;
-}
-
-header.masthead .page-heading h1,
-header.masthead .site-heading h1 {
-  font-size: 50px;
-  margin-top: 0;
 }
 
 header.masthead .page-heading .subheading,
@@ -184,10 +180,16 @@ header.masthead .site-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-@media only screen and (min-width: 768px) {
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+  font-size: 60px;
+  margin-top: 0;
+}
+
+@media only screen and (max-width: $medium) {
   header.masthead .page-heading h1,
   header.masthead .site-heading h1 {
-    font-size: 60px;
+    font-size: calc(1.525rem + 2vw);
   }
 }
 
@@ -219,7 +221,7 @@ header.masthead .post-heading .meta a {
   color: #fff;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $medium) {
   header.masthead .post-heading h1 {
     font-size: 55px;
   }

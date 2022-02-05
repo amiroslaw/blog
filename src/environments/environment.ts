@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  url: 'http://localhost:1668'
+  url: 'https://miroslaw.ovh'
+  // url: 'http://localhost:1668'
 };
 
 /*

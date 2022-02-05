@@ -63,7 +63,7 @@ export class SeoService {
     });
     this.meta.updateTag({
       property: 'og:image:alt',
-      content: config.description,
+      content: config.title,
     });
     this.meta.updateTag({
       property: 'og:site_name',

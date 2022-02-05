@@ -4,9 +4,10 @@ import {ScullyLibModule} from '@scullyio/ng-lib';
 import {ArticleRoutingModule} from './article-routing.module';
 import {ArticleComponent} from './article.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {CommentsDirective} from '../directives/comments.directive';
 
 @NgModule({
-    declarations: [ArticleComponent],
+    declarations: [ArticleComponent, CommentsDirective],
     imports: [CommonModule, ArticleRoutingModule, ScullyLibModule, FontAwesomeModule],
     exports: [
         ArticleComponent

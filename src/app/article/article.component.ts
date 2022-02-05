@@ -9,6 +9,7 @@ import {Tag} from '../types/types';
 import {map} from 'rxjs/operators';
 import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import {faTags} from '@fortawesome/free-solid-svg-icons';
+import {SeoService} from '../services/seo.service';
 
 @Component({
   selector: 'app-article',
@@ -22,23 +23,21 @@ export class ArticleComponent implements OnInit, AfterViewChecked {
   postDate$: Observable<any>;
   readingTime$: Observable<number>;
 
-  constructor(private highlightService: HighlightService, private tagService: TagService, private scullyContent: ScullyContentService, library: FaIconLibrary) {
+  constructor(private highlightService: HighlightService, private tagService: TagService, private scullyContent: ScullyContentService, library: FaIconLibrary, private seoService: SeoService) {
     library.addIcons(faTags, faCalendarAlt, faClock);
   }
 
   ngOnInit(): void {
-
     this.readingTime$ = this.scullyContent.getCurrent().pipe(
       map(route => route.readingTime)
     );
-
-    this.readingTime$.subscribe(r => console.log(r));
 
     this.postTags$ = this.tagService.getPostTags();
 
     this.postDate$ = this.scullyContent.getCurrent().pipe(
       map(route => route.publishedAt)
     );
+    this.seoService.generateMetaTags();
   }
 
   ngAfterViewChecked(): void {

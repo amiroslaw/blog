@@ -1,4 +1,3 @@
-import {Router} from '@angular/router';
 import {Injectable} from '@angular/core';
 import {ScullyRoute, ScullyRoutesService} from '@scullyio/ng-lib';
 import {map} from 'rxjs/operators';
@@ -9,8 +8,7 @@ import * as global from '../services/globals';
   providedIn: 'root',
 })
 export class ScullyContentService {
-  constructor(private scully: ScullyRoutesService, private router: Router) {
-  }
+  constructor(private scully: ScullyRoutesService) {}
 
   getBlogPosts(): Observable<ScullyRoute[]> {
     return this.getFilterRoute(this.scully.available$, '/blog/').pipe(
@@ -57,5 +55,31 @@ export class ScullyContentService {
       map((r) => r.filter((route) => route.route.startsWith(path)))
     );
   }
+
+  getMetadata(): Observable<Metadata> {
+    return this.getCurrent().pipe(
+      map(i => {
+          return <Metadata> {
+            route: i.route,
+            title: i.title,
+            description: i.description,
+            image: i.photo?.card,
+            publishedAt: i.publishedAt,
+            tags: i.tags,
+            authors: i.authors
+          };
+        }
+      )
+    );
+  }
 }
 
+export interface Metadata {
+  title?: string;
+  description?: string;
+  image?: string;
+  route?: string;
+  publishedAt: string;
+  tags: string[];
+  authors: string[];
+}

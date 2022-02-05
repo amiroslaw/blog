@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {Skill} from './skill.model';
 
@@ -15,11 +15,8 @@ import {Skill} from './skill.model';
     ])
   ]
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
   public isTechnologyDescriptionCollapsed = true;
   skills: Array<Skill> = Skill.skills;
-
-  ngOnInit(): void {
-  }
 
 }

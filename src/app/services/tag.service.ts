@@ -1,4 +1,3 @@
-import {Router} from '@angular/router';
 import {Injectable} from '@angular/core';
 import {ScullyRoute, ScullyRoutesService} from '@scullyio/ng-lib';
 import {map} from 'rxjs/operators';
@@ -11,7 +10,7 @@ import {ScullyContentService} from './scully-content.service';
   providedIn: 'root',
 })
 export class TagService {
-  constructor(private contentService: ScullyContentService, private scully: ScullyRoutesService, private router: Router) {
+  constructor(private contentService: ScullyContentService, private scully: ScullyRoutesService) {
   }
 
   getTagPosts(tag: string): Observable<ScullyRoute[]> {

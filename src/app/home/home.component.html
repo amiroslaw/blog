@@ -1,6 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-lg-8 mx-auto">
+      <form (submit)="onSearch()" class="mb-3">
+        <input
+          id="searchPostInput"
+          class="form-control" list="datalistOptions"
+          type="search"
+          [attr.placeholder]="'Search in tags and descriptions'"
+          aria-required="false"
+          [(ngModel)]="search">
+        <datalist id="datalistOptions">
+          <option *ngFor="let tag of tags" value="{{tag}}">
+      </datalist>
+      </form>
       <section>
         <app-post-card *ngFor="let post of posts$ | async" [article]="post"></app-post-card>
         <div class="clearfix"></div>

@@ -10,13 +10,26 @@ import * as global from '../services/globals';
 export class ScullyContentService {
   constructor(private scully: ScullyRoutesService) {}
 
-  getBlogPosts(): Observable<ScullyRoute[]> {
+  getBlogPosts(search?: string): Observable<ScullyRoute[]> {
     return this.getFilterRoute(this.scully.available$, '/blog/').pipe(
       map((posts) =>
         posts.sort((p1, p2) =>
           new Date(p1.publishedAt) > new Date(p2.publishedAt) ? -1 : 1
         )
-      )
+      ),
+      map((routeList) => {
+        if (!search) {
+          return routeList;
+        }
+        return routeList.filter((route: ScullyRoute) => {
+          const searchTerm = search.toLowerCase();
+          return (
+            route.tags.join('').toLowerCase().includes(search) ||
+            route.title.toLowerCase().includes(searchTerm) ||
+            route.description.toLowerCase().includes(searchTerm)
+          );
+        });
+      }),
     );
   }
 

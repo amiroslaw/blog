@@ -1,0 +1,878 @@
+<!DOCTYPE html><html lang="pl"><head><meta name="generator" content="Scully 2.0.1"><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><style type="text/css">svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.225em;
+}
+.svg-inline--fa.fa-w-1 {
+  width: 0.0625em;
+}
+.svg-inline--fa.fa-w-2 {
+  width: 0.125em;
+}
+.svg-inline--fa.fa-w-3 {
+  width: 0.1875em;
+}
+.svg-inline--fa.fa-w-4 {
+  width: 0.25em;
+}
+.svg-inline--fa.fa-w-5 {
+  width: 0.3125em;
+}
+.svg-inline--fa.fa-w-6 {
+  width: 0.375em;
+}
+.svg-inline--fa.fa-w-7 {
+  width: 0.4375em;
+}
+.svg-inline--fa.fa-w-8 {
+  width: 0.5em;
+}
+.svg-inline--fa.fa-w-9 {
+  width: 0.5625em;
+}
+.svg-inline--fa.fa-w-10 {
+  width: 0.625em;
+}
+.svg-inline--fa.fa-w-11 {
+  width: 0.6875em;
+}
+.svg-inline--fa.fa-w-12 {
+  width: 0.75em;
+}
+.svg-inline--fa.fa-w-13 {
+  width: 0.8125em;
+}
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+}
+.svg-inline--fa.fa-w-15 {
+  width: 0.9375em;
+}
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-17 {
+  width: 1.0625em;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+.svg-inline--fa.fa-w-19 {
+  width: 1.1875em;
+}
+.svg-inline--fa.fa-w-20 {
+  width: 1.25em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-border {
+  height: 1.5em;
+}
+.svg-inline--fa.fa-li {
+  width: 2em;
+}
+.svg-inline--fa.fa-fw {
+  width: 1.25em;
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: 0.25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+.far.fa-pull-left,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: 0.3em;
+}
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+.far.fa-pull-right,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: 0.3em;
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
+:root .fa-flip-both {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse {
+  color: #fff;
+}</style><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <meta charset="utf-8">
+  <title>Espanso - text expander</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style type="text/css">@font-face{font-family:'Lora';font-style:italic;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LLPtLtfOm84TX.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Lora';font-style:italic;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LJftLtfOm84TX.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Lora';font-style:italic;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LLvtLtfOm84TX.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Lora';font-style:italic;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LL_tLtfOm84TX.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Lora';font-style:italic;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LIftLtfOm8w.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Lora';font-style:italic;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LLPtLtfOm84TX.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Lora';font-style:italic;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LJftLtfOm84TX.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Lora';font-style:italic;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LLvtLtfOm84TX.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Lora';font-style:italic;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LL_tLtfOm84TX.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Lora';font-style:italic;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIhMX1D_JOuMw_LIftLtfOm8w.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Lora';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMwf7I_FMl_GW8g.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Lora';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMw77I_FMl_GW8g.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Lora';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMwX7I_FMl_GW8g.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Lora';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMwT7I_FMl_GW8g.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Lora';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMwr7I_FMl_E.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Lora';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMwf7I_FMl_GW8g.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Lora';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMw77I_FMl_GW8g.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Lora';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMwX7I_FMl_GW8g.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Lora';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMwT7I_FMl_GW8g.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Lora';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/lora/v23/0QIvMX1D_JOuMwr7I_FMl_E.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+  <style type="text/css">@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6FxZCJgg.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6FxZCJgg.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6FxZCJgg.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6FxZCJgg.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06FxZCJgvAQ.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:italic;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6FxZCJgg.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;font-stretch:100%;src:url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+<style>@charset "UTF-8";:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13,110,253;--bs-secondary-rgb:108,117,125;--bs-success-rgb:25,135,84;--bs-info-rgb:13,202,240;--bs-warning-rgb:255,193,7;--bs-danger-rgb:220,53,69;--bs-light-rgb:248,249,250;--bs-dark-rgb:33,37,41;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-body-color-rgb:33,37,41;--bs-body-bg-rgb:255,255,255;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg,#ffffff26,#fff0);--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-bg:#fff;}*,:after,:before{box-sizing:border-box;}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth;}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;}html{scroll-behavior:smooth;font-size:18px;}body{color:#212529;font-family:Lora,Times New Roman,serif;-webkit-tap-highlight-color:#0085A1;}</style><link rel="stylesheet" href="styles.css" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.css"></noscript><style></style><style>#mainNav[_ngcontent-fvi-c31]{position:absolute;border-bottom:1px solid #e9ecef;background-color:#fff;font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}#mainNav[_ngcontent-fvi-c31]   .navbar-brand[_ngcontent-fvi-c31]   img[_ngcontent-fvi-c31]{width:40px;height:40px;border-radius:10px;box-shadow:1px 1px 4px #b0e0e6}#mainNav[_ngcontent-fvi-c31]   .navbar-brand[_ngcontent-fvi-c31]   img[_ngcontent-fvi-c31]:hover{width:40px;height:40px;border-radius:10px;box-shadow:0 0 6px #0085a1}#mainNav[_ngcontent-fvi-c31]   .navbar-toggler[_ngcontent-fvi-c31]{font-size:12px;font-weight:800;padding:13px;text-transform:uppercase;color:#343a40}#mainNav[_ngcontent-fvi-c31]   .navbar-nav[_ngcontent-fvi-c31] > li.nav-item[_ngcontent-fvi-c31] > a[_ngcontent-fvi-c31]{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}#mainNav[_ngcontent-fvi-c31]   .navbar-nav[_ngcontent-fvi-c31] > li.nav-item[_ngcontent-fvi-c31] > a.active[_ngcontent-fvi-c31]{color:#b0e0e6}#mainNav[_ngcontent-fvi-c31]   .navbar-nav[_ngcontent-fvi-c31] > li.nav-item[_ngcontent-fvi-c31] > a.active[_ngcontent-fvi-c31]:focus{color:#b0e0e6}@media only screen and (min-width: 992px){#mainNav[_ngcontent-fvi-c31]{border-bottom:1px solid transparent;background:transparent}#mainNav[_ngcontent-fvi-c31]   .navbar-brand[_ngcontent-fvi-c31]{padding:10px 20px;color:#b0e0e6}#mainNav[_ngcontent-fvi-c31]   .navbar-brand[_ngcontent-fvi-c31]:focus, #mainNav[_ngcontent-fvi-c31]   .navbar-brand[_ngcontent-fvi-c31]:hover{color:#fffc}#mainNav[_ngcontent-fvi-c31]   .navbar-nav[_ngcontent-fvi-c31] > li.nav-item[_ngcontent-fvi-c31] > a[_ngcontent-fvi-c31]{padding:10px 20px;color:#fff}#mainNav[_ngcontent-fvi-c31]   .navbar-nav[_ngcontent-fvi-c31] > li.nav-item[_ngcontent-fvi-c31] > a[_ngcontent-fvi-c31]:focus, #mainNav[_ngcontent-fvi-c31]   .navbar-nav[_ngcontent-fvi-c31] > li.nav-item[_ngcontent-fvi-c31] > a[_ngcontent-fvi-c31]:hover{color:#fffc}}@media only screen and (min-width: 992px){#mainNav[_ngcontent-fvi-c31]{transition:background-color .2s;transform:translate(0);-webkit-backface-visibility:hidden}#mainNav.is-fixed[_ngcontent-fvi-c31]{position:fixed;top:-67px;transition:transform .2s;border-bottom:1px solid white;background-color:#ffffffe6}#mainNav.is-fixed[_ngcontent-fvi-c31]   .navbar-brand[_ngcontent-fvi-c31]{color:#212529}#mainNav.is-fixed[_ngcontent-fvi-c31]   .navbar-brand[_ngcontent-fvi-c31]:focus, #mainNav.is-fixed[_ngcontent-fvi-c31]   .navbar-brand[_ngcontent-fvi-c31]:hover{color:#0085a1}#mainNav.is-fixed[_ngcontent-fvi-c31]   .navbar-nav[_ngcontent-fvi-c31] > li.nav-item[_ngcontent-fvi-c31] > a[_ngcontent-fvi-c31]{color:#212529}#mainNav.is-fixed[_ngcontent-fvi-c31]   .navbar-nav[_ngcontent-fvi-c31] > li.nav-item[_ngcontent-fvi-c31] > a[_ngcontent-fvi-c31]:focus, #mainNav.is-fixed[_ngcontent-fvi-c31]   .navbar-nav[_ngcontent-fvi-c31] > li.nav-item[_ngcontent-fvi-c31] > a[_ngcontent-fvi-c31]:hover{color:#0085a1}#mainNav.is-visible[_ngcontent-fvi-c31]{transform:translateY(100%)}}.navbar-brand[_ngcontent-fvi-c31]{font-family:"Berkshire Swash","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;color:#17a2b8}header.masthead[_ngcontent-fvi-c31]{margin-bottom:50px;background:no-repeat center center;background-color:#868e96;background-attachment:scroll;position:relative;background-size:cover}header.masthead[_ngcontent-fvi-c31]   .overlay[_ngcontent-fvi-c31]{position:absolute;top:0;left:0;height:100%;width:100%;background-color:#212529;opacity:.5}header.masthead[_ngcontent-fvi-c31]   .page-heading[_ngcontent-fvi-c31], header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31], header.masthead[_ngcontent-fvi-c31]   .site-heading[_ngcontent-fvi-c31]{position:relative;padding:15% 5%;color:#fff}@media only screen and (max-width: 768px){header.masthead[_ngcontent-fvi-c31]   .page-heading[_ngcontent-fvi-c31], header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31], header.masthead[_ngcontent-fvi-c31]   .site-heading[_ngcontent-fvi-c31]{padding:25% 2% 15%}}header.masthead[_ngcontent-fvi-c31]   .page-heading[_ngcontent-fvi-c31], header.masthead[_ngcontent-fvi-c31]   .site-heading[_ngcontent-fvi-c31]{text-align:center}header.masthead[_ngcontent-fvi-c31]   .page-heading[_ngcontent-fvi-c31]   .subheading[_ngcontent-fvi-c31], header.masthead[_ngcontent-fvi-c31]   .site-heading[_ngcontent-fvi-c31]   .subheading[_ngcontent-fvi-c31]{font-size:24px;font-weight:300;line-height:1.1;display:block;margin:10px 0 0;font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}header.masthead[_ngcontent-fvi-c31]   .page-heading[_ngcontent-fvi-c31]   h1[_ngcontent-fvi-c31], header.masthead[_ngcontent-fvi-c31]   .site-heading[_ngcontent-fvi-c31]   h1[_ngcontent-fvi-c31]{font-size:60px;margin-top:0}@media only screen and (max-width: 768px){header.masthead[_ngcontent-fvi-c31]   .page-heading[_ngcontent-fvi-c31]   h1[_ngcontent-fvi-c31], header.masthead[_ngcontent-fvi-c31]   .site-heading[_ngcontent-fvi-c31]   h1[_ngcontent-fvi-c31]{font-size:calc(1.525rem + 2vw)}}header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31]   h1[_ngcontent-fvi-c31]{font-size:35px}header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31]   .meta[_ngcontent-fvi-c31], header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31]   .subheading[_ngcontent-fvi-c31]{line-height:1.1;display:block}header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31]   .subheading[_ngcontent-fvi-c31]{font-size:24px;font-weight:600;margin:10px 0 30px;font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31]   .meta[_ngcontent-fvi-c31]{font-size:20px;font-weight:300;font-style:italic;font-family:"Lora","Times New Roman",serif}header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31]   .meta[_ngcontent-fvi-c31]   a[_ngcontent-fvi-c31]{color:#fff}@media only screen and (min-width: 768px){header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31]   h1[_ngcontent-fvi-c31]{font-size:55px}header.masthead[_ngcontent-fvi-c31]   .post-heading[_ngcontent-fvi-c31]   .subheading[_ngcontent-fvi-c31]{font-size:30px}}</style><style>footer[_ngcontent-fvi-c36]{padding:50px 0 65px}footer[_ngcontent-fvi-c36]   .list-inline[_ngcontent-fvi-c36]{margin:0;padding:0}footer[_ngcontent-fvi-c36]   .copyright[_ngcontent-fvi-c36]{font-size:14px;margin-bottom:0;text-align:center}</style><style>.btn-theme[_ngcontent-fvi-c39]{font-size:14px;font-weight:800;padding:15px 25px;letter-spacing:1px;text-transform:uppercase;font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}.btn-lg[_ngcontent-fvi-c39]{font-size:16px;padding:25px 35px}article.post[_ngcontent-fvi-c39]   iframe[_ngcontent-fvi-c39]{display:block;margin:0 auto}@media (max-width: 576px){article.post[_ngcontent-fvi-c39]   iframe[_ngcontent-fvi-c39]{max-width:100%}}article.post[_ngcontent-fvi-c39]   img[_ngcontent-fvi-c39]{max-width:100%;margin:1% 0;text-align:center}article.post[_ngcontent-fvi-c39]   div.imageblock[_ngcontent-fvi-c39]{text-align:center}article.post[_ngcontent-fvi-c39]   img-25[_ngcontent-fvi-c39]{max-width:25%}article.post[_ngcontent-fvi-c39]   img-55[_ngcontent-fvi-c39]{max-width:55%}article.post[_ngcontent-fvi-c39]   img-75[_ngcontent-fvi-c39]{max-width:75%}@media (min-width: 992px){article.post[_ngcontent-fvi-c39]{font-size:20px}}@media (min-width: 768px){article.post[_ngcontent-fvi-c39]   span.left[_ngcontent-fvi-c39]{float:left;margin:0 2% 2% 0;max-width:40%}article.post[_ngcontent-fvi-c39]   span.right[_ngcontent-fvi-c39]{float:right;margin:0 0 2% 2%;max-width:40%}}#toc[_ngcontent-fvi-c39] > div[_ngcontent-fvi-c39]{text-transform:uppercase}#article-info[_ngcontent-fvi-c39]{text-align:right;font-size:16px;color:#868e96;margin-top:-4%}@media (min-width: 992px){#article-info[_ngcontent-fvi-c39]{font-size:18px}}.tags[_ngcontent-fvi-c39]{list-style:none;margin:0;overflow:hidden;padding:0}.tags[_ngcontent-fvi-c39]   li[_ngcontent-fvi-c39]{float:left}.tags[_ngcontent-fvi-c39]   .tag[_ngcontent-fvi-c39]{background:#eee;border-radius:3px 0 0 3px;color:#999;display:inline-block;height:26px;line-height:26px;padding:0 20px 0 23px;position:relative;margin:0 10px 10px 0;text-decoration:none;-webkit-transition:color .2s}.tags[_ngcontent-fvi-c39]   .tag[_ngcontent-fvi-c39]:before{background:#fff;border-radius:10px;box-shadow:inset 0 1px #00000040;content:"";height:6px;left:10px;position:absolute;width:6px;top:10px}.tags[_ngcontent-fvi-c39]   .tag[_ngcontent-fvi-c39]:after{background:#fff;border-bottom:13px solid transparent;border-left:10px solid #eee;border-top:13px solid transparent;content:"";position:absolute;right:0;top:0}.tags[_ngcontent-fvi-c39]   .tag[_ngcontent-fvi-c39]:hover{background-color:#ddd;color:#fff}.tags[_ngcontent-fvi-c39]   .tag[_ngcontent-fvi-c39]:hover:after{border-left-color:#ddd}.tags[_ngcontent-fvi-c39]   .tag[_ngcontent-fvi-c39]   a[_ngcontent-fvi-c39]:hover{text-decoration:none}kbd[_ngcontent-fvi-c39]{color:#212529;display:inline-block;border:1px solid #ccc;border-radius:4px;padding:.1em .5em;margin:0 .2em;box-shadow:0 1px #0003,0 0 0 2px #fff inset;background-color:#f7f7f7}li[_ngcontent-fvi-c39] > p[_ngcontent-fvi-c39]{margin:4px}li[_ngcontent-fvi-c39]   li[_ngcontent-fvi-c39]   p[_ngcontent-fvi-c39]{margin:3px}.title[_ngcontent-fvi-c39]{text-align:left;font-style:italic;font-size:16px;color:#6c757d}.listingblock[_ngcontent-fvi-c39] > .title[_ngcontent-fvi-c39], td.icon[_ngcontent-fvi-c39] > .title[_ngcontent-fvi-c39]{color:#d63384}.imageblock[_ngcontent-fvi-c39] > .title[_ngcontent-fvi-c39]{margin-bottom:1%}.quoteblock[_ngcontent-fvi-c39]   blockquote[_ngcontent-fvi-c39]:before{color:#17a2b8}table[_ngcontent-fvi-c39]   tbody[_ngcontent-fvi-c39]{border-collapse:collapse;margin:25px 0;font-size:.9em;min-width:400px;box-shadow:0 0 20px #00000026}table[_ngcontent-fvi-c39]   tbody[_ngcontent-fvi-c39]   tr[_ngcontent-fvi-c39]{border-bottom:1px solid #dddddd}table[_ngcontent-fvi-c39]   tbody[_ngcontent-fvi-c39]   tr[_ngcontent-fvi-c39]:nth-of-type(even){background-color:#f3f3f3}table[_ngcontent-fvi-c39]   tbody[_ngcontent-fvi-c39]   tr[_ngcontent-fvi-c39]:last-of-type{border-bottom:2px solid #17a2b8}table[_ngcontent-fvi-c39]   tbody[_ngcontent-fvi-c39]   td[_ngcontent-fvi-c39]{padding:8px 15px}table[_ngcontent-fvi-c39]   tbody[_ngcontent-fvi-c39]   td[_ngcontent-fvi-c39]   p[_ngcontent-fvi-c39]{margin:0}table[_ngcontent-fvi-c39]   tbody[_ngcontent-fvi-c39]   td.content[_ngcontent-fvi-c39]{color:#6c757d}table[_ngcontent-fvi-c39]   tbody[_ngcontent-fvi-c39]   td.icon[_ngcontent-fvi-c39]{border-right:1px solid #dddddd}table.tableblock[_ngcontent-fvi-c39]   tbody[_ngcontent-fvi-c39]   tr[_ngcontent-fvi-c39]:first-child{background-color:#17a2b8;color:#fff;text-align:left}</style><style>
+      :host {
+        display: none;
+      }
+      scully-content {
+        display: none;
+      }
+    </style><meta name="description" content="Espanso jest programem do tworzenia snippetów. Dzięki niemu możemy poprawić naszą pracę w przypadkach, gdy często musimy pisać podobne lub takie same fragmenty. Jeśli męczy Cię ciągłe wpisywanie tych samych formułek w listach elektronicznych lub podawanie swojego e-maila, adresu lub nr. telefonu, to warto go wyprobować."><meta name="keywords" content="Program, Produktywność, Linux"><meta property="og:title" content="Espanso - text expander"><meta property="og:description" content="Espanso jest programem do tworzenia snippetów. Dzięki niemu możemy poprawić naszą pracę w przypadkach, gdy często musimy pisać podobne lub takie same fragmenty. Jeśli męczy Cię ciągłe wpisywanie tych samych formułek w listach elektronicznych lub podawanie swojego e-maila, adresu lub nr. telefonu, to warto go wyprobować."><meta property="og:url" content="https://miroslaw.ovh/blog/espanso"><meta name="twitter:card" content="summary_large_image"><meta property="og:image" content="https://miroslaw.ovh/assets/img/thumbnail/typing-small.jpg"><meta property="og:image:alt" content="Espanso - text expander"><meta property="og:site_name" content="Mirosław"><meta property="og:locale" content="pl_PL"><meta property="og:type" content="article"><meta property="og:article:published_time" content="2022-02-11T00:00:00.000Z"><meta property="og:article:tag" content="Program, Produktywność, Linux"><meta property="og:article:author" content="Arkadiusz Mirosław"><script>window['ScullyIO']='generated';</script></head>
+<body scully-version="2.0.1">
+  <app-root _nghost-fvi-c37="" ng-version="12.2.10"><app-header _ngcontent-fvi-c37="" _nghost-fvi-c31=""><nav _ngcontent-fvi-c31="" id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top"><div _ngcontent-fvi-c31="" class="container"><a _ngcontent-fvi-c31="" routerlink="/home" class="navbar-brand" href="/home/"><img _ngcontent-fvi-c31="" src="assets/img/logo.jpg" alt="Home" loading="lazy"></a><button _ngcontent-fvi-c31="" type="button" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span _ngcontent-fvi-c31="" class="navbar-toggler-icon"></span></button><div _ngcontent-fvi-c31="" id="navbarSupportedContent" class="collapse navbar-collapse"><ul _ngcontent-fvi-c31="" class="navbar-nav mr-auto"><li _ngcontent-fvi-c31="" class="nav-item"><a _ngcontent-fvi-c31="" routerlinkactive="active" href="/blog/" class="active">Blog</a></li><li _ngcontent-fvi-c31="" class="nav-item"><a _ngcontent-fvi-c31="" routerlinkactive="active" href="/about/">O mnie</a></li><li _ngcontent-fvi-c31="" class="nav-item"><a _ngcontent-fvi-c31="" routerlinkactive="active" href="/portfolio/">Portfolio</a></li><li _ngcontent-fvi-c31="" class="nav-item"><a _ngcontent-fvi-c31="" routerlinkactive="active" href="/tags/">Tagi</a></li><!----></ul></div></div></nav><header _ngcontent-fvi-c31="" class="masthead" style="background-image: url(&quot;assets/img/thumbnail/typing.jpg&quot😉;"><div _ngcontent-fvi-c31="" class="overlay"></div><div _ngcontent-fvi-c31="" class="container"><div _ngcontent-fvi-c31="" class="row"><div _ngcontent-fvi-c31="" class="col-lg-8 col-md-10 mx-auto"><div _ngcontent-fvi-c31="" class="site-heading"><h1 _ngcontent-fvi-c31=""> Espanso - text expander </h1></div></div></div></div></header></app-header><div _ngcontent-fvi-c37=""><router-outlet _ngcontent-fvi-c37=""></router-outlet><app-article _nghost-fvi-c39=""><div _ngcontent-fvi-c39="" class="container">
+  <div _ngcontent-fvi-c39="" class="row">
+    <div _ngcontent-fvi-c39="" class="col-md-10 mx-auto">
+      <article _ngcontent-fvi-c39="" class="post">
+        <div _ngcontent-fvi-c39="" id="article-info">
+          <fa-icon _ngcontent-fvi-c39="" class="ng-fa-icon me-1"><svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path></svg></fa-icon>
+          <time _ngcontent-fvi-c39="" datetime="article.date">Feb 11, 2022</time>
+          <fa-icon _ngcontent-fvi-c39="" class="ng-fa-icon ms-3"><svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="svg-inline--fa fa-clock fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg></fa-icon>
+          <span _ngcontent-fvi-c39="">5 min read</span>
+        </div>
+        <!--scullyContent-begin--><div id="toc" class="toc" _ngcontent-fvi-c39="">
+<div id="toctitle" _ngcontent-fvi-c39="">Spis:</div>
+<ul class="sectlevel1" _ngcontent-fvi-c39="">
+<li _ngcontent-fvi-c39=""><a href="#_używanie" _ngcontent-fvi-c39="" onclick="document.getElementById('_używanie').scrollIntoView(); return false;">Używanie</a></li>
+<li _ngcontent-fvi-c39=""><a href="#_konfiguracja" _ngcontent-fvi-c39="" onclick="document.getElementById('_konfiguracja').scrollIntoView(); return false;">Konfiguracja</a></li>
+<li _ngcontent-fvi-c39=""><a href="#_formularze" _ngcontent-fvi-c39="" onclick="document.getElementById('_formularze').scrollIntoView(); return false;">Formularze</a></li>
+<li _ngcontent-fvi-c39=""><a href="#_rozszerzenia" _ngcontent-fvi-c39="" onclick="document.getElementById('_rozszerzenia').scrollIntoView(); return false;">Rozszerzenia</a></li>
+<li _ngcontent-fvi-c39=""><a href="#_alternatywy" _ngcontent-fvi-c39="" onclick="document.getElementById('_alternatywy').scrollIntoView(); return false;">Alternatywy</a></li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch" _ngcontent-fvi-c39="">
+<caption class="title" _ngcontent-fvi-c39="">Table 1. Informacje o programie</caption>
+<colgroup _ngcontent-fvi-c39="">
+<col style="width: 25%;" _ngcontent-fvi-c39="">
+<col style="width: 25%;" _ngcontent-fvi-c39="">
+<col style="width: 25%;" _ngcontent-fvi-c39="">
+<col style="width: 25%;" _ngcontent-fvi-c39="">
+</colgroup>
+<tbody _ngcontent-fvi-c39="">
+<tr _ngcontent-fvi-c39="">
+<td class="tableblock halign-left valign-top" _ngcontent-fvi-c39=""><p class="tableblock" _ngcontent-fvi-c39="">Strona projektu</p></td>
+<td class="tableblock halign-left valign-top" _ngcontent-fvi-c39=""><p class="tableblock" _ngcontent-fvi-c39="">System</p></td>
+<td class="tableblock halign-left valign-top" _ngcontent-fvi-c39=""><p class="tableblock" _ngcontent-fvi-c39="">Język</p></td>
+<td class="tableblock halign-left valign-top" _ngcontent-fvi-c39=""><p class="tableblock" _ngcontent-fvi-c39="">Kategoria</p></td>
+</tr>
+<tr _ngcontent-fvi-c39="">
+<td class="tableblock halign-left valign-top" _ngcontent-fvi-c39=""><p class="tableblock" _ngcontent-fvi-c39=""><a href="https://espanso.org/" _ngcontent-fvi-c39="" rel="noreferrer noopener">espanso</a></p></td>
+<td class="tableblock halign-left valign-top" _ngcontent-fvi-c39=""><p class="tableblock" _ngcontent-fvi-c39="">Linux, Windows, MacOS</p></td>
+<td class="tableblock halign-left valign-top" _ngcontent-fvi-c39=""><p class="tableblock" _ngcontent-fvi-c39="">rust, C++</p></td>
+<td class="tableblock halign-left valign-top" _ngcontent-fvi-c39=""><p class="tableblock" _ngcontent-fvi-c39=""><a href="blog/tags/produktywnosc" _ngcontent-fvi-c39="">produktywność</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39=""><span class="image right img-25" _ngcontent-fvi-c39=""><img src="assets/img/posts/espanso/icon.png" alt="espanso" _ngcontent-fvi-c39=""></span>
+Espanso jest programem do tworzenia snippetów, czyli skrótów, które generują tekst z szablonu. Dzięki niemu możemy poprawić naszą pracę w przypadkach, gdy często musimy pisać podobne lub takie same fragmenty. Przydatny szczególnie w takich sytuacjach jak programowanie, pisanie tekstu przypominającego strukturę formularza. Jeśli męczy Cię ciągłe wpisywanie tych samych formułek w listach elektronicznych lub podawanie swojego e-maila, adresu lub nr. telefonu, to warto go wyprobować. Program jest lekki i nie zajmuje dużo pamięci operacyjnej po uruchomieniu. Najważniejsze co można podkreślić w to, to że program jest dostępny dla każdej platformy oraz można go używać z innymi aplikacjami. Poniżej zamieszczam inne funkcjonalności:</p>
+</div>
+<div class="ulist" _ngcontent-fvi-c39="">
+<ul _ngcontent-fvi-c39="">
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">posiada interfejs graficzny</p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">wspiera emoji i daty</p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">można rozszerzać użyteczność przez paczki tworzone przez społeczność</p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">szablony wspierają skrypty</p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">zaawansowane formularze</p>
+</li>
+</ul>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Program jest dostępny w AUR. Po zainstalowaniu należy raz zarejestrować go jako serwis, aby uruchamiał się przy starcie programu.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Uruchamianie programu</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-bash" data-lang="bash" _ngcontent-fvi-c39="">espanso service register
+
+espanso start</code></pre>
+</div>
+</div>
+<div class="sect1" _ngcontent-fvi-c39="">
+<h2 id="_używanie" _ngcontent-fvi-c39="">Używanie</h2>
+<div class="sectionbody" _ngcontent-fvi-c39="">
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Koncepcja tego typu programów jest prosta. Tworzymy tekst, który będzie się automatycznie wklejać po wpisaniu określonej z góry frazy.</p>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Czasami będziemy chcieli napisać coś, co jest naszą frazą w Espanso, aby powstrzymać program od nadpisywania, należy użyć <kbd _ngcontent-fvi-c39="">Backspace</kbd>, lub tymczasowo go wyłączyć przez dwukrotne naciśnięcie <kbd _ngcontent-fvi-c39="">Alt</kbd>.</p>
+</div>
+<div class="imageblock" _ngcontent-fvi-c39="">
+<div class="content" _ngcontent-fvi-c39="">
+<img src="assets/img/posts/espanso/espanso-search.png" alt="espanso wyszukiwarka" width="500" _ngcontent-fvi-c39="">
+</div>
+<div class="title" _ngcontent-fvi-c39="">Img 1. Wyszukiwarka</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Espanso posiada prostą wyszukiwarkę naszych skrótów, którą zobaczymy po wciśnięciu na klawiaturze <span class="keyseq" _ngcontent-fvi-c39=""><kbd _ngcontent-fvi-c39="">Alt</kbd>+<kbd _ngcontent-fvi-c39="">Space</kbd></span>. Skróty jak i inne ustawienia można zmienić w pliku <code _ngcontent-fvi-c39="">~/.config/espanso/config/default.yml</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1" _ngcontent-fvi-c39="">
+<h2 id="_konfiguracja" _ngcontent-fvi-c39="">Konfiguracja</h2>
+<div class="sectionbody" _ngcontent-fvi-c39="">
+<div class="admonitionblock warning" _ngcontent-fvi-c39="">
+<table _ngcontent-fvi-c39="">
+<tbody _ngcontent-fvi-c39=""><tr _ngcontent-fvi-c39="">
+<td class="icon" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Warning</div>
+</td>
+<td class="content" _ngcontent-fvi-c39="">
+Konfiguracja jest oparta na wersji 2.0.0, która jest jeszcze w wersji <em _ngcontent-fvi-c39="">alpha</em>. Dokumentację do obu wersji można zobaczyć na <a href="https://espanso.org/docs/get-started/" _ngcontent-fvi-c39="" rel="noreferrer noopener">tej stronie.</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Szablony można umieszczać w pliku yaml <code _ngcontent-fvi-c39="">~/.config/espanso/match/base.yml</code> lub w pliku w tym samym katalogu.</p>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Najprostsze użycie to zwykłe zastępowanie skrótu z tekstem ma postać pary <code _ngcontent-fvi-c39="">trigger</code>, <code _ngcontent-fvi-c39="">replace</code>. W prosty sposób można uniknąć popularnych literówek.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">matches:
+  - trigger: "napewno"
+    replace: na pewno
+  - trigger: "ciebie"
+    replace: Ciebie</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Pierwsza uwaga to formatowanie tekstu, jeśli chcemy wkleić tekst z uwzględnieniem nowych linii, to musimy dodać znak <code _ngcontent-fvi-c39="">|</code>, natomiast użyli znak większości <code _ngcontent-fvi-c39="">&gt;</code>, to tekst wyświetliłby się w jednej linii. Dobrym pomysłem jest podanie dwukropku (<code _ngcontent-fvi-c39="">:</code>) przed frazą, tak abyśmy rzadziej omylnie aktywowali program. Jest możliwość dodania kilku triggerów np. <code _ngcontent-fvi-c39="">- trigger: [":sig", ":signature"]</code>.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">- trigger: [":sig", ":signature"]
+replace: |
+  Z poważaniem
+  Arkadiusz Mirosław</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Przy ustawieniu <code _ngcontent-fvi-c39="">propagate_case</code> jesteśmy w stanie zmieniać wielkość liter w zastępowanym tekście. Przykładowo:</p>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Wpisując err dostaniemy error.
+Wpisując Err dostaniemy Error.
+Wpisując ERR dostaniemy ERROR.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">  - trigger: "err"
+    replace: "error"
+    propagate_case: true</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Jesteśmy w stanie ustawić kursor w miejscu którym chcemy, przez dodanie znaków <code _ngcontent-fvi-c39="">$|$</code>. Bardzo przydatne przy pisaniu kodu i tagów HTML.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Znak stopu</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">  - trigger: ":div"
+    replace: "&lt;div&gt;$|$&lt;/div&gt;"</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Jeśli używamy program który umożliwia wklejanie obrazków, to zamiast tekstu możemy podać ścieżkę do pliku, który chcemy wkleić.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Obrazki</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">  - trigger: ":img"
+    image_path: "/home/miro/Pictures/01-02-142537_sc.png"</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Jeśli mamy szablony, które mają tekst wspólny to przez zmienne globalne możemy podstawiać je w naszym tekście przez znaki <code _ngcontent-fvi-c39="">{{}}</code>. W przykładzie po wpisaniu <code _ngcontent-fvi-c39="">:jon</code> dostaniemy <code _ngcontent-fvi-c39="">jon@gmail.com</code>.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Globalne zmienne</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">global_vars:
+  - name: "gmail"
+    type: "dummy"
+    params:
+      echo: "@gmail.com"
+
+matches:
+  - trigger: ":jon"
+    replace: "jon{{gmail}}"</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Espanso posiada wbudowane zmienne dotyczące formatowania daty. Przy pomocy skrótowi <code _ngcontent-fvi-c39="">:now</code> dostaniemy aktualną godzinę.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Data</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">  - trigger: ":now"
+    replace: "{{now}}"
+    vars:
+      - name: now
+        type: date
+        params:
+          format: "%H:%M"</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Nie jesteśmy skazani na sztywne szablony, do naszej dyspozycji jest schowek systemowy oraz polecenie powłoki shell. W pierwszym przykładzie skopiowany link zostanie dodany do atrybutu href oraz kursor zostanie przeniesiony do wnętrza tagu a. Drugi przykład to wydobycie lokalnego adresu IP, dzięki Linuksowym narzędziom systemowym.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Clipboard</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">  - trigger: ":a"
+    replace: "&lt;a href='{{clipboard}}' /&gt;$|$&lt;/a&gt;"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"</code></pre>
+</div>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Polecenie bash</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">  - trigger: ":localip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "ip a | grep 'inet 192' | awk '{ print $2 }'"</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Espanso nie ogranicza się do wywoływanie poleceń systemowych, ale to możemy podać skrypt do każdego języka dynamicznego, który mamy zainstalowany. W tym przypadku należy podać ścieżkę do pliku wykonywalnego. Każdy tekst, który będzie wygenerowany i wysłany na standardowe wyjście, będzie wklejane przez nasz skrót. W mojej konfiguracji użyłem języka Lua, którego polecam w takich sytuacjach.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Skrypt</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">  - trigger: ":lua"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - lua
+            - "path_to_file/test.lua"</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1" _ngcontent-fvi-c39="">
+<h2 id="_formularze" _ngcontent-fvi-c39="">Formularze</h2>
+<div class="sectionbody" _ngcontent-fvi-c39="">
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Jednym z minusów w poprzednich metodach jest to, że możemy ustawić kursor w jedno miejsce. Ogranicza nas, to gdy mamy kilka miejsc, w których chcemy dopisać nasz opcjonalny tekst, np. kilka znaczników HTML. Obejściem na to są formularze. Dzięki temu, że espanso przy tej metodzie generuje interfejs graficzny, możemy zbudować skomplikowany formularz oparty kontrolkach:</p>
+</div>
+<div class="ulist" _ngcontent-fvi-c39="">
+<ul _ngcontent-fvi-c39="">
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Input text</p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Multiline text field</p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Choice box</p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">List box</p>
+</li>
+</ul>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Należy zauważyć, że pole tekstowe dla jednej linii nie musi być zadeklarowane w obiekcie <code _ngcontent-fvi-c39="">form_fields</code>.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Formularz - szablon</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-yaml" data-lang="yaml" _ngcontent-fvi-c39="">  - trigger: ":zamówienie"
+    form: |
+      Klient [[imię]],
+      [[adres]]
+      Zamówił:
+      [[produkt]] w kolorze [[kolor]]
+    form_fields:
+      produkt:
+        type: list
+        values:
+          - koszulka
+          - spodnie
+      kolor:
+        type: choice
+        values:
+          - niebieski
+          - czerwony
+      text:
+        multiline: true</code></pre>
+</div>
+</div>
+<div class="imageblock" _ngcontent-fvi-c39="">
+<div class="content" _ngcontent-fvi-c39="">
+<img src="assets/img/posts/espanso/form.png" alt="Formularz" _ngcontent-fvi-c39="">
+</div>
+<div class="title" _ngcontent-fvi-c39="">Img 2. Wygląd formularza</div>
+</div>
+</div>
+</div>
+<div class="sect1" _ngcontent-fvi-c39="">
+<h2 id="_rozszerzenia" _ngcontent-fvi-c39="">Rozszerzenia</h2>
+<div class="sectionbody" _ngcontent-fvi-c39="">
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Dużym plusem espanso jest posiadanie rozszerzeń, które są tworzone przy współpracy społeczeństwa. Pod tym adresem możne zobaczyć <a href="https://hub.espanso.org/" _ngcontent-fvi-c39="" rel="noreferrer noopener">listę wtyczek</a>.</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="title" _ngcontent-fvi-c39="">Instalacja wtyczki</div>
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-bash" data-lang="bash" _ngcontent-fvi-c39="">espanso install nazwa_rozszerzenie</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Niestety po instalacji trzeba zrestartować program, aby rozszerzenie było dostępne, poprzez polecenie:</p>
+</div>
+<div class="listingblock" _ngcontent-fvi-c39="">
+<div class="content" _ngcontent-fvi-c39="">
+<pre class="highlight" _ngcontent-fvi-c39=""><code class="language-bash" data-lang="bash" _ngcontent-fvi-c39="">espanso restart</code></pre>
+</div>
+</div>
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Wybrałem przykładowe rozszerzenia, które są ciekawe.</p>
+</div>
+<div class="ulist" _ngcontent-fvi-c39="">
+<ul _ngcontent-fvi-c39="">
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39=""><a href="https://hub.espanso.org/packages/cht/" _ngcontent-fvi-c39="" rel="noreferrer noopener">cht</a> - popularny cheat sheat z strony <a href="https://cht.sh" _ngcontent-fvi-c39="" rel="noreferrer noopener">cht.sh</a>.</p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39=""><a href="https://hub.espanso.org/packages/basic-emojis/" _ngcontent-fvi-c39="" rel="noreferrer noopener">emoji</a> - lista znaków emoji. Dostępna jest paczka z większą ich ilością.</p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39=""><a href="https://hub.espanso.org/packages/mispell-en/" _ngcontent-fvi-c39="" rel="noreferrer noopener">misspell</a> - predefiniowana lista angielskich literówek.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1" _ngcontent-fvi-c39="">
+<h2 id="_alternatywy" _ngcontent-fvi-c39="">Alternatywy</h2>
+<div class="sectionbody" _ngcontent-fvi-c39="">
+<div class="paragraph" _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39="">Będąc szczerym sam nie używam Espanso, ponieważ wolałbym program z autouzupełnianiem, który wspiera słowniki. Typing Assistant byłby idealny dla mnie, jednak jest on dostępny tylko dla systemu Windows.</p>
+</div>
+<div class="ulist" _ngcontent-fvi-c39="">
+<ul _ngcontent-fvi-c39="">
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39=""><a href="https://github.com/autokey/autokey" _ngcontent-fvi-c39="" rel="noreferrer noopener">autokey</a></p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39=""><a href="https://gitlab.com/bharadwaj-raju/TextSuggest" _ngcontent-fvi-c39="" rel="noreferrer noopener">TextSuggest</a></p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39=""><a href="https://github.com/leehblue/texpander" _ngcontent-fvi-c39="" rel="noreferrer noopener">texpander</a></p>
+</li>
+<li _ngcontent-fvi-c39="">
+<p _ngcontent-fvi-c39=""><a href="https://www.sumitsoft.com/index.htm" _ngcontent-fvi-c39="" rel="noreferrer noopener">Typing Assistant</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div><!--scullyContent-end--><scully-content _ngcontent-fvi-c39=""></scully-content>
+        <ul _ngcontent-fvi-c39="" class="tags">
+          <li _ngcontent-fvi-c39="" class="tag">
+            <a _ngcontent-fvi-c39="" href="tags/">Program</a>
+          </li><li _ngcontent-fvi-c39="" class="tag">
+            <a _ngcontent-fvi-c39="" href="tags/">Produktywność</a>
+          </li><li _ngcontent-fvi-c39="" class="tag">
+            <a _ngcontent-fvi-c39="" href="tags/linux">Linux</a>
+          </li><!---->
+        </ul>
+      <script>try {window['scullyContent'] = {cssId:"_ngcontent-fvi-c39",html:document.body.innerHTML.split('<!--scullyContent-begin-->')[1].split('<!--scullyContent-end-->')[0]};} catch(e) {console.error('scully could not parse content');}</script></article>
+    </div>
+  </div>
+  <div _ngcontent-fvi-c39="" class="row">
+    <div _ngcontent-fvi-c39=""><div class="utterances">
+    <iframe class="utterances-frame" title="Comments" scrolling="no" src="https://utteranc.es/utterances.html?_ngcontent-fvi-c39=&amp;src=https%3A%2F%2Futteranc.es%2Fclient.js&amp;id=comments&amp;repo=amiroslaw%2Fblog-comments&amp;issue-term=title&amp;theme=github-light&amp;crossorigin=anonymous&amp;async=&amp;url=http%3A%2F%2Flocalhost%3A1864%2Fblog%2Fespanso&amp;origin=http%3A%2F%2Flocalhost%3A1864&amp;pathname=blog%2Fespanso&amp;title=Espanso+-+text+expander&amp;description=Espanso+jest+programem+do+tworzenia+snippet%C3%B3w.+Dzi%C4%99ki+niemu+mo%C5%BCemy+poprawi%C4%87+nasz%C4%85+prac%C4%99+w+przypadkach%2C+gdy+cz%C4%99sto+musimy+pisa%C4%87+podobne+lub+takie+same+fragmenty.+Je%C5%9Bli+m%C4%99czy+Ci%C4%99+ci%C4%85g%C5%82e+wpisywanie+tych+samych+formu%C5%82ek+w+listach+elektronicznych+lub+podawanie+swojego+e-maila%2C+adresu+lub+nr.+telefonu%2C+to+warto+go+wyprobowa%C4%87.&amp;og%3Atitle=Espanso+-+text+expander&amp;session=" loading="lazy"></iframe>
+  </div></div>
+  </div>
+</div>
+</app-article><!----></div><app-footer _ngcontent-fvi-c37="" _nghost-fvi-c36=""><footer _ngcontent-fvi-c36=""><div _ngcontent-fvi-c36="" class="container"><div _ngcontent-fvi-c36="" class="row"><div _ngcontent-fvi-c36="" class="col-10 col-md-4 mx-auto"><ul _ngcontent-fvi-c36="" class="list-inline text-center"><li _ngcontent-fvi-c36="" class="list-inline-item"><a _ngcontent-fvi-c36="" href="mailto:ar.miroslaw@gmail.com"><fa-layers _ngcontent-fvi-c36="" size="3x" class="fa-3x fa-layers"><fa-icon _ngcontent-fvi-c36="" class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" class="svg-inline--fa fa-circle fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg></fa-icon><fa-icon _ngcontent-fvi-c36="" transform="shrink-6" class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16 fa-inverse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="transform-origin: 0.5em 0.5em;"><g transform="translate(256 256)"><g transform="translate(0, 0)  scale(0.625, 0.625)  rotate(0 0 0)"><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" transform="translate(-256 -256)"></path></g></g></svg></fa-icon></fa-layers></a></li><li _ngcontent-fvi-c36="" class="list-inline-item"><a _ngcontent-fvi-c36="" href="https://www.linkedin.com/in/arkadiusz-miroslaw/" target="_blank" rel="noopener noreferrer"><fa-layers _ngcontent-fvi-c36="" size="3x" class="fa-3x fa-layers"><fa-icon _ngcontent-fvi-c36="" class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" class="svg-inline--fa fa-circle fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg></fa-icon><fa-icon _ngcontent-fvi-c36="" transform="shrink-6" class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14 fa-inverse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="transform-origin: 0.4375em 0.5em;"><g transform="translate(224 256)"><g transform="translate(0, 0)  scale(0.625, 0.625)  rotate(0 0 0)"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" transform="translate(-224 -256)"></path></g></g></svg></fa-icon></fa-layers></a></li><li _ngcontent-fvi-c36="" class="list-inline-item"><a _ngcontent-fvi-c36="" href="https://github.com/amiroslaw" target="_blank" rel="noopener noreferrer"><fa-layers _ngcontent-fvi-c36="" size="3x" class="fa-3x fa-layers"><fa-icon _ngcontent-fvi-c36="" class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" class="svg-inline--fa fa-circle fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg></fa-icon><fa-icon _ngcontent-fvi-c36="" transform="shrink-6" class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 fa-inverse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="transform-origin: 0.484375em 0.5em;"><g transform="translate(248 256)"><g transform="translate(0, 0)  scale(0.625, 0.625)  rotate(0 0 0)"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" transform="translate(-248 -256)"></path></g></g></svg></fa-icon></fa-layers></a></li><li _ngcontent-fvi-c36="" class="list-inline-item"><a _ngcontent-fvi-c36="" href="/rss" target="_blank" rel="noopener noreferrer"><fa-layers _ngcontent-fvi-c36="" size="3x" class="fa-3x fa-layers"><fa-icon _ngcontent-fvi-c36="" class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" class="svg-inline--fa fa-circle fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg></fa-icon><fa-icon _ngcontent-fvi-c36="" transform="shrink-6" class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" class="svg-inline--fa fa-rss fa-w-14 fa-inverse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="transform-origin: 0.4375em 0.5em;"><g transform="translate(224 256)"><g transform="translate(0, 0)  scale(0.625, 0.625)  rotate(0 0 0)"><path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z" transform="translate(-224 -256)"></path></g></g></svg></fa-icon></fa-layers></a></li></ul><p _ngcontent-fvi-c36="" class="copyright text-muted">Copyright © 2022</p></div></div></div></footer></app-footer></app-root>
+<script id="ScullyIO-transfer-state"></script><script src="runtime.js" defer=""></script><script src="polyfills.js" defer=""></script><script src="main.js" defer=""></script>
+
+</body></html>

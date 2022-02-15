@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://miroslaw.ovh</id>
     <title>miroslaw.ovh</title>
-    <updated>2022-02-06T01:02:29.195Z</updated>
+    <updated>2022-02-15T18:58:44.919Z</updated>
     <generator>Blog o programowaniu i Linuksie</generator>
     <link rel="alternate" href="https://miroslaw.ovh"/>
     <link rel="self" href="https://miroslaw.ovh/rss.atom"/>
@@ -14,6 +14,211 @@
     <category term="Linux"/>
     <category term="Java"/>
     <category term="node"/>
+    <entry>
+        <title type="html"><![CDATA[Espanso - text expander]]></title>
+        <id>/blog/espanso</id>
+        <link href="https://miroslaw.ovh/blog/espanso"/>
+        <updated>2022-02-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Espanso jest programem do tworzenia snippetów. Dzięki niemu możemy poprawić naszą pracę w przypadkach, gdy często musimy pisać podobne lub takie same fragmenty. Jeśli męczy Cię ciągłe wpisywanie tych samych formułek w listach elektronicznych lub podawanie swojego e-maila, adresu lub nr. telefonu, to warto go wyprobować.]]></summary>
+        <content type="html"><![CDATA[<p>:toc:
+:toc-title: Spis:
+:figure-caption: Img
+:experimental:
+:icons: font</p>
+<p>.Informacje o programie
+|===
+| Strona projektu | System | Język  | Kategoria
+| https://espanso.org/[espanso] | Linux, Windows, MacOS | rust, C++  | link:blog/tags/produktywnosc[produktywność]
+|===</p>
+<p>image:assets/img/posts/espanso/icon.png[espanso,role=right img-25]
+Espanso jest programem do tworzenia snippetów, czyli skrótów, które generują tekst z szablonu. Dzięki niemu możemy poprawić naszą pracę w przypadkach, gdy często musimy pisać podobne lub takie same fragmenty. Przydatny szczególnie w takich sytuacjach jak programowanie, pisanie tekstu przypominającego strukturę formularza. Jeśli męczy Cię ciągłe wpisywanie tych samych formułek w listach elektronicznych lub podawanie swojego e-maila, adresu lub nr. telefonu, to warto go wyprobować. Program jest lekki i nie zajmuje dużo pamięci operacyjnej po uruchomieniu. Najważniejsze co można podkreślić w to, to że program jest dostępny dla każdej platformy oraz można go używać z innymi aplikacjami. Poniżej zamieszczam inne funkcjonalności:</p>
+<ul>
+<li>posiada interfejs graficzny</li>
+<li>wspiera emoji i daty</li>
+<li>można rozszerzać użyteczność przez paczki tworzone przez społeczność</li>
+<li>szablony wspierają skrypty</li>
+<li>zaawansowane formularze</li>
+</ul>
+<p>Program jest dostępny w AUR. Po zainstalowaniu należy raz zarejestrować go jako serwis, aby uruchamiał się przy starcie programu.</p>
+<p>.Uruchamianie programu</p>
+<h2 id="sourcebash">[source,bash]</h2>
+<p>espanso service register</p>
+<h2 id="espansostart">espanso start</h2>
+<p>== Używanie
+Koncepcja tego typu programów jest prosta. Tworzymy tekst, który będzie się automatycznie wklejać po wpisaniu określonej z góry frazy.</p>
+<p>Czasami będziemy chcieli napisać coś, co jest naszą frazą w Espanso, aby powstrzymać program od nadpisywania, należy użyć kbd:[Backspace], lub tymczasowo go wyłączyć przez dwukrotne naciśnięcie kbd:[Alt].</p>
+<p>.Wyszukiwarka
+image::assets/img/posts/espanso/espanso-search.png[espanso wyszukiwarka,500]
+Espanso posiada prostą wyszukiwarkę naszych skrótów, którą zobaczymy po wciśnięciu na klawiaturze kbd:[Alt + Space]. Skróty jak i inne ustawienia można zmienić w pliku <code>~/.config/espanso/config/default.yml</code>.</p>
+<p>== Konfiguracja</p>
+<p>WARNING: Konfiguracja jest oparta na wersji 2.0.0, która jest jeszcze w wersji <strong>alpha</strong>. Dokumentację do obu wersji można zobaczyć na https://espanso.org/docs/get-started/[tej stronie.]</p>
+<p>Szablony można umieszczać w pliku yaml <code>~/.config/espanso/match/base.yml</code> lub w pliku w tym samym katalogu.</p>
+<p>Najprostsze użycie to zwykłe zastępowanie skrótu z tekstem ma postać pary <code>trigger</code>, <code>replace</code>. W prosty sposób można uniknąć popularnych literówek.</p>
+<h2 id="sourceyaml">[source,yaml]</h2>
+<p>matches:</p>
+<ul>
+<li>trigger: "napewno"
+replace: na pewno</li>
+<li>trigger: "ciebie"</li>
+</ul>
+<h2 id="replaceciebie">    replace: Ciebie</h2>
+<p>Pierwsza uwaga to formatowanie tekstu, jeśli chcemy wkleić tekst z uwzględnieniem nowych linii, to musimy dodać znak <code>|</code>, natomiast użyli znak większości <code>&gt;</code>, to tekst wyświetliłby się w jednej linii. Dobrym pomysłem jest podanie dwukropku (<code>:</code>) przed frazą, tak abyśmy rzadziej omylnie aktywowali program. Jest możliwość dodania kilku triggerów np. <code>- trigger: [":sig", ":signature"]</code>.</p>
+<h2 id="sourceyaml-1">[source,yaml]</h2>
+<ul>
+<li>trigger: [":sig", ":signature"]
+replace: |
+Z poważaniem</li>
+</ul>
+<h2 id="arkadiuszmirosaw">  Arkadiusz Mirosław</h2>
+<p>Przy ustawieniu <code>propagate_case</code> jesteśmy w stanie zmieniać wielkość liter w zastępowanym tekście. Przykładowo:</p>
+<p>Wpisując err dostaniemy error.
+Wpisując Err dostaniemy Error.
+Wpisując ERR dostaniemy ERROR.</p>
+<h2 id="sourceyaml-2">[source,yaml]</h2>
+<ul>
+<li>trigger: "err"
+replace: "error"</li>
+</ul>
+<h2 id="propagate_casetrue">    propagate_case: true</h2>
+<p>Jesteśmy w stanie ustawić kursor w miejscu którym chcemy, przez dodanie znaków <code>$|$</code>. Bardzo przydatne przy pisaniu kodu i tagów HTML.</p>
+<p>.Znak stopu</p>
+<h2 id="sourceyaml-3">[source,yaml]</h2>
+<ul>
+<li>trigger: ":div"</li>
+</ul>
+<h2 id="replacedivdddiv">    replace: "<div>$|$</div>"</h2>
+<p>Jeśli używamy program który umożliwia wklejanie obrazków, to zamiast tekstu możemy podać ścieżkę do pliku, który chcemy wkleić.</p>
+<p>.Obrazki</p>
+<h2 id="sourceyaml-4">[source,yaml]</h2>
+<ul>
+<li>trigger: ":img"</li>
+</ul>
+<h2 id="image_pathhomemiropictures0102142537_scpng">    image<em>path: "/home/miro/Pictures/01-02-142537</em>sc.png"</h2>
+<p>Jeśli mamy szablony, które mają tekst wspólny to przez zmienne globalne możemy podstawiać je w naszym tekście przez znaki <code>{{}}</code>. W przykładzie po wpisaniu <code>:jon</code> dostaniemy <code>jon@gmail.com</code>.</p>
+<p>.Globalne zmienne</p>
+<h2 id="sourceyaml-5">[source,yaml]</h2>
+<p>global_vars:</p>
+<ul>
+<li>name: "gmail"
+type: "dummy"
+params:
+  echo: "@gmail.com"</li>
+</ul>
+<p>matches:</p>
+<ul>
+<li>trigger: ":jon"</li>
+</ul>
+<h2 id="replacejongmail">    replace: "jon{{gmail}}"</h2>
+<p>Espanso posiada wbudowane zmienne dotyczące formatowania daty. Przy pomocy skrótowi <code>:now</code> dostaniemy aktualną godzinę.</p>
+<p>.Data</p>
+<h2 id="sourceyaml-6">[source,yaml]</h2>
+<ul>
+<li>trigger: ":now"
+replace: "{{now}}"
+vars:<ul>
+<li>name: now
+type: date
+params:</li></ul></li>
+</ul>
+<h2 id="formathm">          format: "%H:%M"</h2>
+<p>Nie jesteśmy skazani na sztywne szablony, do naszej dyspozycji jest schowek systemowy oraz polecenie powłoki shell. W pierwszym przykładzie skopiowany link zostanie dodany do atrybutu href oraz kursor zostanie przeniesiony do wnętrza tagu a. Drugi przykład to wydobycie lokalnego adresu IP, dzięki Linuksowym narzędziom systemowym.</p>
+<p>.Clipboard</p>
+<h2 id="sourceyaml-7">[source,yaml]</h2>
+<ul>
+<li>trigger: ":a"
+replace: "<a href='{{clipboard}}' />$|$</a>"
+vars:<ul>
+<li>name: "clipboard"</li></ul></li>
+</ul>
+<h2 id="typeclipboard">        type: "clipboard"</h2>
+<p>.Polecenie bash</p>
+<h2 id="sourceyaml-8">[source,yaml]</h2>
+<ul>
+<li>trigger: ":localip"
+replace: "{{output}}"
+vars:<ul>
+<li>name: output
+type: shell
+params:</li></ul></li>
+</ul>
+<h2 id="cmdipagrepinet192awkprintd2">          cmd: "ip a | grep 'inet 192' | awk '{ print $2 }'"</h2>
+<p>Espanso nie ogranicza się do wywoływanie poleceń systemowych, ale to możemy podać skrypt do każdego języka dynamicznego, który mamy zainstalowany. W tym przypadku należy podać ścieżkę do pliku wykonywalnego. Każdy tekst, który będzie wygenerowany i wysłany na standardowe wyjście, będzie wklejane przez nasz skrót. W mojej konfiguracji użyłem języka Lua, którego polecam w takich sytuacjach.</p>
+<p>.Skrypt</p>
+<h2 id="sourceyaml-9">[source,yaml]</h2>
+<ul>
+<li>trigger: ":lua"
+replace: "{{output}}"
+vars:<ul>
+<li>name: output
+type: script
+params:
+  args:
+    - lua</li></ul></li>
+</ul>
+<h2 id="path_to_filetestlua">            - "path<em>to</em>file/test.lua"</h2>
+<p>== Formularze
+Jednym z minusów w poprzednich metodach jest to, że możemy ustawić kursor w jedno miejsce. Ogranicza nas, to gdy mamy kilka miejsc, w których chcemy dopisać nasz opcjonalny tekst, np. kilka znaczników HTML. Obejściem na to są formularze. Dzięki temu, że espanso przy tej metodzie generuje interfejs graficzny, możemy zbudować skomplikowany formularz oparty kontrolkach:</p>
+<ul>
+<li>Input text</li>
+<li>Multiline text field</li>
+<li>Choice box</li>
+<li>List box</li>
+</ul>
+<p>Należy zauważyć, że pole tekstowe dla jednej linii nie musi być zadeklarowane w obiekcie <code>form_fields</code>.</p>
+<p>.Formularz - szablon</p>
+<h2 id="sourceyaml-10">[source,yaml]</h2>
+<ul>
+<li>trigger: ":zamówienie"
+form: |
+  Klient [[imię]],
+  [[adres]]
+  Zamówił:
+  [[produkt]] w kolorze [[kolor]]
+form_fields:
+  produkt:
+    type: list
+    values:
+      - koszulka
+      - spodnie
+  kolor:
+    type: choice
+    values:
+      - niebieski
+      - czerwony
+  text:</li>
+</ul>
+<h2 id="multilinetrue">        multiline: true</h2>
+<p>.Wygląd formularza
+image::assets/img/posts/espanso/form.png[Formularz]</p>
+<p>== Rozszerzenia
+Dużym plusem espanso jest posiadanie rozszerzeń, które są tworzone przy współpracy społeczeństwa. Pod tym adresem możne zobaczyć https://hub.espanso.org/[listę wtyczek].</p>
+<p>.Instalacja wtyczki</p>
+<h2 id="sourcebash-1">[source,bash]</h2>
+<h2 id="espansoinstallnazwa_rozszerzenie">espanso install nazwa_rozszerzenie</h2>
+<p>Niestety po instalacji trzeba zrestartować program, aby rozszerzenie było dostępne, poprzez polecenie:</p>
+<h2 id="sourcebash-2">[source,bash]</h2>
+<h2 id="espansorestart">espanso restart</h2>
+<p>Wybrałem przykładowe rozszerzenia, które są ciekawe.</p>
+<ul>
+<li>https://hub.espanso.org/packages/cht/[cht] - popularny cheat sheat z strony https://cht.sh[cht.sh].</li>
+<li>https://hub.espanso.org/packages/basic-emojis/[emoji] - lista znaków emoji. Dostępna jest paczka z większą ich ilością.</li>
+<li>https://hub.espanso.org/packages/mispell-en/[misspell] - predefiniowana lista angielskich literówek.</li>
+</ul>
+<p>== Alternatywy
+Będąc szczerym sam nie używam Espanso, ponieważ wolałbym program z autouzupełnianiem, który wspiera słowniki. Typing Assistant byłby idealny dla mnie, jednak jest on dostępny tylko dla systemu Windows.</p>
+<ul>
+<li>https://github.com/autokey/autokey[autokey]</li>
+<li>https://gitlab.com/bharadwaj-raju/TextSuggest[TextSuggest]</li>
+<li>https://github.com/leehblue/texpander[texpander]</li>
+<li>https://www.sumitsoft.com/index.htm[Typing Assistant]</li>
+</ul>]]></content>
+        <author>
+            <name>Arkadiusz Mirosław</name>
+        </author>
+        <contributor>
+            <name>arkadiusz-mirosław</name>
+        </contributor>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Filozofia Vima - edycja]]></title>
         <id>/blog/filozofia-vima-edycja</id>
@@ -501,7 +706,7 @@ Z drugiej strony nie zachęcam osób do zmiany systemu, które nie chcą zmieni�
         <content type="html"><![CDATA[<p>:figure-caption: Img</p>
 <p>Jest to mój pierwszy post, do którego zbierałem się niemal dwa lata, więc przydałoby się z Wami przywitać. :) Nazywam się Arek, a nazwisko moje to Mirosław (warto nadmienić, aby nie wprowadzać nikogo w zakłopotanie które to imie, a które nazwisko), z czego pochodzi moja kreatywna nazwa tej domeny. Nie lubię mówić o sobie, więc po więcej informacji odsyłam do strony link:about[O mnie].</p>
 <p>.Oneiric Ocelot
-image::assets/img/posts/linux/Oneiric<em>Ocelot</em>c-768x480.jpg[Oneiric Ocelot]</p>
+image::assets/img/posts/linux/Oneiric<em>Ocelot</em>c-768x480.jpg[Oneiric Ocelot,500]</p>
 <p>Od wersji 11.10 Ubuntu (Oniryczny Ocelot) poznaje świat systemu operacyjnego spod znaku pingwina. Szczególnie upodobałem sobie programy uruchamiane w terminalu. Niestety wydaje mi się, mało jest artykułów w internecie (zwłaszcza po polsku), które łatwo wprowadzałyby do ich użytkowania. Szczególnie małe programy, które poza suchą dokumentacją nie mają nic innego. Właśnie w tamtym okresie zainteresowania systemem operacyjnym GNU/Linux, pojawiła się w mojej głowie myśl o stworzeniu blogu o takiej tematyce. W następnych postach będę częściej używał skrótu myślowego Linux, odwołując się do systemów operacyjnych GNU/Linux. Z biegiem lat ukończyłem studia informatyczne oraz na kierunku zarządzania, przez co moje zainteresowania się poszerzyły. W związku z tym na blogu będą się pojawiać posty na temat programowania (głównie interesuje się technologiami opartymi na Javie) oraz nie wykluczam, że popełnię teksty o inwestowaniu.</p>
 <p>Nie ukrywam, że blog zakładam także z myślą o sobie. Lubię poznawać nowe technologie, a przy tym przywykłem do robienia notatek. Pisanie postów będzie dla mnie sposobem na usystematyzowanie swojej wiedzy (lub jej zdobycie), pretekstem do "posprzątania" moich notatek oraz oddaniem hołdu dla społeczności ludzi, którzy dzielą się swoją wiedzą. Wszystko to wpływać będzie na format moich postów. Czasami będą to, krótkie skrypty, instrukcje zawierające najważniejsze informacje. Starać się jednak będę pokazywać mój punkt widzenia na dany temat. Nie omieszkam, co z góry przepraszam, ubarwiać wpisów dawką humoru. ;)</p>
 <p>Zdaję sobie sprawę, że mogę się mylić, popełnić błąd lub dana informacja może się zdezaktualizować. Umożliwiam pisanie komentarzy bez rejestracji, właśnie z tej racji oraz na zachęcenie Ciebie do dyskusji. Docelowo wszystkie moje pliki konfiguracyjne oraz dłuższe fragmenty kodu z postów, będę zamieszczać na moim https://github.com/amiroslaw[GitHubie].</p>]]></content>

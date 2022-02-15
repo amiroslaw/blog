@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   }
 
   onSearch() {
-    console.log(this.search);
     this.posts$ = this.scullyContentService.getBlogPosts(this.search);
   }
 }

@@ -18,7 +18,7 @@ photo:
 :toc-title: Spis:
 :figure-caption: Img
 :experimental:
-
+:icons: font
 
 .Informacje o programie
 |===
@@ -26,6 +26,7 @@ photo:
 | https://espanso.org/[espanso] | Linux, Windows, MacOS | rust, C++  | link:blog/tags/produktywnosc[produktywność]
 |===
 
+image:assets/img/posts/espanso/icon.png[espanso,role=right img-25]
 Espanso jest programem do tworzenia snippetów, czyli skrótów, które generują tekst z szablonu. Dzięki niemu możemy poprawić naszą pracę w przypadkach, gdy często musimy pisać podobne lub takie same fragmenty. Przydatny szczególnie w takich sytuacjach jak programowanie, pisanie tekstu przypominającego strukturę formularza. Jeśli męczy Cię ciągłe wpisywanie tych samych formułek w listach elektronicznych lub podawanie swojego e-maila, adresu lub nr. telefonu, to warto go wyprobować. Program jest lekki i nie zajmuje dużo pamięci operacyjnej po uruchomieniu. Najważniejsze co można podkreślić w to, to że program jest dostępny dla każdej platformy oraz można go używać z innymi aplikacjami. Poniżej zamieszczam inne funkcjonalności:
 
 - posiada interfejs graficzny
@@ -34,7 +35,7 @@ Espanso jest programem do tworzenia snippetów, czyli skrótów, które generuj�
 - szablony wspierają skrypty
 - zaawansowane formularze
 
-Program jest dostępny w AUR. Po zainstalowaniu należy raz zarejestrować go jako serwis, aby uruchamiał się przy starcie programu. 
+Program jest dostępny w AUR. Po zainstalowaniu należy raz zarejestrować go jako serwis, aby uruchamiał się przy starcie programu.
 
 .Uruchamianie programu
 [source,bash]
@@ -45,17 +46,17 @@ espanso start
 ----
 
 == Używanie
-image:assets/img/posts/espanso/icon.png[espanso,role=right img-25]
-Koncepcja tego typu programów jest prosta. Tworzymy tekst, który będzie się automatycznie wklejać po wpisaniu określonej z góry frazy. 
+Koncepcja tego typu programów jest prosta. Tworzymy tekst, który będzie się automatycznie wklejać po wpisaniu określonej z góry frazy.
 
 Czasami będziemy chcieli napisać coś, co jest naszą frazą w Espanso, aby powstrzymać program od nadpisywania, należy użyć kbd:[Backspace], lub tymczasowo go wyłączyć przez dwukrotne naciśnięcie kbd:[Alt].
 
+.Wyszukiwarka
 image::assets/img/posts/espanso/espanso-search.png[espanso wyszukiwarka,500]
 Espanso posiada prostą wyszukiwarkę naszych skrótów, którą zobaczymy po wciśnięciu na klawiaturze kbd:[Alt + Space]. Skróty jak i inne ustawienia można zmienić w pliku `~/.config/espanso/config/default.yml`.
 
 == Konfiguracja
 
-WARNING: Konfiguracja jest oparta na wersji 2.0.0, która jest jeszcze w wersji __alpha__. Dokumentację do obu wersji można zobaczyć na https://espanso.org/docs/get-started/[tej stronie.] 
+WARNING: Konfiguracja jest oparta na wersji 2.0.0, która jest jeszcze w wersji __alpha__. Dokumentację do obu wersji można zobaczyć na https://espanso.org/docs/get-started/[tej stronie.]
 
 Szablony można umieszczać w pliku yaml `~/.config/espanso/match/base.yml` lub w pliku w tym samym katalogu.
 
@@ -143,7 +144,7 @@ Espanso posiada wbudowane zmienne dotyczące formatowania daty. Przy pomocy skr�
 
 Nie jesteśmy skazani na sztywne szablony, do naszej dyspozycji jest schowek systemowy oraz polecenie powłoki shell. W pierwszym przykładzie skopiowany link zostanie dodany do atrybutu href oraz kursor zostanie przeniesiony do wnętrza tagu a. Drugi przykład to wydobycie lokalnego adresu IP, dzięki Linuksowym narzędziom systemowym.
 
-.Clipboard 
+.Clipboard
 [source,yaml]
 ----
   - trigger: ":a"
@@ -189,7 +190,7 @@ Jednym z minusów w poprzednich metodach jest to, że możemy ustawić kursor w 
 - Choice box
 - List box
 
-Należy zauważyć, że pole tekstowe dla jednej linii nie musi być zadeklarowane w obiekcie `form_fields`. 
+Należy zauważyć, że pole tekstowe dla jednej linii nie musi być zadeklarowane w obiekcie `form_fields`.
 
 .Formularz - szablon
 [source,yaml]
@@ -215,11 +216,11 @@ Należy zauważyć, że pole tekstowe dla jednej linii nie musi być zadeklarowa
         multiline: true
 ----
 
-.Wygląd formularzu
-image::assets/img/posts/espanso/form.png[Formularz] 
+.Wygląd formularza
+image::assets/img/posts/espanso/form.png[Formularz]
 
 == Rozszerzenia
-Dużym plusem espanso jest posiadanie rozszerzeń, które są tworzone przy współpracy społeczeństwa. Pod tym adresem możne zobaczyć https://hub.espanso.org/[listę wtyczek]. 
+Dużym plusem espanso jest posiadanie rozszerzeń, które są tworzone przy współpracy społeczeństwa. Pod tym adresem możne zobaczyć https://hub.espanso.org/[listę wtyczek].
 
 .Instalacja wtyczki
 [source,bash]
@@ -234,7 +235,7 @@ Niestety po instalacji trzeba zrestartować program, aby rozszerzenie było dost
 espanso restart
 ----
 
-Wybrałem przykładowe rozszerzenia, które są ciekawe. 
+Wybrałem przykładowe rozszerzenia, które są ciekawe.
 
 - https://hub.espanso.org/packages/cht/[cht] - popularny cheat sheat z strony https://cht.sh[cht.sh].
 - https://hub.espanso.org/packages/basic-emojis/[emoji] - lista znaków emoji. Dostępna jest paczka z większą ich ilością.
@@ -244,7 +245,7 @@ Wybrałem przykładowe rozszerzenia, które są ciekawe.
 Będąc szczerym sam nie używam Espanso, ponieważ wolałbym program z autouzupełnianiem, który wspiera słowniki. Typing Assistant byłby idealny dla mnie, jednak jest on dostępny tylko dla systemu Windows.
 
 - https://github.com/autokey/autokey[autokey]
-- https://gitlab.com/bharadwaj-raju/TextSuggest[TextSuggest] 
-- https://github.com/leehblue/texpander[texpander] 
+- https://gitlab.com/bharadwaj-raju/TextSuggest[TextSuggest]
+- https://github.com/leehblue/texpander[texpander]
 - https://www.sumitsoft.com/index.htm[Typing Assistant]
 

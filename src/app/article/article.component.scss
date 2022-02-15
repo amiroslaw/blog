@@ -56,13 +56,13 @@ article.post {
   article.post span {
     &.left {
       float: left;
-      margin: 2% 2% 2% 0;
+      margin: 0 2% 2% 0;
       max-width: 40%;
     }
 
     &.right {
       float: right;
-      margin: 2% 0 2% 2%;
+      margin: 0 0 2% 2%;
       max-width: 40%;
     }
   }
@@ -160,13 +160,72 @@ kbd {
 li > p {
   margin: 4px;
 }
+
 li li p {
   margin: 3px;
 }
 
-.imageblock > .title {
+.title {
   text-align: left;
-  font-size: .8em;
-  color: #6c757d;
+  font-style: italic;
+  font-size: 16px;
+  color: $color-gray;
+  //@media (min-width: $large) {
+  //  font-size: 18px;
+  //}
+}
+
+.listingblock > .title, td.icon > .title {
+  color: $color-accent;
+}
+
+.imageblock > .title {
   margin-bottom: 1%;
 }
+
+.quoteblock blockquote::before {
+  color: $color-primary;
+}
+
+table tbody {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  tr {
+    border-bottom: 1px solid #dddddd;
+
+    &:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    &:last-of-type {
+      border-bottom: 2px solid $color-primary;
+    }
+  }
+
+  td {
+    padding: 8px 15px;
+    p {
+      margin: 0;
+    }
+  }
+
+  //admonitionblock notes
+  td.content {
+    color: $color-gray;
+  }
+
+  td.icon {
+    border-right: 1px solid #dddddd;
+  }
+}
+
+table.tableblock tbody tr:first-child {
+  background-color: $color-primary;
+  color: #ffffff;
+  text-align: left;
+}
+

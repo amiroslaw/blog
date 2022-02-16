@@ -18,7 +18,6 @@ photo:
 :toc-title: Spis:
 :figure-caption: Img
 :experimental:
-:icons: font
 
 .Informacje o programie
 |===

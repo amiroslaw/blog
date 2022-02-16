@@ -35,20 +35,25 @@ article.post {
     text-align: center;
   }
 
-  img-25 {
-    max-width: 25%;
+  .img-25 {
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
   }
 
-  img-55 {
+  .img-55 {
     max-width: 55%;
   }
 
-  img-75 {
+  .img-75 {
     max-width: 75%;
   }
 
   @media (min-width: $large) {
     font-size: 20px;
+    .img-25 {
+      max-width: 25%;
+    }
   }
 }
 
@@ -187,6 +192,15 @@ li li p {
   color: $color-primary;
 }
 
+table.tableblock {
+  display: block;
+  max-width: 100%;
+  @media (max-width: $medium) {
+    overflow-x: auto;
+    width: fit-content;
+  }
+}
+
 table tbody {
   border-collapse: collapse;
   margin: 25px 0;
@@ -220,8 +234,12 @@ table tbody {
 
   td.icon {
     border-right: 1px solid #dddddd;
+    text-align: center;
+    color: $color-gray;
+    width: 40px;
   }
 }
+
 
 table.tableblock tbody tr:first-child {
   background-color: $color-primary;

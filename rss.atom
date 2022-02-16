@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://miroslaw.ovh</id>
     <title>miroslaw.ovh</title>
-    <updated>2022-02-15T18:58:44.919Z</updated>
+    <updated>2022-02-16T02:09:46.081Z</updated>
     <generator>Blog o programowaniu i Linuksie</generator>
     <link rel="alternate" href="https://miroslaw.ovh"/>
     <link rel="self" href="https://miroslaw.ovh/rss.atom"/>
@@ -23,8 +23,7 @@
         <content type="html"><![CDATA[<p>:toc:
 :toc-title: Spis:
 :figure-caption: Img
-:experimental:
-:icons: font</p>
+:experimental:</p>
 <p>.Informacje o programie
 |===
 | Strona projektu | System | Język  | Kategoria

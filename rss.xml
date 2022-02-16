@@ -4,7 +4,7 @@
         <title>miroslaw.ovh</title>
         <link>https://miroslaw.ovh</link>
         <description>Blog o programowaniu i Linuksie</description>
-        <lastBuildDate>Tue, 15 Feb 2022 18:58:44 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Feb 2022 02:09:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Blog o programowaniu i Linuksie</generator>
         <language>pl</language>
@@ -27,8 +27,7 @@
             <content:encoded><![CDATA[<p>:toc:
 :toc-title: Spis:
 :figure-caption: Img
-:experimental:
-:icons: font</p>
+:experimental:</p>
 <p>.Informacje o programie
 |===
 | Strona projektu | System | Język  | Kategoria

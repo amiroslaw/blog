@@ -4,7 +4,7 @@
         <title>miroslaw.ovh</title>
         <link>https://miroslaw.ovh</link>
         <description>Blog o programowaniu i Linuksie</description>
-        <lastBuildDate>Wed, 16 Feb 2022 02:09:46 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 18 Feb 2022 21:26:44 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Blog o programowaniu i Linuksie</generator>
         <language>pl</language>
@@ -24,197 +24,364 @@
             <guid>/blog/espanso</guid>
             <pubDate>Fri, 11 Feb 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Espanso jest programem do tworzenia snippetów. Dzięki niemu możemy poprawić naszą pracę w przypadkach, gdy często musimy pisać podobne lub takie same fragmenty. Jeśli męczy Cię ciągłe wpisywanie tych samych formułek w listach elektronicznych lub podawanie swojego e-maila, adresu lub nr. telefonu, to warto go wyprobować.]]></description>
-            <content:encoded><![CDATA[<p>:toc:
-:toc-title: Spis:
-:figure-caption: Img
-:experimental:</p>
-<p>.Informacje o programie
-|===
-| Strona projektu | System | Język  | Kategoria
-| https://espanso.org/[espanso] | Linux, Windows, MacOS | rust, C++  | link:blog/tags/produktywnosc[produktywność]
-|===</p>
-<p>image:assets/img/posts/espanso/icon.png[espanso,role=right img-25]
+            <content:encoded><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Spis:</div>
+<ul class="sectlevel1">
+<li><a href="#_używanie">Używanie</a></li>
+<li><a href="#_konfiguracja">Konfiguracja</a></li>
+<li><a href="#_formularze">Formularze</a></li>
+<li><a href="#_rozszerzenia">Rozszerzenia</a></li>
+<li><a href="#_alternatywy">Alternatywy</a></li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Informacje o programie</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strona projektu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Język</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kategoria</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://espanso.org/">espanso</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux, Windows, MacOS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rust, C++</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="blog/tags/produktywnosc">produktywność</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image right img-25"><img src="assets/img/posts/espanso/icon.png" alt="espanso"></span>
 Espanso jest programem do tworzenia snippetów, czyli skrótów, które generują tekst z szablonu. Dzięki niemu możemy poprawić naszą pracę w przypadkach, gdy często musimy pisać podobne lub takie same fragmenty. Przydatny szczególnie w takich sytuacjach jak programowanie, pisanie tekstu przypominającego strukturę formularza. Jeśli męczy Cię ciągłe wpisywanie tych samych formułek w listach elektronicznych lub podawanie swojego e-maila, adresu lub nr. telefonu, to warto go wyprobować. Program jest lekki i nie zajmuje dużo pamięci operacyjnej po uruchomieniu. Najważniejsze co można podkreślić w to, to że program jest dostępny dla każdej platformy oraz można go używać z innymi aplikacjami. Poniżej zamieszczam inne funkcjonalności:</p>
+</div>
+<div class="ulist">
 <ul>
-<li>posiada interfejs graficzny</li>
-<li>wspiera emoji i daty</li>
-<li>można rozszerzać użyteczność przez paczki tworzone przez społeczność</li>
-<li>szablony wspierają skrypty</li>
-<li>zaawansowane formularze</li>
+<li>
+<p>posiada interfejs graficzny</p>
+</li>
+<li>
+<p>wspiera emoji i daty</p>
+</li>
+<li>
+<p>można rozszerzać użyteczność przez paczki tworzone przez społeczność</p>
+</li>
+<li>
+<p>szablony wspierają skrypty</p>
+</li>
+<li>
+<p>zaawansowane formularze</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p>Program jest dostępny w AUR. Po zainstalowaniu należy raz zarejestrować go jako serwis, aby uruchamiał się przy starcie programu.</p>
-<p>.Uruchamianie programu</p>
-<h2 id="sourcebash">[source,bash]</h2>
-<p>espanso service register</p>
-<h2 id="espansostart">espanso start</h2>
-<p>== Używanie
-Koncepcja tego typu programów jest prosta. Tworzymy tekst, który będzie się automatycznie wklejać po wpisaniu określonej z góry frazy.</p>
-<p>Czasami będziemy chcieli napisać coś, co jest naszą frazą w Espanso, aby powstrzymać program od nadpisywania, należy użyć kbd:[Backspace], lub tymczasowo go wyłączyć przez dwukrotne naciśnięcie kbd:[Alt].</p>
-<p>.Wyszukiwarka
-image::assets/img/posts/espanso/espanso-search.png[espanso wyszukiwarka,500]
-Espanso posiada prostą wyszukiwarkę naszych skrótów, którą zobaczymy po wciśnięciu na klawiaturze kbd:[Alt + Space]. Skróty jak i inne ustawienia można zmienić w pliku <code>~/.config/espanso/config/default.yml</code>.</p>
-<p>== Konfiguracja</p>
-<p>WARNING: Konfiguracja jest oparta na wersji 2.0.0, która jest jeszcze w wersji <strong>alpha</strong>. Dokumentację do obu wersji można zobaczyć na https://espanso.org/docs/get-started/[tej stronie.]</p>
+</div>
+<div class="listingblock">
+<div class="title">Uruchamianie programu</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">espanso service register
+
+espanso start</code></pre>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_używanie">Używanie</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Koncepcja tego typu programów jest prosta. Tworzymy tekst, który będzie się automatycznie wklejać po wpisaniu określonej z góry frazy.</p>
+</div>
+<div class="paragraph">
+<p>Czasami będziemy chcieli napisać coś, co jest naszą frazą w Espanso, aby powstrzymać program od nadpisywania, należy użyć <kbd>Backspace</kbd>, lub tymczasowo go wyłączyć przez dwukrotne naciśnięcie <kbd>Alt</kbd>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/img/posts/espanso/espanso-search.png" alt="espanso wyszukiwarka" width="500">
+</div>
+<div class="title">Img 1. Wyszukiwarka</div>
+</div>
+<div class="paragraph">
+<p>Espanso posiada prostą wyszukiwarkę naszych skrótów, którą zobaczymy po wciśnięciu na klawiaturze <span class="keyseq"><kbd>Alt</kbd>+<kbd>Space</kbd></span>. Skróty jak i inne ustawienia można zmienić w pliku <code>~/.config/espanso/config/default.yml</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_konfiguracja">Konfiguracja</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Konfiguracja jest oparta na wersji 2.0.0, która jest jeszcze w wersji <em>alpha</em>. Dokumentację do obu wersji można zobaczyć na <a href="https://espanso.org/docs/get-started/">tej stronie.</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
 <p>Szablony można umieszczać w pliku yaml <code>~/.config/espanso/match/base.yml</code> lub w pliku w tym samym katalogu.</p>
+</div>
+<div class="paragraph">
 <p>Najprostsze użycie to zwykłe zastępowanie skrótu z tekstem ma postać pary <code>trigger</code>, <code>replace</code>. W prosty sposób można uniknąć popularnych literówek.</p>
-<h2 id="sourceyaml">[source,yaml]</h2>
-<p>matches:</p>
-<ul>
-<li>trigger: "napewno"
-replace: na pewno</li>
-<li>trigger: "ciebie"</li>
-</ul>
-<h2 id="replaceciebie">    replace: Ciebie</h2>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">matches:
+  - trigger: "napewno"
+    replace: na pewno
+  - trigger: "ciebie"
+    replace: Ciebie</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Pierwsza uwaga to formatowanie tekstu, jeśli chcemy wkleić tekst z uwzględnieniem nowych linii, to musimy dodać znak <code>|</code>, natomiast użyli znak większości <code>&gt;</code>, to tekst wyświetliłby się w jednej linii. Dobrym pomysłem jest podanie dwukropku (<code>:</code>) przed frazą, tak abyśmy rzadziej omylnie aktywowali program. Jest możliwość dodania kilku triggerów np. <code>- trigger: [":sig", ":signature"]</code>.</p>
-<h2 id="sourceyaml-1">[source,yaml]</h2>
-<ul>
-<li>trigger: [":sig", ":signature"]
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">- trigger: [":sig", ":signature"]
 replace: |
-Z poważaniem</li>
-</ul>
-<h2 id="arkadiuszmirosaw">  Arkadiusz Mirosław</h2>
+  Z poważaniem
+  Arkadiusz Mirosław</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Przy ustawieniu <code>propagate_case</code> jesteśmy w stanie zmieniać wielkość liter w zastępowanym tekście. Przykładowo:</p>
+</div>
+<div class="paragraph">
 <p>Wpisując err dostaniemy error.
 Wpisując Err dostaniemy Error.
 Wpisując ERR dostaniemy ERROR.</p>
-<h2 id="sourceyaml-2">[source,yaml]</h2>
-<ul>
-<li>trigger: "err"
-replace: "error"</li>
-</ul>
-<h2 id="propagate_casetrue">    propagate_case: true</h2>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  - trigger: "err"
+    replace: "error"
+    propagate_case: true</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Jesteśmy w stanie ustawić kursor w miejscu którym chcemy, przez dodanie znaków <code>$|$</code>. Bardzo przydatne przy pisaniu kodu i tagów HTML.</p>
-<p>.Znak stopu</p>
-<h2 id="sourceyaml-3">[source,yaml]</h2>
-<ul>
-<li>trigger: ":div"</li>
-</ul>
-<h2 id="replacedivdddiv">    replace: "<div>$|$</div>"</h2>
+</div>
+<div class="listingblock">
+<div class="title">Znak stopu</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  - trigger: ":div"
+    replace: "&lt;div&gt;$|$&lt;/div&gt;"</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Jeśli używamy program który umożliwia wklejanie obrazków, to zamiast tekstu możemy podać ścieżkę do pliku, który chcemy wkleić.</p>
-<p>.Obrazki</p>
-<h2 id="sourceyaml-4">[source,yaml]</h2>
-<ul>
-<li>trigger: ":img"</li>
-</ul>
-<h2 id="image_pathhomemiropictures0102142537_scpng">    image<em>path: "/home/miro/Pictures/01-02-142537</em>sc.png"</h2>
+</div>
+<div class="listingblock">
+<div class="title">Obrazki</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  - trigger: ":img"
+    image_path: "/home/miro/Pictures/01-02-142537_sc.png"</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Jeśli mamy szablony, które mają tekst wspólny to przez zmienne globalne możemy podstawiać je w naszym tekście przez znaki <code>{{}}</code>. W przykładzie po wpisaniu <code>:jon</code> dostaniemy <code>jon@gmail.com</code>.</p>
-<p>.Globalne zmienne</p>
-<h2 id="sourceyaml-5">[source,yaml]</h2>
-<p>global_vars:</p>
-<ul>
-<li>name: "gmail"
-type: "dummy"
-params:
-  echo: "@gmail.com"</li>
-</ul>
-<p>matches:</p>
-<ul>
-<li>trigger: ":jon"</li>
-</ul>
-<h2 id="replacejongmail">    replace: "jon{{gmail}}"</h2>
+</div>
+<div class="listingblock">
+<div class="title">Globalne zmienne</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">global_vars:
+  - name: "gmail"
+    type: "dummy"
+    params:
+      echo: "@gmail.com"
+
+matches:
+  - trigger: ":jon"
+    replace: "jon{{gmail}}"</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Espanso posiada wbudowane zmienne dotyczące formatowania daty. Przy pomocy skrótowi <code>:now</code> dostaniemy aktualną godzinę.</p>
-<p>.Data</p>
-<h2 id="sourceyaml-6">[source,yaml]</h2>
-<ul>
-<li>trigger: ":now"
-replace: "{{now}}"
-vars:<ul>
-<li>name: now
-type: date
-params:</li></ul></li>
-</ul>
-<h2 id="formathm">          format: "%H:%M"</h2>
+</div>
+<div class="listingblock">
+<div class="title">Data</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  - trigger: ":now"
+    replace: "{{now}}"
+    vars:
+      - name: now
+        type: date
+        params:
+          format: "%H:%M"</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Nie jesteśmy skazani na sztywne szablony, do naszej dyspozycji jest schowek systemowy oraz polecenie powłoki shell. W pierwszym przykładzie skopiowany link zostanie dodany do atrybutu href oraz kursor zostanie przeniesiony do wnętrza tagu a. Drugi przykład to wydobycie lokalnego adresu IP, dzięki Linuksowym narzędziom systemowym.</p>
-<p>.Clipboard</p>
-<h2 id="sourceyaml-7">[source,yaml]</h2>
-<ul>
-<li>trigger: ":a"
-replace: "<a href='{{clipboard}}' />$|$</a>"
-vars:<ul>
-<li>name: "clipboard"</li></ul></li>
-</ul>
-<h2 id="typeclipboard">        type: "clipboard"</h2>
-<p>.Polecenie bash</p>
-<h2 id="sourceyaml-8">[source,yaml]</h2>
-<ul>
-<li>trigger: ":localip"
-replace: "{{output}}"
-vars:<ul>
-<li>name: output
-type: shell
-params:</li></ul></li>
-</ul>
-<h2 id="cmdipagrepinet192awkprintd2">          cmd: "ip a | grep 'inet 192' | awk '{ print $2 }'"</h2>
+</div>
+<div class="listingblock">
+<div class="title">Clipboard</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  - trigger: ":a"
+    replace: "&lt;a href='{{clipboard}}' /&gt;$|$&lt;/a&gt;"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Polecenie bash</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  - trigger: ":localip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "ip a | grep 'inet 192' | awk '{ print $2 }'"</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Espanso nie ogranicza się do wywoływanie poleceń systemowych, ale to możemy podać skrypt do każdego języka dynamicznego, który mamy zainstalowany. W tym przypadku należy podać ścieżkę do pliku wykonywalnego. Każdy tekst, który będzie wygenerowany i wysłany na standardowe wyjście, będzie wklejane przez nasz skrót. W mojej konfiguracji użyłem języka Lua, którego polecam w takich sytuacjach.</p>
-<p>.Skrypt</p>
-<h2 id="sourceyaml-9">[source,yaml]</h2>
+</div>
+<div class="listingblock">
+<div class="title">Skrypt</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  - trigger: ":lua"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - lua
+            - "path_to_file/test.lua"</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_formularze">Formularze</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jednym z minusów w poprzednich metodach jest to, że możemy ustawić kursor w jedno miejsce. Ogranicza nas, to gdy mamy kilka miejsc, w których chcemy dopisać nasz opcjonalny tekst, np. kilka znaczników HTML. Obejściem na to są formularze. Dzięki temu, że espanso przy tej metodzie generuje interfejs graficzny, możemy zbudować skomplikowany formularz oparty kontrolkach:</p>
+</div>
+<div class="ulist">
 <ul>
-<li>trigger: ":lua"
-replace: "{{output}}"
-vars:<ul>
-<li>name: output
-type: script
-params:
-  args:
-    - lua</li></ul></li>
+<li>
+<p>Input text</p>
+</li>
+<li>
+<p>Multiline text field</p>
+</li>
+<li>
+<p>Choice box</p>
+</li>
+<li>
+<p>List box</p>
+</li>
 </ul>
-<h2 id="path_to_filetestlua">            - "path<em>to</em>file/test.lua"</h2>
-<p>== Formularze
-Jednym z minusów w poprzednich metodach jest to, że możemy ustawić kursor w jedno miejsce. Ogranicza nas, to gdy mamy kilka miejsc, w których chcemy dopisać nasz opcjonalny tekst, np. kilka znaczników HTML. Obejściem na to są formularze. Dzięki temu, że espanso przy tej metodzie generuje interfejs graficzny, możemy zbudować skomplikowany formularz oparty kontrolkach:</p>
-<ul>
-<li>Input text</li>
-<li>Multiline text field</li>
-<li>Choice box</li>
-<li>List box</li>
-</ul>
+</div>
+<div class="paragraph">
 <p>Należy zauważyć, że pole tekstowe dla jednej linii nie musi być zadeklarowane w obiekcie <code>form_fields</code>.</p>
-<p>.Formularz - szablon</p>
-<h2 id="sourceyaml-10">[source,yaml]</h2>
-<ul>
-<li>trigger: ":zamówienie"
-form: |
-  Klient [[imię]],
-  [[adres]]
-  Zamówił:
-  [[produkt]] w kolorze [[kolor]]
-form_fields:
-  produkt:
-    type: list
-    values:
-      - koszulka
-      - spodnie
-  kolor:
-    type: choice
-    values:
-      - niebieski
-      - czerwony
-  text:</li>
-</ul>
-<h2 id="multilinetrue">        multiline: true</h2>
-<p>.Wygląd formularza
-image::assets/img/posts/espanso/form.png[Formularz]</p>
-<p>== Rozszerzenia
-Dużym plusem espanso jest posiadanie rozszerzeń, które są tworzone przy współpracy społeczeństwa. Pod tym adresem możne zobaczyć https://hub.espanso.org/[listę wtyczek].</p>
-<p>.Instalacja wtyczki</p>
-<h2 id="sourcebash-1">[source,bash]</h2>
-<h2 id="espansoinstallnazwa_rozszerzenie">espanso install nazwa_rozszerzenie</h2>
+</div>
+<div class="listingblock">
+<div class="title">Formularz - szablon</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  - trigger: ":zamówienie"
+    form: |
+      Klient [[imię]],
+      [[adres]]
+      Zamówił:
+      [[produkt]] w kolorze [[kolor]]
+    form_fields:
+      produkt:
+        type: list
+        values:
+          - koszulka
+          - spodnie
+      kolor:
+        type: choice
+        values:
+          - niebieski
+          - czerwony
+      text:
+        multiline: true</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/img/posts/espanso/form.png" alt="Formularz">
+</div>
+<div class="title">Img 2. Wygląd formularza</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rozszerzenia">Rozszerzenia</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dużym plusem espanso jest posiadanie rozszerzeń, które są tworzone przy współpracy społeczeństwa. Pod tym adresem możne zobaczyć <a href="https://hub.espanso.org/">listę wtyczek</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Instalacja wtyczki</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">espanso install nazwa_rozszerzenie</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Niestety po instalacji trzeba zrestartować program, aby rozszerzenie było dostępne, poprzez polecenie:</p>
-<h2 id="sourcebash-2">[source,bash]</h2>
-<h2 id="espansorestart">espanso restart</h2>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">espanso restart</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Wybrałem przykładowe rozszerzenia, które są ciekawe.</p>
+</div>
+<div class="ulist">
 <ul>
-<li>https://hub.espanso.org/packages/cht/[cht] - popularny cheat sheat z strony https://cht.sh[cht.sh].</li>
-<li>https://hub.espanso.org/packages/basic-emojis/[emoji] - lista znaków emoji. Dostępna jest paczka z większą ich ilością.</li>
-<li>https://hub.espanso.org/packages/mispell-en/[misspell] - predefiniowana lista angielskich literówek.</li>
+<li>
+<p><a href="https://hub.espanso.org/packages/cht/">cht</a> - popularny cheat sheat z strony <a href="https://cht.sh">cht.sh</a>.</p>
+</li>
+<li>
+<p><a href="https://hub.espanso.org/packages/basic-emojis/">emoji</a> - lista znaków emoji. Dostępna jest paczka z większą ich ilością.</p>
+</li>
+<li>
+<p><a href="https://hub.espanso.org/packages/mispell-en/">misspell</a> - predefiniowana lista angielskich literówek.</p>
+</li>
 </ul>
-<p>== Alternatywy
-Będąc szczerym sam nie używam Espanso, ponieważ wolałbym program z autouzupełnianiem, który wspiera słowniki. Typing Assistant byłby idealny dla mnie, jednak jest on dostępny tylko dla systemu Windows.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alternatywy">Alternatywy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Będąc szczerym sam nie używam Espanso, ponieważ wolałbym program z autouzupełnianiem, który wspiera słowniki. Typing Assistant byłby idealny dla mnie, jednak jest on dostępny tylko dla systemu Windows.</p>
+</div>
+<div class="ulist">
 <ul>
-<li>https://github.com/autokey/autokey[autokey]</li>
-<li>https://gitlab.com/bharadwaj-raju/TextSuggest[TextSuggest]</li>
-<li>https://github.com/leehblue/texpander[texpander]</li>
-<li>https://www.sumitsoft.com/index.htm[Typing Assistant]</li>
-</ul>]]></content:encoded>
+<li>
+<p><a href="https://github.com/autokey/autokey">autokey</a></p>
+</li>
+<li>
+<p><a href="https://gitlab.com/bharadwaj-raju/TextSuggest">TextSuggest</a></p>
+</li>
+<li>
+<p><a href="https://github.com/leehblue/texpander">texpander</a></p>
+</li>
+<li>
+<p><a href="https://www.sumitsoft.com/index.htm">Typing Assistant</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Filozofia Vima - edycja]]></title>
@@ -222,151 +389,433 @@ Będąc szczerym sam nie używam Espanso, ponieważ wolałbym program z autouzup
             <guid>/blog/filozofia-vima-edycja</guid>
             <pubDate>Sat, 30 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Druga część dotycząca podstaw w używaniu edytora tekstowego Vim. W tej części nauczymy się jak się poruszać i edytować plik tekstowy.]]></description>
-            <content:encoded><![CDATA[<p>:toc:
-:toc-title: Spis:
-:figure-caption: Img
-:experimental:</p>
-<p>Jest to druga część dotycząca podstaw w używaniu edytora tekstowego Vim. Pierwszą opisującą tryby i zarządzanie plikami można przeczytać link:blog/filozofia-vima-tryby-i-pliki[tutaj].</p>
+            <content:encoded><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Spis:</div>
+<ul class="sectlevel1">
+<li><a href="#_poruszanie">Poruszanie</a>
+<ul class="sectlevel2">
+<li><a href="#_wyszukiwanie">Wyszukiwanie</a></li>
+</ul>
+</li>
+<li><a href="#_komendy">Komendy</a>
+<ul class="sectlevel2">
+<li><a href="#_cofanie_i_powtarzanie">Cofanie i powtarzanie</a></li>
+</ul>
+</li>
+<li><a href="#_obiekty_tekstowe">Obiekty tekstowe</a></li>
+<li><a href="#_połączenie_poleceń">Połączenie poleceń</a></li>
+<li><a href="#_porady">Porady</a></li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Jest to druga część dotycząca podstaw w używaniu edytora tekstowego Vim. Pierwszą opisującą tryby i zarządzanie plikami można przeczytać <a href="blog/filozofia-vima-tryby-i-pliki">tutaj</a>.</p>
+</div>
+<div class="paragraph">
 <p>Najistotniejsze co trzeba zrozumieć w używaniu Vima jest to, że zachowuje się on jak język programowania. :)</p>
+</div>
+<div class="paragraph">
 <p>Edytowanie i poruszanie oparte jest na komendach (commands), które operują na obiektach (text objects) lub określonym ruchu (motions). Dodatkowo taki zestaw możemy poprzedzić ilością powtórzeń. Ważne do zaznaczenie jest to, że wszystkie wymienione wcześniej funkcje są odseparowane od siebie.</p>
-<p>== Poruszanie</p>
+</div>
+<div class="sect1">
+<h2 id="_poruszanie">Poruszanie</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Dużą zaletą Vima jest mnogość operacji pozwalających na efektywne przemieszczenie kursora. Możemy zapomnieć o używaniu myszki i syndromie RSI. Poniższe skróty działają w normalnym trybie.</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> - klawisze te poruszają kursorem tak jak odpowiednio strzałki: lewo, dół, góra, prawo</li>
-<li><code>w</code>, <code>e</code>, <code>b</code> - przejście do początku <code>w</code>, końca następnego wyrazu <code>e</code> albo do poprzedniego wyrazu <code>b</code></li>
-<li><code>W</code>, <code>E</code>, <code>B</code> - odpowiedniki powyższych skrótów, jednak tym razem wyraz ignorujemy znaki przestankowe. Przykładowo tekst div.nav i text-align będą traktowane jako jeden wyraz</li>
-<li><code>(</code>,<code>)</code>; <code>{</code>,<code>}</code> - przejście na początek i koniec zdania <code>()</code> albo akapitu <code>{}</code></li>
-<li><code>0</code>,<code>$</code> - skok na początek i koniec linii</li>
-<li><code>I</code>,<code>A</code> - skok na początek i koniec linii i przejście w tryb Insert</li>
-<li><code>H</code>, <code>M</code>, <code>L</code> - skok kursora na górę, środek lub dół ekranu</li>
-<li><code>zz</code>, <code>zt</code>, <code>zb</code> - wycentrowanie <code>zz</code> tekstu na linii gdzie znajduje się kursor. Przesunięcie ekranu tak, aby kursor znajdował się na górze <code>zt</code> lub dole <code>zb</code> ekranu</li>
-<li><code>c-b</code>, <code>c-f</code> - przesunięcie ekranu do góry i dołu,</li>
-<li><code>c-u</code>, <code>c-d</code> - przesunięcie tylko połowy ekranu do góry i dołu</li>
+<li>
+<p><code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> - klawisze te poruszają kursorem tak jak odpowiednio strzałki: lewo, dół, góra, prawo</p>
+</li>
+<li>
+<p><code>w</code>, <code>e</code>, <code>b</code> - przejście do początku <code>w</code>, końca następnego wyrazu <code>e</code> albo do poprzedniego wyrazu <code>b</code></p>
+</li>
+<li>
+<p><code>W</code>, <code>E</code>, <code>B</code> - odpowiedniki powyższych skrótów, jednak tym razem wyraz ignorujemy znaki przestankowe. Przykładowo tekst div.nav i text-align będą traktowane jako jeden wyraz</p>
+</li>
+<li>
+<p><code>(</code>,<code>)</code>; <code>{</code>,<code>}</code> - przejście na początek i koniec zdania <code>()</code> albo akapitu <code>{}</code></p>
+</li>
+<li>
+<p><code>0</code>,<code>$</code> - skok na początek i koniec linii</p>
+</li>
+<li>
+<p><code>I</code>,<code>A</code> - skok na początek i koniec linii i przejście w tryb Insert</p>
+</li>
+<li>
+<p><code>H</code>, <code>M</code>, <code>L</code> - skok kursora na górę, środek lub dół ekranu</p>
+</li>
+<li>
+<p><code>zz</code>, <code>zt</code>, <code>zb</code> - wycentrowanie <code>zz</code> tekstu na linii gdzie znajduje się kursor. Przesunięcie ekranu tak, aby kursor znajdował się na górze <code>zt</code> lub dole <code>zb</code> ekranu</p>
+</li>
+<li>
+<p><code>c-b</code>, <code>c-f</code> - przesunięcie ekranu do góry i dołu,</p>
+</li>
+<li>
+<p><code>c-u</code>, <code>c-d</code> - przesunięcie tylko połowy ekranu do góry i dołu</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p>Prawie wszystkie powyższe skróty można poprzedzić liczbą i tak np. <code>4l</code> przesunie kursor o cztery znaki w prawo, a <code>2k</code> o dwie linie do góry. Jak chcemy skoczyć do konkretnej linii, to możemy użyć <code>gg</code> lub <code>G</code>, poprzedzając je numerem linii. Skok do linii numer 3 wykonamy przez <code>3gg</code>. Istnieją aliasy to przechodzenia na początek i koniec dokumentu, są to odpowiednio <code>gg</code> i <code>G</code>, tylko bez liczb.</p>
-<p>=== Wyszukiwanie</p>
+</div>
+<div class="sect2">
+<h3 id="_wyszukiwanie">Wyszukiwanie</h3>
+<div class="paragraph">
 <p>Upraszczając do celów edukacyjnych, zebrałem trzy metody przeskakiwania kursora do wyszukiwanego tekstu lub znaku.</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>\#</code>, <code>\*</code> - przechodzenie do następnego <code>*</code> lub poprzedniego <code>#</code> wyrazu, który znajduję się pod kursorem</li>
-<li><code>%</code> - szuka brakującego nawiasu: (,),[,],{, lub }. Przenosi do miejsca, w którym występuje zamykający/otwierający nawias</li>
-<li><code>f{znak}</code>, <code>F{znak}</code> - skok do pierwszego następnego <code>f</code> lub poprzedniego <code>F</code> wyszukiwanego znaku. Możemy powtarzać ten sam skok poprzez <code>;</code> lub powracając <code>,</code> do poprzedniego znaku.</li>
-<li><code>/{fraza}</code> lub <code>?{fraza}</code> - wyszukuje następnej <code>/</code> lub poprzedniej <code>?</code> frazy w pliku</li>
+<li>
+<p><code>#</code>, <code>*</code> - przechodzenie do następnego <code>*</code> lub poprzedniego <code>#</code> wyrazu, który znajduję się pod kursorem</p>
+</li>
+<li>
+<p><code>%</code> - szuka brakującego nawiasu: (,),[,],\{, lub }. Przenosi do miejsca, w którym występuje zamykający/otwierający nawias</p>
+</li>
+<li>
+<p><code>f{znak}</code>, <code>F{znak}</code> - skok do pierwszego następnego <code>f</code> lub poprzedniego <code>F</code> wyszukiwanego znaku. Możemy powtarzać ten sam skok poprzez <code>;</code> lub powracając <code>,</code> do poprzedniego znaku.</p>
+</li>
+<li>
+<p><code>/{fraza}</code> lub <code>?{fraza}</code> - wyszukuje następnej <code>/</code> lub poprzedniej <code>?</code> frazy w pliku</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p>Dobrze wiedzieć, że w ostatni sposobie możemy użyć wyrażeń regularnych na przykład <code>/nazw.\|login</code>, może uwzględnić nam wyrazy jak: nazwa, nazwy lub login. Bardziej przydatne wyrażenia to:</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>.</code> - dowolny znak</li>
-<li><code>^</code>, <code>$</code> - początek i koniec linii</li>
-<li><code>\&lt;</code>, <code>\&gt;</code> - początek i koniec słowa np. <code>\&lt;surykatka\&gt;</code> wyszuka tylko wyraz surykatka</li>
+<li>
+<p><code>.</code> - dowolny znak</p>
+</li>
+<li>
+<p><code>^</code>, <code>$</code> - początek i koniec linii</p>
+</li>
+<li>
+<p><code>\&lt;</code>, <code>\&gt;</code> - początek i koniec słowa np. <code>\&lt;surykatka\&gt;</code> wyszuka tylko wyraz surykatka</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p>W czasie wyszukiwania możemy skakać pomiędzy znalezionymi frazami, i tak <code>n</code> znajduje nam następne wystąpienie, a <code>N</code> poprzednie. Jak chcemy przeskoczyć kilka trafień musimy poprzedzić komendę liczbą np. <code>10n</code>.</p>
-<p>== Komendy</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_komendy">Komendy</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Jak do tej pory nauczyliśmy się skakać po dokumencie, co nie jest zbytnio produktywne. ;) Komendy (commands) służą nam do edytowania dokumentu, do podstawowych operacji należą:</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>y</code>, <code>yy</code> (yank) - kopiowanie tekstu lub całej linii <code>yy</code></li>
-<li><code>d</code>, <code>dd</code> (delete) - usunięcie (wycinanie) zaznaczonego tekstu <code>d</code> lub całej linii <code>dd</code></li>
-<li><code>c</code>, <code>cc</code> (change) - zmienianie tekstu, komenda ta wycina znaki i przechodzi do Insert mode. Polecenie <code>cc</code> zmienia całą linię.</li>
-<li><code>p</code>, <code>p</code> (paste) - wklejanie tekstu po kursorze <code>p</code> lub przed <code>p</code></li>
-<li><code>gu</code>, <code>gu</code> - opcja dodana trochę na siłę mająca na celu podmianę wyrazów na duże <code>gu</code> lub małe <code>gu</code> litery</li>
-<li><code>&gt;</code>, <code>&gt;&gt;</code> - zrobienie wcięcia jednej linii <code>&gt;&gt;</code> lub kilku <code>&gt;</code>, przy dodaniu parametru ruchu</li>
+<li>
+<p><code>y</code>, <code>yy</code> (yank) - kopiowanie tekstu lub całej linii <code>yy</code></p>
+</li>
+<li>
+<p><code>d</code>, <code>dd</code> (delete) - usunięcie (wycinanie) zaznaczonego tekstu <code>d</code> lub całej linii <code>dd</code></p>
+</li>
+<li>
+<p><code>c</code>, <code>cc</code> (change) - zmienianie tekstu, komenda ta wycina znaki i przechodzi do Insert mode. Polecenie <code>cc</code> zmienia całą linię.</p>
+</li>
+<li>
+<p><code>p</code>, <code>p</code> (paste) - wklejanie tekstu po kursorze <code>p</code> lub przed <code>p</code></p>
+</li>
+<li>
+<p><code>gu</code>, <code>gu</code> - opcja dodana trochę na siłę mająca na celu podmianę wyrazów na duże <code>gu</code> lub małe <code>gu</code> litery</p>
+</li>
+<li>
+<p><code>&gt;</code>, <code>&gt;&gt;</code> - zrobienie wcięcia jednej linii <code>&gt;&gt;</code> lub kilku <code>&gt;</code>, przy dodaniu parametru ruchu</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p>Gratuluję wytrwałości, jak dotrwałeś do tego miejsca. Mam dobrą wiadomość, jakbyś miał mętlik w głowie od wszystkich poznanych skrótów. Z powyższymi funkcjami możesz wykonać większość operacji na tekście. Vim idzie dalej, umożliwiając nam bardziej ergonomiczne jego manipulowanie. Często takimi ułatwieniami są aliasy do podstawowych skrótów (te będą podane w nawiasach).</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>x</code> (<code>dl</code>), <code>X</code> (<code>dh</code>) - wycinanie znaku spod kursora <code>x</code> lub jeden znak wcześniej <code>X</code> - duże x</li>
-<li><code>d</code> (<code>d$</code>) - wycinanie tekstu od miejsca, gdzie znajduje się kursor do końca linii</li>
-<li><code>y</code> (<code>y$</code>) - kopiowanie naisu od miejsca, gdzie znajduje się kursor do końca linii</li>
-<li><code>C</code> (<code>c$</code>) - zmiana tekstu od miejsca, gdzie znajduje się kursor do końca linii</li>
-<li><code>s</code> (<code>cl</code>), <code>S</code> (<code>cc</code>) - zmienianie tekstu, komenda ta wycina znak spod kursora i przechodzi do Insert mode. Polecenie <code>S</code> zmienia całą linie.</li>
-<li><code>~</code> (<code>gUl</code> i <code>gul</code>) - (tylda) zamiana wielkości znaku spod kursora</li>
-<li><code>r{x}</code> - działa jak <code>cl</code>, jednak pozostaje w Normal mode. Zamienia znak na pozycji kursora na wybrany znak</li>
+<li>
+<p><code>x</code> (<code>dl</code>), <code>X</code> (<code>dh</code>) - wycinanie znaku spod kursora <code>x</code> lub jeden znak wcześniej <code>X</code> - duże x</p>
+</li>
+<li>
+<p><code>d</code> (<code>d$</code>) - wycinanie tekstu od miejsca, gdzie znajduje się kursor do końca linii</p>
+</li>
+<li>
+<p><code>y</code> (<code>y$</code>) - kopiowanie naisu od miejsca, gdzie znajduje się kursor do końca linii</p>
+</li>
+<li>
+<p><code>C</code> (<code>c$</code>) - zmiana tekstu od miejsca, gdzie znajduje się kursor do końca linii</p>
+</li>
+<li>
+<p><code>s</code> (<code>cl</code>), <code>S</code> (<code>cc</code>) - zmienianie tekstu, komenda ta wycina znak spod kursora i przechodzi do Insert mode. Polecenie <code>S</code> zmienia całą linie.</p>
+</li>
+<li>
+<p><code>~</code> (<code>gUl</code> i <code>gul</code>) - (tylda) zamiana wielkości znaku spod kursora</p>
+</li>
+<li>
+<p><code>r{x}</code> - działa jak <code>cl</code>, jednak pozostaje w Normal mode. Zamienia znak na pozycji kursora na wybrany znak</p>
+</li>
 </ul>
-<p>image:assets/img/posts/memy/smart-guy-300x300.jpg[smart guy,role=left img-25]
+</div>
+<div class="paragraph">
+<p><span class="image left img-25"><img src="assets/img/posts/memy/smart-guy-300x300.jpg" alt="smart guy"></span>
 Jestem Wam winien wyjaśnienie, dlaczego operacje <code>d</code> (delete) przetłumaczyłem na wycinanie. Vim domyślnie niczego nie kasuje, komendy takie jak <code>d</code>, <code>c</code>, <code>S</code> przenoszą tekst do rejestru.
 Vim przechowuje historie wyciętego tekstu w rejestrach pod cyframi 1-9. Jeśli usunęliśmy dwa różne stringi i chcemy wkleić ten pierwszy, to musimy wywołać rejestr o cyfrze 2 przez <code>"2</code>, aby wkleić dodajemy jeszcze literkę p (paste) - <code>"2p</code>. Dodatkowo po kolejnych wyciętych obiektach, tekst przesuwa się do rejestrów o wyższych numeracjach. Następną sprawą jest fakt, iż skopiowany tekst (<code>y</code>) posiada specjalny rejestr 0.</p>
+</div>
+<div class="paragraph">
 <p>Podsumowując, jeśli skopiujemy napis (<code>y</code>) i potem przejdziemy w inne miejsce pliku oraz usuniemy inny fragment, to pod klawiszem <code>p</code> będzie ten usunięty tekst. Jeśli chcemy wkleić to co kopiowaliśmy, to musimy użyć komendę <code>"0p</code>.</p>
-<p>=== Cofanie i powtarzanie</p>
+</div>
+<div class="sect2">
+<h3 id="_cofanie_i_powtarzanie">Cofanie i powtarzanie</h3>
+<div class="paragraph">
 <p>Każde polecenie można powtórzyć - robi się to przez <code>.</code> kropkę. Oczywiście mamy też możliwość cofnięcia edycji lub wykonania jej ponownie. Nic nie szkodzi nam, aby takie cofnięcia powtarzać kilkukrotnie np. <code>5u</code>.</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>u</code> - cofa skutki ostatniego polecenia</li>
-<li><code>U</code> - cofa dla całej linii</li>
-<li><code>c-r</code> - operacja ``wykonaj ponownie'' - cofa cofnięcia</li>
+<li>
+<p><code>u</code> - cofa skutki ostatniego polecenia</p>
+</li>
+<li>
+<p><code>U</code> - cofa dla całej linii</p>
+</li>
+<li>
+<p><code>c-r</code> - operacja ``wykonaj ponownie'' - cofa cofnięcia</p>
+</li>
 </ul>
-<p>== Obiekty tekstowe</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_obiekty_tekstowe">Obiekty tekstowe</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Dobrą praktyką jest, aby podczas edycji dokumentu używać obiektów tekstowych, a nie komend ruchu (motions). Obiektami tymi są m.in. wyraz <code>w</code>, zdanie <code>s</code>, paragraf <code>p</code>, napis zawarty w cudzysłowach <code>"</code>, nawiasach <code>b</code> lub tagach HTML <code>t</code>. Często klawisz odpowiadający za dany ruch jest taki sam w obiektach tekstowych. W takim wypadku różnica polegająca na zaznaczeniu obiektu, to dodanie jednej z dwóch liter:</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>i</code> - operuje tylko na danym obiekcie</li>
-<li><code>a</code> - operuje na danym obiekcie wraz ze spacjami poprzedzającymi następny obiekt. Jeśli mamy cudzysłowy lub nawiasy to zaznaczamy je oraz tekst pomiędzy nimi.</li>
+<li>
+<p><code>i</code> - operuje tylko na danym obiekcie</p>
+</li>
+<li>
+<p><code>a</code> - operuje na danym obiekcie wraz ze spacjami poprzedzającymi następny obiekt. Jeśli mamy cudzysłowy lub nawiasy to zaznaczamy je oraz tekst pomiędzy nimi.</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p>Załóżmy, że nasz kursor znajduje się na środku wyrazu i chcielibyśmy go usunąć. Jeśli użyjemy <code>dw</code> usuniemy tylko połowę wyrazu (od kursora do następnego słowa). Musimy w takim razie przejść do początku tego wyrazu (przez np.<code>b</code>) i dopiero zastosować komendy <code>dw</code>. Używając obiektów tekstowych nie musimy być na początku tego obiektu. Następną przewagą w tej metodzie jest zdolność do powtarzania komend, niezależnie od pozycji kursora. Wydaje się to skomplikowane, ale po poniższym przykładzie wszystko stanie się jasne. Pogrubiony znak oznacza pozycję kursora.</p>
-<p>[arabic]
-. sury<strong>k</strong>atka → próbujemy usunąć słowo przez <code>dw</code>
-. sury → wynikiem jest usunięcie tylko fragmentu wyrazu
-. sury<strong>k</strong>atka → <code>bdw</code> musimy przejść na początek wyrazu i dopiero go wyciąć
-. Konst<strong>a</strong>ntynopol → jesteśmy w połowie drugiego słowa, i chcielibyśmy powtórzyć poprzednią komendę przez <code>.</code> kropkę
-. Konst → niestety ucinamy tylko fragment od pozycji kursora</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>sury<strong>k</strong>atka → próbujemy usunąć słowo przez <code>dw</code></p>
+</li>
+<li>
+<p>sury → wynikiem jest usunięcie tylko fragmentu wyrazu</p>
+</li>
+<li>
+<p>sury<strong>k</strong>atka → <code>bdw</code> musimy przejść na początek wyrazu i dopiero go wyciąć</p>
+</li>
+<li>
+<p>Konst<strong>a</strong>ntynopol → jesteśmy w połowie drugiego słowa, i chcielibyśmy powtórzyć poprzednią komendę przez <code>.</code> kropkę</p>
+</li>
+<li>
+<p>Konst → niestety ucinamy tylko fragment od pozycji kursora</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
 <p>Teraz powtórzmy to używając obiektów tekstowych:</p>
-<p>[arabic]
-. sury<strong>k</strong>atka → <code>daw</code> usuwa całe słowo
-. Konst<strong>a</strong>ntynopol → kropka <code>.</code> powtarza nam polecenie ``usuń cały wyraz''</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>sury<strong>k</strong>atka → <code>daw</code> usuwa całe słowo</p>
+</li>
+<li>
+<p>Konst<strong>a</strong>ntynopol → kropka <code>.</code> powtarza nam polecenie ``usuń cały wyraz''</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
 <p>Dodatkowo nie trzeba być na danym obiekcie, aby go edytować. Vim wyszuka pierwsze wystąpienie tego obiektu.</p>
+</div>
+<div class="paragraph">
 <p>Wyodrębniłbym kilka rodzajów obiektów. W pieszym znajdują się:</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>w</code> - wyraz</li>
-<li><code>W</code> - wyrazy połączone znakami przestankowymi</li>
-<li><code>s</code> - zdanie</li>
-<li><code>p</code> - paragraf</li>
-<li><code>'</code>, <code>"</code>, ` - tekst pomiędzy cudzysłowami</li>
+<li>
+<p><code>w</code> - wyraz</p>
+</li>
+<li>
+<p><code>W</code> - wyrazy połączone znakami przestankowymi</p>
+</li>
+<li>
+<p><code>s</code> - zdanie</p>
+</li>
+<li>
+<p><code>p</code> - paragraf</p>
+</li>
+<li>
+<p><code>'</code>, <code>"</code>, ` - tekst pomiędzy cudzysłowami</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p>Napis pomiędzy nawiasami. Obiekty te możemy zaznaczać niezależnie czy użyjemy znaku otwarcia lub zamknięcia nawiasu. Niektóre z nich mają alias:</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>(</code>, <code>)</code> lub <code>b</code> - nawias okrągły</li>
-<li><code>{</code>, <code>}</code> lub <code>B</code> - nawias wąsaty</li>
-<li><code>[</code>, <code>]</code> - nawias kwadratowy</li>
-<li><code>&lt;</code>, <code>&gt;</code> - nawias ostry</li>
+<li>
+<p><code>(</code>, <code>)</code> lub <code>b</code> - nawias okrągły</p>
+</li>
+<li>
+<p><code>{</code>, <code>}</code> lub <code>B</code> - nawias wąsaty</p>
+</li>
+<li>
+<p><code>[</code>, <code>]</code> - nawias kwadratowy</p>
+</li>
+<li>
+<p><code>&lt;</code>, <code>&gt;</code> - nawias ostry</p>
+</li>
 </ul>
-<p>Dla programistów są zdefiniowane obiekty HTML. Znak <code>t</code> to tekst pomiędzy tagami, dzięki <code>&gt;</code> możemy zmienić sam znacznik (tak jakby to był zwykły nawias ostry) np.: <span>sury<strong>k</strong>atka<span> → <code>dit</code> skasuje wyraz ``surykatka''</p>
-<p>Dodatkowe obiekty można samemu zdefiniować lub zainstalować odpowiedni https://github.com/kana/vim-textobj-user/wiki[plugin].</p>
-<p>== Połączenie poleceń</p>
+</div>
+<div class="paragraph">
+<p>Dla programistów są zdefiniowane obiekty HTML. Znak <code>t</code> to tekst pomiędzy tagami, dzięki <code>&gt;</code> możemy zmienić sam znacznik (tak jakby to był zwykły nawias ostry) np.: &lt;span&gt;sury<strong>k</strong>atka&lt;span&gt; → <code>dit</code> skasuje wyraz ``surykatka''</p>
+</div>
+<div class="paragraph">
+<p>Dodatkowe obiekty można samemu zdefiniować lub zainstalować odpowiedni <a href="https://github.com/kana/vim-textobj-user/wiki">plugin</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_połączenie_poleceń">Połączenie poleceń</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Tak jak wspominałem do Vima można podejść jak do języka programowania. Prawie wszystkie wcześniej grupy skrótów można ze sobą komponować w jedno polecenie, które ma poniższą strukturę:</p>
-<p>{empty}[liczba][komenda][obiekt tekstowy lub ruch]</p>
+</div>
+<div class="paragraph">
+<p>[liczba][komenda][obiekt tekstowy lub ruch]</p>
+</div>
+<div class="paragraph">
 <p>Składowe tego polecenia są opcjonalne. Nie musimy powtarzać lub manipulować kilkoma obiektami, bez komendy edycyjnej będziemy jedynie poruszać się po dokumencie. W tym momencie można zauważyć, że nie potrzebujemy uczyć się wszystkich skrótów. Kilka poleceń daje nam ogromne możliwości i sposoby manipulacji dokumentem. Oto przykłady:</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>3w</code> - przejście o 3 wyrazy do przodu</li>
-<li><code>3pb</code> - skopiowanie 3 poprzednich wyrazów</li>
-<li><code>ci[</code> - zamiana znaków w nawiasie kwadratowym</li>
-<li><code>2dap</code> - usunięcie 2 paragrafów</li>
-<li><code>d/{text}</code> - kasowanie tekstu od kursora do wyszukiwanego wzorca</li>
-<li><code>vfz</code> - przejście do trybu wizualnego i zaznaczenie tekstu do pierwszego wystąpienia litery <code>z</code></li>
-<li><code>xp</code> - zamiana miejscami dwóch liter</li>
-<li><code>guH</code> - zamiana wszystkich liter na małe, od kursora do górnej krawędzi ekranu</li>
-<li><code>dG</code> - usunięcie wszystkiego od kursora do końca dokumentu</li>
-<li><code>4&gt;j</code> - wcięcie 4 następnych linii</li>
-<li><code>2.</code> - dwukrotne powtórzenie ostatniego polecenia</li>
-<li><code>d'a</code> - dzięki takiej konstrukcji, Vim usuwa wszystko od miejsca zakładki <code>a</code> do miejsca, w którym znajduje się kursor</li>
-<li><code>5c-w+</code> - zwiększenie okna o 5 wierszy</li>
+<li>
+<p><code>3w</code> - przejście o 3 wyrazy do przodu</p>
+</li>
+<li>
+<p><code>3pb</code> - skopiowanie 3 poprzednich wyrazów</p>
+</li>
+<li>
+<p><code>ci[</code> - zamiana znaków w nawiasie kwadratowym</p>
+</li>
+<li>
+<p><code>2dap</code> - usunięcie 2 paragrafów</p>
+</li>
+<li>
+<p><code>d/{text}</code> - kasowanie tekstu od kursora do wyszukiwanego wzorca</p>
+</li>
+<li>
+<p><code>vfz</code> - przejście do trybu wizualnego i zaznaczenie tekstu do pierwszego wystąpienia litery <code>z</code></p>
+</li>
+<li>
+<p><code>xp</code> - zamiana miejscami dwóch liter</p>
+</li>
+<li>
+<p><code>guH</code> - zamiana wszystkich liter na małe, od kursora do górnej krawędzi ekranu</p>
+</li>
+<li>
+<p><code>dG</code> - usunięcie wszystkiego od kursora do końca dokumentu</p>
+</li>
+<li>
+<p><code>4&gt;j</code> - wcięcie 4 następnych linii</p>
+</li>
+<li>
+<p><code>2.</code> - dwukrotne powtórzenie ostatniego polecenia</p>
+</li>
+<li>
+<p><code>d&#8217;a</code> - dzięki takiej konstrukcji, Vim usuwa wszystko od miejsca zakładki <code>a</code> do miejsca, w którym znajduje się kursor</p>
+</li>
+<li>
+<p><code>5c-w+</code> - zwiększenie okna o 5 wierszy</p>
+</li>
 </ul>
-<p>== Porady</p>
-<p>Na sam koniec tego wstępu do Vima, mam dla Was kilka porad, które mogą być przydatne. Pierwsza z nich wydaje się być dziwna. Proponuję zamiast Vima zainstalować jego fork https://neovim.io/[NeoVim]. Program ten ma kilka dodatkowych funkcji i wydaje mi się, że jest bardzie, dostosowany do pracy od razu po zainstalowaniu. Mówiąc o ustawieniach, na stronie https://vim-bootstrap.com/[vim-bootstrap] znajdziemy przygotowane pliki konfiguracyjne. Podczas pisania możemy korzystać z auto uzupełniania. Listę słów, które wystąpiły w dokumencie otworzymy przez kbd:[Ctrl+n] lub kbd:[Ctrl+p], skróty te odpowiadają też za ich wybór.</p>
-<p>Zachętą do nauki Vima jest fakt, iż w innych programach zaimplementowane są poznane nam skróty. Praktycznie większość popularnych IDE ma wtyczkę, która umożliwi nam operowaniem tekstem w ten sam sposób jak w Vime. W powłokach systemowych bash i zsh jest możliwość włączenia <code>Vi mode</code>. https://github.com/brookhong/Surfingkeys[Surfingkeys] to jedno z rozszerzeń do Firefox i przeglądarek bazujących na Chromium, które pozwalają nawigować po stronach internetowych. Niektóre aplikacje, zorientowane na produktywność pozwalają na łatwą zamianę lub wspierają, skróty podobne do tych z Vima.</p>
-<p>.VimVi przeglądarka zdjęć
-image::assets/img/posts/vim/vimiv.png[vimiv,role=right]</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_porady">Porady</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Na sam koniec tego wstępu do Vima, mam dla Was kilka porad, które mogą być przydatne. Pierwsza z nich wydaje się być dziwna. Proponuję zamiast Vima zainstalować jego fork <a href="https://neovim.io/">NeoVim</a>. Program ten ma kilka dodatkowych funkcji i wydaje mi się, że jest bardzie, dostosowany do pracy od razu po zainstalowaniu. Mówiąc o ustawieniach, na stronie <a href="https://vim-bootstrap.com/">vim-bootstrap</a> znajdziemy przygotowane pliki konfiguracyjne. Podczas pisania możemy korzystać z auto uzupełniania. Listę słów, które wystąpiły w dokumencie otworzymy przez <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>n</kbd></span> lub <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>p</kbd></span>, skróty te odpowiadają też za ich wybór.</p>
+</div>
+<div class="paragraph">
+<p>Zachętą do nauki Vima jest fakt, iż w innych programach zaimplementowane są poznane nam skróty. Praktycznie większość popularnych IDE ma wtyczkę, która umożliwi nam operowaniem tekstem w ten sam sposób jak w Vime. W powłokach systemowych bash i zsh jest możliwość włączenia <code>Vi mode</code>. <a href="https://github.com/brookhong/Surfingkeys">Surfingkeys</a> to jedno z rozszerzeń do Firefox i przeglądarek bazujących na Chromium, które pozwalają nawigować po stronach internetowych. Niektóre aplikacje, zorientowane na produktywność pozwalają na łatwą zamianę lub wspierają, skróty podobne do tych z Vima.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="assets/img/posts/vim/vimiv.png" alt="vimiv">
+</div>
+<div class="title">Img 1. VimVi przeglądarka zdjęć</div>
+</div>
+<div class="ulist">
 <ul>
-<li>https://vifm.info/[vifm] i https://ranger.github.io/[ranger] → Przeglądarki plików</li>
-<li>https://github.com/thestinger/termite/[termite] → Terminal linuksowy, który posiada tryby jak w Vim.</li>
-<li>http://karlch.github.io/vimiv/[vimiv], feh i sxiv → Lekkie przeglądarki zdjęć</li>
-<li>https://cmus.github.io/[cmus] i https://kimtore.no/pms/[PMS] → Odtwarzacze muzyczne</li>
-<li>https://pwmt.org/projects/zathura/[zathura] i http://naihe2010.github.io/apvlv/[apvlv] → Przeglądarki pdf</li>
-<li>https://i3wm.org/[i3wm] → Window manager</li>
-<li>https://tamlok.github.io/vnote/[VNote] → Aplikacja do robienia notatek w Markdown</li>
-<li>http://www.mutt.org/[mutt] → Klient e-mail</li>
-<li>https://code.meskio.net/tudu/[TuDu] → Lista zadań w terminalu</li>
-<li>https://qutebrowser.org/[qutebrowser] → Lekka przeglądarka internetowa</li>
-<li>https://github.com/seanyeh/vibreoffice[vibreoffice] → Plugin do LibreOffice i OpenOffice</li>
-<li>https://skyfromme.wordpress.com/2015/04/06/easterhegg-vimpressing-libreoffice/[Vimpressing] → Tworzenie prezentacji w Vim</li>
-<li>http://www.viemu.com/[viemu] - emulatora Vima</li>
+<li>
+<p><a href="https://vifm.info/">vifm</a> i <a href="https://ranger.github.io/">ranger</a> → Przeglądarki plików</p>
+</li>
+<li>
+<p><a href="https://github.com/thestinger/termite/">termite</a> → Terminal linuksowy, który posiada tryby jak w Vim.</p>
+</li>
+<li>
+<p><a href="http://karlch.github.io/vimiv/">vimiv</a>, feh i sxiv → Lekkie przeglądarki zdjęć</p>
+</li>
+<li>
+<p><a href="https://cmus.github.io/">cmus</a> i <a href="https://kimtore.no/pms/">PMS</a> → Odtwarzacze muzyczne</p>
+</li>
+<li>
+<p><a href="https://pwmt.org/projects/zathura/">zathura</a> i <a href="http://naihe2010.github.io/apvlv/">apvlv</a> → Przeglądarki pdf</p>
+</li>
+<li>
+<p><a href="https://i3wm.org/">i3wm</a> → Window manager</p>
+</li>
+<li>
+<p><a href="https://tamlok.github.io/vnote/">VNote</a> → Aplikacja do robienia notatek w Markdown</p>
+</li>
+<li>
+<p><a href="http://www.mutt.org/">mutt</a> → Klient e-mail</p>
+</li>
+<li>
+<p><a href="https://code.meskio.net/tudu/">TuDu</a> → Lista zadań w terminalu</p>
+</li>
+<li>
+<p><a href="https://qutebrowser.org/">qutebrowser</a> → Lekka przeglądarka internetowa</p>
+</li>
+<li>
+<p><a href="https://github.com/seanyeh/vibreoffice">vibreoffice</a> → Plugin do LibreOffice i OpenOffice</p>
+</li>
+<li>
+<p><a href="https://skyfromme.wordpress.com/2015/04/06/easterhegg-vimpressing-libreoffice/">Vimpressing</a> → Tworzenie prezentacji w Vim</p>
+</li>
+<li>
+<p><a href="http://www.viemu.com/">viemu</a> - emulatora Vima</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p>Poniżej zamieszczam przydatną grafikę z skrótami klawiaturowymi.</p>
-<p>.Vim cheat sheet
-image::assets/img/posts/vim/vi-vim-cheat-sheet.gif[cheat sheet]</p>]]></content:encoded>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/img/posts/vim/vi-vim-cheat-sheet.gif" alt="cheat sheet">
+</div>
+<div class="title">Img 2. Vim cheat sheet</div>
+</div>
+</div>
+</div>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Filozofia Vima - tryby i pliki]]></title>
@@ -374,87 +823,250 @@ image::assets/img/posts/vim/vi-vim-cheat-sheet.gif[cheat sheet]</p>]]></content:
             <guid>/blog/filozofia-vima-tryby-i-pliki</guid>
             <pubDate>Tue, 12 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Filozoficzne podejście do nauki nietypowego edytora jakim jest vim.]]></description>
-            <content:encoded><![CDATA[<p>:toc:
-:toc-title: Spis:
-:figure-caption: Img
-:experimental:</p>
-<p>Długo przymierzałem się do napisania tego artykułu, który miałby za zadanie nauczyć i zachęcić do poznania Vima. Moja prokrastynacja wynikała z niezliczonych możliwości, jakie daje to narzędzie. Po kilku latach używania tego edytora nadal uczę się nowych rzeczy. Na początku przygody z Vimem, https://www.vim.org/docs.php[dokumentacja] lub darmowa ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf[książka] może być przytłaczająca. Warto natomiast poznać koncepcje, na jakich został oparty edytor, i w czasie potrzeby zgłębiać wiedzę, spoglądając w instrukcję (<code>:help</code>). Dla osób które szybko się nudzą powstały gry do nauki jak https://vim-adventures.com/[vim adventures] i http://www.vimgenius.com/[vim genius]. Bardzo dobrym źródłem wiedzy jest dostępna wraz z programem dokumentacja - vimtutor i strona z poradnikami wideo http://vimcasts.org/[vim casts].</p>
-<p>image:assets/img/posts/vim/vim-learning-curve.png[vim-curve, role=left]
-Dlaczego zatem uczyć się edytora, którego korzenie sięgają 1976 roku? Odpowiedzi jest kilka w zależności od zapotrzebowania. Najważniejszą cechą wg. mnie jest efektywność. Vi (protoplasta Vim), był napisany w czasach, gdy interfejsy graficzne nie były popularne. Całą manipulacją dokumentu, trzeba było wykonywać przy pomocy klawiatury. Obsługa programu przez samą klawiaturę ma sens dzisiaj, ponieważ używanie myszki komputerowej jest nieoptymalne oraz bardziej naraża nasze nadgarstki na urazy. Program ten jest bardzo lekki (zajmuje ok. 10 MB), dzięki czemu możemy go znaleźć prawie na każdej instalacji Linuksa. Pożera też mało RAMu, szybko się otwiera nawet przy gigantycznych plikach tekstowych. Łatwość, duża możliwość konfiguracji oraz zbiór pluginów pozwala nam na dostosowanie edytora do naszych potrzeb. Vim posiada dużo zaawansowanych opcji, które ułatwią nam pisanie tekstu i oszczędzają czas. Niestety, aby skorzystać z tych benefitów musimy poznać podstawy działania, które są inne niż w typowych edytorach.</p>
-<p>W tym artykule jak i następnym przybliżę filozofię działania Vima. Uważam, że to lepsza nauka niż próba uczenia się skrótów w losowej kolejności. Będę się posługiwać konwencjami z Vima, tłumacząc jego zawiłości. Znak <code>c-</code> oznaczać będzie klawisz Control, dwukropek <code>:</code> komendę w trybie Command-line. W nawiasach okrągłych <code>()</code> będą nazwy angielskie używane przez Vima, natomiast nawiasy <code>{}</code> będą zawierać przykładowe parametry.</p>
-<p>== Tryby pracy</p>
-<p>image:assets/img/posts/vim/vim-esc.jpg[Esc-key,role=right]
-Vim posiada http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes-intro[jedenaście] trybów pracy poza zwykłym jakim jest wpisywanie tekstu (Insert mode). Niech ta liczba Was nie przeraża, ponieważ niektóre z nich są podobne do siebie i mało używane. Jak uruchomimy Vima to wejdziemy w tryb normalny (Normal mode). Pozwala on nam na edytowanie tekstu oraz jest punktem startowym to wszystkich innych funkcji. Prawdopodobnie stąd powstał kawał związany z trudnością wyjścia z edytora.</p>
-<ul>
-<li>Normal mode - pozwala nam w łatwy sposób edytować tekst, ponieważ, każdy klawisz w tym trybie może być skrótem klawiszowym. Z tego miejsca możemy dostać się do wszystkich innych trybów. Jak chcemy napisać tekst, musimy wejść w tryb Insert przez:
-** <code>i</code>, <code>a</code> - stawia kursor przed podświetlonym znakiem, <code>a</code> za znakiem
-** <code>I</code>, <code>A</code> - stawia kursor na początek paragrafu, <code>A</code> na koniec
-** <code>o</code>, <code>O</code> - stawia kursor pod edytowaną linią, <code>O</code> nad nią</li>
-<li>Insert mode - zachowuje się jak zwykły edytor tekstowy, każdy naciśnięty znak pojawia się jako tekst. Nie znaczny to, że nie można w nim używać zwykłych skrótów klawiaturowych np. z Controlem. Chcąc przejść do Normal mode należy użyć kbd:[Esc], kbd:[Ctrl+c] lub kbd:[Ctrl+[]. Używając kbd:[Ctrl+p] i kbd:[Ctrl+n] możemy aktywować autouzupełnianie i poruszać się w oknie dialogowym.</li>
-<li>Visual mode - jest podobny do Normal mode, który pozwala nam na zaznaczanie tekstu, ma trzy warianty. Poniżej prezentuje skrót klawiszowy informujący jak przejść do niego z Normal mode:
-** <code>v</code> - precyzyjne zaznaczanie tekstu znak po znaku
-** <code>V</code> - zaznacza całe linie
-** <code>c-v</code> - zaznaczanie blokowe</li>
-<li>Command-line mode - pozwala nam wywoływać komendy wpisując jej nazwę po dwukropku np. <code>:start</code> (przejście do trybu Insert). Natomiast znaki <code>/</code> i <code>?</code> służą do wyszukiwania tekstu. Ciekawostką jest możliwość wywoływania komend powłoki systemowej. Poprzedzając poleceniem bashowym wykrzyknikiem np. <code>!ls</code>, wyświetlimy listę plików w bieżącym katalogu. Używając uzupełnienia <code>c-d</code>, możemy zobaczyć pasujące polecenia.</li>
-<li>Replace mode - w trybie Insert przejdziemy do niego wciskając przycisk <code>insert</code>, zachowanie tego trybu jest takie same, jakbyśmy zrobili to samo w LibreOffice. Do trybu podmieniania znaków możemy też przejść z Normal mode klawiszem <code>R</code>.</li>
+            <content:encoded><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Spis:</div>
+<ul class="sectlevel1">
+<li><a href="#_tryby_pracy">Tryby pracy</a></li>
+<li><a href="#_zakładki">Zakładki</a></li>
+<li><a href="#_pliki_i_karty">Pliki i karty</a>
+<ul class="sectlevel2">
+<li><a href="#_karty">Karty</a></li>
+<li><a href="#_manager_plików">Manager plików</a></li>
 </ul>
-<p>image::assets/img/posts/vim/kiedy-prbujesz-wyj-z-vim.jpg[exit from vim]</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Długo przymierzałem się do napisania tego artykułu, który miałby za zadanie nauczyć i zachęcić do poznania Vima. Moja prokrastynacja wynikała z niezliczonych możliwości, jakie daje to narzędzie. Po kilku latach używania tego edytora nadal uczę się nowych rzeczy. Na początku przygody z Vimem, <a href="https://www.vim.org/docs.php">dokumentacja</a> lub darmowa <a href="ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf">książka</a> może być przytłaczająca. Warto natomiast poznać koncepcje, na jakich został oparty edytor, i w czasie potrzeby zgłębiać wiedzę, spoglądając w instrukcję (<code>:help</code>). Dla osób które szybko się nudzą powstały gry do nauki jak <a href="https://vim-adventures.com/">vim adventures</a> i <a href="http://www.vimgenius.com/">vim genius</a>. Bardzo dobrym źródłem wiedzy jest dostępna wraz z programem dokumentacja - vimtutor i strona z poradnikami wideo <a href="http://vimcasts.org/">vim casts</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image left"><img src="assets/img/posts/vim/vim-learning-curve.png" alt="vim-curve"></span>
+Dlaczego zatem uczyć się edytora, którego korzenie sięgają 1976 roku? Odpowiedzi jest kilka w zależności od zapotrzebowania. Najważniejszą cechą wg. mnie jest efektywność. Vi (protoplasta Vim), był napisany w czasach, gdy interfejsy graficzne nie były popularne. Całą manipulacją dokumentu, trzeba było wykonywać przy pomocy klawiatury. Obsługa programu przez samą klawiaturę ma sens dzisiaj, ponieważ używanie myszki komputerowej jest nieoptymalne oraz bardziej naraża nasze nadgarstki na urazy. Program ten jest bardzo lekki (zajmuje ok. 10 MB), dzięki czemu możemy go znaleźć prawie na każdej instalacji Linuksa. Pożera też mało RAMu, szybko się otwiera nawet przy gigantycznych plikach tekstowych. Łatwość, duża możliwość konfiguracji oraz zbiór pluginów pozwala nam na dostosowanie edytora do naszych potrzeb. Vim posiada dużo zaawansowanych opcji, które ułatwią nam pisanie tekstu i oszczędzają czas. Niestety, aby skorzystać z tych benefitów musimy poznać podstawy działania, które są inne niż w typowych edytorach.</p>
+</div>
+<div class="paragraph">
+<p>W tym artykule jak i następnym przybliżę filozofię działania Vima. Uważam, że to lepsza nauka niż próba uczenia się skrótów w losowej kolejności. Będę się posługiwać konwencjami z Vima, tłumacząc jego zawiłości. Znak <code>c-</code> oznaczać będzie klawisz Control, dwukropek <code>:</code> komendę w trybie Command-line. W nawiasach okrągłych <code>()</code> będą nazwy angielskie używane przez Vima, natomiast nawiasy <code>{}</code> będą zawierać przykładowe parametry.</p>
+</div>
+<div class="sect1">
+<h2 id="_tryby_pracy">Tryby pracy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image right"><img src="assets/img/posts/vim/vim-esc.jpg" alt="Esc-key"></span>
+Vim posiada <a href="http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes-intro">jedenaście</a> trybów pracy poza zwykłym jakim jest wpisywanie tekstu (Insert mode). Niech ta liczba Was nie przeraża, ponieważ niektóre z nich są podobne do siebie i mało używane. Jak uruchomimy Vima to wejdziemy w tryb normalny (Normal mode). Pozwala on nam na edytowanie tekstu oraz jest punktem startowym to wszystkich innych funkcji. Prawdopodobnie stąd powstał kawał związany z trudnością wyjścia z edytora.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Normal mode - pozwala nam w łatwy sposób edytować tekst, ponieważ, każdy klawisz w tym trybie może być skrótem klawiszowym. Z tego miejsca możemy dostać się do wszystkich innych trybów. Jak chcemy napisać tekst, musimy wejść w tryb Insert przez:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>i</code>, <code>a</code> - stawia kursor przed podświetlonym znakiem, <code>a</code> za znakiem</p>
+</li>
+<li>
+<p><code>I</code>, <code>A</code> - stawia kursor na początek paragrafu, <code>A</code> na koniec</p>
+</li>
+<li>
+<p><code>o</code>, <code>O</code> - stawia kursor pod edytowaną linią, <code>O</code> nad nią</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Insert mode - zachowuje się jak zwykły edytor tekstowy, każdy naciśnięty znak pojawia się jako tekst. Nie znaczny to, że nie można w nim używać zwykłych skrótów klawiaturowych np. z Controlem. Chcąc przejść do Normal mode należy użyć <kbd>Esc</kbd>, <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>c</kbd></span> lub <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>[</kbd></span>. Używając <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>p</kbd></span> i <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>n</kbd></span> możemy aktywować autouzupełnianie i poruszać się w oknie dialogowym.</p>
+</li>
+<li>
+<p>Visual mode - jest podobny do Normal mode, który pozwala nam na zaznaczanie tekstu, ma trzy warianty. Poniżej prezentuje skrót klawiszowy informujący jak przejść do niego z Normal mode:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>v</code> - precyzyjne zaznaczanie tekstu znak po znaku</p>
+</li>
+<li>
+<p><code>V</code> - zaznacza całe linie</p>
+</li>
+<li>
+<p><code>c-v</code> - zaznaczanie blokowe</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Command-line mode - pozwala nam wywoływać komendy wpisując jej nazwę po dwukropku np. <code>:start</code> (przejście do trybu Insert). Natomiast znaki <code>/</code> i <code>?</code> służą do wyszukiwania tekstu. Ciekawostką jest możliwość wywoływania komend powłoki systemowej. Poprzedzając poleceniem bashowym wykrzyknikiem np. <code>!ls</code>, wyświetlimy listę plików w bieżącym katalogu. Używając uzupełnienia <code>c-d</code>, możemy zobaczyć pasujące polecenia.</p>
+</li>
+<li>
+<p>Replace mode - w trybie Insert przejdziemy do niego wciskając przycisk <code>insert</code>, zachowanie tego trybu jest takie same, jakbyśmy zrobili to samo w LibreOffice. Do trybu podmieniania znaków możemy też przejść z Normal mode klawiszem <code>R</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/img/posts/vim/kiedy-prbujesz-wyj-z-vim.jpg" alt="exit from vim">
+</div>
+</div>
+<div class="paragraph">
 <p>To nie są wszystkie tryby pracy, lecz najważniejsze. Szczególnie w trybach Normal i Insert będziemy spędzać najwięcej czasu. Visual mode powinniśmy unikać. Lepiej nauczyć się używać efektywniej metod skakania po tekście w normalnym trybie.
 Więc jak wyjść z Vima? ;) "To zależy" - jakby to odpowiedział dobry adwokat. W różnych trybach można zrobić te same operacje i to od nas zależy jaki sposób będzie wygodniejszy w danej sytuacji. Po drugie, istnieje dużo aliasów robiących to samo. Przykładowo w normalnym trybie wyjść z Vima można na kilka sposobów:</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>:wq</code>, <code>:x</code> lub <code>ZZ</code> - zapisanie i wyjście</li>
-<li><code>!q</code> lub <code>ZQ</code> - wyjście bez zapisywania</li>
-<li><code>:qa</code> - zamknięcie wszystkich otwartych plików</li>
+<li>
+<p><code>:wq</code>, <code>:x</code> lub <code>ZZ</code> - zapisanie i wyjście</p>
+</li>
+<li>
+<p><code>!q</code> lub <code>ZQ</code> - wyjście bez zapisywania</p>
+</li>
+<li>
+<p><code>:qa</code> - zamknięcie wszystkich otwartych plików</p>
+</li>
 </ul>
-<p>== Zakładki</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zakładki">Zakładki</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Przy długim dokumencie możemy ustawiać zakładki, i szybko przeskakiwać pomiędzy nimi. Zakładkom można nadawać jednoliterowe tagi - od a do z (i A-Z). Odwołujemy się do nich przez klawisze <code>'</code> lub ` (gravis). Pierwszy znak to linia, gdzie znajduje się zakładka, druga pozwoli nam przeskoczyć też do konkretnej kolumny w tekście. Możemy używać ich zamiennie w zależności od potrzeb.</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>mx</code> - tworzy zakładkę w tekście o nazwie <code>x</code></li>
-<li><code>'x</code> - przejście do zakładki <code>x</code></li>
-<li><code>['</code>, <code>]'</code> - poprzednia, następna zakładka</li>
-<li><code>d'a</code> - usuwa zakładkę</li>
-<li><code>:marks</code> - pokazanie wszystkich znaczników</li>
-<li><code>:delmarks a-c</code> - usunięcie zakładek od a do c</li>
-<li><code>.</code> - skok do ostatnio edytowanej linii</li>
-<li><code>''</code> - przechodzenie do poprzedniego miejsca, z którego skoczyliśmy</li>
+<li>
+<p><code>mx</code> - tworzy zakładkę w tekście o nazwie <code>x</code></p>
+</li>
+<li>
+<p><code>'x</code> - przejście do zakładki <code>x</code></p>
+</li>
+<li>
+<p><code>['</code>, <code>]'</code> - poprzednia, następna zakładka</p>
+</li>
+<li>
+<p><code>d&#8217;a</code> - usuwa zakładkę</p>
+</li>
+<li>
+<p><code>:marks</code> - pokazanie wszystkich znaczników</p>
+</li>
+<li>
+<p><code>:delmarks a-c</code> - usunięcie zakładek od a do c</p>
+</li>
+<li>
+<p><code>.</code> - skok do ostatnio edytowanej linii</p>
+</li>
+<li>
+<p><code>''</code> - przechodzenie do poprzedniego miejsca, z którego skoczyliśmy</p>
+</li>
 </ul>
-<p>Jeśli nie będziecie chcieli zapamiętywać jakie litery nadaliście swoim zakładkom, to proponuję zainstalować plugin http://blog.mattes-groeger.de/vim-bookmarks/[vim-bookmarks].</p>
-<p>== Pliki i karty</p>
+</div>
+<div class="paragraph">
+<p>Jeśli nie będziecie chcieli zapamiętywać jakie litery nadaliście swoim zakładkom, to proponuję zainstalować plugin <a href="http://blog.mattes-groeger.de/vim-bookmarks/">vim-bookmarks</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pliki_i_karty">Pliki i karty</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Vim dostarcza nam kilka narzędzi do zarządzania plikami. Pierwsze, jakie chciałem opisać to podział ekranu. Jak chcemy podzielić okno horyzontalnie na dwie części to w Command-line mode musimy wpisać <code>:split</code> lub tylko <code>:sp</code>. Analogicznie do podziału wertykalnego użyjemy komend <code>:vsplit</code> lub <code>:vs</code>. Dzielić ekran możemy kilkukrotnie, ważne, jednak na jakim oknie aktualnie się znajdujemy. Polecenie <code>:resize 90</code> ustawi nam szerokość okna na 90 kolumn, natomiast <code>:vertical resize 80</code> na 80 wierszy.</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>c-w w</code> lub <code>c-w c-w</code> - przełącza okna z jednego okna na drugie</li>
-<li><code>c-w j</code>, <code>c-w k</code>, <code>c-w h</code>, <code>c-l</code> - odpowiednio przełącza na okno dolne, górne, lewe i prawe. Zamiast <code>hjkl</code> można używać strzałek</li>
-<li><code>c-w +</code>, <code>c-w -</code> - zwiększa, zmniejsza rozmiar okna w układzie horyzontalnym</li>
-<li><code>c-w &gt;</code>, <code>c-w &lt;</code> - zwiększa, zmniejsza rozmiar okna w układzie wertykalnym</li>
-<li><code>c-w _</code> - maksymalizuje okno</li>
-<li><code>c-w =</code> - ustawia okna na takie same rozmiary [.image]#split windows#</li>
+<li>
+<p><code>c-w w</code> lub <code>c-w c-w</code> - przełącza okna z jednego okna na drugie</p>
+</li>
+<li>
+<p><code>c-w j</code>, <code>c-w k</code>, <code>c-w h</code>, <code>c-l</code> - odpowiednio przełącza na okno dolne, górne, lewe i prawe. Zamiast <code>hjkl</code> można używać strzałek</p>
+</li>
+<li>
+<p><code>c-w +</code>, <code>c-w -</code> - zwiększa, zmniejsza rozmiar okna w układzie horyzontalnym</p>
+</li>
+<li>
+<p><code>c-w &gt;</code>, <code>c-w &lt;</code> - zwiększa, zmniejsza rozmiar okna w układzie wertykalnym</p>
+</li>
+<li>
+<p><code>c-w _</code> - maksymalizuje okno</p>
+</li>
+<li>
+<p><code>c-w =</code> - ustawia okna na takie same rozmiary <span class="image">split windows</span></p>
+</li>
 </ul>
-<p>=== Karty</p>
+</div>
+<div class="sect2">
+<h3 id="_karty">Karty</h3>
+<div class="paragraph">
 <p>Dodatkowo Vim wspiera karty, dzięki czemu możemy mieć otwarte kilka dokumentów.</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>:tabnew</code> - stworzenie pustej karty</li>
-<li><code>:tabclose</code> - zamknięcie aktualnej karty</li>
-<li><code>:tabnext</code>, <code>gt</code> - przejście do następnej karty</li>
-<li><code>:tabnext</code>, <code>gT</code> - przejście do poprzedniej karty</li>
-<li><code>:tabfirst</code>, <code>:tablast</code> - przejście do pierwszej, ostatniej karty</li>
+<li>
+<p><code>:tabnew</code> - stworzenie pustej karty</p>
+</li>
+<li>
+<p><code>:tabclose</code> - zamknięcie aktualnej karty</p>
+</li>
+<li>
+<p><code>:tabnext</code>, <code>gt</code> - przejście do następnej karty</p>
+</li>
+<li>
+<p><code>:tabnext</code>, <code>gT</code> - przejście do poprzedniej karty</p>
+</li>
+<li>
+<p><code>:tabfirst</code>, <code>:tablast</code> - przejście do pierwszej, ostatniej karty</p>
+</li>
 </ul>
-<p>=== Manager plików</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manager_plików">Manager plików</h3>
+<div class="paragraph">
 <p>Instalacja Vima zawiera plugin netrw, który jest przeglądarką plików. Dzięki niej możemy zarządzać plikami i katalogami.</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>:E</code> lub <code>:Explore</code> - otwiera listę plików w katalogu, gdzie znajduje się otwarty plik</li>
-<li><code>:Se</code> lub <code>:Sexplore</code>, (<code>Sex</code> też działa ;)) - otwiera przeglądarkę w podziale horyzontalnym</li>
-<li><code>:Vex</code> lub <code>:Vexplore</code> - otwiera przeglądarkę w podziale wertykalnym</li>
-<li><code>i</code> - przełącza między różnymi trybami wyświetlania listy plików (lista, szczegóły, drzewo)</li>
-<li><code>s</code> - sortuje pliki</li>
-<li><code>R</code> - zmienia nazwę pliku lub katalogu</li>
-<li><code>D</code> - usuwa plik lub katalog</li>
-<li><code>d</code> - tworzy nowy katalog</li>
-<li><code>%</code> - tworzy nowy plik w bieżącym katalogu (zapyta o nazwę)</li>
-<li><code>e</code> - otwiera plik w bieżącym oknie</li>
-<li><code>o</code>, <code>v</code> - otwiera plik w poziomo <code>o</code> lub pionowo <code>v</code> podzielonym oknie</li>
+<li>
+<p><code>:E</code> lub <code>:Explore</code> - otwiera listę plików w katalogu, gdzie znajduje się otwarty plik</p>
+</li>
+<li>
+<p><code>:Se</code> lub <code>:Sexplore</code>, (<code>Sex</code> też działa ;)) - otwiera przeglądarkę w podziale horyzontalnym</p>
+</li>
+<li>
+<p><code>:Vex</code> lub <code>:Vexplore</code> - otwiera przeglądarkę w podziale wertykalnym</p>
+</li>
+<li>
+<p><code>i</code> - przełącza między różnymi trybami wyświetlania listy plików (lista, szczegóły, drzewo)</p>
+</li>
+<li>
+<p><code>s</code> - sortuje pliki</p>
+</li>
+<li>
+<p><code>R</code> - zmienia nazwę pliku lub katalogu</p>
+</li>
+<li>
+<p><code>D</code> - usuwa plik lub katalog</p>
+</li>
+<li>
+<p><code>d</code> - tworzy nowy katalog</p>
+</li>
+<li>
+<p><code>%</code> - tworzy nowy plik w bieżącym katalogu (zapyta o nazwę)</p>
+</li>
+<li>
+<p><code>e</code> - otwiera plik w bieżącym oknie</p>
+</li>
+<li>
+<p><code>o</code>, <code>v</code> - otwiera plik w poziomo <code>o</code> lub pionowo <code>v</code> podzielonym oknie</p>
+</li>
 </ul>
-<p>Jest to pierwsza część dotycząca podstaw w używaniu najlepszego na świecie edytora tekstowego. Nie będę na razie opisywać takich funkcji jak zwijanie i porównywanie napisów, bufory, makra i podświetlanie kodu. Warto jednak wiedzieć, że takie funkcje są dostępne. Zapraszam jednak do przeczytania link:blog/filozofia-vima-edycja[drugiej] części. Opisuję w niej najważniejszą (i trudniejszą) funkcję, jaką mają edytory tekstowe. Tak zgadliście mówię o manipulowaniem tekstu. :D</p>
-<p>image::assets/img/posts/vim/this-is-vim.jpg[madness]</p>]]></content:encoded>
+</div>
+<div class="paragraph">
+<p>Jest to pierwsza część dotycząca podstaw w używaniu najlepszego na świecie edytora tekstowego. Nie będę na razie opisywać takich funkcji jak zwijanie i porównywanie napisów, bufory, makra i podświetlanie kodu. Warto jednak wiedzieć, że takie funkcje są dostępne. Zapraszam jednak do przeczytania <a href="blog/filozofia-vima-edycja">drugiej</a> części. Opisuję w niej najważniejszą (i trudniejszą) funkcję, jaką mają edytory tekstowe. Tak zgadliście mówię o manipulowaniem tekstu. :D</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/img/posts/vim/this-is-vim.jpg" alt="madness">
+</div>
+</div>
+</div>
+</div>
+</div>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Programy na linuksa]]></title>
@@ -462,169 +1074,615 @@ Więc jak wyjść z Vima? ;) "To zależy" - jakby to odpowiedział dobry adwokat
             <guid>/blog/programy-na-linuksa</guid>
             <pubDate>Fri, 28 Feb 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Jak szukać zamienników programów napisanych na Linuksa wraz z moimi rekomendacjami.]]></description>
-            <content:encoded><![CDATA[<p>:toc:
-:toc-title: Spis:
-:figure-caption: Img</p>
-<p>== Wstęp</p>
+            <content:encoded><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Spis:</div>
+<ul class="sectlevel1">
+<li><a href="#_wstęp">Wstęp</a></li>
+<li><a href="#_jak_szukać_programów">Jak szukać programów?</a></li>
+<li><a href="#_lista_aplikacji">Lista aplikacji</a>
+<ul class="sectlevel2">
+<li><a href="#_przeglądarki_internetowe">Przeglądarki internetowe</a></li>
+<li><a href="#_multimedia">Multimedia</a></li>
+<li><a href="#_grafika">Grafika</a></li>
+<li><a href="#_programy_biurwe">Programy biurwe</a></li>
+<li><a href="#_narzędzia_systemowe">Narzędzia systemowe</a></li>
+<li><a href="#_ergonomia">Ergonomia</a></li>
+<li><a href="#_narzędzia_developerskie">Narzędzia developerskie</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_wstęp">Wstęp</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Dla osoby zaczynającej przygodę z systemami GNU/Linux początek może być bardzo frustrujący z uwagi na brak wsparcia programów, z którymi się zapoznaliśmy używając Windowsa. Często osoba w takiej sytuacji narzeka na niedobór oprogramowania lub w najgorszym przypadku próbuje instalować swoje ulubione programy przez Wine. Rozwiązaniem sytuacji powinno być przede wszystkim szukanie programów napisanych natywne pod Linuksa. Może to zająć trochę czasu, dlatego powstał ten post. Mam nadzieję, że osoby używające pingwina codziennie, znajdą też coś ciekawego lub podzielą się w komentarzu własnymi propozycjami.</p>
-<p>== Jak szukać programów?</p>
-<p>image:assets/img/posts/2020/ask-blackboard-chalk-board-356079-300x182.jpg[question_makr, role=left]
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jak_szukać_programów">Jak szukać programów?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image left"><img src="assets/img/posts/2020/ask-blackboard-chalk-board-356079-300x182.jpg" alt="question_makr"></span>
 Moja propozycja programów jest tylko małym wycinkiem dostępnego oprogramowania na Linuksy. Różne dystrybucje podchodzą do tego inaczej, więc należy się zapoznać jak instalować paczki z programami. Najprostszym sposobem do zainstalowania programu jest otworzenie odpowiednika Windowsowskiego sklepu, w Linux Mint jest to menedżer oprogramowania. W systemach pochodnych do debiana operację taką wykonamy też w terminalu:</p>
-<h2 id="sourcebash">[source,bash]</h2>
-<p>apt-cache search wyszukiwany_program</p>
-<h2 id="sudoaptgetinstallnazwa_paczki">sudo apt-get install nazwa_paczki</h2>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">apt-cache search wyszukiwany_program
+sudo apt-get install nazwa_paczki</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Alternatywami menedżera oprogramowania i apt jest Synaptic i aptitude z łatwiejszymi do zapamiętania poleceniami. Czasami jednak trzeba je zainstalować.</p>
-<p>.Synaptic
-image::assets/img/posts/2020/synatpic-768x537.jpg[Synaptic]</p>
-<p>Jak nie znajdziemy nic co nas interesuje w repozytorium lub nie wiemy jak nazywa się program, możemy zajrzeć na stronę https://alternativeto.net/platform/linux/[alternativeTO]. Portal ten posiada zbiór rekomendowanych aplikacji. Możemy wpisać nazwę programu, który znamy z Windowsa i przefiltrować wyniki po platformie Linux. Na oficjalnej stronie wybranego projektu powinniśmy mieć instrukcję instalacji na nasz system. W Ubuntu i Mint będzie to pobranie paczki z rozszerzeniem .deb lub dodanie jego do repozytorium przez PPA. W najgorszym przypadku będziemy musieli pobrać kod programu i go skompilować.</p>
-<p>Chciałbym wspomnieć, też o nowych technologiach, które mają na celu uprościć instalację oprogramowanie nie patrząc na jakiej dystrybucji pracujemy. https://appimage.org/[AppImage] jest chyba najprostszym sposobem, aby to osiągnąć. https://flatpak.org/[Flatpak] i https://snapcraft.io/store[Snap] posiadają własne centra.</p>
-<p>== Lista aplikacji</p>
-<p>Poniższa lista zawiera w dużej mierze programy, z których korzystam lub korzystałem. Unikałem aplikacji napisanych w Qt, aby nie pobierać za dużo paczek, pomaga to też, aby system wyglądał spójnie. Nie ukrywam, że część aplikacji jest minimalistyczna. Dodałem także programy bardzo stare, które nie są już wspierane, jednak działają dobrze, a jak coś działa to po co to zmieniać. ;) +
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/img/posts/2020/synatpic-768x537.jpg" alt="Synaptic">
+</div>
+<div class="title">Img 1. Synaptic</div>
+</div>
+<div class="paragraph">
+<p>Jak nie znajdziemy nic co nas interesuje w repozytorium lub nie wiemy jak nazywa się program, możemy zajrzeć na stronę <a href="https://alternativeto.net/platform/linux/">alternativeTO</a>. Portal ten posiada zbiór rekomendowanych aplikacji. Możemy wpisać nazwę programu, który znamy z Windowsa i przefiltrować wyniki po platformie Linux. Na oficjalnej stronie wybranego projektu powinniśmy mieć instrukcję instalacji na nasz system. W Ubuntu i Mint będzie to pobranie paczki z rozszerzeniem .deb lub dodanie jego do repozytorium przez PPA. W najgorszym przypadku będziemy musieli pobrać kod programu i go skompilować.</p>
+</div>
+<div class="paragraph">
+<p>Chciałbym wspomnieć, też o nowych technologiach, które mają na celu uprościć instalację oprogramowanie nie patrząc na jakiej dystrybucji pracujemy. <a href="https://appimage.org/">AppImage</a> jest chyba najprostszym sposobem, aby to osiągnąć. <a href="https://flatpak.org/">Flatpak</a> i <a href="https://snapcraft.io/store">Snap</a> posiadają własne centra.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lista_aplikacji">Lista aplikacji</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Poniższa lista zawiera w dużej mierze programy, z których korzystam lub korzystałem. Unikałem aplikacji napisanych w Qt, aby nie pobierać za dużo paczek, pomaga to też, aby system wyglądał spójnie. Nie ukrywam, że część aplikacji jest minimalistyczna. Dodałem także programy bardzo stare, które nie są już wspierane, jednak działają dobrze, a jak coś działa to po co to zmieniać. ;)<br>
 Zamierzam w przyszłości opublikować post z listą programów działających w konsoli (CLI), dlatego nie chcę się powielać i nie zamieściłem ich tutaj. W podpunktach zawarłem alternatywy do proponowanego programu.</p>
+</div>
+<div class="ulist">
 <ul>
-<li>https://mega.nz/[Megasync] Synchronizacja plików z chmury Mega. Usługa ta daje nam 50 GB miejsca na nasze pliki.
-** Dropbox → Popularna alternatywa, oferująca jednak mniej darmowej przestrzeni.</li>
-<li>https://apps.ankiweb.net/[anki] → Program do nauki, głównie wykorzystywany do zapamiętania słówek z obcego języka. Pakiety słówek można pobierać ze strony projektu. Jest dostępna wersja na androida - AnkiDroid.</li>
-<li>https://www.pidgin.im/[pidgin] → Komunikator internetowy, pozwalający na łączenie się z różnymi protokołami np. IRC, Skype, Facebook. Dostępna jest, też wersja konsolowa.</li>
-<li>https://www.qbittorrent.org/[qBittorrent] → Klient torrent.
-** Transmission</li>
-<li>http://www.retroarch.com/[retroarch] → Emulator systemów, umożliwiających granie w gry z takich konsol jak GameBoy, Atari, NES.</li>
-<li>https://keepassxc.org[KeePassXC] → Manager haseł, dostępne są wersje na androida (Keepass2Android) i terminala ) i CLI.</li>
-<li>https://doublecmd.sourceforge.io/index.php?lang=eng[Double Commander] → Manager plików dwu panelowy jak Total Commander.
-** krusader → Wersja KDE.
-** Vifm → Wersja działająca w terminalu.</li>
+<li>
+<p><a href="https://mega.nz/">Megasync</a> Synchronizacja plików z chmury Mega. Usługa ta daje nam 50 GB miejsca na nasze pliki.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Dropbox → Popularna alternatywa, oferująca jednak mniej darmowej przestrzeni.</p>
+</li>
 </ul>
-<p>=== Przeglądarki internetowe</p>
+</div>
+</li>
+<li>
+<p><a href="https://apps.ankiweb.net/">anki</a> → Program do nauki, głównie wykorzystywany do zapamiętania słówek z obcego języka. Pakiety słówek można pobierać ze strony projektu. Jest dostępna wersja na androida - AnkiDroid.</p>
+</li>
+<li>
+<p><a href="https://www.pidgin.im/">pidgin</a> → Komunikator internetowy, pozwalający na łączenie się z różnymi protokołami np. IRC, Skype, Facebook. Dostępna jest, też wersja konsolowa.</p>
+</li>
+<li>
+<p><a href="https://www.qbittorrent.org/">qBittorrent</a> → Klient torrent.</p>
+<div class="ulist">
 <ul>
-<li>https://vivaldi.com/?lang=pl_PL[Vivaldi] → Posiada dużo funkcji i udogodnień. Oparta na silniku z Chrome, wspiera także jej rozszerzenia. Trochę dużo zajmuje pamięci operacyjnej.</li>
-<li>Firefox → Od wersji Quantum stała się bardzo lekka i o wiele lepiej działa.</li>
-<li>https://qutebrowser.org/[qutebrowser] → Lekka przeglądarka wspierająca nawigację z vim.</li>
-<li>Chrome i Chromium</li>
-<li>https://www.falkon.org/[Falkon] → Dawna qupzilla, jeszcze w wersji beta. Napisana w technologii QT.</li>
+<li>
+<p>Transmission</p>
+</li>
 </ul>
-<p>=== Multimedia</p>
+</div>
+</li>
+<li>
+<p><a href="http://www.retroarch.com/">retroarch</a> → Emulator systemów, umożliwiających granie w gry z takich konsol jak GameBoy, Atari, NES.</p>
+</li>
+<li>
+<p><a href="https://keepassxc.org">KeePassXC</a> → Manager haseł, dostępne są wersje na androida (Keepass2Android) i terminala ) i CLI.</p>
+</li>
+<li>
+<p><a href="https://doublecmd.sourceforge.io/index.php?lang=eng">Double Commander</a> → Manager plików dwu panelowy jak Total Commander.</p>
+<div class="ulist">
 <ul>
-<li>https://kodi.tv/[Kodi] → Centrum multimedialne.</li>
-<li>http://store.steampowered.com/[Steam] → Cyfrowy sklep z grami komputerowymi.</li>
-<li>https://www.clementine-player.org/[Clementine] → Odtwarzacz muzyki, potrafiący też odtwarzać radia internetowe.
-** Amarok
-** Ario - Klient dla MPD.
-** http://anoise.tuxfamily.org/[Ambient Noise Player] → Odtwarza dźwięki relaksacyjne jak deszcz, las.</li>
-<li>https://gpodder.github.io/[gPodder] → Manager podcastów, posiadający wersję webową gpodder.net i na androida.
-** https://github.com/alatiera/hammond[Hammond]</li>
-<li>https://github.com/haecker-felix/gradio[Gradio] → Radio internetowe.
-** Goodvibes</li>
-<li>http://www.smplayer.info/pl/info[SMplayer] → Odtwarzacz wideo.
-** VLC</li>
-<li>http://qwinff.github.io/[QWinFF] → Nakładka na świetny program ffmpeg do nagrywania, konwertowania audio/wideo.
-** HandBrake → Konwerter wideo.
-** http://vidcutter.ozmartians.com/[VidCutter] → Wycinanie i scalanie fragmentów wideo.</li>
-<li>http://qnapi.github.io/[qnapi] → Program do pobierania napisów filmowych.</li>
+<li>
+<p>krusader → Wersja KDE.</p>
+</li>
+<li>
+<p>Vifm → Wersja działająca w terminalu.</p>
+</li>
 </ul>
-<p>=== Grafika</p>
-<ul>
-<li>https://www.gimp.org/[Gimp] → Edytor grafiki.</li>
-<li>http://www.xnview.com/en/xnviewmp/#features[xnview] → Przeglądarka i konwersją zdjęć.
-** http://karlch.github.io/vimiv/[vimiv] → Lekka przeglądarka zdjęć ze skrótami jak w vimie.
-** sxiv
-** Viewnior</li>
-<li>https://www.darktable.org/[Darktable] → Obróbka zdjęć (jak Lightroom).
-** RawTherapee
-** digiKam
-** LightZone
-** Photivo</li>
+</div>
+</li>
 </ul>
-<p>=== Programy biurwe</p>
+</div>
+<div class="sect2">
+<h3 id="_przeglądarki_internetowe">Przeglądarki internetowe</h3>
+<div class="ulist">
 <ul>
-<li>https://www.libreoffice.org/[LibreOffice] → Pakiet biurowy.
-** WPS Office
-** AbiWord → Lekki edytor tekstu.</li>
-<li>https://www.mozilla.org/thunderbird[Thunderbird] → Klient pocztowy.
-** Claws Mail
-** Geary</li>
-<li>http://goldendict.org/[GoldenDict] → Słownik
-** StarDict → Już nie wspierany.</li>
-<li>https://www.gnucash.org/[GnuCash] → Zarządzanie budżetem domowym i małych firm. Zgodny z regułą podwójnego zapisu.
-** Eqonomize
-** Homebank</li>
-<li>https://calibre-ebook.com/[calibre - E-book management] → Manager e-booków, w pakiecie jest zawarta przeglądarka książek elektronicznych.
-** https://github.com/oguzhaninan/Buka[buka ebook reader]</li>
-<li>https://www.freeplane.org/wiki/index.php/Home[Freeplane] → Tworzenia map myśli.
-** http://www.xmind.net/[xmind]
-** freemind</li>
-<li>https://pwmt.org/projects/zathura/[zathura i mupdf] → Lekka przeglądarka PDF.
-** https://okular.kde.org/[Okular] → Wersja KDE.</li>
-<li>http://www.pdfsam.org/[PDFsam] → Program do modyfikowania plików PDF
-** PDFMod
-** http://xournal.sourceforge.net/[Xournal] → Notatki i adnotacje PDF.</li>
-<li>https://typora.io/[Typora] → Tworzenie i podgląd notatek zapisanych w formacie Markdown.
-** Boostnote
-** Simplenote
-** http://remarkableapp.github.io/linux.html[Remarkable]</li>
+<li>
+<p><a href="https://vivaldi.com/?lang=pl_PL">Vivaldi</a> → Posiada dużo funkcji i udogodnień. Oparta na silniku z Chrome, wspiera także jej rozszerzenia. Trochę dużo zajmuje pamięci operacyjnej.</p>
+</li>
+<li>
+<p>Firefox → Od wersji Quantum stała się bardzo lekka i o wiele lepiej działa.</p>
+</li>
+<li>
+<p><a href="https://qutebrowser.org/">qutebrowser</a> → Lekka przeglądarka wspierająca nawigację z vim.</p>
+</li>
+<li>
+<p>Chrome i Chromium</p>
+</li>
+<li>
+<p><a href="https://www.falkon.org/">Falkon</a> → Dawna qupzilla, jeszcze w wersji beta. Napisana w technologii QT.</p>
+</li>
 </ul>
-<p>=== Narzędzia systemowe</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_multimedia">Multimedia</h3>
+<div class="ulist">
 <ul>
-<li>http://tilda.sourceforge.net/[tilda] → Drop-down terminal.
-** Guake terminal
-** yakuake → Wersja dla KDE.</li>
-<li>https://github.com/alacritty/alacritty[alacritty]
-** kitty
-** https://github.com/thestinger/termite/[termite] → Posiada tryby jak w vim, ale już nie jest wspierany.
-** http://www.ubuntu-pomoc.org/terminology-wiecej-niz-kolejny-emulator-terminala/[terminology] → Rozbudowany terminal z wieloma funkcjami.
-** st → Bardzo lekki terminal.</li>
-<li>http://en.congelli.eu/prog<em>info</em>lcdnurse.html[LCD Nurse] → Szukanie martwych pikseli w monitorach LCD.</li>
-<li>https://dave-theunsub.github.io/clamtk/[ClamTK] → Antywirus</li>
-<li>http://www.pixelbeat.org/fslint/[fslint] → Narzędzie do szukania duplikatów, pustych folderów itp.</li>
-<li>http://pl.wikibooks.org/wiki/Ubuntu/Program_antywirusowy[ClamTK] ClamAV → nakładka gui na antywirus</li>
-<li>kazam → Nagrywanie pulpitu.</li>
-<li>https://davedavenport.github.io/rofi/[rofi] → Program do przełączania i uruchamiania aplikacji jak dmenu.
-** https://kupferlauncher.github.io/[kupfer]</li>
-<li>https://github.com/wummel/patool[patool] → Manager do archiwizacji i kompresji danych. Wspiera dużą ilość rozszerzeń.
-** atool
-** 7zip</li>
-<li>https://github.com/DoTheEvo/ANGRYsearch[ANGRYsearch] → Wyszukiwarka plików.
-** http://www.lesbonscomptes.com/recoll/[recoll]</li>
-<li>https://unetbootin.github.io/[UNetbootin] → Tworzenie USB boot.</li>
-<li>https://github.com/oguzhaninan/Stacer[Stacer] → Optymalizacja systemu.</li>
-<li>http://shutter-project.org/[Shutter] → Tworzenie zrzutów ekranu.</li>
-<li>https://sourceforge.net/projects/linssid/[linssid] → Skanowanie sieci bezprzewodowych.</li>
-<li>https://www.bleachbit.org/[bleachbit] → Czyszczenie systemu z niepotrzebnych plików.</li>
-<li>Unclutter → Ukrywanie wskaźnika myszy w czasie spoczynku.</li>
-<li>Hardinfo → Informacje o sprzęcie i systemie.
-** lshw → info o systemie można zainstalować nakładkę GUI.</li>
-<li>http://www.nongnu.org/synaptic/[Synaptic] → Manager pakietów.</li>
-<li>http://meldmerge.org/[meld] → Porównywanie plików tekstowych w poszukiwaniu różnic.</li>
-<li>https://wiki.gnome.org/Apps/Brasero[brasero] → Nagrywarka płyt.
-** https://sourceforge.net/projects/acetoneiso/[AcetoneISO] → Tworzenie plików ISO.
-** Furiusisomount</li>
+<li>
+<p><a href="https://kodi.tv/">Kodi</a> → Centrum multimedialne.</p>
+</li>
+<li>
+<p><a href="http://store.steampowered.com/">Steam</a> → Cyfrowy sklep z grami komputerowymi.</p>
+</li>
+<li>
+<p><a href="https://www.clementine-player.org/">Clementine</a> → Odtwarzacz muzyki, potrafiący też odtwarzać radia internetowe.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Amarok</p>
+</li>
+<li>
+<p>Ario - Klient dla MPD.</p>
+</li>
+<li>
+<p><a href="http://anoise.tuxfamily.org/">Ambient Noise Player</a> → Odtwarza dźwięki relaksacyjne jak deszcz, las.</p>
+</li>
 </ul>
-<p>=== Ergonomia</p>
+</div>
+</li>
+<li>
+<p><a href="https://gpodder.github.io/">gPodder</a> → Manager podcastów, posiadający wersję webową gpodder.net i na androida.</p>
+<div class="ulist">
 <ul>
-<li>https://github.com/thjaeger/easystroke/wiki[EasyStroke] → Program umożliwia mapowanie gestów myszki z skrótami klawiaturowymi lub poleceniami konsolowymi. Nie jest już wspierany, ale nadal prawidłowo działa.</li>
-<li>http://www.workrave.org/[Workrave] → Program mówiący kiedy mamy zrobić sobie przerwę od komputera.
-** https://projecthamster.wordpress.com/about/[Hamster] → Monitorowanie czasu.</li>
-<li>http://jonls.dk/redshift[redshift] → Aplikacja starająca się ograniczyć niebieskie światło od monitora.
-** f.lux</li>
-<li>http://hluk.github.io/CopyQ/[CopyQ] → Manager schowka systemowego.
-** cliplt</li>
+<li>
+<p><a href="https://github.com/alatiera/hammond">Hammond</a></p>
+</li>
 </ul>
-<p>=== Narzędzia developerskie</p>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/haecker-felix/gradio">Gradio</a> → Radio internetowe.</p>
+<div class="ulist">
 <ul>
-<li>http://www.eclipse.org/downloads/eclipse-packages/[Eclipse] → Środowisko programistyczne do min. Java, PHP, C, C++.
-** IntelliJ IDEA:
-** http://www.codeblocks.org/[code blocks]
-** https://code.visualstudio.com/[visual studio code]
-** atom
-** brackets</li>
-<li>https://zealdocs.org/[zeal] → Dokumentacja offline.</li>
-<li>https://filezilla-project.org/[filezilla] → Klient FTP.</li>
-<li>http://dbeaver.jkiss.org/[dbeaver] → Uniwersalny klient do zarządzania bazami danymi.
-** mysql workbench
-** DbVisualizer</li>
-<li>https://git-scm.com/[git] → Manager kontroli wersji.
-** kraken
-** smartgit</li>
-</ul>]]></content:encoded>
+<li>
+<p>Goodvibes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://www.smplayer.info/pl/info">SMplayer</a> → Odtwarzacz wideo.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>VLC</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://qwinff.github.io/">QWinFF</a> → Nakładka na świetny program ffmpeg do nagrywania, konwertowania audio/wideo.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>HandBrake → Konwerter wideo.</p>
+</li>
+<li>
+<p><a href="http://vidcutter.ozmartians.com/">VidCutter</a> → Wycinanie i scalanie fragmentów wideo.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://qnapi.github.io/">qnapi</a> → Program do pobierania napisów filmowych.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grafika">Grafika</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.gimp.org/">Gimp</a> → Edytor grafiki.</p>
+</li>
+<li>
+<p><a href="http://www.xnview.com/en/xnviewmp/#features">xnview</a> → Przeglądarka i konwersją zdjęć.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://karlch.github.io/vimiv/">vimiv</a> → Lekka przeglądarka zdjęć ze skrótami jak w vimie.</p>
+</li>
+<li>
+<p>sxiv</p>
+</li>
+<li>
+<p>Viewnior</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://www.darktable.org/">Darktable</a> → Obróbka zdjęć (jak Lightroom).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>RawTherapee</p>
+</li>
+<li>
+<p>digiKam</p>
+</li>
+<li>
+<p>LightZone</p>
+</li>
+<li>
+<p>Photivo</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_programy_biurwe">Programy biurwe</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.libreoffice.org/">LibreOffice</a> → Pakiet biurowy.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>WPS Office</p>
+</li>
+<li>
+<p>AbiWord → Lekki edytor tekstu.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://www.mozilla.org/thunderbird">Thunderbird</a> → Klient pocztowy.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Claws Mail</p>
+</li>
+<li>
+<p>Geary</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://goldendict.org/">GoldenDict</a> → Słownik</p>
+<div class="ulist">
+<ul>
+<li>
+<p>StarDict → Już nie wspierany.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://www.gnucash.org/">GnuCash</a> → Zarządzanie budżetem domowym i małych firm. Zgodny z regułą podwójnego zapisu.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Eqonomize</p>
+</li>
+<li>
+<p>Homebank</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://calibre-ebook.com/">calibre - E-book management</a> → Manager e-booków, w pakiecie jest zawarta przeglądarka książek elektronicznych.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/oguzhaninan/Buka">buka ebook reader</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://www.freeplane.org/wiki/index.php/Home">Freeplane</a> → Tworzenia map myśli.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.xmind.net/">xmind</a></p>
+</li>
+<li>
+<p>freemind</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://pwmt.org/projects/zathura/">zathura i mupdf</a> → Lekka przeglądarka PDF.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://okular.kde.org/">Okular</a> → Wersja KDE.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://www.pdfsam.org/">PDFsam</a> → Program do modyfikowania plików PDF</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PDFMod</p>
+</li>
+<li>
+<p><a href="http://xournal.sourceforge.net/">Xournal</a> → Notatki i adnotacje PDF.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://typora.io/">Typora</a> → Tworzenie i podgląd notatek zapisanych w formacie Markdown.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Boostnote</p>
+</li>
+<li>
+<p>Simplenote</p>
+</li>
+<li>
+<p><a href="http://remarkableapp.github.io/linux.html">Remarkable</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_narzędzia_systemowe">Narzędzia systemowe</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://tilda.sourceforge.net/">tilda</a> → Drop-down terminal.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Guake terminal</p>
+</li>
+<li>
+<p>yakuake → Wersja dla KDE.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/alacritty/alacritty">alacritty</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>kitty</p>
+</li>
+<li>
+<p><a href="https://github.com/thestinger/termite/">termite</a> → Posiada tryby jak w vim, ale już nie jest wspierany.</p>
+</li>
+<li>
+<p><a href="http://www.ubuntu-pomoc.org/terminology-wiecej-niz-kolejny-emulator-terminala/">terminology</a> → Rozbudowany terminal z wieloma funkcjami.</p>
+</li>
+<li>
+<p>st → Bardzo lekki terminal.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://en.congelli.eu/prog_info_lcdnurse.html">LCD Nurse</a> → Szukanie martwych pikseli w monitorach LCD.</p>
+</li>
+<li>
+<p><a href="https://dave-theunsub.github.io/clamtk/">ClamTK</a> → Antywirus</p>
+</li>
+<li>
+<p><a href="http://www.pixelbeat.org/fslint/">fslint</a> → Narzędzie do szukania duplikatów, pustych folderów itp.</p>
+</li>
+<li>
+<p><a href="http://pl.wikibooks.org/wiki/Ubuntu/Program_antywirusowy">ClamTK</a> ClamAV → nakładka gui na antywirus</p>
+</li>
+<li>
+<p>kazam → Nagrywanie pulpitu.</p>
+</li>
+<li>
+<p><a href="https://davedavenport.github.io/rofi/">rofi</a> → Program do przełączania i uruchamiania aplikacji jak dmenu.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://kupferlauncher.github.io/">kupfer</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/wummel/patool">patool</a> → Manager do archiwizacji i kompresji danych. Wspiera dużą ilość rozszerzeń.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>atool</p>
+</li>
+<li>
+<p>7zip</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/DoTheEvo/ANGRYsearch">ANGRYsearch</a> → Wyszukiwarka plików.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.lesbonscomptes.com/recoll/">recoll</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://unetbootin.github.io/">UNetbootin</a> → Tworzenie USB boot.</p>
+</li>
+<li>
+<p><a href="https://github.com/oguzhaninan/Stacer">Stacer</a> → Optymalizacja systemu.</p>
+</li>
+<li>
+<p><a href="http://shutter-project.org/">Shutter</a> → Tworzenie zrzutów ekranu.</p>
+</li>
+<li>
+<p><a href="https://sourceforge.net/projects/linssid/">linssid</a> → Skanowanie sieci bezprzewodowych.</p>
+</li>
+<li>
+<p><a href="https://www.bleachbit.org/">bleachbit</a> → Czyszczenie systemu z niepotrzebnych plików.</p>
+</li>
+<li>
+<p>Unclutter → Ukrywanie wskaźnika myszy w czasie spoczynku.</p>
+</li>
+<li>
+<p>Hardinfo → Informacje o sprzęcie i systemie.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lshw → info o systemie można zainstalować nakładkę GUI.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://www.nongnu.org/synaptic/">Synaptic</a> → Manager pakietów.</p>
+</li>
+<li>
+<p><a href="http://meldmerge.org/">meld</a> → Porównywanie plików tekstowych w poszukiwaniu różnic.</p>
+</li>
+<li>
+<p><a href="https://wiki.gnome.org/Apps/Brasero">brasero</a> → Nagrywarka płyt.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://sourceforge.net/projects/acetoneiso/">AcetoneISO</a> → Tworzenie plików ISO.</p>
+</li>
+<li>
+<p>Furiusisomount</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ergonomia">Ergonomia</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/thjaeger/easystroke/wiki">EasyStroke</a> → Program umożliwia mapowanie gestów myszki z skrótami klawiaturowymi lub poleceniami konsolowymi. Nie jest już wspierany, ale nadal prawidłowo działa.</p>
+</li>
+<li>
+<p><a href="http://www.workrave.org/">Workrave</a> → Program mówiący kiedy mamy zrobić sobie przerwę od komputera.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://projecthamster.wordpress.com/about/">Hamster</a> → Monitorowanie czasu.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://jonls.dk/redshift">redshift</a> → Aplikacja starająca się ograniczyć niebieskie światło od monitora.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>f.lux</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://hluk.github.io/CopyQ/">CopyQ</a> → Manager schowka systemowego.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>cliplt</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_narzędzia_developerskie">Narzędzia developerskie</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.eclipse.org/downloads/eclipse-packages/">Eclipse</a> → Środowisko programistyczne do min. Java, PHP, C, C++.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>IntelliJ IDEA:</p>
+</li>
+<li>
+<p><a href="http://www.codeblocks.org/">code blocks</a></p>
+</li>
+<li>
+<p><a href="https://code.visualstudio.com/">visual studio code</a></p>
+</li>
+<li>
+<p>atom</p>
+</li>
+<li>
+<p>brackets</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://zealdocs.org/">zeal</a> → Dokumentacja offline.</p>
+</li>
+<li>
+<p><a href="https://filezilla-project.org/">filezilla</a> → Klient FTP.</p>
+</li>
+<li>
+<p><a href="http://dbeaver.jkiss.org/">dbeaver</a> → Uniwersalny klient do zarządzania bazami danymi.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>mysql workbench</p>
+</li>
+<li>
+<p>DbVisualizer</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://git-scm.com/">git</a> → Manager kontroli wersji.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>kraken</p>
+</li>
+<li>
+<p>smartgit</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Linux vs Windows]]></title>
@@ -632,43 +1690,107 @@ Zamierzam w przyszłości opublikować post z listą programów działających w
             <guid>/blog/linux-vs-windows</guid>
             <pubDate>Sun, 19 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Najważniejsze różnice pomiędzy systemem operacyjnym z rodziny Windows i Linuks z perspektywy desktopowego użytkownika. Czyli próba potwierdzenia mojego wyboru.]]></description>
-            <content:encoded><![CDATA[<p>:toc:
-:toc-title: Spis:
-:figure-caption: Img</p>
+            <content:encoded><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Spis:</div>
+<ul class="sectlevel1">
+<li><a href="#_to_ten_system_z_pingwinem">To ten system z pingwinem?</a></li>
+<li><a href="#_z_technicznego_punktu_widzenia">Z technicznego punktu widzenia.</a>
+<ul class="sectlevel2">
+<li><a href="#_gry_i_aplikacje">Gry i aplikacje</a></li>
+<li><a href="#_wsparcie_techniczne">Wsparcie techniczne</a></li>
+</ul>
+</li>
+<li><a href="#_nawyki">Nawyki</a></li>
+</ul>
+</div>
+<div class="paragraph">
 <p>Postaram się w tym artykule, wytłumaczyć najważniejsze dla mnie różnice pomiędzy systemem operacyjnym z rodziny Windows a GNU/Linux w wersjach nieserwerowych. Nie będę brać pod uwagę Windowsa XP (oraz wersji starszych), ponieważ sam Microsoft jak i inne firmy porzuciły wsparcie dla niego.</p>
-<p>pass:[<iframe width="560" height="315" src="https://www.youtube.com/embed/VrOhi5ZHkIw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>]</p>
+</div>
+<div class="paragraph">
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/VrOhi5ZHkIw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+</div>
+<div class="paragraph">
 <p>Po tym humorystycznym fragmencie z serialu IT crowd (polecam obejrzeć) nie trudno się domyśleć, że jestem zwolennikiem pingwina. Jednak będę daleki od zachęcania używania Linuksa, a tym samym do wskazywania, który jest lepszy. OS jest tylko narzędziem, od nas należy jego wybór. Istotne jest jednak znać alternatywę, aby takiego wyboru dokonać.</p>
-<p>== To ten system z pingwinem?
-Linux często jest utożsamiany z jej sympatyczną maskotką - pingwinem Tux.</p>
-<p>.Pingwin Tux
-image::assets/img/posts/linux/Tux.svg[pingwin Tux]</p>
+</div>
+<div class="sect1">
+<h2 id="_to_ten_system_z_pingwinem">To ten system z pingwinem?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Linux często jest utożsamiany z jej sympatyczną maskotką - pingwinem Tux.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/img/posts/linux/Tux.svg" alt="pingwin Tux">
+</div>
+<div class="title">Img 1. Pingwin Tux</div>
+</div>
+<div class="paragraph">
 <p>Do nakreślenia filozofii tego systemu operacyjnego, posłużę się cytatem z Wikipedii:</p>
-<p><strong>Linux - rodzina uniksopodobnych systemów operacyjnych opartych na jądrze Linux. Linux jest jednym z przykładów wolnego i otwartego oprogramowania (FLOSS): jego kod źródłowy może być dowolnie wykorzystywany, modyfikowany i rozpowszechniany.</strong></p>
-<p>image:assets/img/posts/memy/malpa-janusz.jpg[małpa janusz,role=right]
+</div>
+<div class="paragraph">
+<p><em>Linux - rodzina uniksopodobnych systemów operacyjnych opartych na jądrze Linux. Linux jest jednym z przykładów wolnego i otwartego oprogramowania (FLOSS): jego kod źródłowy może być dowolnie wykorzystywany, modyfikowany i rozpowszechniany.</em></p>
+</div>
+<div class="paragraph">
+<p><span class="image right"><img src="assets/img/posts/memy/malpa-janusz.jpg" alt="małpa janusz"></span>
 Linus Torvalds twórca Linuksa, pisząc swój system wzorował się na popularnego w tamtym czasie UNIXa. Punktami stycznymi są m.in. hierarchiczna struktura katalogów, wszystko jest plikiem oraz zasada KISS mówiącą, że programy powinny być proste i realizować dobrze jedną rzecz.
 Należy wspomnieć, że do jądra Linuksa (kernela) dodane zostały narzędzia systemowe i biblioteki z projektu GNU, przez co niektórzy wolą nazywać cały ekosystem jako GNU/Linux. Ja w tym i następnych postach będę częściej używał nazwy Linux.
 Ostatnią rzeczą, która jest istotna z przywołanego cytatu, jest to, że cały system jest oparty na wolnościowych licencjach. Oznacza to, że kod jest dostępny dla każdego i każdy może próbować go poprawiać. Dobrym porównaniem jest Wikipedia, która jest otwartą encyklopedią, przez co spora liczba osób uważa to za minus. Jednak jest to ogromna zaleta, która pozwoliła jej stać się jedną z najlepszych jakościowo encyklopedii. Dodatkową zaletą oprogramowania Open Source jest jego darmowa dostępność (w większości przypadków).</p>
-<p>Jeśli chcesz bardziej zrozumieć czym jest "Free Software" polecam podstronę dotyczącą filozofii https://www.gnu.org/philosophy/philosophy.html[projektu GNU]. Szczególnie polecam podstronę z piosenkami z https://www.gnu.org/music/[GNU Music and Songs].</p>
-<p>== Z technicznego punktu widzenia.</p>
+</div>
+<div class="paragraph">
+<p>Jeśli chcesz bardziej zrozumieć czym jest "Free Software" polecam podstronę dotyczącą filozofii <a href="https://www.gnu.org/philosophy/philosophy.html">projektu GNU</a>. Szczególnie polecam podstronę z piosenkami z <a href="https://www.gnu.org/music/">GNU Music and Songs</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_z_technicznego_punktu_widzenia">Z technicznego punktu widzenia.</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Nie chcę pisać o wizualnym stronie systemów operacyjnych, ponieważ to sprawa indywidualna i zależy od naszych gustów. Oczywiście możemy środowisko graficzne zmienić tak, aby wyglądało jak te stosowane w Windowsach, ale zawsze będzie to coś innego niż oryginał. Druga sprawa to, że wszyscy użytkownicy Windows będą zmuszeni do przerzucenia się na wersję 10. Niektórzy nie lubią kafelków, co powinno być szansą dla linuksowych dystrybucji, które nie mają 'innowacyjnego' wyglądu.</p>
+</div>
+<div class="paragraph">
 <p>Modyfikacja środowiska graficznego (lub zmianie na inny bez konieczności reinstalacji systemu) - jest jednym z ważniejszym atutem, dla niektórego ludzie używają Linuksa. Oznacza to nie tylko, że możemy zmieniać jego wygląd, ale także dostosowywać do ergonomicznego użytkowania. Na przykład konfigurując system tak, aby używać klawiatury zamiast myszki. W Windows jest to utrudnione lub wymagające dodatkowych aplikacji.</p>
+</div>
+<div class="paragraph">
 <p>Wymagania sprzętowe znowu są na korzyść Linuksa, zwłaszcza przy niewydajnych komputerach. Wsparcie dla Windows XP jest porzucane przez duże firmy, a nowsze wersje będą działać źle na nich. Konkurencja wymaga mniej pamięci RAM i na dysku twardym oraz oferuje minimalistyczne dystrybucje, które uruchomią się nawet na lodówce. ;)</p>
+</div>
+<div class="paragraph">
 <p>W Linuksie oszczędzić można RAM, nie instalując antywirusa, co jest częstą praktyką. Wynika to z faktu, iż jest znikoma ilość niebezpiecznego oprogramowania pisanego pod ten system. Głównie dlatego, że nie jest on popularny, a użytkownicy z reguły posiadają większą widzę na temat bezpieczeństwa. W skrócie nie opłaca się pisać szkodliwe programy skierowane do małej grupy docelowej.</p>
+</div>
+<div class="paragraph">
 <p>Warto wspomnieć, że Windows zbiera o nas dane. Dla niektórych jest to kluczowym czynnikiem, aby nie używać tego systemu. Nie twierdzę, że wszystkie dystrybucje nie robią tego, ale znam tylko jedną, która to robiła.</p>
+</div>
+<div class="paragraph">
 <p>Pora na wytknięcie największego minusu w systemach GNU/Linux, a mianowicie brak sterowników. O ile nie ma problemów ze sterownikami do pospolitych rzeczy jak myszek, kart sieciowych, które są out of the box w systemie. Zdarzyć się może, że dane urządzenie np. kamerka internetowa nie będzie wspierana.</p>
-<p>=== Gry i aplikacje
-Następna niepodważalna przewaga Windowsa wynikająca z popularności jest dostępność oprogramowania. Od dziesiątek wersji pomniejszych aplikacji do tych wyspecjalizowanych. Wprawdzie używając Linuksa można znaleźć natywne wersje lub dobre alternatywy (polecam https://alternativeto.net/[alternativeTO]), dla programów codziennego użytku. Problem czasami nie do obejścia zaczyna się, gdy musimy korzystać z niektórych profesjonalny narzędzi. Sztandarowym przykładem jest Photoshop, a nawet czasami MS Office. Na osłodę można wspomnieć, że dystrybucje Linuksowe mają swoje odpowiedniki jak Microsoft Store, gdzie trywialnie można instalować aplikacje, które są w większości przypadków darmowe. +
-Osobną kategorią są Gry, których brakuje na Linuksie. Przez SteamOS pojawiła się znaczna ilość tytułów w których można grać, niestety ten produkt okazuje się sprzedażowym niewypałem. Jest wprawdzie projekt https://www.winehq.org/[Wine], który ma na celu uruchamianie aplikacji windowsowskich na Linuksie, jednak nie wszystkie programy się uruchomią. Ja doradzałbym szukać alternatyw, niż instalować natywnych aplikacji z Windowsa przez Wine. Często oszczędzi nam to stresu, podczas występowania błędów. +
-Jako że na tym blogu będę umieszczać posty dotyczące programowania, muszę napisać, że wsparcie dla tego obszaru jest takie same, a nawet czasami lepsze, niż na Windowsie (oprócz .NET), przykładem może być konsola. Używanie terminalu na pingwinie jest znacznie wygodniejsze, dużo przydatnych aplikacji można na niej uruchomić. +
-Oczywiście to nie wszystkie techniczne minusy systemów GNU/Linux. Po szczegóły odsyłam na stronę https://itvision.altervista.org/why.linux.is.not.ready.for.the.desktop.current.html[Major Linux Problems] lub serii filmów https://www.youtube.com/watch?v=SMKeWTVYBUo[Linux Sucks].</p>
-<p>=== Wsparcie techniczne
-Płacąc za Windows możemy oczekiwać wsparcie techniczne ze strony Microsoft. Jednanie biznesowe dystrybucje linuksowe oferują ten przywilej np. RedHat. Nie pisałbym tego akapitu, gdyby nie moje doświadczenia z supportem IT od pierwszej wymienionej firmy. Moje kontakty zazwyczaj wyglądały tak jak na tym fragmencie z IT crowd:
-pass:[<iframe width="560" height="315" src="https://www.youtube.com/embed/YhPejfTQfEA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>]
+</div>
+<div class="sect2">
+<h3 id="_gry_i_aplikacje">Gry i aplikacje</h3>
+<div class="paragraph">
+<p>Następna niepodważalna przewaga Windowsa wynikająca z popularności jest dostępność oprogramowania. Od dziesiątek wersji pomniejszych aplikacji do tych wyspecjalizowanych. Wprawdzie używając Linuksa można znaleźć natywne wersje lub dobre alternatywy (polecam <a href="https://alternativeto.net/">alternativeTO</a>), dla programów codziennego użytku. Problem czasami nie do obejścia zaczyna się, gdy musimy korzystać z niektórych profesjonalny narzędzi. Sztandarowym przykładem jest Photoshop, a nawet czasami MS Office. Na osłodę można wspomnieć, że dystrybucje Linuksowe mają swoje odpowiedniki jak Microsoft Store, gdzie trywialnie można instalować aplikacje, które są w większości przypadków darmowe.<br>
+Osobną kategorią są Gry, których brakuje na Linuksie. Przez SteamOS pojawiła się znaczna ilość tytułów w których można grać, niestety ten produkt okazuje się sprzedażowym niewypałem. Jest wprawdzie projekt <a href="https://www.winehq.org/">Wine</a>, który ma na celu uruchamianie aplikacji windowsowskich na Linuksie, jednak nie wszystkie programy się uruchomią. Ja doradzałbym szukać alternatyw, niż instalować natywnych aplikacji z Windowsa przez Wine. Często oszczędzi nam to stresu, podczas występowania błędów.<br>
+Jako że na tym blogu będę umieszczać posty dotyczące programowania, muszę napisać, że wsparcie dla tego obszaru jest takie same, a nawet czasami lepsze, niż na Windowsie (oprócz .NET), przykładem może być konsola. Używanie terminalu na pingwinie jest znacznie wygodniejsze, dużo przydatnych aplikacji można na niej uruchomić.<br>
+Oczywiście to nie wszystkie techniczne minusy systemów GNU/Linux. Po szczegóły odsyłam na stronę <a href="https://itvision.altervista.org/why.linux.is.not.ready.for.the.desktop.current.html">Major Linux Problems</a> lub serii filmów <a href="https://www.youtube.com/watch?v=SMKeWTVYBUo">Linux Sucks</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wsparcie_techniczne">Wsparcie techniczne</h3>
+<div class="paragraph">
+<p>Płacąc za Windows możemy oczekiwać wsparcie techniczne ze strony Microsoft. Jednanie biznesowe dystrybucje linuksowe oferują ten przywilej np. RedHat. Nie pisałbym tego akapitu, gdyby nie moje doświadczenia z supportem IT od pierwszej wymienionej firmy. Moje kontakty zazwyczaj wyglądały tak jak na tym fragmencie z IT crowd:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YhPejfTQfEA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 Nie oszukuję, raz dosłownie osoba ze wsparcia technicznego poleciła mi reboot systemu. :) Niestety porada nie była pomocna, jak i trudno było znaleźć rozwiązanie na błąd systemowy, głównie przez ogromną ilość informacji dotyczących prostych porad. Robię błąd opierając się na moich doznaniach, ale wydaje mi się, że łatwiej znaleźć rozwiązanie problemu na dużej ilości forach i czatach dotyczących Linuksowi.</p>
-<p>== Nawyki
-Na zakończenie chciałbym obalić mit, jakoby to Linuksy były tylko dla programistów lub ludzi pracujących w NASA. Oczywiście systemy te utożsamiane są z osobami, które dużo pracują z komputerem. Wynika to z faktu, iż Linux pozwala na większą swobodę i możliwości konfiguracyjne. Obecnie jednak nowoczesne środowiska graficzne są dostosowane dla każdego. W tym momencie możesz zadać pytanie, dlaczego w takim razie nie widać migracji z np. Windowsa to Ubuntu (albo innej dystrybucji). Powodów może być kilka, ale najważniejszy według mnie to nawyki, które bardzo trudno zmienić. Z systemem od Microsoftu wszyscy są zaznajomieni, w szkole jest nauczany, a większość komputerów sprzedaje się z preinstalowanym windowsem. Jestem przekonany, że jakby postawić przed wyborem systemu operacyjnego kogoś, kto pierwszy raz ma z nimi styczność, to wybrałby np. Linux Mint niż Windows 10. Dla przykładu mogę jedynie przedstawić serię filmów "Mum tries out Linux" z kanału OSFirstTimer na YouTube.
-pass:[<iframe width="560" height="315" src="https://www.youtube.com/embed/I-PTQVeCF9k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>]
-Z drugiej strony nie zachęcam osób do zmiany systemu, które nie chcą zmienić swoich nawyków lub po prostu nie mają na to czasu. Linuksa zaliczyłby do kategorii "easy to learn difficult to master". Oznacza to często, iż instalując Linuksa, trzeba być otwartym na naukę tego systemu i nie bać się konsoli. Na szczęście nie często przytrafi nam się trudniejszy błąd, który wymagać będzie jego użycia.</p>]]></content:encoded>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nawyki">Nawyki</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Na zakończenie chciałbym obalić mit, jakoby to Linuksy były tylko dla programistów lub ludzi pracujących w NASA. Oczywiście systemy te utożsamiane są z osobami, które dużo pracują z komputerem. Wynika to z faktu, iż Linux pozwala na większą swobodę i możliwości konfiguracyjne. Obecnie jednak nowoczesne środowiska graficzne są dostosowane dla każdego. W tym momencie możesz zadać pytanie, dlaczego w takim razie nie widać migracji z np. Windowsa to Ubuntu (albo innej dystrybucji). Powodów może być kilka, ale najważniejszy według mnie to nawyki, które bardzo trudno zmienić. Z systemem od Microsoftu wszyscy są zaznajomieni, w szkole jest nauczany, a większość komputerów sprzedaje się z preinstalowanym windowsem. Jestem przekonany, że jakby postawić przed wyborem systemu operacyjnego kogoś, kto pierwszy raz ma z nimi styczność, to wybrałby np. Linux Mint niż Windows 10. Dla przykładu mogę jedynie przedstawić serię filmów "Mum tries out Linux" z kanału OSFirstTimer na YouTube.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I-PTQVeCF9k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+Z drugiej strony nie zachęcam osób do zmiany systemu, które nie chcą zmienić swoich nawyków lub po prostu nie mają na to czasu. Linuksa zaliczyłby do kategorii "easy to learn difficult to master". Oznacza to często, iż instalując Linuksa, trzeba być otwartym na naukę tego systemu i nie bać się konsoli. Na szczęście nie często przytrafi nam się trudniejszy błąd, który wymagać będzie jego użycia.</p>
+</div>
+</div>
+</div>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Słowem wstępu]]></title>
@@ -676,13 +1798,24 @@ Z drugiej strony nie zachęcam osób do zmiany systemu, które nie chcą zmieni�
             <guid>/blog/slowem-wstepu</guid>
             <pubDate>Wed, 01 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Trochę o mnie i o blogu. Jest to mój pierwszy post, do którego zbierałem się niemal dwa lata, więc przydało by się z Wami przywitać...]]></description>
-            <content:encoded><![CDATA[<p>:figure-caption: Img</p>
-<p>Jest to mój pierwszy post, do którego zbierałem się niemal dwa lata, więc przydałoby się z Wami przywitać. :) Nazywam się Arek, a nazwisko moje to Mirosław (warto nadmienić, aby nie wprowadzać nikogo w zakłopotanie które to imie, a które nazwisko), z czego pochodzi moja kreatywna nazwa tej domeny. Nie lubię mówić o sobie, więc po więcej informacji odsyłam do strony link:about[O mnie].</p>
-<p>.Oneiric Ocelot
-image::assets/img/posts/linux/Oneiric<em>Ocelot</em>c-768x480.jpg[Oneiric Ocelot,500]</p>
+            <content:encoded><![CDATA[<div class="paragraph">
+<p>Jest to mój pierwszy post, do którego zbierałem się niemal dwa lata, więc przydałoby się z Wami przywitać. :) Nazywam się Arek, a nazwisko moje to Mirosław (warto nadmienić, aby nie wprowadzać nikogo w zakłopotanie które to imie, a które nazwisko), z czego pochodzi moja kreatywna nazwa tej domeny. Nie lubię mówić o sobie, więc po więcej informacji odsyłam do strony <a href="about">O mnie</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/img/posts/linux/Oneiric_Ocelot_c-768x480.jpg" alt="Oneiric Ocelot" width="500">
+</div>
+<div class="title">Img 1. Oneiric Ocelot</div>
+</div>
+<div class="paragraph">
 <p>Od wersji 11.10 Ubuntu (Oniryczny Ocelot) poznaje świat systemu operacyjnego spod znaku pingwina. Szczególnie upodobałem sobie programy uruchamiane w terminalu. Niestety wydaje mi się, mało jest artykułów w internecie (zwłaszcza po polsku), które łatwo wprowadzałyby do ich użytkowania. Szczególnie małe programy, które poza suchą dokumentacją nie mają nic innego. Właśnie w tamtym okresie zainteresowania systemem operacyjnym GNU/Linux, pojawiła się w mojej głowie myśl o stworzeniu blogu o takiej tematyce. W następnych postach będę częściej używał skrótu myślowego Linux, odwołując się do systemów operacyjnych GNU/Linux. Z biegiem lat ukończyłem studia informatyczne oraz na kierunku zarządzania, przez co moje zainteresowania się poszerzyły. W związku z tym na blogu będą się pojawiać posty na temat programowania (głównie interesuje się technologiami opartymi na Javie) oraz nie wykluczam, że popełnię teksty o inwestowaniu.</p>
+</div>
+<div class="paragraph">
 <p>Nie ukrywam, że blog zakładam także z myślą o sobie. Lubię poznawać nowe technologie, a przy tym przywykłem do robienia notatek. Pisanie postów będzie dla mnie sposobem na usystematyzowanie swojej wiedzy (lub jej zdobycie), pretekstem do "posprzątania" moich notatek oraz oddaniem hołdu dla społeczności ludzi, którzy dzielą się swoją wiedzą. Wszystko to wpływać będzie na format moich postów. Czasami będą to, krótkie skrypty, instrukcje zawierające najważniejsze informacje. Starać się jednak będę pokazywać mój punkt widzenia na dany temat. Nie omieszkam, co z góry przepraszam, ubarwiać wpisów dawką humoru. ;)</p>
-<p>Zdaję sobie sprawę, że mogę się mylić, popełnić błąd lub dana informacja może się zdezaktualizować. Umożliwiam pisanie komentarzy bez rejestracji, właśnie z tej racji oraz na zachęcenie Ciebie do dyskusji. Docelowo wszystkie moje pliki konfiguracyjne oraz dłuższe fragmenty kodu z postów, będę zamieszczać na moim https://github.com/amiroslaw[GitHubie].</p>]]></content:encoded>
+</div>
+<div class="paragraph">
+<p>Zdaję sobie sprawę, że mogę się mylić, popełnić błąd lub dana informacja może się zdezaktualizować. Umożliwiam pisanie komentarzy bez rejestracji, właśnie z tej racji oraz na zachęcenie Ciebie do dyskusji. Docelowo wszystkie moje pliki konfiguracyjne oraz dłuższe fragmenty kodu z postów, będę zamieszczać na moim <a href="https://github.com/amiroslaw">GitHubie</a>.</p>
+</div>]]></content:encoded>
         </item>
     </channel>
 </rss>

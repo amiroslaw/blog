@@ -2,7 +2,6 @@
   "name": "miroslaw",
   "version": "2.1.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "prod": "ng build --prod",
@@ -14,6 +13,7 @@
     "scully-watch": "scully -- --watch",
     "scully": "scully",
     "scully-serve": "npx scully serve --",
+    "serve-host": "ng serve --host 0.0.0.0",
     "deploy": "npm run build --prod && npm run scully"
   },
   "description": "miroslaw.ovh website",
@@ -43,6 +43,7 @@
     "@scullyio/ng-lib": "^2.0.0",
     "@scullyio/scully": "^2.0.0",
     "bootstrap": "^5.1.3",
+    "feed": "^4.2.2",
     "prismjs": "^1.25.0",
     "rxjs": "^7.4.0",
     "tslib": "^2.3.0",
@@ -53,7 +54,6 @@
     "@angular/cli": "~12.2.0",
     "@angular/compiler-cli": "~12.2.0",
     "@gammastream/scully-plugin-http404": "^1.0.4",
-    "@notiz/scully-plugin-rss": "^1.2.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
@@ -64,7 +64,6 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "protractor": "~7.0.0",
-    "scully-plugin-page-title": "^2.0.0",
     "scully-plugin-time-to-read": "0.0.5",
     "typescript": "~4.3.5"
   }

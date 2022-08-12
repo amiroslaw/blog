@@ -2,7 +2,10 @@
   <div class="row">
     <div class="col-md-5 col-12 text-center">
       <a [routerLink]="article.route" *ngIf=" article.photo && (article.photo.header || article.photo.card)">
-        <img class="img-thumbnail" [src]="article.photo.card || article.photo.header" alt="thumbnail"/>
+        <picture>
+          <source type="image/avif" srcset="" [srcset]="utilService.getAvifImgPath(article.photo.card) || utilService.getAvifImgPath(article.photo.header) ">
+          <img class="img-thumbnail" [src]="article.photo.card || article.photo.header" alt="thumbnail"/>
+        </picture>
       </a>
       <div class="post-meta mt-2">
         <div>

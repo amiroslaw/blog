@@ -17,7 +17,10 @@
                 <fa-icon [icon]="['fas', 'link']" size="3x"></fa-icon>
               </div>
             </div>
-            <img class="img-fluid" [src]="portfolio.cardImgPath" alt="">
+            <picture>
+              <source type="image/avif" srcset="" [srcset]="utilService.getAvifImgPath(portfolio.cardImgPath)">
+              <img class="img-fluid" [src]="portfolio.cardImgPath" [alt]="portfolio.title">
+            </picture>
           </a>
         </ng-template>
 
@@ -28,7 +31,10 @@
                 <fa-icon [icon]="['fas', 'search-plus']" size="3x"></fa-icon>
               </div>
             </div>
-            <img class="img-fluid" [src]="portfolio.cardImgPath" alt="">
+            <picture>
+              <source type="image/avif" srcset="" [srcset]="utilService.getAvifImgPath(portfolio.cardImgPath)">
+              <img class="img-fluid" [src]="portfolio.cardImgPath" [alt]="portfolio.title">
+            </picture>
           </a>
         </ng-template>
 
@@ -56,7 +62,10 @@
                 </ul>
               </ng-container>
               <ng-container *ngFor="let screenshot of portfolio.project.screenshotsPath">
-                <img class="img-fluid d-block mx-auto" [src]="screenshot" alt="">
+                <picture>
+                  <source type="image/avif" srcset="" [srcset]="utilService.getAvifImgPath(screenshot)">
+                  <img class="img-fluid d-block mx-auto" [src]="screenshot" alt="screenshot of {{portfolio.title}}">
+                </picture>
               </ng-container>
               <ng-container *ngIf="portfolio.project.technology">
                 <h3>Used technology</h3>

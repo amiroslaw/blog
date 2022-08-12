@@ -1,5 +1,6 @@
 import {JSDOM} from 'jsdom';
 import {HandledRoute, logError, registerPlugin} from '@scullyio/scully';
+import {UtilService} from '../../src/app/services/UtilService';
 
 function toc(dom: JSDOM) {
   const tocLinks = dom.window.document.querySelectorAll('#toc a');
@@ -30,8 +31,19 @@ function admonitions(dom: JSDOM) {
 }
 
 const articlePlugin = async (dom: JSDOM, routeData: HandledRoute): Promise<string> => {
-  toc(dom);
-  admonitions(dom);
+  if (routeData.route.startsWith('/blog/')) {
+    logError(routeData.route)
+
+    const imgs = dom.window.document.getElementsByTagName('img');
+   imgs.forEach(i => {
+     const src = i.getAttribute('src');
+     let avif = src.split('.')[0] + '.avif';
+     i.setAttribute('src', avif);
+   })
+
+    toc(dom);
+    admonitions(dom);
+  }
   return dom;
 };
 

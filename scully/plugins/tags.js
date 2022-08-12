@@ -21,6 +21,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const scully_1 = require("@scullyio/scully");
 const global = __importStar(require("../../src/app/services/globals"));
+// Create url tag from the Polish tag name
 const tagPlugin = async (route, config = {}) => {
     const routes = [];
     for (const tag of global.tagsName.values()) {

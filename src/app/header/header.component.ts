@@ -54,16 +54,20 @@ export class HeaderComponent implements OnInit {
   }
 
   private getPhoto(routeInfo): string {
-    const defaultPhoto = 'assets/img/sites/home-bg.jpg';
+    let defaultPhoto = 'assets/img/sites/home-bg.jpg';
+    console.log(this.hasAvifSupport());
     if (!routeInfo) {
       return defaultPhoto;
     }
 
     const route = routeInfo.route;
     if (route.includes('/blog/') && routeInfo.photo.header) {
-      return routeInfo.photo.header;
+      defaultPhoto = routeInfo.photo.header;
+    }
+    if (this.hasAvifSupport()) {
+      return defaultPhoto.split('.')[0] + '.avif';
     } else {
-      return defaultPhoto;
+      return defaultPhoto
     }
   }
 
@@ -72,6 +76,17 @@ export class HeaderComponent implements OnInit {
       return RouteService.routesName.get(route);
     } else {
       return RouteService.routesName.get(RouteService.HOME_ROUTE);
+    }
+  }
+
+  private hasAvifSupport() {
+    const elem = document.createElement('canvas');
+
+    if (!!(elem.getContext && elem.getContext('2d'))) {
+      // was able or not to get WebP representation
+      return elem.toDataURL('image/avif').indexOf('data:image/avif') == 0;
+    } else {
+      return false;
     }
   }
 }

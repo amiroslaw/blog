@@ -24,7 +24,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.routeInfo$.subscribe((routeInfo) => {
       this.headerTitle = this.getHeaderTitle(routeInfo);
-      this.photo = this.getPhoto(routeInfo);
+      this.isAvifSupported()
+      .then(() => this.photo = this.getPhoto(routeInfo).split('.')[0] + '.avif')
+      .catch(() => this.photo = this.getPhoto(routeInfo))
     });
 
     this.routesNavigation = this.getRoutesNavigation();
@@ -55,7 +57,7 @@ export class HeaderComponent implements OnInit {
 
   private getPhoto(routeInfo): string {
     let defaultPhoto = 'assets/img/sites/home-bg.jpg';
-    console.log(this.hasAvifSupport());
+
     if (!routeInfo) {
       return defaultPhoto;
     }
@@ -64,12 +66,16 @@ export class HeaderComponent implements OnInit {
     if (route.includes('/blog/') && routeInfo.photo.header) {
       defaultPhoto = routeInfo.photo.header;
     }
-    if (this.hasAvifSupport()) {
-      return defaultPhoto.split('.')[0] + '.avif';
-    } else {
-      return defaultPhoto
-    }
+    return defaultPhoto;
   }
+
+  private isAvifSupported = () =>
+    new Promise((resolve, reject) => {
+      const image = new Image();
+      image.src = 'data:image/avif;base64,AAAAFGZ0eXBhdmlmAAAAAG1pZjEAAACgbWV0YQAAAAAAAAAOcGl0bQAAAAAAAQAAAB5pbG9jAAAAAEQAAAEAAQAAAAEAAAC8AAAAGwAAACNpaW5mAAAAAAABAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAARWlwcnAAAAAoaXBjbwAAABRpc3BlAAAAAAAAAAQAAAAEAAAADGF2MUOBAAAAAAAAFWlwbWEAAAAAAAAAAQABAgECAAAAI21kYXQSAAoIP8R8hAQ0BUAyDWeeUy0JG+QAACANEkA='
+      image.onload = () => {resolve(true);};
+      image.onerror = () => {reject('format avif not supported');};
+    });
 
   private getRouteName(route: string): string {
     if (RouteService.routesName.has(route)) {
@@ -79,15 +85,5 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  private hasAvifSupport() {
-    const elem = document.createElement('canvas');
-
-    if (!!(elem.getContext && elem.getContext('2d'))) {
-      // was able or not to get WebP representation
-      return elem.toDataURL('image/avif').indexOf('data:image/avif') == 0;
-    } else {
-      return false;
-    }
-  }
 }
 

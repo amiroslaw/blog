@@ -1,6 +1,5 @@
 import {JSDOM} from 'jsdom';
 import {HandledRoute, logError, registerPlugin} from '@scullyio/scully';
-import {UtilService} from '../../src/app/services/UtilService';
 
 function toc(dom: JSDOM) {
   const tocLinks = dom.window.document.querySelectorAll('#toc a');
@@ -30,17 +29,26 @@ function admonitions(dom: JSDOM) {
 
 }
 
+function addAvifSource(dom: JSDOM) {
+  const images = dom.window.document.images;
+  for (const image of images) {
+    const excludedFiles = !image.src.endsWith('.svg') && !image.src.endsWith('logo.jpg') && !image.src.endsWith('.gif');
+    if (excludedFiles) {
+      const picture = dom.window.document.createElement('picture');
+      const source = dom.window.document.createElement('source');
+      source.srcset = image.src.split('.')[0] + '.avif';
+      source.type = 'image/avif';
+      image.parentNode.insertBefore(picture, image);
+      image.parentNode.removeChild(image);
+      picture.appendChild(source);
+      picture.appendChild(image);
+    }
+  }
+}
+
 const articlePlugin = async (dom: JSDOM, routeData: HandledRoute): Promise<string> => {
   if (routeData.route.startsWith('/blog/')) {
-    logError(routeData.route)
-
-    const imgs = dom.window.document.getElementsByTagName('img');
-   imgs.forEach(i => {
-     const src = i.getAttribute('src');
-     let avif = src.split('.')[0] + '.avif';
-     i.setAttribute('src', avif);
-   })
-
+    addAvifSource(dom);
     toc(dom);
     admonitions(dom);
   }

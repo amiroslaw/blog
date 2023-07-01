@@ -3,6 +3,44 @@ import {PortfolioCard, PortfolioModal} from '../types/types';
 const repository = 'https://github.com';
 
 export let portfolioData: Array<PortfolioCard> = [];
+
+portfolioData.push(new PortfolioCard(
+  'Shopping List', 'Aplikacja zakupowa',
+  'assets/img/portfolio/shopping.png',
+  new PortfolioModal(
+    {
+      description: 'This web application helps to create meal plans, find recipes based on that meal, and organize grocery lists around those recipes and what you have in your fridge.',
+      features: [
+        'Separation between backend and frontend',
+        'Creating a grocery list',
+        'Managing purchased ingredients',
+        'Create the recipes and share them with others',
+        'Finding a recipe that you can make from your purchased ingredients',
+        'User authentication',
+      ],
+      technology: 'Spring Boot (Spring MVC, Spring Security - JWT), Java 11, Hibernate, JUnit, Mockito, JHipster, Angular',
+      repositoryUrl: new URL('amiroslaw/shopping-list-angular', repository)
+    }
+  )
+));
+
+portfolioData.push(new PortfolioCard(
+  'TimeFx', 'Aplikacja do prezentowania wykresów z TimeWarrior',
+  'assets/img/portfolio/timefx.png',
+  new PortfolioModal(
+    {
+      description: 'GUI application for presenting Timewarrior data on charts.',
+      features: [
+        'Pie and area chart',
+        'Filtering by context or project',
+        'Simple statistics'
+      ],
+      technology: 'Java Native Image, JavaFX, Java 17',
+      repositoryUrl: new URL('amiroslaw/timeFX', repository)
+    }
+  )
+));
+
 portfolioData.push(new PortfolioCard(
   'Languide', 'Aplikacja do nauki języków obcych.',
   'assets/img/portfolio/languide_small.png',

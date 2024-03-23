@@ -42,6 +42,23 @@ portfolioData.push(new PortfolioCard(
 ));
 
 portfolioData.push(new PortfolioCard(
+  'Kindle2Anki', 'Konwerter ułatwiający tworzenie flashcards dla programu Anki',
+  'assets/img/portfolio/anki.webp',
+  new PortfolioModal(
+    {
+      description: 'Kindle Vocabulary to anki flashcards converter',
+      features: [
+        'Export kindle vocabulary to a TSV file.',
+        'Fetch informations from a dictionary',
+        'User database',
+        'Import words from a TSV file',
+      ],
+      technology: 'Spring Shell, Java 21',
+      repositoryUrl: new URL('amiroslaw/kindle2anki', repository)
+    }
+  )
+));
+portfolioData.push(new PortfolioCard(
   'Languide', 'Aplikacja do nauki języków obcych.',
   'assets/img/portfolio/languide_small.png',
   new PortfolioModal(
